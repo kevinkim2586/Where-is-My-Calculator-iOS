@@ -3,22 +3,35 @@ import UIKit
 
 class NormalCalculatorViewController: UIViewController {
     
-    
     @IBOutlet weak var calculatorWorkings: UILabel!
     @IBOutlet weak var calculatorResults: UILabel!
     
-    
     var workings: String = ""
-
+    
+    var numPressedFirst: Bool = false
+    var first: Double = 0.0
+    var second: Double = 0.0
+    var op: String = ""
+    var result: Double = 0.0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     //MARK: - Functions
     
+    // Clears all two labels
     func clearAll(){
         workings = ""
         calculatorWorkings.text = ""
+        calculatorResults.text = "0"
+    }
+    
+    // Only clears the result label
+    func clearResultsLabel(){
+        
+        workings = ""
         calculatorResults.text = ""
     }
     
@@ -27,127 +40,88 @@ class NormalCalculatorViewController: UIViewController {
         workings = workings + value
         calculatorWorkings.text = workings
     }
-     
+    
+    //MARK: - Numbers
+    
+    @IBAction func pressedNumber(_ sender: UIButton) {
+        
+        numPressedFirst = true
+        workings += sender.currentTitle!
+        calculatorResults.text = workings
+        
+    }
+    
+    @IBAction func pressedFunction(_ sender: UIButton) {
+        
+        op = sender.currentTitle!
+        
+        if(numPressedFirst){
+            first = Double(workings) ?? 0
+            calculatorWorkings.text = workings + sender.currentTitle!
+            clearResultsLabel()
+            numPressedFirst = false
+        }
+        else{
+            return
+        }
+        
+    }
+    
+    
+    @IBAction func pressedEqual(_ sender: UIButton) {
+        
+        second = Double(workings) ?? 0
+        calculatorWorkings.text! += calculatorResults.text ?? "Error"
+        
+        calculate(with: op)
+        
+        if(result.truncatingRemainder(dividingBy: 1)==0){
+            calculatorResults.text = String(format: "%.0f", result)
+        }
+        else{
+            calculatorResults.text = String(format: "%.2f", result)
+        }
+        
+    }
+        
+    
+    func calculate(with op: String){
+        
+        switch op{
+        case "+": result = first + second
+        case "-": result = first - second
+        case "*": result = first * second
+        case "/": result = first / second
+            
+        default:
+            print("Error in displaying number")
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
     //MARK: - Calculator Functions
     @IBAction func allClearTap(_ sender: UIButton) {
         clearAll()
     }
     
     @IBAction func backTap(_ sender: UIButton) {
-     
+        
         if(!workings.isEmpty){
             workings.removeLast()
-            calculatorWorkings.text = workings
+            calculatorResults.text = workings
         }
     }
     
     
-    
-    @IBAction func equalTap(_ sender: UIButton) {
-        
-        if(validInput()){
-            
-            let checkedWorkingsForPercent = workings.replacingOccurrences(of: "%", with: "*0.01")
-            let expression = NSExpression(format: checkedWorkingsForPercent)
-            let result = expression.expressionValue(with: nil, context: nil) as! Double
-            
-            let resultString = formatResult(result: result)
-            
-            calculatorResults.text = resultString
-            
-        }
-        else{
-            
-            let alert = UIAlertController(title: "잘못된 입력입니다.", message: "입력값을 다시 확인해 주세요.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "확인", style: .default))
-            self.present(alert, animated: true, completion: nil)
-            clearAll()
-            
-        }
-    
-    }
-    func formatResult(result: Double)->String{
-        
-        if(result.truncatingRemainder(dividingBy: 1) == 0){ //If a whole number
-            return String(format: "%.0f", result)
-        }
-        else{
-            return String(format: "%.2f", result)   //two decimal places
-        }
-    }
-    
-    func validInput()->Bool{
-        
-        var count = 0
-        var funcCharIndexes = [Int]()
-        
-        // Going through each character in the workings String
-        for char in workings{
-            
-            if(specialCharacter(char: char)){
-                funcCharIndexes.append(count)
-            }
-            count += 1
-        }
-    
-        var previous: Int = -1
-        
-        for index in funcCharIndexes{
-                
-            // If the very first input is a special character, the input is invalid
-            if(index == 0){
-                return false
-            }
-            
-            // If the very last input is a special character, the input is also invalid
-            if(index == workings.count - 1){
-                return false
-            }
-            
-            if(previous != -1){
-                
-                if(index - previous == 1){
-                    return false
-                }
-            }
-            previous = index
-        }
-        
-        
-        return true
-    }
-    
-    // Function to check if input is indeed any of our functions
-    func specialCharacter(char: Character)->Bool{
-        
-        if(char == "*"){
-            return true
-        }
-        if(char == "/"){
-            return true
-        }
-        if(char == "+"){
-            return true
-        }
-        if(char == "-"){
-            return true
-        }
        
-        return false
-        
-    }
     
     
     
-    
-    //MARK: - Numbers
-    
-    @IBAction func functionOrNumberButtonTapped(_ sender: UIButton) {
-
-        addToWorkings(value: sender.currentTitle!)
-        
-    }
-
     
     
     
