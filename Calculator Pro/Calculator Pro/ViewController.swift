@@ -92,6 +92,7 @@ class ViewController: UIViewController {
             let alert = UIAlertController(title: "잘못된 입력입니다.", message: "입력값을 다시 확인해 주세요.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .default))
             self.present(alert, animated: true, completion: nil)
+            clearAll()
             
         }
     
@@ -111,14 +112,58 @@ class ViewController: UIViewController {
         var count = 0
         var funcCharIndexes = [Int]()
         
+        // Going through each character in the workings String
         for char in workings{
             
+            if(specialCharacter(char: char)){
+                funcCharIndexes.append(count)
+            }
+            count += 1
+        }
+    
+        var previous: Int = -1
+        
+        for index in funcCharIndexes{
+                
+            // If the very first input is a special character, the input is invalid
+            if(index == 0){
+                return false
+            }
+            
+            // If the very last input is a special character, the input is also invalid
+            if(index == workings.count - 1){
+                return false
+            }
+            
+            if(previous != -1){
+                
+                if(index - previous == 1){
+                    return false
+                }
+            }
+            previous = index
         }
         
         
         return true
     }
     
+    // Function to check if input is indeed any of our functions
+    func specialCharacter(char: Character)->Bool{
+        
+        if(char == "*"){
+            return true
+        }
+        if(char == "/"){
+            return true
+        }
+        if(char == "+"){
+            return true
+        }
+       
+        return false
+        
+    }
     
     
     
