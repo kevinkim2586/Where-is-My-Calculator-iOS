@@ -73,9 +73,11 @@ class NormalCalculatorViewController: UIViewController {
         
         if(result.truncatingRemainder(dividingBy: 1)==0){
             calculatorResults.text = String(format: "%.0f", result)
+            workings = calculatorResults.text!
         }
         else{
             calculatorResults.text = String(format: "%.2f", result)
+            workings = calculatorResults.text!
         }
         
     }
