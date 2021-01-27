@@ -16,6 +16,7 @@
 		7CDE259025C125DB0048B3CC /* Calculator_ProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE258F25C125DB0048B3CC /* Calculator_ProTests.swift */; };
 		7CDE259B25C125DB0048B3CC /* Calculator_ProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE259A25C125DB0048B3CC /* Calculator_ProUITests.swift */; };
 		7CDE25B425C139770048B3CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE25B325C139770048B3CC /* HomeViewController.swift */; };
+		7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE25B825C13BD50048B3CC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7CDE259A25C125DB0048B3CC /* Calculator_ProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_ProUITests.swift; sourceTree = "<group>"; };
 		7CDE259C25C125DB0048B3CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CDE25B325C139770048B3CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7CDE25B825C13BD50048B3CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				7CDE258125C125DB0048B3CC /* Assets.xcassets */,
 				7CDE258325C125DB0048B3CC /* LaunchScreen.storyboard */,
 				7CDE258625C125DB0048B3CC /* Info.plist */,
+				7CDE25B825C13BD50048B3CC /* Constants.swift */,
 			);
 			path = "Calculator Pro";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */,
 				7CDE257D25C125D80048B3CC /* NormalCalculatorViewController.swift in Sources */,
 				7CDE257925C125D80048B3CC /* AppDelegate.swift in Sources */,
 				7CDE257B25C125D80048B3CC /* SceneDelegate.swift in Sources */,
