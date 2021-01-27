@@ -80,7 +80,6 @@ class NormalCalculatorViewController: UIViewController {
         
     }
         
-    
     func calculate(with op: String){
         
         switch op{
@@ -115,6 +114,7 @@ class NormalCalculatorViewController: UIViewController {
         workings = ""
         calculatorWorkings.text = ""
         calculatorResults.text = "0"
+        continuingInput = false
     }
     
     // Only clears the result label
