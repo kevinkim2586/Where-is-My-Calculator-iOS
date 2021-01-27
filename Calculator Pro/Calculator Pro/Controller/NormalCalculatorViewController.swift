@@ -1,13 +1,7 @@
-//
-//  ViewController.swift
-//  Calculator Pro
-//
-//  Created by Kevin Kim on 2021/01/27.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
+class NormalCalculatorViewController: UIViewController {
     
     
     @IBOutlet weak var calculatorWorkings: UILabel!
@@ -33,10 +27,7 @@ class ViewController: UIViewController {
         workings = workings + value
         calculatorWorkings.text = workings
     }
-    
-    
-    
-    
+     
     //MARK: - Calculator Functions
     @IBAction func allClearTap(_ sender: UIButton) {
         clearAll()
@@ -50,28 +41,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func percentTap(_ sender: UIButton) {
-        
-        addToWorkings(value: "%")
-    }
-    
-    @IBAction func divideTap(_ sender: UIButton) {
-        addToWorkings(value: "/")
-    }
-    
-    
-    @IBAction func multiplyTap(_ sender: UIButton) {
-        addToWorkings(value: "*")
-    }
-    
-    
-    @IBAction func minusTap(_ sender: UIButton) {
-        addToWorkings(value: "-")
-    }
-    
-    @IBAction func addTap(_ sender: UIButton) {
-        addToWorkings(value: "+")
-    }
     
     
     @IBAction func equalTap(_ sender: UIButton) {
@@ -160,6 +129,9 @@ class ViewController: UIViewController {
         if(char == "+"){
             return true
         }
+        if(char == "-"){
+            return true
+        }
        
         return false
         
@@ -170,51 +142,12 @@ class ViewController: UIViewController {
     
     //MARK: - Numbers
     
-    @IBAction func decimalTap(_ sender: UIButton) {
-        addToWorkings(value: ".")
+    @IBAction func functionOrNumberButtonTapped(_ sender: UIButton) {
+
+        addToWorkings(value: sender.currentTitle!)
+        
     }
-    
-    @IBAction func zeroTap(_ sender: UIButton) {
-        addToWorkings(value: "0")
-    }
-    
-    @IBAction func oneTap(_ sender: UIButton) {
-        addToWorkings(value: "1")
-    }
-    
-    @IBAction func twoTap(_ sender: UIButton) {
-        addToWorkings(value: "2")
-    }
-    
-    @IBAction func threeTap(_ sender: UIButton) {
-        addToWorkings(value: "3")
-    }
-    
-    @IBAction func fourTap(_ sender: UIButton) {
-        addToWorkings(value: "4")
-    }
-    
-    @IBAction func fiveTap(_ sender: UIButton) {
-        addToWorkings(value: "5")
-    }
-    
-    @IBAction func sixTap(_ sender: UIButton) {
-        addToWorkings(value: "6")
-    }
-    
-    @IBAction func sevenTap(_ sender: UIButton) {
-        addToWorkings(value: "7")
-    }
-    
-    @IBAction func eightTap(_ sender: UIButton) {
-        addToWorkings(value: "8")
-    }
-    
-    @IBAction func nineTap(_ sender: UIButton) {
-        addToWorkings(value: "9")
-    }
-    
-    
+
     
     
     
