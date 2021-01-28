@@ -22,14 +22,13 @@ class NormalCalculatorViewController: UIViewController {
     
    
     
-    //MARK: - Numbers
+    //MARK: - Methods
     
     @IBAction func pressedNumber(_ sender: UIButton) {
         
         numPressedFirst = true
         workings += sender.currentTitle!
         calculatorResults.text = workings
-        
     }
     
     @IBAction func pressedFunction(_ sender: UIButton) {
@@ -55,12 +54,7 @@ class NormalCalculatorViewController: UIViewController {
                 
                 continuingInput = true
             }
-            
         }
-        else{
-            return
-        }
-        
     }
     
     
@@ -79,7 +73,6 @@ class NormalCalculatorViewController: UIViewController {
             calculatorResults.text = String(format: "%.2f", result)
             workings = calculatorResults.text!
         }
-        
     }
         
     func calculate(with op: String){
@@ -97,9 +90,7 @@ class NormalCalculatorViewController: UIViewController {
     
     
     
-
-    
-    
+    //MARK: - Clearing functions
     @IBAction func allClearTap(_ sender: UIButton) {
         clearAll()
     }
@@ -125,11 +116,5 @@ class NormalCalculatorViewController: UIViewController {
         workings = ""
         calculatorResults.text = ""
     }
-    
-    
-    
-    
-    
-    
 }
 
