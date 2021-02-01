@@ -53,11 +53,16 @@ extension ExchangeRateViewController{
     
     func createPickerView() {
         
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
+        let fromPickerView = UIPickerView()
+        fromPickerView.tag = 0
+        fromPickerView.delegate = self
         
-        exchangeRateFromPicker.inputView = pickerView
-        exchangeRateToPicker.inputView = pickerView
+        let toPickerView = UIPickerView()
+        toPickerView.tag = 1
+        toPickerView.delegate = self
+        
+        exchangeRateFromPicker.inputView = fromPickerView
+        exchangeRateToPicker.inputView = toPickerView
     }
     
     func dismissPickerView() {
@@ -78,14 +83,22 @@ extension ExchangeRateViewController{
         exchangeRateFromPicker.endEditing(true)
         exchangeRateToPicker.endEditing(true)
         
-        if let country = exchangeRateFromPicker.text{
+        if let fromCountry = exchangeRateFromPicker.text{
             
-            
-            
-            exchangeRateManager.fetchExchangeRate(for: country)
+            exchangeRateFromLabel.text = fromCountry
+//            exchangeRateManager.fetchExchangeRate(for: country)
         }
         else{
-            print("Error Optional Binding is dismissPicker( )")
+            print("Error Optional Binding is dismissPicker( ) - 1st method")
+            return
+        }
+        if let toCountry = exchangeRateToPicker.text{
+            
+            exchangeRateToLabel.text = toCountry
+        }
+        else{
+            print("Error Optional Binding is dismissPicker( ) - 2nd method")
+            return
         }
         
     }
@@ -142,7 +155,13 @@ extension ExchangeRateViewController: UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        exchangeRateFromPicker.text = countries[row]
+        
+        if pickerView.tag == 0{
+            exchangeRateFromPicker.text = countries[row]
+        }
+        else{
+            exchangeRateToPicker.text = countries[row]
+        }
     }
     
 }
@@ -159,4 +178,3 @@ extension ExchangeRateViewController: UIPickerViewDataSource{
         return countries.count
     }
 }
-
