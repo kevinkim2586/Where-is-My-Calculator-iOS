@@ -17,6 +17,16 @@ struct ExchangeRateManager{
     
     var delegate: ExchangeRateManagerDelegate?
     
+    
+    
+    
+
+}
+
+//MARK: - API Networking & Parsing JSON Methods
+
+extension ExchangeRateManager{
+    
     func fetchExchangeRate(for country: String){
         
         //let urlString = "\(exchangeRateURL)\(apiKey)&searchdate=\(currentDate)&data=\(apiRequestType)"
@@ -35,17 +45,14 @@ struct ExchangeRateManager{
                     delegate?.didFailWithError(error: error!)
                     return
                 }
-                
                 if let safeData = data{
                     if let exchangeRate = parseJSON(for: safeData){
                         delegate?.didUpdateExchangeRate(self, exchange: exchangeRate)
                     }
                 }
-
             }
             task.resume()
         }
-        
     }
     
     func parseJSON(for exchangeData: Data)->ExchangeRateModel?{
@@ -68,12 +75,16 @@ struct ExchangeRateManager{
         }
     }
     
+}
+
+//MARK: - Additional Needed Methods
+
+extension ExchangeRateManager{
+    
     mutating func fetchCurrentDate(){
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"
         let current_date_string = formatter.string(from: Date())
         currentDate = current_date_string
     }
-
 }
-

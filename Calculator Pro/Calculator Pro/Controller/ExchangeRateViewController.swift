@@ -39,6 +39,48 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
 }
 
 
+
+
+
+//MARK: - Picker View Related Methods
+
+extension ExchangeRateViewController{
+    
+    func createPickerView() {
+        
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        exchangeRateFromPicker.inputView = pickerView
+    }
+    
+    func dismissPickerView() {
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(self.dismissPicker))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([flexibleSpace, doneButton], animated: false )
+        toolBar.isUserInteractionEnabled = true
+        toolBar.updateConstraintsIfNeeded()
+        
+        exchangeRateFromPicker.inputAccessoryView = toolBar
+    }
+    @objc func dismissPicker(){
+        
+        exchangeRateFromPicker.endEditing(true)
+        
+        if let country = exchangeRateFromPicker.text{
+            
+            exchangeRateManager.fetchExchangeRate(for: country)
+        }
+        else{
+            print("Error Optional Binding is dismissPicker( )")
+        }
+        
+    }
+}
+
+//MARK: - UITextField Related Methods
 extension UITextField {
     
     func setLeftIcon(icon: UIImage) {
@@ -73,50 +115,12 @@ extension UITextField {
 }
 
 
-
-
-//MARK: - Picker View Related Methods
-
-extension ExchangeRateViewController{
-    
-    func createPickerView() {
-        
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        exchangeRateFromPicker.inputView = pickerView
-    }
-    
-    func dismissPickerView() {
-        
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(self.dismissPicker))
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolBar.setItems([flexibleSpace, doneButton], animated: false )
-        toolBar.isUserInteractionEnabled = true
-        toolBar.updateConstraintsIfNeeded()
-        
-        exchangeRateFromPicker.inputAccessoryView = toolBar
-    }
-    @objc func dismissPicker(){
-        
-        exchangeRateFromPicker.endEditing(true)
-        
-        if let country = exchangeRateFromPicker.text{
-            exchangeRateManager.fetchExchangeRate(for: country)
-        }
-        else{
-            print("Error Optional Binding is dismissPicker( )")
-        }
-        
-    }
-}
-
 //MARK: - UITextFieldDelegate
 
 extension ExchangeRateViewController: UITextFieldDelegate{
     
 }
+
 
 //MARK: - UIPickerViewDelegate
 
@@ -144,3 +148,4 @@ extension ExchangeRateViewController: UIPickerViewDataSource{
         return countries.count
     }
 }
+
