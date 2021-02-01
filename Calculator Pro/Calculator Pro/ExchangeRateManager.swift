@@ -45,20 +45,24 @@ extension ExchangeRateManager{
             return "KRW"
         case "미국":
             return "USD"
+            
         default:
             return "Error in converting currency unit to JSON key value"
         }
     }
 }
 
+
 //MARK: - API Networking & Parsing JSON Methods
 
 extension ExchangeRateManager{
     
-    func fetchExchangeRate(for country: String){
+    mutating func fetchExchangeRate(){
         
-        //let urlString = "\(exchangeRateURL)\(apiKey)&searchdate=\(currentDate)&data=\(apiRequestType)"
-        let urlString = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=0KWEJK5Ttln2L2s44erbx7aJbz0cCbdi&searchdate=20210201&data=AP01"
+        fetchCurrentDate()
+        
+        let urlString = "\(Constants.ExchangeRateStrings.basicURL)\(Constants.ExchangeRateStrings.keyForExchangeRate)&searchdate=\(currentDate)&data=\(apiRequestType)"
+    
         performRequest(with: urlString)
     }
     

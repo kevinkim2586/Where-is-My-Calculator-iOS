@@ -5,9 +5,10 @@ class ExchangeRateViewController: UIViewController{
     @IBOutlet weak var exchangeRateFromPicker: UITextField!
     @IBOutlet weak var exchangeRateToPicker: UITextField!
     
-    @IBOutlet weak var exchangeRateFromLabel: UILabel!
+    @IBOutlet weak var exchangeRateFromTextField: UITextField!
+    @IBOutlet weak var exchangeRateToTextField: UITextField!
     
-    @IBOutlet weak var exchangeRateToLabel: UILabel!
+    
     
     var exchangeRateManager = ExchangeRateManager(exchangeRateFrom: nil, exchangeRateTo: nil)
     
@@ -20,11 +21,20 @@ class ExchangeRateViewController: UIViewController{
         createPickerView()
         dismissPickerView()
         
+        exchangeRateFromPicker.text = "대한민국"
+        exchangeRateToPicker.text = "미국"
+        
+
+        
         exchangeRateFromPicker.setLeftIcon(icon: #imageLiteral(resourceName: "USA"))
     }
 
     
 }
+
+
+
+//MARK: -  Implementation of ExchangeRateManagerDelegate Protocol
 
 extension ExchangeRateViewController: ExchangeRateManagerDelegate{
     
@@ -32,7 +42,7 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
         
         DispatchQueue.main.async {
             
-            self.exchangeRateFromLabel.text = exchange.deal_bas_r
+            self.exchangeRateFromTextField.text = exchange.deal_bas_r
         }
     }
     
@@ -51,14 +61,17 @@ extension ExchangeRateViewController{
     
     func createPickerView() {
         
+        // Upper PickerView
         let fromPickerView = UIPickerView()
         fromPickerView.tag = 0
         fromPickerView.delegate = self
         
+        // Lower PickerView
         let toPickerView = UIPickerView()
         toPickerView.tag = 1
         toPickerView.delegate = self
         
+        // Inserting PickerView to UITextField
         exchangeRateFromPicker.inputView = fromPickerView
         exchangeRateToPicker.inputView = toPickerView
     }
@@ -94,6 +107,10 @@ extension ExchangeRateViewController{
             exchangeRateManager.setCurrencyUnitForTo(country: toCountry)
         }
         else {return}
+        
+        
+        
+        
         
         
         //exchangeRateManager.
