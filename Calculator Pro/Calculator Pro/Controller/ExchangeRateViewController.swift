@@ -5,7 +5,11 @@ class ExchangeRateViewController: UIViewController{
     @IBOutlet weak var exchangeRateFromPicker: UITextField!
     @IBOutlet weak var exchangeRateToPicker: UITextField!
     
-    var exchangeRateManager = ExchangeRateManager()
+    @IBOutlet weak var exchangeRateFromLabel: UILabel!
+    
+    @IBOutlet weak var exchangeRateToLabel: UILabel!
+    
+    var exchangeRateManager = ExchangeRateManager(exchangeRateFrom: nil, exchangeRateTo: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +31,8 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
     func didUpdateExchangeRate(_ exchangeRateManager: ExchangeRateManager, exchange: ExchangeRateModel) {
         
         DispatchQueue.main.async {
-            self.exchangeRateToPicker.text = exchange.deal_bas_r
+            
+            self.exchangeRateFromLabel.text = exchange.deal_bas_r
         }
     }
     
@@ -50,7 +55,9 @@ extension ExchangeRateViewController{
         
         let pickerView = UIPickerView()
         pickerView.delegate = self
+        
         exchangeRateFromPicker.inputView = pickerView
+        exchangeRateToPicker.inputView = pickerView
     }
     
     func dismissPickerView() {
@@ -64,12 +71,16 @@ extension ExchangeRateViewController{
         toolBar.updateConstraintsIfNeeded()
         
         exchangeRateFromPicker.inputAccessoryView = toolBar
+        exchangeRateToPicker.inputAccessoryView = toolBar
     }
     @objc func dismissPicker(){
         
         exchangeRateFromPicker.endEditing(true)
+        exchangeRateToPicker.endEditing(true)
         
         if let country = exchangeRateFromPicker.text{
+            
+            
             
             exchangeRateManager.fetchExchangeRate(for: country)
         }

@@ -10,10 +10,13 @@ let countries = ["대한민국", "미국"]
 
 struct ExchangeRateManager{
     
-    let exchangeRateURL = "https://www.koreaexim.go.ksr/site/program/financial/exchangeJSON?authkey="
-    let apiKey = Constants.APIKeys.keyForExchangeRate
+    let exchangeRateURL = Constants.ExchangeRateStrings.basicURL
+    let apiKey = Constants.ExchangeRateStrings.keyForExchangeRate
     var currentDate = "DEFAULT"
     var apiRequestType = "AP01"                     //AP01 : 환율, AP02 : 대출금리, AP03 : 국제금리
+    
+    let exchangeRateFrom: String?
+    let exchangeRateTo: String?
     
     var delegate: ExchangeRateManagerDelegate?
     
@@ -21,6 +24,14 @@ struct ExchangeRateManager{
     
     
 
+}
+
+//MARK: - Result Calculation Methods
+
+extension ExchangeRateManager{
+    
+    //func 
+    
 }
 
 //MARK: - API Networking & Parsing JSON Methods
