@@ -45,8 +45,6 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
 
 
 
-
-
 //MARK: - Picker View Related Methods
 
 extension ExchangeRateViewController{
@@ -78,6 +76,7 @@ extension ExchangeRateViewController{
         exchangeRateFromPicker.inputAccessoryView = toolBar
         exchangeRateToPicker.inputAccessoryView = toolBar
     }
+    
     @objc func dismissPicker(){
         
         exchangeRateFromPicker.endEditing(true)
@@ -85,22 +84,19 @@ extension ExchangeRateViewController{
         
         if let fromCountry = exchangeRateFromPicker.text{
             
-            exchangeRateFromLabel.text = fromCountry
-//            exchangeRateManager.fetchExchangeRate(for: country)
+            exchangeRateManager.setCurrencyUnitForFrom(country: fromCountry)
+
         }
-        else{
-            print("Error Optional Binding is dismissPicker( ) - 1st method")
-            return
-        }
-        if let toCountry = exchangeRateToPicker.text{
-            
-            exchangeRateToLabel.text = toCountry
-        }
-        else{
-            print("Error Optional Binding is dismissPicker( ) - 2nd method")
-            return
-        }
+        else {return}
         
+        if let toCountry = exchangeRateToPicker.text{
+           
+            exchangeRateManager.setCurrencyUnitForTo(country: toCountry)
+        }
+        else {return}
+        
+        
+        //exchangeRateManager.
     }
 }
 

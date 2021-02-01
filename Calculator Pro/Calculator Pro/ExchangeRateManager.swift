@@ -15,8 +15,8 @@ struct ExchangeRateManager{
     var currentDate = "DEFAULT"
     var apiRequestType = "AP01"                     //AP01 : 환율, AP02 : 대출금리, AP03 : 국제금리
     
-    let exchangeRateFrom: String?
-    let exchangeRateTo: String?
+    var exchangeRateFrom: String?
+    var exchangeRateTo: String?
     
     var delegate: ExchangeRateManagerDelegate?
     
@@ -30,8 +30,25 @@ struct ExchangeRateManager{
 
 extension ExchangeRateManager{
     
-    //func 
+    mutating func setCurrencyUnitForFrom(country: String){
+        exchangeRateFrom = convertCurrencyUnitToJSONKey(country: country)
+    }
     
+    mutating func setCurrencyUnitForTo(country: String){
+        exchangeRateTo = convertCurrencyUnitToJSONKey(country: country)
+    }
+    
+    func convertCurrencyUnitToJSONKey(country: String)->String{
+        
+        switch country {
+        case "대한민국":
+            return "KRW"
+        case "미국":
+            return "USD"
+        default:
+            return "Error in converting currency unit to JSON key value"
+        }
+    }
 }
 
 //MARK: - API Networking & Parsing JSON Methods
