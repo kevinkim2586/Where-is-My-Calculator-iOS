@@ -10,7 +10,6 @@ class ExchangeRateViewController: UIViewController {
         exchangeRateFromPicker.tintColor = .clear
         createPickerView()
         dismissPickerView()
-        
     }
     
     
@@ -35,10 +34,12 @@ extension ExchangeRateViewController{
         toolBar.isUserInteractionEnabled = true
         exchangeRateFromPicker.inputAccessoryView = toolBar
     }
-    @objc func action() {
+    @objc func action(){
+        exchangeRateFromPicker.endEditing(true)
     }
 }
 
+//MARK: - UITextFieldDelegate
 
 extension ExchangeRateViewController: UITextFieldDelegate{
     
