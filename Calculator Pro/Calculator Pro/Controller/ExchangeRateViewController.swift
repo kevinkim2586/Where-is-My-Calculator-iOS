@@ -8,7 +8,8 @@ class ExchangeRateViewController: UIViewController{
     @IBOutlet weak var exchangeRateFromTextField: UITextField!
     @IBOutlet weak var exchangeRateToTextField: UITextField!
     
-    
+    @IBOutlet weak var currencyUnitFromTextField: UITextField!
+    @IBOutlet weak var currencyUnitToTextField: UITextField!
     
     var exchangeRateManager = ExchangeRateManager(exchangeRateFrom: nil, exchangeRateTo: nil)
     
@@ -16,6 +17,9 @@ class ExchangeRateViewController: UIViewController{
         super.viewDidLoad()
         
         exchangeRateManager.delegate = self
+        
+        exchangeRateFromTextField.delegate = self
+        exchangeRateToTextField.delegate = self
         
         exchangeRateFromPicker.tintColor = .clear
         createPickerView()
@@ -26,7 +30,7 @@ class ExchangeRateViewController: UIViewController{
         
 
         
-        exchangeRateFromPicker.setLeftIcon(icon: #imageLiteral(resourceName: "USA"))
+        //exchangeRateFromPicker.setLeftIcon(icon: #imageLiteral(resourceName: "USA"))
     }
 
     
@@ -155,6 +159,26 @@ extension UITextField {
 //MARK: - UITextFieldDelegate
 
 extension ExchangeRateViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        
+        if textField.text != nil{
+            view.endEditing(true)
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.view.endEditing(true)
+    }
     
 }
 

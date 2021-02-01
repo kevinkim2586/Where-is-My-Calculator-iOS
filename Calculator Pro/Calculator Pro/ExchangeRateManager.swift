@@ -94,6 +94,11 @@ extension ExchangeRateManager{
         do{
             let decodedData = try decoder.decode([ExchangeRateData].self, from: exchangeData)
             
+            
+            
+            
+            
+            
             let result = decodedData[22].result
             let cur_unit = decodedData[22].cur_unit
             let deal_bas_r = decodedData[22].deal_bas_r
