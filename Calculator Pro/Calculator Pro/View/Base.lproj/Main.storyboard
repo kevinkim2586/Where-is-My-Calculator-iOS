@@ -382,8 +382,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="example" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-RL-0Qh">
-                                <rect key="frame" x="147" y="194" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="국가를 선택해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-Kl-scs">
+                                <rect key="frame" x="83" y="503" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rg-Qb-Osz">
+                                <rect key="frame" x="166" y="393" width="58" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" backgroundImage="equal.circle.fill" catalog="system"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="국가를 선택해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-RL-0Qh">
+                                <rect key="frame" x="83" y="277" width="235" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -391,6 +402,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d1c-Lr-Qyn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Rg-Qb-Osz" firstAttribute="centerY" secondItem="Gu0-Ca-8OO" secondAttribute="centerY" id="HXf-YC-goK"/>
+                            <constraint firstItem="2Rg-Qb-Osz" firstAttribute="centerX" secondItem="Gu0-Ca-8OO" secondAttribute="centerX" id="K62-mv-Iv2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="환율 계산기" largeTitleDisplayMode="always" id="BM9-LF-hZG"/>
                     <connections>
@@ -399,11 +414,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP7-dL-CPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="-604"/>
+            <point key="canvasLocation" x="1104.6153846153845" y="-604.26540284360192"/>
         </scene>
     </scenes>
     <resources>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="equal.circle.fill" catalog="system" width="128" height="121"/>
         <image name="list.number" catalog="system" width="128" height="97"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
