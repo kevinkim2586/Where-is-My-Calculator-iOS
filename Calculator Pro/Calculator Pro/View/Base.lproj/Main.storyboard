@@ -9,24 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--계산기 PRO-->
+        <!--Home View Controller-->
         <scene sceneID="7sc-S9-YOw">
             <objects>
-                <viewController title="계산기 PRO" id="qd3-6I-26W" customClass="HomeViewController" customModule="Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home View Controller" id="qd3-6I-26W" customClass="HomeViewController" customModule="Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KAD-nK-aUY">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="기본 계산기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZZ-ng-7vP">
-                                <rect key="frame" x="43" y="291" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="기본 계산기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZZ-ng-7vP">
+                                <rect key="frame" x="44" y="291" width="78" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoV-se-kw1">
                                 <rect key="frame" x="20" y="153" width="125" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="WIM_Brand Color"/>
                                 <state key="normal" backgroundImage="list.number" catalog="system">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
@@ -35,6 +36,23 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="R9e-d9-lyc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqK-7F-73M">
+                                <rect key="frame" x="218" y="152.33333333333337" width="125" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="WIM_Brand Color"/>
+                                <state key="normal" backgroundImage="dollarsign.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="pressedNormalCalculatorButton:" destination="qd3-6I-26W" eventType="touchUpInside" id="SUd-Ly-EnH"/>
+                                    <segue destination="3mm-lk-Rep" kind="show" id="efg-wo-lYq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="환율 계산기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1v-qH-yBI">
+                                <rect key="frame" x="241" y="290" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qWF-Sg-b3w"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -326,7 +344,7 @@
                             <constraint firstItem="er5-39-RAb" firstAttribute="top" secondItem="jEP-K9-9CW" secondAttribute="bottom" constant="10" id="qpj-9T-OCS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Thh-JD-FKc">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Thh-JD-FKc">
                         <barButtonItem key="backBarButtonItem" id="oRj-5o-v9m"/>
                     </navigationItem>
                     <connections>
@@ -356,11 +374,42 @@
             </objects>
             <point key="canvasLocation" x="-849.27536231884062" y="121.875"/>
         </scene>
+        <!--Exchange Rate View Controller-->
+        <scene sceneID="a7C-Tt-XcA">
+            <objects>
+                <viewController title="Exchange Rate View Controller" id="3mm-lk-Rep" customClass="ExchangeRateViewController" customModule="Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gu0-Ca-8OO">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="example" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-RL-0Qh">
+                                <rect key="frame" x="147" y="194" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d1c-Lr-Qyn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="환율 계산기" largeTitleDisplayMode="always" id="BM9-LF-hZG"/>
+                    <connections>
+                        <outlet property="exchangeRateFromPicker" destination="Slv-RL-0Qh" id="Qvk-P1-NxX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tP7-dL-CPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="-604"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="list.number" catalog="system" width="128" height="97"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WIM_Brand Color">
+            <color red="0.38109138609999998" green="0.82434362169999997" blue="0.98041623830000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

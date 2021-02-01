@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */; };
 		7CB0196625C7B3AB004D9650 /* DiscountCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */; };
+		7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */; };
+		7CB0197025C7BBD2004D9650 /* ExchangeRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196F25C7BBD2004D9650 /* ExchangeRateManager.swift */; };
 		7CDE257925C125D80048B3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE257825C125D80048B3CC /* AppDelegate.swift */; };
 		7CDE257B25C125D80048B3CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE257A25C125D80048B3CC /* SceneDelegate.swift */; };
 		7CDE257D25C125D80048B3CC /* NormalCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE257C25C125D80048B3CC /* NormalCalculatorViewController.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCalculatorViewController.swift; sourceTree = "<group>"; };
+		7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
+		7CB0196F25C7BBD2004D9650 /* ExchangeRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateManager.swift; sourceTree = "<group>"; };
 		7CDE257525C125D80048B3CC /* Calculator Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDE257825C125D80048B3CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CDE257A25C125D80048B3CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			children = (
 				7CDE257C25C125D80048B3CC /* NormalCalculatorViewController.swift */,
 				7CDE25B325C139770048B3CC /* HomeViewController.swift */,
+				7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */,
 				7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */,
 				7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */,
 			);
@@ -160,6 +165,7 @@
 		7CDE25B225C138F20048B3CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7CB0196F25C7BBD2004D9650 /* ExchangeRateManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -296,6 +302,8 @@
 			files = (
 				7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */,
 				7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */,
+				7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */,
+				7CB0197025C7BBD2004D9650 /* ExchangeRateManager.swift in Sources */,
 				7CDE257D25C125D80048B3CC /* NormalCalculatorViewController.swift in Sources */,
 				7CDE257925C125D80048B3CC /* AppDelegate.swift in Sources */,
 				7CB0196625C7B3AB004D9650 /* DiscountCalculatorViewController.swift in Sources */,
