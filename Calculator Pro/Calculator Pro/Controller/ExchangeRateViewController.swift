@@ -29,12 +29,15 @@ extension ExchangeRateViewController{
     func dismissPickerView() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
-        let button = UIBarButtonItem(title: "선택", style: .plain, target: self, action: #selector(self.action))
-        toolBar.setItems([button], animated: true)
+        let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(self.dismissPicker))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([flexibleSpace, doneButton], animated: false )
         toolBar.isUserInteractionEnabled = true
+        toolBar.updateConstraintsIfNeeded()
+        
         exchangeRateFromPicker.inputAccessoryView = toolBar
     }
-    @objc func action(){
+    @objc func dismissPicker(){
         exchangeRateFromPicker.endEditing(true)
     }
 }
