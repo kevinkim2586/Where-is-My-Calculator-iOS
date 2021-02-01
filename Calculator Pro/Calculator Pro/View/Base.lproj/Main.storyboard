@@ -410,6 +410,7 @@
                     <navigationItem key="navigationItem" title="환율 계산기" largeTitleDisplayMode="always" id="BM9-LF-hZG"/>
                     <connections>
                         <outlet property="exchangeRateFromPicker" destination="Slv-RL-0Qh" id="Qvk-P1-NxX"/>
+                        <outlet property="exchangeRateToPicker" destination="qpQ-Kl-scs" id="dOp-9A-9jX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP7-dL-CPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -19,7 +19,8 @@ struct ExchangeRateManager{
     
     func fetchExchangeRate(for country: String){
         
-        let urlString = "\(exchangeRateURL)\(apiKey)&searchdate=\(currentDate)&data=\(apiRequestType)"
+        //let urlString = "\(exchangeRateURL)\(apiKey)&searchdate=\(currentDate)&data=\(apiRequestType)"
+        let urlString = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=0KWEJK5Ttln2L2s44erbx7aJbz0cCbdi&searchdate=20210201&data=AP01"
         performRequest(with: urlString)
     }
     
@@ -50,14 +51,14 @@ struct ExchangeRateManager{
     func parseJSON(for exchangeData: Data)->ExchangeRateModel?{
         
         let decoder = JSONDecoder()
-        
+    
         do{
+            let decodedData = try decoder.decode([ExchangeRateData].self, from: exchangeData)
             
-            let decodedData = try decoder.decode(ExchangeRateData.self, from: exchangeData)
-            let result = decodedData.result
-            let cur_unit = decodedData.cur_unit
-            let deal_bas_r = decodedData.deal_bas_r
-            
+            let result = decodedData[22].result
+            let cur_unit = decodedData[22].cur_unit
+            let deal_bas_r = decodedData[22].deal_bas_r
+          
             let exchangeRate = ExchangeRateModel(result: result, cur_unit: cur_unit, deal_bas_r: deal_bas_r)
             return exchangeRate
         }

@@ -1,11 +1,16 @@
 import UIKit
 
-class ExchangeRateViewController: UIViewController {
+class ExchangeRateViewController: UIViewController{
     
     @IBOutlet weak var exchangeRateFromPicker: UITextField!
+    @IBOutlet weak var exchangeRateToPicker: UITextField!
+    
+    var exchangeRateManager = ExchangeRateManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        exchangeRateManager.delegate = self
         
         exchangeRateFromPicker.tintColor = .clear
         createPickerView()
@@ -13,7 +18,22 @@ class ExchangeRateViewController: UIViewController {
         
         exchangeRateFromPicker.setLeftIcon(icon: #imageLiteral(resourceName: "USA"))
     }
+
     
+}
+
+extension ExchangeRateViewController: ExchangeRateManagerDelegate{
+    
+    func didUpdateExchangeRate(_ exchangeRateManager: ExchangeRateManager, exchange: ExchangeRateModel) {
+        
+        DispatchQueue.main.async {
+            self.exchangeRateToPicker.text = exchange.deal_bas_r
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
     
     
 }
@@ -60,12 +80,14 @@ extension UITextField {
 extension ExchangeRateViewController{
     
     func createPickerView() {
+        
         let pickerView = UIPickerView()
         pickerView.delegate = self
         exchangeRateFromPicker.inputView = pickerView
     }
     
     func dismissPickerView() {
+        
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(self.dismissPicker))
@@ -77,7 +99,16 @@ extension ExchangeRateViewController{
         exchangeRateFromPicker.inputAccessoryView = toolBar
     }
     @objc func dismissPicker(){
+        
         exchangeRateFromPicker.endEditing(true)
+        
+        if let country = exchangeRateFromPicker.text{
+            exchangeRateManager.fetchExchangeRate(for: country)
+        }
+        else{
+            print("Error Optional Binding is dismissPicker( )")
+        }
+        
     }
 }
 
