@@ -41,6 +41,8 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateFromPicker.text = "대한민국"
         exchangeRateToPicker.text = "미국"
         
+        exchangeRateFromTextField.becomeFirstResponder()
+        
         createPickerView()
         dismissPickerView()
         
@@ -74,10 +76,30 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateToTextField.text = ""
         toWorkings = ""
         
+        exchangeRateFromTextField.becomeFirstResponder()
+        
+    }
+
+
+    @IBAction func pressedDelete(_ sender: UIButton) {
+
+        if fromTextFieldIsEditing == true{
+            print(fromWorkings)
+            if(!fromWorkings.isEmpty){
+                fromWorkings.removeLast()
+                exchangeRateFromTextField.text = fromWorkings
+            }
+        }
+        else if toTextFieldIsEditing == true{
+            if(!toWorkings.isEmpty){
+                toWorkings.removeLast()
+                exchangeRateToTextField.text = toWorkings
+            }
+            
+        }
+        else { return }
     }
     
-
-
 }
 
 
@@ -211,22 +233,23 @@ extension ExchangeRateViewController: UITextFieldDelegate{
             return false
         }
     }
-    
-    
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         if textField.tag == 0{
             fromTextFieldIsEditing = true
             toTextFieldIsEditing = false
+            exchangeRateFromTextField.becomeFirstResponder()
         }
         else{
             toTextFieldIsEditing = true
             fromTextFieldIsEditing = false
+            exchangeRateToTextField.becomeFirstResponder()
         }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
         
     }
 

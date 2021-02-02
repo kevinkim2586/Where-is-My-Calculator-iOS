@@ -436,6 +436,9 @@
                                                         <state key="normal" title="DEL">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressedDelete:" destination="3mm-lk-Rep" eventType="touchUpInside" id="Zsx-KA-YTX"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH3-g0-JAq">
                                                         <rect key="frame" x="87.666666666666657" y="0.0" width="86.666666666666657" height="79.333333333333329"/>
