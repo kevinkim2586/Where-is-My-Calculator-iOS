@@ -6,25 +6,24 @@ protocol ExchangeRateManagerDelegate {
     func didFailWithError(error: Error)
 }
 
-let countries = ["대한민국", "미국"]
+let countries = ["대한민국", "미국", "캐나다"]
 
 struct ExchangeRateManager{
     
+    // Properties for API Networking
     let exchangeRateURL = Constants.ExchangeRateStrings.basicURL
     let apiKey = Constants.ExchangeRateStrings.keyForExchangeRate
     var currentDate = "DEFAULT"
-    var apiRequestType = "AP01"                     //AP01 : 환율, AP02 : 대출금리, AP03 : 국제금리
+    var apiRequestType = "AP01"            //AP01 : 환율, AP02 : 대출금리, AP03 : 국제금리
     
+    // Properties needed for conversion calculation
     var exchangeRateFrom: String?
     var exchangeRateTo: String?
     
     var delegate: ExchangeRateManagerDelegate?
     
-    
-    
-    
-
 }
+
 
 //MARK: - Result Calculation Methods
 
@@ -45,6 +44,8 @@ extension ExchangeRateManager{
             return "KRW"
         case "미국":
             return "USD"
+        case "캐나다":
+            return "CAD"
             
         default:
             return "Error in converting currency unit to JSON key value"

@@ -49,12 +49,9 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
             self.exchangeRateFromTextField.text = exchange.deal_bas_r
         }
     }
-    
     func didFailWithError(error: Error) {
         print(error)
     }
-    
-    
 }
 
 
