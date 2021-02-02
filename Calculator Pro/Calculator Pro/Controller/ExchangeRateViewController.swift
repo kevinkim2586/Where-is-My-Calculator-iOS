@@ -13,6 +13,14 @@ class ExchangeRateViewController: UIViewController{
     
     var exchangeRateManager = ExchangeRateManager(exchangeRateFrom: nil, exchangeRateTo: nil)
     
+    var fromWorkings: String = ""
+    var toWorkings: String = ""
+    
+    var fromTextFieldIsEditing = false
+    var toTextFieldIsEditing = false
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,12 +29,20 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateFromTextField.delegate = self
         exchangeRateToTextField.delegate = self
         
-        exchangeRateFromPicker.tintColor = .clear
-        createPickerView()
-        dismissPickerView()
+        // Inserting a dummy view to not display default keyboard
+        exchangeRateFromTextField.inputView = UIView()
+        exchangeRateToTextField.inputView = UIView()
         
+        // A Tag to identify each UITextField
+        exchangeRateFromTextField.tag = 0
+        exchangeRateToTextField.tag = 1
+        
+        // Initialize Picker's text
         exchangeRateFromPicker.text = "대한민국"
         exchangeRateToPicker.text = "미국"
+        
+        createPickerView()
+        dismissPickerView()
         
 
         
@@ -34,7 +50,37 @@ class ExchangeRateViewController: UIViewController{
     }
 
     
+    
+    @IBAction func pressedNumber(_ sender: UIButton) {
+        
+        if fromTextFieldIsEditing == true{
+            fromWorkings += sender.currentTitle!
+            exchangeRateFromTextField.text = fromWorkings
+        }
+        else if toTextFieldIsEditing == true{
+            toWorkings += sender.currentTitle!
+            exchangeRateToTextField.text = toWorkings
+        }
+        
+        
+    }
+    
+    
+    @IBAction func pressedClear(_ sender: UIButton) {
+        
+        exchangeRateFromTextField.text = ""
+        fromWorkings = ""
+    
+        exchangeRateToTextField.text = ""
+        toWorkings = ""
+        
+    }
+    
+
+
 }
+
+
 
 
 
@@ -110,9 +156,7 @@ extension ExchangeRateViewController{
         else {return}
         
         
-        
-        
-        
+
         
         //exchangeRateManager.
     }
@@ -156,14 +200,9 @@ extension UITextField {
 //MARK: - UITextFieldDelegate
 
 extension ExchangeRateViewController: UITextFieldDelegate{
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.endEditing(true)
-        return true
-    }
-    
+  
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        
+
         if textField.text != nil{
             view.endEditing(true)
             return true
@@ -172,6 +211,25 @@ extension ExchangeRateViewController: UITextFieldDelegate{
             return false
         }
     }
+    
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if textField.tag == 0{
+            fromTextFieldIsEditing = true
+            toTextFieldIsEditing = false
+        }
+        else{
+            toTextFieldIsEditing = true
+            fromTextFieldIsEditing = false
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+    }
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
