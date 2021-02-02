@@ -78,7 +78,9 @@ extension ExchangeRateManager{
                     return
                 }
                 if let safeData = data{
+                    
                     if let exchangeRate = parseJSON(for: safeData){
+                        
                         delegate?.didUpdateExchangeRate(self, exchange: exchangeRate)
                     }
                 }
