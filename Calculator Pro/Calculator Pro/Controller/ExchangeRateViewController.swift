@@ -53,6 +53,14 @@ class ExchangeRateViewController: UIViewController{
 
     
     
+    
+}
+
+//MARK: - @IBAction Methods
+
+extension ExchangeRateViewController{
+    
+
     @IBAction func pressedNumber(_ sender: UIButton) {
         
         if fromTextFieldIsEditing == true{
@@ -66,7 +74,6 @@ class ExchangeRateViewController: UIViewController{
         
         
     }
-    
     
     @IBAction func pressedClear(_ sender: UIButton) {
         
@@ -84,7 +91,6 @@ class ExchangeRateViewController: UIViewController{
     @IBAction func pressedDelete(_ sender: UIButton) {
 
         if fromTextFieldIsEditing == true{
-            print(fromWorkings)
             if(!fromWorkings.isEmpty){
                 fromWorkings.removeLast()
                 exchangeRateFromTextField.text = fromWorkings
@@ -95,13 +101,10 @@ class ExchangeRateViewController: UIViewController{
                 toWorkings.removeLast()
                 exchangeRateToTextField.text = toWorkings
             }
-            
         }
         else { return }
     }
-    
 }
-
 
 
 
@@ -293,3 +296,4 @@ extension ExchangeRateViewController: UIPickerViewDataSource{
         return countries.count
     }
 }
+
