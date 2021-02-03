@@ -6,9 +6,11 @@ protocol ExchangeRateManagerDelegate {
     func didFailWithError(error: Error)
 }
 
-let countries = ["대한민국", "미국", "캐나다"]
+
 
 struct ExchangeRateManager{
+    
+    let countries = ["대한민국", "미국", "캐나다"]
     
     // Properties for API Networking
     let exchangeRateURL = Constants.ExchangeRateStrings.basicURL
@@ -17,8 +19,11 @@ struct ExchangeRateManager{
     var apiRequestType = "AP01"            //AP01 : 환율, AP02 : 대출금리, AP03 : 국제금리
     
     // Properties needed for conversion calculation
-    var exchangeRateFrom: String?
-    var exchangeRateTo: String?
+    var exchangeRateFrom = ""
+    var exchangeRateTo = ""
+    
+    var inputAmount: Int = 0
+    
     
     var delegate: ExchangeRateManagerDelegate?
     
@@ -48,9 +53,11 @@ extension ExchangeRateManager{
             return "CAD"
             
         default:
+            print("Error in converting currency unit to JSON key value")
             return "Error in converting currency unit to JSON key value"
         }
     }
+    
 }
 
 
@@ -58,12 +65,17 @@ extension ExchangeRateManager{
 
 extension ExchangeRateManager{
     
-    mutating func fetchExchangeRate(){
+    mutating func fetchExchangeRate(for amount: Int){
+        
+        inputAmount = amount
         
         fetchCurrentDate()
         
-        let urlString = "\(Constants.ExchangeRateStrings.basicURL)\(Constants.ExchangeRateStrings.keyForExchangeRate)&searchdate=\(currentDate)&data=\(apiRequestType)"
+        //let urlString = "\(Constants.ExchangeRateStrings.basicURL)\(Constants.ExchangeRateStrings.keyForExchangeRate)&searchdate=\(currentDate)&data=\(apiRequestType)"
     
+        let urlString = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=0KWEJK5Ttln2L2s44erbx7aJbz0cCbdi&searchdate=20210201&data=AP01"
+        
+        
         performRequest(with: urlString)
     }
     
@@ -76,12 +88,11 @@ extension ExchangeRateManager{
                 
                 if error != nil{
                     delegate?.didFailWithError(error: error!)
-                    return
                 }
                 if let safeData = data{
                     
                     if let exchangeRate = parseJSON(for: safeData){
-                        
+
                         delegate?.didUpdateExchangeRate(self, exchange: exchangeRate)
                     }
                 }
@@ -96,23 +107,40 @@ extension ExchangeRateManager{
     
         do{
             let decodedData = try decoder.decode([ExchangeRateData].self, from: exchangeData)
+
+            for data in decodedData{
+                
+                // 환율을 구하려는 국가의 화폐 단위 (ex. USD)를 JSON 객체에서 찾으면
+                if data.cur_unit == exchangeRateTo{
+                    
+                    
+                    var dealBaseInString = data.deal_bas_r
+                    dealBaseInString = dealBaseInString.replacingOccurrences(of: ",", with: "")
+                    let dealBaseNumRounded = String(format: "%.0f", dealBaseInString)
+                    if let dealBaseNum = Int(dealBaseNumRounded){
             
-            
-            
-            
-            
-            
-            let result = decodedData[22].result
-            let cur_unit = decodedData[22].cur_unit
-            let deal_bas_r = decodedData[22].deal_bas_r
-          
-            let exchangeRate = ExchangeRateModel(result: result, cur_unit: cur_unit, deal_bas_r: deal_bas_r)
-            return exchangeRate
+                        // 환율 계산
+                        let resultValue = inputAmount/dealBaseNum
+                    
+                        let result = data.result
+                        let cur_unit = data.cur_unit
+                        let deal_base_r = data.deal_bas_r
+                        
+                        let exchangeRate = ExchangeRateModel(result: result, cur_unit: cur_unit, deal_bas_r: deal_base_r, resultValue: resultValue )
+                        
+                        return exchangeRate
+                    }
+                    else{
+                        print("Error in optional binding data.deal_bas_r")
+                    }
+                }
+            }
         }
         catch{
             delegate?.didFailWithError(error: error)
             return nil
         }
+        return nil
     }
     
 }

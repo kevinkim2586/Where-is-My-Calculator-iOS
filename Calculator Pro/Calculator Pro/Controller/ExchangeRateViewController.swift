@@ -11,15 +11,14 @@ class ExchangeRateViewController: UIViewController{
     @IBOutlet weak var currencyUnitFromTextField: UITextField!
     @IBOutlet weak var currencyUnitToTextField: UITextField!
     
-    var exchangeRateManager = ExchangeRateManager(exchangeRateFrom: nil, exchangeRateTo: nil)
+    var exchangeRateManager = ExchangeRateManager()
     
     var fromWorkings: String = ""
     var toWorkings: String = ""
     
     var fromTextFieldIsEditing = false
     var toTextFieldIsEditing = false
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +51,7 @@ class ExchangeRateViewController: UIViewController{
     }
 
     
+   
     
     
 }
@@ -60,6 +60,21 @@ class ExchangeRateViewController: UIViewController{
 
 extension ExchangeRateViewController{
     
+    @IBAction func pressedCalculate(_ sender: UIButton) {
+        
+        if let inputString = exchangeRateFromTextField.text, let inputCountry = exchangeRateFromPicker.text, let toCountry = exchangeRateToPicker.text{
+            
+            if let inputNumber = Int(inputString){
+                exchangeRateManager.setCurrencyUnitForFrom(country: inputCountry)
+                exchangeRateManager.setCurrencyUnitForTo(country: toCountry)
+                exchangeRateManager.fetchExchangeRate(for: inputNumber)
+            }
+        }
+        else{
+            print("Error in pressedCalculate( )")
+            return
+        }
+    }
 
     @IBAction func pressedNumber(_ sender: UIButton) {
         
@@ -115,9 +130,12 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
     
     func didUpdateExchangeRate(_ exchangeRateManager: ExchangeRateManager, exchange: ExchangeRateModel) {
         
+        
+        print("hey")
+        
         DispatchQueue.main.async {
             
-            self.exchangeRateFromTextField.text = exchange.deal_bas_r
+            self.exchangeRateToTextField.text = String(format: "%.0f", exchange.resultValue)
         }
     }
     func didFailWithError(error: Error) {
@@ -136,11 +154,14 @@ extension ExchangeRateViewController{
         // Upper PickerView
         let fromPickerView = UIPickerView()
         fromPickerView.tag = 0
+        fromPickerView.dataSource = self
         fromPickerView.delegate = self
+        
         
         // Lower PickerView
         let toPickerView = UIPickerView()
         toPickerView.tag = 1
+        toPickerView.dataSource = self
         toPickerView.delegate = self
         
         // Inserting PickerView to UITextField
@@ -170,20 +191,14 @@ extension ExchangeRateViewController{
         if let fromCountry = exchangeRateFromPicker.text{
             
             exchangeRateManager.setCurrencyUnitForFrom(country: fromCountry)
-
         }
-        else {return}
-        
+
         if let toCountry = exchangeRateToPicker.text{
            
             exchangeRateManager.setCurrencyUnitForTo(country: toCountry)
         }
         else {return}
-        
-        
 
-        
-        //exchangeRateManager.
     }
 }
 
@@ -269,17 +284,18 @@ extension ExchangeRateViewController: UITextFieldDelegate{
 extension ExchangeRateViewController: UIPickerViewDelegate{
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return countries[row]
+        return exchangeRateManager.countries[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView.tag == 0{
-            exchangeRateFromPicker.text = countries[row]
+            exchangeRateFromPicker.text = exchangeRateManager.countries[row]
         }
-        else{
-            exchangeRateToPicker.text = countries[row]
+        else if pickerView.tag == 1{
+            exchangeRateToPicker.text = exchangeRateManager.countries[row]
         }
+        else { return }
     }
     
 }
@@ -293,7 +309,7 @@ extension ExchangeRateViewController: UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return countries.count
+        return exchangeRateManager.countries.count
     }
 }
 
