@@ -632,9 +632,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="GoldUnitPicker" destination="LWU-y8-I77" id="Guf-Do-JAp"/>
-                        <outlet property="ResultTextField" destination="Rwp-yv-She" id="Qgb-Ij-BNB"/>
-                        <outlet property="UserInputTextField" destination="DBE-Sp-px7" id="TP0-ad-vfV"/>
+                        <outlet property="goldUnitPicker" destination="LWU-y8-I77" id="Guf-Do-JAp"/>
+                        <outlet property="resultTextField" destination="Rwp-yv-She" id="Qgb-Ij-BNB"/>
+                        <outlet property="userInputTextField" destination="DBE-Sp-px7" id="TP0-ad-vfV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsc-by-MME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

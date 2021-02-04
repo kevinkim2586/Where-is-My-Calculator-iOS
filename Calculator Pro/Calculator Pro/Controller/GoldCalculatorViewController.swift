@@ -4,9 +4,9 @@ import UIKit
 class GoldCalculatorViewController: UIViewController {
 
     
-    @IBOutlet weak var GoldUnitPicker: UITextField!
-    @IBOutlet weak var UserInputTextField: UITextField!
-    @IBOutlet weak var ResultTextField: UITextField!
+    @IBOutlet weak var goldUnitPicker: UITextField!
+    @IBOutlet weak var userInputTextField: UITextField!
+    @IBOutlet weak var resultTextField: UITextField!
     
     var workings: String = ""
     
@@ -18,9 +18,9 @@ class GoldCalculatorViewController: UIViewController {
     
         goldCalculatorManager.goldDelegate = self
         
-        UserInputTextField.delegate = self
-        UserInputTextField.inputView = UIView()
-        UserInputTextField.becomeFirstResponder()
+        userInputTextField.delegate = self
+        userInputTextField.inputView = UIView()
+        userInputTextField.becomeFirstResponder()
         
         
         
@@ -44,7 +44,7 @@ extension GoldCalculatorViewController{
         
         if let inputNum = sender.currentTitle{
             workings += inputNum
-            UserInputTextField.text = workings
+            userInputTextField.text = workings
         }
         
         
@@ -52,15 +52,15 @@ extension GoldCalculatorViewController{
     
     @IBAction func pressedClear(_ sender: UIButton) {
         
-        UserInputTextField.text = ""
-        ResultTextField.text = ""
+        userInputTextField.text = ""
+        resultTextField.text = ""
     }
     
     @IBAction func pressedDelete(_ sender: UIButton) {
         
         if(!workings.isEmpty){
             workings.removeLast()
-            UserInputTextField.text = workings
+            userInputTextField.text = workings
         }
     }
     
@@ -71,7 +71,7 @@ extension GoldCalculatorViewController{
 extension GoldCalculatorViewController: GoldCalculatorManagerDelegate{
     
     func didUpdateGoldPrice(_ goldCalculatorManager: GoldCalculatorManager, goldModel: GoldModel) {
-        <#code#>
+        //
     }
     
     func didFailWithError(error: Error) {
@@ -99,5 +99,21 @@ extension GoldCalculatorViewController: UITextFieldDelegate{
           self.view.endEditing(true)
     }
     
+    
+}
+
+
+//MARK: - Picker View Related Methods
+
+extension GoldCalculatorViewController{
+    
+    func createPickerView(){
+        
+        let goldUnitPickerView = UIPickerView()
+        goldUnitPickerView.dataSource = self
+        goldUnitPickerView.delegate = self
+        
+        goldUnitPicker
+    }
     
 }
