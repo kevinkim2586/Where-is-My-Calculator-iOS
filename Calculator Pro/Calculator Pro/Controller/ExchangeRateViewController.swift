@@ -37,8 +37,8 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateToTextField.tag = 1
         
         // Initialize Picker's text
-        exchangeRateFromPicker.text = "대한민국"
-        exchangeRateToPicker.text = "미국"
+        exchangeRateFromPicker.text = "대한민국 원"
+        exchangeRateToPicker.text = "미국 달러"
         
         exchangeRateFromTextField.becomeFirstResponder()
         
@@ -50,9 +50,6 @@ class ExchangeRateViewController: UIViewController{
         //exchangeRateFromPicker.setLeftIcon(icon: #imageLiteral(resourceName: "USA"))
     }
 
-    
-   
-    
     
 }
 
@@ -86,8 +83,7 @@ extension ExchangeRateViewController{
             toWorkings += sender.currentTitle!
             exchangeRateToTextField.text = toWorkings
         }
-        
-        
+
     }
     
     @IBAction func pressedClear(_ sender: UIButton) {
@@ -99,7 +95,6 @@ extension ExchangeRateViewController{
         toWorkings = ""
         
         exchangeRateFromTextField.becomeFirstResponder()
-        
     }
 
 
@@ -129,6 +124,8 @@ extension ExchangeRateViewController{
 extension ExchangeRateViewController: ExchangeRateManagerDelegate{
     
     func didUpdateExchangeRate(_ exchangeRateManager: ExchangeRateManager, exchange: ExchangeRateModel) {
+       
+        
         
         DispatchQueue.main.async {
             
@@ -153,8 +150,6 @@ extension ExchangeRateViewController{
         fromPickerView.tag = 0
         fromPickerView.dataSource = self
         fromPickerView.delegate = self
-        
-        
         
         // Lower PickerView
         let toPickerView = UIPickerView()

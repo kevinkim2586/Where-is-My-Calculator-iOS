@@ -1,8 +1,20 @@
-//
-//  ExchangeRateCalculation.swift
-//  Calculator Pro
-//
-//  Created by Kevin Kim on 2021/02/04.
-//
-
 import Foundation
+
+func calculateResultValue(inputAmount: Float, dealBaseNum: Float, from: String, to: String){
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+//
+//let resultValue = Float(inputAmount)/dealBaseNum

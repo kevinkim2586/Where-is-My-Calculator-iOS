@@ -6,6 +6,5 @@ struct ExchangeRateModel{
     let cur_unit: String    // 통화 코드 ("USD")
     let deal_bas_r: String  // 매매 기준율 (1000원 = "1117.2"
     
-    
     var resultValue: Float    // 최종 출력값
 }

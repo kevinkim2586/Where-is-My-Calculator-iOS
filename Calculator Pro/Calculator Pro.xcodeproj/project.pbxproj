@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C8D8BD925CBA2F00019FCD4 /* ExchangeRateCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */; };
+		7C8D8BDE25CBAF280019FCD4 /* GoldCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */; };
 		7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */; };
 		7CB0196625C7B3AB004D9650 /* DiscountCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */; };
 		7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculation.swift; sourceTree = "<group>"; };
+		7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculatorManager.swift; sourceTree = "<group>"; };
 		7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				7CB0196F25C7BBD2004D9650 /* ExchangeRateManager.swift */,
 				7CB0197725C7C87D004D9650 /* ExchangeRateData.swift */,
 				7CB0197C25C7CB6A004D9650 /* ExchangeRateModel.swift */,
+				7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */,
+				7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */,
 			);
 			name = ExchangeRate;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 			files = (
 				7CB0197825C7C87D004D9650 /* ExchangeRateData.swift in Sources */,
 				7CB0197D25C7CB6A004D9650 /* ExchangeRateModel.swift in Sources */,
+				7C8D8BD925CBA2F00019FCD4 /* ExchangeRateCalculation.swift in Sources */,
 				7CB0199C25C8E225004D9650 /* ExtraFiles.swift in Sources */,
 				7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */,
 				7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */,
@@ -329,6 +336,7 @@
 				7CB0196625C7B3AB004D9650 /* DiscountCalculatorViewController.swift in Sources */,
 				7CDE257B25C125D80048B3CC /* SceneDelegate.swift in Sources */,
 				7CDE25B425C139770048B3CC /* HomeViewController.swift in Sources */,
+				7C8D8BDE25CBAF280019FCD4 /* GoldCalculatorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
