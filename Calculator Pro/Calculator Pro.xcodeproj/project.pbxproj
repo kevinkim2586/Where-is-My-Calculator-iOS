@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7C8D8BD925CBA2F00019FCD4 /* ExchangeRateCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */; };
 		7C8D8BDE25CBAF280019FCD4 /* GoldCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */; };
+		7C8D8BE425CBB4D30019FCD4 /* GoldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BE325CBB4D30019FCD4 /* GoldData.swift */; };
+		7C8D8BEC25CBB4F60019FCD4 /* GoldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BEB25CBB4F60019FCD4 /* GoldModel.swift */; };
 		7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */; };
 		7CB0196625C7B3AB004D9650 /* DiscountCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */; };
 		7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculation.swift; sourceTree = "<group>"; };
 		7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculatorManager.swift; sourceTree = "<group>"; };
+		7C8D8BE325CBB4D30019FCD4 /* GoldData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldData.swift; sourceTree = "<group>"; };
+		7C8D8BEB25CBB4F60019FCD4 /* GoldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldModel.swift; sourceTree = "<group>"; };
 		7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C8D8BE225CBB4BE0019FCD4 /* GoldCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */,
+				7C8D8BE325CBB4D30019FCD4 /* GoldData.swift */,
+				7C8D8BEB25CBB4F60019FCD4 /* GoldModel.swift */,
+			);
+			name = GoldCalculator;
+			sourceTree = "<group>";
+		};
 		7CB0198125C7CDB1004D9650 /* ExchangeRate */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +119,6 @@
 				7CB0197725C7C87D004D9650 /* ExchangeRateData.swift */,
 				7CB0197C25C7CB6A004D9650 /* ExchangeRateModel.swift */,
 				7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */,
-				7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */,
 			);
 			name = ExchangeRate;
 			sourceTree = "<group>";
@@ -175,8 +188,8 @@
 		7CDE25B125C138E60048B3CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7CDE257C25C125D80048B3CC /* NormalCalculatorViewController.swift */,
 				7CDE25B325C139770048B3CC /* HomeViewController.swift */,
+				7CDE257C25C125D80048B3CC /* NormalCalculatorViewController.swift */,
 				7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */,
 				7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */,
 				7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */,
@@ -188,6 +201,7 @@
 		7CDE25B225C138F20048B3CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7C8D8BE225CBB4BE0019FCD4 /* GoldCalculator */,
 				7CB0198125C7CDB1004D9650 /* ExchangeRate */,
 			);
 			name = Model;
@@ -324,12 +338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CB0197825C7C87D004D9650 /* ExchangeRateData.swift in Sources */,
+				7C8D8BEC25CBB4F60019FCD4 /* GoldModel.swift in Sources */,
 				7CB0197D25C7CB6A004D9650 /* ExchangeRateModel.swift in Sources */,
 				7C8D8BD925CBA2F00019FCD4 /* ExchangeRateCalculation.swift in Sources */,
 				7CB0199C25C8E225004D9650 /* ExtraFiles.swift in Sources */,
 				7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */,
 				7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */,
 				7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */,
+				7C8D8BE425CBB4D30019FCD4 /* GoldData.swift in Sources */,
 				7CB0197025C7BBD2004D9650 /* ExchangeRateManager.swift in Sources */,
 				7CDE257D25C125D80048B3CC /* NormalCalculatorViewController.swift in Sources */,
 				7CDE257925C125D80048B3CC /* AppDelegate.swift in Sources */,
