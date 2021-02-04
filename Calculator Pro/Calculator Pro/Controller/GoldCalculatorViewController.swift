@@ -15,20 +15,19 @@ class GoldCalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         goldCalculatorManager.goldDelegate = self
+        
+        goldCalculatorManager.goldUnit = "oz"
         
         userInputTextField.delegate = self
         userInputTextField.inputView = UIView()
         userInputTextField.becomeFirstResponder()
         
         createPickerView()
-    
-        
-        
     }
     
-    
+   
     
    
     
@@ -42,12 +41,32 @@ class GoldCalculatorViewController: UIViewController {
 
 extension GoldCalculatorViewController{
     
+    func setInputAmount(inputAmount: String){
+        
+        if let inputAmount = Float(inputAmount){
+            goldCalculatorManager.inputAmount = inputAmount
+        }
+    }
+    
+    func setGoldUnit(inputUnit: String){
+
+        goldCalculatorManager.goldUnit = inputUnit
+    }
+    
+    
+    // 버튼을 누름과 동시에 계산이 될 수 있도록 구현
     @IBAction func pressedNumber(_ sender: UIButton) {
         
-        if let inputNum = sender.currentTitle{
+        if let inputNum = sender.currentTitle, let inputGoldUnit = goldUnitPickerTextField.text{
+            
             workings += inputNum
             userInputTextField.text = workings
+            
+            setInputAmount(inputAmount: workings)
+            setGoldUnit(inputUnit: inputGoldUnit)
+            goldCalculatorManager.performRequest()
         }
+
         
         
     }
@@ -56,6 +75,7 @@ extension GoldCalculatorViewController{
         
         userInputTextField.text = ""
         resultTextField.text = ""
+        workings = ""
     }
     
     @IBAction func pressedDelete(_ sender: UIButton) {
@@ -73,7 +93,12 @@ extension GoldCalculatorViewController{
 extension GoldCalculatorViewController: GoldCalculatorManagerDelegate{
     
     func didUpdateGoldPrice(_ goldCalculatorManager: GoldCalculatorManager, goldModel: GoldModel) {
-        //
+        
+        DispatchQueue.main.async {
+            
+            self.resultTextField.text = ""
+            self.resultTextField.text = String(format: "%.2f", goldModel.finalResult)
+        }
     }
     
     func didFailWithError(error: Error) {
@@ -97,18 +122,17 @@ extension GoldCalculatorViewController: UITextFieldDelegate{
             return false
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
     }
-    
-    
+
 }
 
 
 //MARK: - Picker View Related Methods
 
 extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate{
-    
     
     func createPickerView(){
         
@@ -133,16 +157,12 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
         
         goldUnitPickerTextField.inputView = goldUnitPickerView
         goldUnitPickerTextField.inputAccessoryView = toolBar
-        
-        
     }
     
     @objc func dismissPicker(){
         self.view.endEditing(true)
     }
-    
-    
-    
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -157,9 +177,6 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
         goldUnitPickerTextField.text = goldCalculatorManager.goldUnitArray[row]
     }
-    
-    
 }

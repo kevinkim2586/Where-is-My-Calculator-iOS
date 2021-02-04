@@ -8,12 +8,16 @@ protocol GoldCalculatorManagerDelegate{
     func didFailWithError(error: Error)
 }
 
+
 struct GoldCalculatorManager{
     
     let goldUnitArray = ["oz", "g", "kg"]
     
     let APIKey = "goldapi-3ldrukkm196k6-io"
     let urlString = "https://www.goldapi.io/api/XAU/USD"
+    
+    var inputAmount: Float = 0.0
+    var goldUnit: String = "oz"
     
     var goldDelegate: GoldCalculatorManagerDelegate?
     
@@ -24,7 +28,7 @@ struct GoldCalculatorManager{
 
 extension GoldCalculatorManager{
     
-    func performRequest(with url: String){
+    func performRequest(){
         
         let semaphore = DispatchSemaphore (value: 0)
     
@@ -61,7 +65,9 @@ extension GoldCalculatorManager{
             let metal = decodedData.metal
             let price = decodedData.price
             
-            let goldModel = GoldModel(metal: metal, currency: currency, price: price)
+            let finalResult = calculateFinalResult(currentGoldPrice: price)
+            
+            let goldModel = GoldModel(metal: metal, currency: currency, price: price, finalResult: finalResult)
             
             return goldModel
         }
@@ -69,6 +75,29 @@ extension GoldCalculatorManager{
             goldDelegate?.didFailWithError(error: error)
             return nil
         }
+    }
+    
+}
+
+
+//MARK: - Calculation Methods
+
+extension GoldCalculatorManager{
+    
+     func calculateFinalResult(currentGoldPrice: Float)->Float{
+        
+        var finalResult: Float
+       
+        switch goldUnit {
+        case "oz":
+            finalResult = inputAmount * currentGoldPrice
+        default:
+            finalResult = 0.0
+        }
+        
+       
+        
+        return finalResult
     }
     
 }
