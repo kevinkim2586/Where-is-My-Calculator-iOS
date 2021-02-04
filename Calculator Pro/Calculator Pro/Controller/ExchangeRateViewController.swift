@@ -130,12 +130,9 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
     
     func didUpdateExchangeRate(_ exchangeRateManager: ExchangeRateManager, exchange: ExchangeRateModel) {
         
-        
-        print("hey")
-        
         DispatchQueue.main.async {
             
-            self.exchangeRateToTextField.text = String(format: "%.0f", exchange.resultValue)
+            self.exchangeRateToTextField.text = String(format: "%.2f", exchange.resultValue)
         }
     }
     func didFailWithError(error: Error) {
@@ -156,6 +153,7 @@ extension ExchangeRateViewController{
         fromPickerView.tag = 0
         fromPickerView.dataSource = self
         fromPickerView.delegate = self
+        
         
         
         // Lower PickerView
@@ -185,19 +183,22 @@ extension ExchangeRateViewController{
     
     @objc func dismissPicker(){
         
-        exchangeRateFromPicker.endEditing(true)
-        exchangeRateToPicker.endEditing(true)
+        
         
         if let fromCountry = exchangeRateFromPicker.text{
             
             exchangeRateManager.setCurrencyUnitForFrom(country: fromCountry)
+
         }
 
         if let toCountry = exchangeRateToPicker.text{
            
             exchangeRateManager.setCurrencyUnitForTo(country: toCountry)
         }
-        else {return}
+        else {
+            return
+            
+        }
 
     }
 }
@@ -288,14 +289,24 @@ extension ExchangeRateViewController: UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
+
         if pickerView.tag == 0{
+
             exchangeRateFromPicker.text = exchangeRateManager.countries[row]
+            //self.view.endEditing(true)
+
         }
         else if pickerView.tag == 1{
+
             exchangeRateToPicker.text = exchangeRateManager.countries[row]
+            //self.view.endEditing(true)
         }
-        else { return }
+        else {
+
+            return
+            
+        }
+        self.view.endEditing(true)
     }
     
 }

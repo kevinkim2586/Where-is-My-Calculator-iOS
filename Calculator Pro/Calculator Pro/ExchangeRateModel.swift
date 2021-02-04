@@ -7,5 +7,5 @@ struct ExchangeRateModel{
     let deal_bas_r: String  // 매매 기준율 (1000원 = "1117.2"
     
     
-    var resultValue: Int    // 최종 출력값
+    var resultValue: Float    // 최종 출력값
 }

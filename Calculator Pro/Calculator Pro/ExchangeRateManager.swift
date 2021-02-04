@@ -10,7 +10,14 @@ protocol ExchangeRateManagerDelegate {
 
 struct ExchangeRateManager{
     
-    let countries = ["대한민국", "미국", "캐나다"]
+    let countries = ["미국 달러", "캐나다 달러", "호주 달러",
+                     "스위스 프랑", "위안화", "덴마아크 크로네", "유로",
+                     "영국 파운드", "홍콩 달러", "인도네시아 루피아"
+                     "일본 옌", "한국 원", "쿠웨이트 디나르",
+                     "말레이지아 링기트", "노르웨이 크로네",
+                     "뉴질랜드 달러", "사우디 리얄", "스웨덴 크로나"
+                     "싱가포르 달러", "태국 바트"
+    ]
     
     // Properties for API Networking
     let exchangeRateURL = Constants.ExchangeRateStrings.basicURL
@@ -51,6 +58,8 @@ extension ExchangeRateManager{
             return "USD"
         case "캐나다":
             return "CAD"
+        case "호주":
+            return "AUD"
             
         default:
             print("Error in converting currency unit to JSON key value")
@@ -73,7 +82,7 @@ extension ExchangeRateManager{
         
         //let urlString = "\(Constants.ExchangeRateStrings.basicURL)\(Constants.ExchangeRateStrings.keyForExchangeRate)&searchdate=\(currentDate)&data=\(apiRequestType)"
     
-        let urlString = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=0KWEJK5Ttln2L2s44erbx7aJbz0cCbdi&searchdate=20210201&data=AP01"
+        let urlString = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=0KWEJK5Ttln2L2s44erbx7aJbz0cCbdi&searchdate=20210203&data=AP01"
         
         
         performRequest(with: urlString)
@@ -116,11 +125,11 @@ extension ExchangeRateManager{
                     
                     var dealBaseInString = data.deal_bas_r
                     dealBaseInString = dealBaseInString.replacingOccurrences(of: ",", with: "")
-                    let dealBaseNumRounded = String(format: "%.0f", dealBaseInString)
-                    if let dealBaseNum = Int(dealBaseNumRounded){
+            
+                    if let dealBaseNum = Float(dealBaseInString){
             
                         // 환율 계산
-                        let resultValue = inputAmount/dealBaseNum
+                        let resultValue = Float(inputAmount)/dealBaseNum
                     
                         let result = data.result
                         let cur_unit = data.cur_unit
