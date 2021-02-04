@@ -9,12 +9,13 @@ protocol GoldCalculatorManagerDelegate{
 }
 
 struct GoldCalculatorManager{
-
-    var goldDelegate: GoldCalculatorManagerDelegate?
+    
+    let goldUnitArray = ["oz", "g", "kg"]
     
     let APIKey = "goldapi-3ldrukkm196k6-io"
     let urlString = "https://www.goldapi.io/api/XAU/USD"
     
+    var goldDelegate: GoldCalculatorManagerDelegate?
     
     
 }
