@@ -46,7 +46,7 @@ extension GoldCalculatorViewController{
     
     func setGoldUnit(inputUnit: String){
 
-        goldCalculatorManager.goldUnit = inputUnit
+        goldCalculatorManager.setGoldUnit(unit: inputUnit)
     }
     
     

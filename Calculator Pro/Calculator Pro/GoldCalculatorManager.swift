@@ -97,4 +97,19 @@ extension GoldCalculatorManager{
         return finalResult
     }
     
+    
+    mutating func setGoldUnit(unit: String){
+        
+        switch unit {
+        case "oz":
+            goldUnit = "oz"
+        case "g":
+            goldUnit = "g"
+        case "kg":
+            goldUnit = "kg"
+        default:
+            return
+        }
+    }
+    
 }
