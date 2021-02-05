@@ -20,8 +20,6 @@ class GoldCalculatorViewController: UIViewController {
         goldCalculatorManager.goldDelegate = self
         
         goldCalculatorManager.goldUnit = "oz"
-        
-        
         goldUnitPickerTextField.text = "oz"
         userInputTextField.delegate = self
         userInputTextField.inputView = UIView()

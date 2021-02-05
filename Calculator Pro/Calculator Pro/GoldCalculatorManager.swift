@@ -91,6 +91,10 @@ extension GoldCalculatorManager{
         switch goldUnit {
         case "oz":
             finalResult = inputAmount * currentGoldPrice
+        case "g":
+            finalResult = (inputAmount * currentGoldPrice) / 28.35
+        case "kg":
+            finalResult = (inputAmount * currentGoldPrice) * 0.03
         default:
             finalResult = 0.0
         }
