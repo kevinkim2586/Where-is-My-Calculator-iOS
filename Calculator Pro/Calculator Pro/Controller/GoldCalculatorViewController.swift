@@ -9,9 +9,10 @@ class GoldCalculatorViewController: UIViewController {
     @IBOutlet weak var resultTextField: UITextField!
     
     var workings: String = ""
+    var goldPrice: Float = 0.0
     
     var goldCalculatorManager = GoldCalculatorManager()
-    
+    var goldModelReceived = GoldModel(metal: "", currency: "", price: 0.0, finalResult: 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,21 +21,20 @@ class GoldCalculatorViewController: UIViewController {
         
         goldCalculatorManager.goldUnit = "oz"
         
+        
+        goldUnitPickerTextField.text = "oz"
         userInputTextField.delegate = self
         userInputTextField.inputView = UIView()
         userInputTextField.becomeFirstResponder()
-        
+    
         createPickerView()
+        
+        goldCalculatorManager.fetchGoldPrice()
     }
     
    
     
-   
-    
-  
-    
-    
-    
+
 }
 
 //MARK: - @IBAction Methods
@@ -64,11 +64,15 @@ extension GoldCalculatorViewController{
             
             setInputAmount(inputAmount: workings)
             setGoldUnit(inputUnit: inputGoldUnit)
-            goldCalculatorManager.performRequest()
+            
+            goldPrice = goldModelReceived.price
+            
+            let finalResult = goldCalculatorManager.calculateFinalResult(currentGoldPrice: goldPrice)
+            
+            resultTextField.text = String(format: "%.2f", finalResult)
+            
         }
 
-        
-        
     }
     
     @IBAction func pressedClear(_ sender: UIButton) {
@@ -83,7 +87,24 @@ extension GoldCalculatorViewController{
         if(!workings.isEmpty){
             workings.removeLast()
             userInputTextField.text = workings
+            
+            setInputAmount(inputAmount: workings)
+            goldPrice = goldModelReceived.price
+            
+            let finalResult = goldCalculatorManager.calculateFinalResult(currentGoldPrice: goldPrice)
+            
+            resultTextField.text = String(format: "%.2f", finalResult)
         }
+        else if(userInputTextField.text == ""){
+            
+            resultTextField.text = ""
+            workings = ""
+        }
+        
+        
+        
+        
+        
     }
     
 }
@@ -94,12 +115,17 @@ extension GoldCalculatorViewController: GoldCalculatorManagerDelegate{
     
     func didUpdateGoldPrice(_ goldCalculatorManager: GoldCalculatorManager, goldModel: GoldModel) {
         
-        DispatchQueue.main.async {
-            
-            self.resultTextField.text = ""
-            self.resultTextField.text = String(format: "%.2f", goldModel.finalResult)
-        }
+        goldModelReceived = goldModel
+
+
+//        DispatchQueue.main.async {
+//
+//            self.resultTextField.text = ""
+//            self.resultTextField.text = String(format: "%.2f", goldModel.finalResult)
+//        }
     }
+    
+    
     
     func didFailWithError(error: Error) {
         print("Failed to fetch Gold Price at this moment")
@@ -126,7 +152,6 @@ extension GoldCalculatorViewController: UITextFieldDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
     }
-
 }
 
 

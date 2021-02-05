@@ -5,6 +5,7 @@ import Foundation
 protocol GoldCalculatorManagerDelegate{
     
     func didUpdateGoldPrice(_ goldCalculatorManager: GoldCalculatorManager, goldModel: GoldModel)
+    
     func didFailWithError(error: Error)
 }
 
@@ -20,15 +21,14 @@ struct GoldCalculatorManager{
     var goldUnit: String = "oz"
     
     var goldDelegate: GoldCalculatorManagerDelegate?
-    
-    
+
 }
 
 //MARK: - API Networking Methods
 
 extension GoldCalculatorManager{
     
-    func performRequest(){
+    func fetchGoldPrice(){
         
         let semaphore = DispatchSemaphore (value: 0)
     
@@ -52,6 +52,7 @@ extension GoldCalculatorManager{
             task.resume()
             semaphore.wait()
         }
+ 
     }
     
     func parseJSON(for goldData: Data)->GoldModel?{
@@ -64,10 +65,9 @@ extension GoldCalculatorManager{
             let currency = decodedData.currency
             let metal = decodedData.metal
             let price = decodedData.price
+        
             
-            let finalResult = calculateFinalResult(currentGoldPrice: price)
-            
-            let goldModel = GoldModel(metal: metal, currency: currency, price: price, finalResult: finalResult)
+            let goldModel = GoldModel(metal: metal, currency: currency, price: price, finalResult: nil)
             
             return goldModel
         }
@@ -76,6 +76,10 @@ extension GoldCalculatorManager{
             return nil
         }
     }
+    
+ 
+    
+    
     
 }
 
@@ -94,9 +98,6 @@ extension GoldCalculatorManager{
         default:
             finalResult = 0.0
         }
-        
-       
-        
         return finalResult
     }
     

@@ -8,5 +8,5 @@ struct GoldModel{
     let currency: String
     let price: Float
 
-    let finalResult: Float
+    let finalResult: Float?
 }
