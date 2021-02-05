@@ -103,86 +103,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "099FF9D1-7A5B-490E-9D98-857B82ED46C4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Calculator Pro/GoldCalculatorManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "GoldCalculatorManager"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1C4C4AD8-1591-4763-97BD-301D3DF5FC91"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Calculator Pro/GoldCalculatorManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "GoldCalculatorManager"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "08058D9C-6871-41FF-AC1C-C1CE9061DBC5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Calculator Pro/Controller/GoldCalculatorViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "didUpdateGoldPrice(_:goldModel:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "08058D9C-6871-41FF-AC1C-C1CE9061DBC5 - a5a6cdf0aba1684a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Calculator_Pro.GoldCalculatorViewController.didUpdateGoldPrice(_: Calculator_Pro.GoldCalculatorManager, goldModel: Calculator_Pro.GoldModel) -&gt; ()"
-                  moduleName = "Calculator Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevinkim/Desktop/%E1%84%8B%E1%85%A2%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%84%83%E1%85%B5/Calculator%20PRO/Calculator%20Pro/Calculator%20Pro/Controller/GoldCalculatorViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "184">
-               </Location>
-               <Location
-                  uuid = "08058D9C-6871-41FF-AC1C-C1CE9061DBC5 - 811a147baab21f82"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Calculator_Pro.GoldCalculatorViewController.didUpdateGoldPrice(_: Calculator_Pro.GoldCalculatorManager, goldModel: Calculator_Pro.GoldModel) -&gt; ()"
-                  moduleName = "Calculator Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kevinkim/Desktop/%E1%84%8B%E1%85%A2%E1%86%B8%20%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%20%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%84%83%E1%85%B5/Calculator%20PRO/Calculator%20Pro/Calculator%20Pro/Controller/GoldCalculatorViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "95">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "12443E6C-725C-4112-B509-562FCF787C09"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -190,32 +110,16 @@
             filePath = "Calculator Pro/Controller/GoldCalculatorViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "pressedNumber(_:)"
-            landmarkType = "7">
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "GoldCalculatorViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "084F78CD-3273-47AC-921C-48CCA635ED2D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Calculator Pro/Controller/GoldCalculatorViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "pressedNumber(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0E391E82-2399-4D95-B3A0-E08F9009EA2D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -231,6 +135,22 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "0E391E82-2399-4D95-B3A0-E08F9009EA2D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calculator Pro/Controller/GoldCalculatorViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "pressedNumber(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "B147D57F-727C-474A-8C21-694024EDCE64"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -238,8 +158,8 @@
             filePath = "Calculator Pro/Controller/GoldCalculatorViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "pressedNumber(_:)"
             landmarkType = "7">
          </BreakpointContent>

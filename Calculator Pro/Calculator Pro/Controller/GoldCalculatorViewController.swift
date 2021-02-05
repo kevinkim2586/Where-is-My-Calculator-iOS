@@ -31,10 +31,6 @@ class GoldCalculatorViewController: UIViewController {
         
         goldCalculatorManager.fetchGoldPrice()
     }
-    
-   
-    
-
 }
 
 //MARK: - @IBAction Methods
@@ -72,7 +68,6 @@ extension GoldCalculatorViewController{
             resultTextField.text = String(format: "%.2f", finalResult)
             
         }
-
     }
     
     @IBAction func pressedClear(_ sender: UIButton) {
@@ -100,13 +95,7 @@ extension GoldCalculatorViewController{
             resultTextField.text = ""
             workings = ""
         }
-        
-        
-        
-        
-        
     }
-    
 }
 
 //MARK: - Implementation of GoldCalculatorManagerDelegate Protocol
@@ -116,22 +105,13 @@ extension GoldCalculatorViewController: GoldCalculatorManagerDelegate{
     func didUpdateGoldPrice(_ goldCalculatorManager: GoldCalculatorManager, goldModel: GoldModel) {
         
         goldModelReceived = goldModel
-
-
-//        DispatchQueue.main.async {
-//
-//            self.resultTextField.text = ""
-//            self.resultTextField.text = String(format: "%.2f", goldModel.finalResult)
-//        }
     }
-    
-    
-    
+        
     func didFailWithError(error: Error) {
         print("Failed to fetch Gold Price at this moment")
     }
-    
 }
+
 
 
 //MARK: - UITextFieldDelegate
