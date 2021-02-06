@@ -88,7 +88,7 @@ extension GoldCalculatorViewController{
             
             resultTextField.text = String(format: "%.2f", finalResult)
         }
-        else if(userInputTextField.text == ""){
+        else if(workings.isEmpty){
             
             resultTextField.text = ""
             workings = ""
@@ -164,6 +164,7 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
     
     @objc func dismissPicker(){
         self.view.endEditing(true)
+        userInputTextField.becomeFirstResponder()
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

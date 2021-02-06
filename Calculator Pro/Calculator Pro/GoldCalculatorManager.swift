@@ -76,7 +76,6 @@ extension GoldCalculatorManager{
             return nil
         }
     }
-  
 }
 
 
