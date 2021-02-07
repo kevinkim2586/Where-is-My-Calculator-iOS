@@ -52,7 +52,7 @@ extension GradeCell: UITextFieldDelegate{
             
             if let gradeString = gradeTextField.text{
                 
-                if gradeString.isNumber{
+                if gradeString.isNumber || (Double(gradeString) != nil){
                     let gradeDouble = Double(gradeString)
                     newGradeInfo.grade = gradeDouble
                     break
