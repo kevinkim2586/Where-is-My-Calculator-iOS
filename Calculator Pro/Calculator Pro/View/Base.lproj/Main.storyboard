@@ -381,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="139"/>
+            <point key="canvasLocation" x="1105" y="122"/>
         </scene>
         <!--Gold Calculator View Controller-->
         <scene sceneID="o3I-Rs-XmC">
@@ -659,13 +659,43 @@
                     <view key="view" contentMode="scaleToFill" id="wZh-Md-jtA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPU-LT-N63" userLabel="Title View">
+                                <rect key="frame" x="16" y="44" width="358" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wsO-uc-tA8">
+                                <rect key="frame" x="16" y="120" width="358" height="550"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="GxF-lQ-iNf"/>
+                                    <constraint firstAttribute="height" constant="550" id="fjE-cA-LUU"/>
+                                </constraints>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bep-G4-lRz">
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="plus" catalog="system"/>
+                                    <connections>
+                                        <action selector="pressedAddButton:" destination="h0l-1U-at8" eventType="touchUpInside" id="b3G-9D-ady"/>
+                                    </connections>
+                                </button>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QJT-S6-uby"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wsO-uc-tA8" firstAttribute="centerX" secondItem="wZh-Md-jtA" secondAttribute="centerX" id="mru-E3-36B"/>
+                            <constraint firstItem="wsO-uc-tA8" firstAttribute="centerY" secondItem="wZh-Md-jtA" secondAttribute="centerY" id="vIx-FH-smI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="wsO-uc-tA8" id="J8V-dt-InQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iJ-r9-zcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="866"/>
+            <point key="canvasLocation" x="1104.6153846153845" y="865.87677725118476"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CO4-kS-gMz">
@@ -1010,6 +1040,7 @@
         <image name="list.number" catalog="system" width="128" height="97"/>
         <image name="macmini" catalog="system" width="128" height="62"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
