@@ -28,6 +28,7 @@
 		7CDE259B25C125DB0048B3CC /* Calculator_ProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE259A25C125DB0048B3CC /* Calculator_ProUITests.swift */; };
 		7CDE25B425C139770048B3CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE25B325C139770048B3CC /* HomeViewController.swift */; };
 		7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE25B825C13BD50048B3CC /* Constants.swift */; };
+		7CDF6CD825CF9FEE00DD67B3 /* GradeCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF6CD725CF9FEE00DD67B3 /* GradeCalculatorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		7CDE259C25C125DB0048B3CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CDE25B325C139770048B3CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7CDE25B825C13BD50048B3CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7CDF6CD725CF9FEE00DD67B3 /* GradeCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCalculatorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */,
 				7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */,
 				7CB0199B25C8E225004D9650 /* ExtraFiles.swift */,
+				7CDF6CD725CF9FEE00DD67B3 /* GradeCalculatorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				7CB0199C25C8E225004D9650 /* ExtraFiles.swift in Sources */,
 				7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */,
 				7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */,
+				7CDF6CD825CF9FEE00DD67B3 /* GradeCalculatorViewController.swift in Sources */,
 				7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */,
 				7C8D8BE425CBB4D30019FCD4 /* GoldData.swift in Sources */,
 				7CB0197025C7BBD2004D9650 /* ExchangeRateManager.swift in Sources */,
