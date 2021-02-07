@@ -124,11 +124,8 @@ extension ExchangeRateViewController{
 extension ExchangeRateViewController: ExchangeRateManagerDelegate{
     
     func didUpdateExchangeRate(_ exchangeRateManager: ExchangeRateManager, exchange: ExchangeRateModel) {
-       
-        
-        
+  
         DispatchQueue.main.async {
-            
             self.exchangeRateToTextField.text = String(format: "%.2f", exchange.resultValue)
         }
     }
@@ -136,8 +133,6 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
         print(error)
     }
 }
-
-
 
 //MARK: - Picker View Related Methods
 

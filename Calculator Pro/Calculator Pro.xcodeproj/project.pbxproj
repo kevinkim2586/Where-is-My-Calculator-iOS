@@ -200,7 +200,6 @@
 		7CDE25B225C138F20048B3CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7CDF6CCB25CF9C2C00DD67B3 /* NormaCalculator */,
 				7C8D8BE225CBB4BE0019FCD4 /* GoldCalculator */,
 				7CB0198125C7CDB1004D9650 /* ExchangeRate */,
 			);
@@ -230,13 +229,6 @@
 				7CDE257A25C125D80048B3CC /* SceneDelegate.swift */,
 			);
 			path = Delegates;
-			sourceTree = "<group>";
-		};
-		7CDF6CCB25CF9C2C00DD67B3 /* NormaCalculator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NormaCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

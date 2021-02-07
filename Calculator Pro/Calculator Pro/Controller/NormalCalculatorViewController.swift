@@ -1,6 +1,4 @@
-
 import UIKit
-
 
 enum Operation: String{
     
@@ -9,6 +7,7 @@ enum Operation: String{
     case divide = "/"
     case multiply = "*"
     case NULL = "Empty"
+    
 }
 
 class NormalCalculatorViewController: UIViewController {
@@ -20,8 +19,7 @@ class NormalCalculatorViewController: UIViewController {
     var rightValue = ""
     var result = ""
     var currentOperation: Operation = .NULL
-    
-    
+
   
     override func viewDidLoad() {
         super.viewDidLoad()
