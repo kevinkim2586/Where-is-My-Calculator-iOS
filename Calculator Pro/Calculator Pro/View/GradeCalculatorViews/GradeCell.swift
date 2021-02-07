@@ -1,5 +1,17 @@
 import UIKit
 
+protocol GradeCellDelegate{
+    
+    
+    
+    func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell)
+    
+    func didChangeCredit(credit: Int, tagNum: Int, cell: GradeCell)
+    
+    func didChangeGrade(grade: Double, tagNum: Int, cell: GradeCell)
+}
+
+
 class GradeCell: UITableViewCell {
     
     @IBOutlet weak var lectureTextField: UITextField!
@@ -8,13 +20,16 @@ class GradeCell: UITableViewCell {
     
     var newGradeInfo = GradeInfo()
     
+    var tagNum: Int = 0
+    
+    var gradeCellDelegate: GradeCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         lectureTextField.delegate = self
         creditTextField.delegate = self
         gradeTextField.delegate = self
- 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,26 +37,38 @@ class GradeCell: UITableViewCell {
     }
 }
 
+//MARK: - Methods
+
+extension GradeCell{
+    
+    func registerGradeInfoToDB(_ gradeInfo: GradeInfo){
+        
+        totalGradeInfo.insert(gradeInfo, at: totalGradeInfo.endIndex)
+    }
+
+}
+
+
+//MARK: - UITextFieldDelegate
 
 extension GradeCell: UITextFieldDelegate{
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+     
         
         switch textField{
         case lectureTextField:
             
             if let lectureName = lectureTextField.text{
-                newGradeInfo.lectureName = lectureName
-            }else {
-                newGradeInfo.lectureName = nil
+                gradeCellDelegate?.didChangeLectureName(lecture: lectureName, tagNum: tagNum, cell: self)
             }
         case creditTextField:
-            
+
             if let creditString = creditTextField.text{
-                
                 if creditString.isNumber{
-                    let creditInt = Int(creditString)
-                    newGradeInfo.credit = creditInt
+                    if let creditInt = Int(creditString){
+                        gradeCellDelegate?.didChangeCredit(credit: creditInt, tagNum: tagNum, cell: self)
+                    }
                     break
                 }
                 else{ creditTextField.text = "" }
@@ -50,11 +77,11 @@ extension GradeCell: UITextFieldDelegate{
         case gradeTextField:
             
             if let gradeString = gradeTextField.text{
-                
                 if gradeString.isNumber || (Double(gradeString) != nil){
-                    let gradeDouble = Double(gradeString)
-                    newGradeInfo.grade = gradeDouble
-                    break
+                    if let gradeDouble = Double(gradeString){
+                        gradeCellDelegate?.didChangeGrade(grade: gradeDouble, tagNum: tagNum, cell: self)
+                        break
+                    }
                 }
                 else { gradeTextField.text = "" }
             }
@@ -78,8 +105,11 @@ extension GradeCell: UITextFieldDelegate{
         }
         return true
     }
+
     
 }
+
+
 
 
 

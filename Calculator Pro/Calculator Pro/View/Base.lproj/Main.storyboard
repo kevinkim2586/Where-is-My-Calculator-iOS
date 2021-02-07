@@ -704,6 +704,14 @@
                                     </connections>
                                 </button>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdB-Ue-tgT">
+                                <rect key="frame" x="180" y="695" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="계산"/>
+                                <connections>
+                                    <action selector="pressedCalculate:" destination="h0l-1U-at8" eventType="touchUpInside" id="Plo-88-OMY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QJT-S6-uby"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
