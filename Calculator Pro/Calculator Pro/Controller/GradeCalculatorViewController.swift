@@ -33,6 +33,20 @@ class GradeCalculatorViewController: UIViewController{
     }
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
+        
+        var sum: Double = 0.0
+        
+        
+        for grade in totalGradeInfo{
+            
+            if let grade = grade.grade{
+                sum += grade
+            }
+            
+            
+            
+        }
+        print(sum)
     }
     
     
@@ -46,18 +60,12 @@ extension GradeCalculatorViewController{
     func increaseRowNum(){
         rowNum += 1
     }
-//    func createNewGradeInfo(){
-//        let newGradeInfo = GradeInfo(lectureName: nil, credit: nil, grade: nil)
-//        totalGradeInfo.append(newGradeInfo)
-//        rowNum += 1
-//    }
+
 }
 
+//MARK: - UITableViewDataSource, UITableViewDelegate
 
-
-//MARK: - UITableViewDataSource, UITableViewDelegate, GradeCellDelegate
-
-extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDelegate, GradeCellDelegate{
+extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -72,7 +80,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         cell.creditTextField.text = ""
         cell.gradeTextField.text = ""
         cell.tagNum = indexPath.row
-    
+
         cell.gradeCellDelegate = self
     
         let newGradeInfo = GradeInfo(lectureName: nil, credit: nil, grade: nil)
@@ -82,8 +90,14 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
     }
         
   
+    
+}
+
+//MARK: - GradeCellDelegate
+
+extension GradeCalculatorViewController: GradeCellDelegate{
+    
     func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell) {
-        
         totalGradeInfo[tagNum].lectureName = lecture
        
     }
@@ -97,7 +111,10 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         totalGradeInfo[tagNum].grade = grade
     
     }
+    
 }
+
+//MARK: - UITextFieldDelegate
 
 extension GradeCalculatorViewController: UITextFieldDelegate{
     
