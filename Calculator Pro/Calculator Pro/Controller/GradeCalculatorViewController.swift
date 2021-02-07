@@ -23,7 +23,9 @@ class GradeCalculatorViewController: UIViewController {
         
         gradeInfo.append(newGradeInfo)
         
-        tableView.reloadData()
+        
+        //tableView.reloadData()
+        tableView.insertRows(at: [IndexPath(row:0, section: 0)], with: .top)
     }
     
 }
@@ -46,8 +48,16 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         return cell
     }
     
-    
-    
+
 }
 
 
+extension GradeCalculatorViewController: UITextFieldDelegate{
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.view.endEditing(true)
+    }
+    
+    
+    
+}
