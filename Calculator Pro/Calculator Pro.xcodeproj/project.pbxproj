@@ -146,14 +146,12 @@
 		7CDE257725C125D80048B3CC /* Calculator Pro */ = {
 			isa = PBXGroup;
 			children = (
+				7CDF6CC725CF949E00DD67B3 /* Delegates */,
+				7CDF6CC625CF949400DD67B3 /* Assets */,
+				7CDF6CC525CF948500DD67B3 /* Constants */,
 				7CDE25B225C138F20048B3CC /* Model */,
-				7CDE25B125C138E60048B3CC /* Controller */,
 				7CDE25B025C138E10048B3CC /* View */,
-				7CDE25B825C13BD50048B3CC /* Constants.swift */,
-				7CB0198825C838C4004D9650 /* Assets.xcassets */,
-				7CDE257825C125D80048B3CC /* AppDelegate.swift */,
-				7CDE257A25C125D80048B3CC /* SceneDelegate.swift */,
-				7CDE258325C125DB0048B3CC /* LaunchScreen.storyboard */,
+				7CDE25B125C138E60048B3CC /* Controller */,
 				7CDE258625C125DB0048B3CC /* Info.plist */,
 			);
 			path = "Calculator Pro";
@@ -181,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				7CDE257E25C125D90048B3CC /* Main.storyboard */,
+				7CDE258325C125DB0048B3CC /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,10 +200,43 @@
 		7CDE25B225C138F20048B3CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7CDF6CCB25CF9C2C00DD67B3 /* NormaCalculator */,
 				7C8D8BE225CBB4BE0019FCD4 /* GoldCalculator */,
 				7CB0198125C7CDB1004D9650 /* ExchangeRate */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7CDF6CC525CF948500DD67B3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7CDE25B825C13BD50048B3CC /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		7CDF6CC625CF949400DD67B3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7CB0198825C838C4004D9650 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		7CDF6CC725CF949E00DD67B3 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				7CDE257825C125D80048B3CC /* AppDelegate.swift */,
+				7CDE257A25C125D80048B3CC /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		7CDF6CCB25CF9C2C00DD67B3 /* NormaCalculator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NormaCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

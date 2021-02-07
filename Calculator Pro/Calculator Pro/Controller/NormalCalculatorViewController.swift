@@ -1,120 +1,126 @@
 
 import UIKit
 
-class NormalCalculatorViewController: UIViewController {
+
+enum Operation: String{
     
-    @IBOutlet weak var calculatorWorkings: UILabel!
+    case add = "+"
+    case subtract = "-"
+    case divide = "/"
+    case multiply = "*"
+    case NULL = "Empty"
+}
+
+class NormalCalculatorViewController: UIViewController {
+
     @IBOutlet weak var calculatorResults: UILabel!
     
-    var workings: String = ""
+    var runningNumber = ""
+    var leftValue = ""
+    var rightValue = ""
+    var result = ""
+    var currentOperation: Operation = .NULL
     
-    var numPressedFirst: Bool = false
-    var continuingInput: Bool = false
     
-    var first: Double = 0.0
-    var second: Double = 0.0
-    var op: String = ""
-    var result: Double = 0.0
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        calculatorResults.text = "0"
     }
-    
-   
-    
+
     //MARK: - Methods
     
     @IBAction func pressedNumber(_ sender: UIButton) {
         
-        numPressedFirst = true
-        workings += sender.currentTitle!
-        calculatorResults.text = workings
-    }
-    
-    @IBAction func pressedFunction(_ sender: UIButton) {
-        
-        op = sender.currentTitle!
-        
-        if(numPressedFirst){
-            
-            if(continuingInput == true){
-                
-                calculatorWorkings.text = String(format: "%.0f", first + Double(workings)!) + op
-                
-                first = first + Double(workings)!
-                
-                clearResultsLabel()
-            }
-            else{
-                calculatorWorkings.text = workings + sender.currentTitle!
-                first = Double(workings) ?? 0
-                
-                clearResultsLabel()
-                numPressedFirst = false
-                
-                continuingInput = true
-            }
+        if runningNumber.count <= 8{                // 입력 숫자 제한
+            runningNumber += "\(sender.tag)"
+            calculatorResults.text = runningNumber
         }
     }
     
+    @IBAction func pressedDot(_ sender: UIButton) {
+        
+        if runningNumber.count <= 7{                // 마지막 input 이 "." 이면 안 됨
+            runningNumber += "."
+            calculatorResults.text = runningNumber
+        }
+    }
     
     @IBAction func pressedEqual(_ sender: UIButton) {
+        operation(operation: currentOperation)
+    }
+    
+    @IBAction func pressedAdd(_ sender: UIButton) {
+        operation(operation: .add)
+    }
+    
+    @IBAction func pressedSubtract(_ sender: UIButton) {
+        operation(operation: .subtract)
+    }
+    
+    @IBAction func pressedMultiply(_ sender: UIButton) {
+        operation(operation: .multiply)
+    }
+    
+    @IBAction func pressedDivide(_ sender: UIButton) {
+        operation(operation: .divide)
+    }
+    
+    func operation(operation: Operation){
         
-        second = Double(workings) ?? 0
-        calculatorWorkings.text! += calculatorResults.text ?? "Error"
-        
-        calculate(with: op)
-        
-        if(result.truncatingRemainder(dividingBy: 1)==0){
-            calculatorResults.text = String(format: "%.0f", result)
-            workings = calculatorResults.text!
+        if currentOperation != .NULL{
+            
+            if runningNumber != ""{
+                rightValue = runningNumber
+                runningNumber = ""
+                
+                if currentOperation == .add{
+                    result = "\(Double(leftValue)! + Double(rightValue)!)"
+                }
+                else if currentOperation == .subtract{
+                    result = "\(Double(leftValue)! - Double(rightValue)!)"
+                }
+                else if currentOperation == .multiply{
+                    result = "\(Double(leftValue)! * Double(rightValue)!)"
+                }
+                else if currentOperation == .divide{
+                    result = "\(Double(leftValue)! / Double(rightValue)!)"
+                }
+                leftValue = result
+                
+                if (Double(result)!.truncatingRemainder(dividingBy: 1) == 0){       // If is divisible by 1
+                    result = "\(Int(Double(result)!))"
+                }
+                calculatorResults.text = result
+            }
+            currentOperation = operation
         }
         else{
-            calculatorResults.text = String(format: "%.2f", result)
-            workings = calculatorResults.text!
+            leftValue = runningNumber
+            runningNumber = ""
+            currentOperation = operation
         }
     }
-        
-    func calculate(with op: String){
-        
-        switch op{
-        case "+": result = first + second
-        case "-": result = first - second
-        case "*": result = first * second
-        case "/": result = first / second
-            
-        default:
-            print("Error in calculate()")
-        }
-    }
-    
-    
-    
+  
     //MARK: - Clearing functions
     @IBAction func allClearTap(_ sender: UIButton) {
-        clearAll()
+        
+        runningNumber = ""
+        leftValue = ""
+        rightValue = ""
+        result = ""
+        currentOperation = .NULL
+        calculatorResults.text = "0"
     }
     
     @IBAction func backTap(_ sender: UIButton) {
         
-        if(!workings.isEmpty){
-            workings.removeLast()
-            calculatorResults.text = workings
+        if(!runningNumber.isEmpty){
+            runningNumber.removeLast()
+            calculatorResults.text = runningNumber
         }
     }
-    // Clears all two labels
-    func clearAll(){
-        workings = ""
-        calculatorWorkings.text = ""
-        calculatorResults.text = "0"
-        continuingInput = false
-    }
     
-    // Only clears the result label
-    func clearResultsLabel(){
-        
-        workings = ""
-        calculatorResults.text = ""
-    }
 }
 
