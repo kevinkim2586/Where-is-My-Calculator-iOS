@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C8D8BD925CBA2F00019FCD4 /* ExchangeRateCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */; };
-		7C8D8BDE25CBAF280019FCD4 /* GoldCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */; };
-		7C8D8BE425CBB4D30019FCD4 /* GoldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BE325CBB4D30019FCD4 /* GoldData.swift */; };
-		7C8D8BEC25CBB4F60019FCD4 /* GoldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8D8BEB25CBB4F60019FCD4 /* GoldModel.swift */; };
+		7CA9327225D183B400BD71C2 /* NormalCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326525D183B400BD71C2 /* NormalCalculatorManager.swift */; };
+		7CA9327325D183B400BD71C2 /* GoldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326725D183B400BD71C2 /* GoldData.swift */; };
+		7CA9327425D183B400BD71C2 /* GoldCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */; };
+		7CA9327525D183B400BD71C2 /* GoldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326925D183B400BD71C2 /* GoldModel.swift */; };
+		7CA9327625D183B400BD71C2 /* ExchangeRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326B25D183B400BD71C2 /* ExchangeRateManager.swift */; };
+		7CA9327725D183B400BD71C2 /* ExchangeRateCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326C25D183B400BD71C2 /* ExchangeRateCalculation.swift */; };
+		7CA9327825D183B400BD71C2 /* ExchangeRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326D25D183B400BD71C2 /* ExchangeRateModel.swift */; };
+		7CA9327925D183B400BD71C2 /* ExchangeRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326E25D183B400BD71C2 /* ExchangeRateData.swift */; };
+		7CA9327A25D183B400BD71C2 /* GradeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9327025D183B400BD71C2 /* GradeInfo.swift */; };
+		7CA9327B25D183B400BD71C2 /* GradeCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9327125D183B400BD71C2 /* GradeCalculatorManager.swift */; };
 		7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */; };
 		7CB0196625C7B3AB004D9650 /* DiscountCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */; };
 		7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */; };
-		7CB0197025C7BBD2004D9650 /* ExchangeRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196F25C7BBD2004D9650 /* ExchangeRateManager.swift */; };
-		7CB0197825C7C87D004D9650 /* ExchangeRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0197725C7C87D004D9650 /* ExchangeRateData.swift */; };
-		7CB0197D25C7CB6A004D9650 /* ExchangeRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0197C25C7CB6A004D9650 /* ExchangeRateModel.swift */; };
 		7CB0198925C838C4004D9650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB0198825C838C4004D9650 /* Assets.xcassets */; };
 		7CB0199C25C8E225004D9650 /* ExtraFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0199B25C8E225004D9650 /* ExtraFiles.swift */; };
 		7CDE257925C125D80048B3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE257825C125D80048B3CC /* AppDelegate.swift */; };
@@ -31,8 +34,6 @@
 		7CDF6CD825CF9FEE00DD67B3 /* GradeCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF6CD725CF9FEE00DD67B3 /* GradeCalculatorViewController.swift */; };
 		7CDF6CE225CFA54E00DD67B3 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF6CE025CFA54E00DD67B3 /* GradeCell.swift */; };
 		7CDF6CE325CFA54E00DD67B3 /* GradeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF6CE125CFA54E00DD67B3 /* GradeCell.xib */; };
-		7CDF6CEC25CFAA5C00DD67B3 /* GradeCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF6CEB25CFAA5C00DD67B3 /* GradeCalculatorManager.swift */; };
-		7CDF6CF425CFAA7C00DD67B3 /* GradeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF6CF325CFAA7C00DD67B3 /* GradeInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,16 +54,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculation.swift; sourceTree = "<group>"; };
-		7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculatorManager.swift; sourceTree = "<group>"; };
-		7C8D8BE325CBB4D30019FCD4 /* GoldData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldData.swift; sourceTree = "<group>"; };
-		7C8D8BEB25CBB4F60019FCD4 /* GoldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldModel.swift; sourceTree = "<group>"; };
+		7CA9326525D183B400BD71C2 /* NormalCalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalCalculatorManager.swift; sourceTree = "<group>"; };
+		7CA9326725D183B400BD71C2 /* GoldData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldData.swift; sourceTree = "<group>"; };
+		7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldCalculatorManager.swift; sourceTree = "<group>"; };
+		7CA9326925D183B400BD71C2 /* GoldModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldModel.swift; sourceTree = "<group>"; };
+		7CA9326B25D183B400BD71C2 /* ExchangeRateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateManager.swift; sourceTree = "<group>"; };
+		7CA9326C25D183B400BD71C2 /* ExchangeRateCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculation.swift; sourceTree = "<group>"; };
+		7CA9326D25D183B400BD71C2 /* ExchangeRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateModel.swift; sourceTree = "<group>"; };
+		7CA9326E25D183B400BD71C2 /* ExchangeRateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateData.swift; sourceTree = "<group>"; };
+		7CA9327025D183B400BD71C2 /* GradeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeInfo.swift; sourceTree = "<group>"; };
+		7CA9327125D183B400BD71C2 /* GradeCalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeCalculatorManager.swift; sourceTree = "<group>"; };
 		7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
-		7CB0196F25C7BBD2004D9650 /* ExchangeRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateManager.swift; sourceTree = "<group>"; };
-		7CB0197725C7C87D004D9650 /* ExchangeRateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateData.swift; sourceTree = "<group>"; };
-		7CB0197C25C7CB6A004D9650 /* ExchangeRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateModel.swift; sourceTree = "<group>"; };
 		7CB0198825C838C4004D9650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CB0199B25C8E225004D9650 /* ExtraFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraFiles.swift; sourceTree = "<group>"; };
 		7CDE257525C125D80048B3CC /* Calculator Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,8 +87,6 @@
 		7CDF6CD725CF9FEE00DD67B3 /* GradeCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CDF6CE025CFA54E00DD67B3 /* GradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		7CDF6CE125CFA54E00DD67B3 /* GradeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeCell.xib; sourceTree = "<group>"; };
-		7CDF6CEB25CFAA5C00DD67B3 /* GradeCalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCalculatorManager.swift; sourceTree = "<group>"; };
-		7CDF6CF325CFAA7C00DD67B3 /* GradeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,25 +114,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7C8D8BE225CBB4BE0019FCD4 /* GoldCalculator */ = {
+		7CA9326325D183B400BD71C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C8D8BDD25CBAF280019FCD4 /* GoldCalculatorManager.swift */,
-				7C8D8BE325CBB4D30019FCD4 /* GoldData.swift */,
-				7C8D8BEB25CBB4F60019FCD4 /* GoldModel.swift */,
+				7CA9326425D183B400BD71C2 /* NormalCalculator */,
+				7CA9326625D183B400BD71C2 /* GoldCalculator */,
+				7CA9326A25D183B400BD71C2 /* ExchangeRate */,
+				7CA9326F25D183B400BD71C2 /* GradeCalculator */,
 			);
-			name = GoldCalculator;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		7CB0198125C7CDB1004D9650 /* ExchangeRate */ = {
+		7CA9326425D183B400BD71C2 /* NormalCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				7CB0196F25C7BBD2004D9650 /* ExchangeRateManager.swift */,
-				7CB0197725C7C87D004D9650 /* ExchangeRateData.swift */,
-				7CB0197C25C7CB6A004D9650 /* ExchangeRateModel.swift */,
-				7C8D8BD825CBA2F00019FCD4 /* ExchangeRateCalculation.swift */,
+				7CA9326525D183B400BD71C2 /* NormalCalculatorManager.swift */,
 			);
-			name = ExchangeRate;
+			path = NormalCalculator;
+			sourceTree = "<group>";
+		};
+		7CA9326625D183B400BD71C2 /* GoldCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				7CA9326725D183B400BD71C2 /* GoldData.swift */,
+				7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */,
+				7CA9326925D183B400BD71C2 /* GoldModel.swift */,
+			);
+			path = GoldCalculator;
+			sourceTree = "<group>";
+		};
+		7CA9326A25D183B400BD71C2 /* ExchangeRate */ = {
+			isa = PBXGroup;
+			children = (
+				7CA9326B25D183B400BD71C2 /* ExchangeRateManager.swift */,
+				7CA9326C25D183B400BD71C2 /* ExchangeRateCalculation.swift */,
+				7CA9326D25D183B400BD71C2 /* ExchangeRateModel.swift */,
+				7CA9326E25D183B400BD71C2 /* ExchangeRateData.swift */,
+			);
+			path = ExchangeRate;
+			sourceTree = "<group>";
+		};
+		7CA9326F25D183B400BD71C2 /* GradeCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				7CA9327025D183B400BD71C2 /* GradeInfo.swift */,
+				7CA9327125D183B400BD71C2 /* GradeCalculatorManager.swift */,
+			);
+			path = GradeCalculator;
 			sourceTree = "<group>";
 		};
 		7CDE256C25C125D80048B3CC = {
@@ -159,7 +189,7 @@
 				7CDF6CC725CF949E00DD67B3 /* Delegates */,
 				7CDF6CC625CF949400DD67B3 /* Assets */,
 				7CDF6CC525CF948500DD67B3 /* Constants */,
-				7CDE25B225C138F20048B3CC /* Model */,
+				7CA9326325D183B400BD71C2 /* Model */,
 				7CDE25B025C138E10048B3CC /* View */,
 				7CDE25B125C138E60048B3CC /* Controller */,
 				7CDE258625C125DB0048B3CC /* Info.plist */,
@@ -209,16 +239,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		7CDE25B225C138F20048B3CC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7CDF6CEA25CFAA4E00DD67B3 /* GradeCalculator */,
-				7C8D8BE225CBB4BE0019FCD4 /* GoldCalculator */,
-				7CB0198125C7CDB1004D9650 /* ExchangeRate */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		7CDF6CC525CF948500DD67B3 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,15 +271,6 @@
 				7CDF6CE125CFA54E00DD67B3 /* GradeCell.xib */,
 			);
 			path = GradeCalculatorViews;
-			sourceTree = "<group>";
-		};
-		7CDF6CEA25CFAA4E00DD67B3 /* GradeCalculator */ = {
-			isa = PBXGroup;
-			children = (
-				7CDF6CEB25CFAA5C00DD67B3 /* GradeCalculatorManager.swift */,
-				7CDF6CF325CFAA7C00DD67B3 /* GradeInfo.swift */,
-			);
-			name = GradeCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,26 +404,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CB0197825C7C87D004D9650 /* ExchangeRateData.swift in Sources */,
-				7C8D8BEC25CBB4F60019FCD4 /* GoldModel.swift in Sources */,
-				7CB0197D25C7CB6A004D9650 /* ExchangeRateModel.swift in Sources */,
+				7CA9327725D183B400BD71C2 /* ExchangeRateCalculation.swift in Sources */,
 				7CDF6CE225CFA54E00DD67B3 /* GradeCell.swift in Sources */,
-				7C8D8BD925CBA2F00019FCD4 /* ExchangeRateCalculation.swift in Sources */,
+				7CA9327225D183B400BD71C2 /* NormalCalculatorManager.swift in Sources */,
+				7CA9327A25D183B400BD71C2 /* GradeInfo.swift in Sources */,
 				7CB0199C25C8E225004D9650 /* ExtraFiles.swift in Sources */,
+				7CA9327825D183B400BD71C2 /* ExchangeRateModel.swift in Sources */,
 				7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */,
+				7CA9327B25D183B400BD71C2 /* GradeCalculatorManager.swift in Sources */,
 				7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */,
+				7CA9327525D183B400BD71C2 /* GoldModel.swift in Sources */,
+				7CA9327325D183B400BD71C2 /* GoldData.swift in Sources */,
 				7CDF6CD825CF9FEE00DD67B3 /* GradeCalculatorViewController.swift in Sources */,
+				7CA9327425D183B400BD71C2 /* GoldCalculatorManager.swift in Sources */,
 				7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */,
-				7C8D8BE425CBB4D30019FCD4 /* GoldData.swift in Sources */,
-				7CB0197025C7BBD2004D9650 /* ExchangeRateManager.swift in Sources */,
 				7CDE257D25C125D80048B3CC /* NormalCalculatorViewController.swift in Sources */,
-				7CDF6CF425CFAA7C00DD67B3 /* GradeInfo.swift in Sources */,
 				7CDE257925C125D80048B3CC /* AppDelegate.swift in Sources */,
 				7CB0196625C7B3AB004D9650 /* DiscountCalculatorViewController.swift in Sources */,
+				7CA9327925D183B400BD71C2 /* ExchangeRateData.swift in Sources */,
 				7CDE257B25C125D80048B3CC /* SceneDelegate.swift in Sources */,
 				7CDE25B425C139770048B3CC /* HomeViewController.swift in Sources */,
-				7CDF6CEC25CFAA5C00DD67B3 /* GradeCalculatorManager.swift in Sources */,
-				7C8D8BDE25CBAF280019FCD4 /* GoldCalculatorManager.swift in Sources */,
+				7CA9327625D183B400BD71C2 /* ExchangeRateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
