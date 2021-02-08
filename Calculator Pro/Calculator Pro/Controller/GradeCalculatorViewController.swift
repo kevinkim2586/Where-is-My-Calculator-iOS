@@ -16,7 +16,6 @@ class GradeCalculatorViewController: UIViewController{
        
         tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
         
-        
    
     }
 
@@ -61,6 +60,12 @@ extension GradeCalculatorViewController{
         rowNum += 1
     }
 
+    
+    func createNewGradeInfo(){
+        
+        let newGradeInfo = GradeInfo(lectureName: nil, credit: nil, grade: nil)
+        totalGradeInfo.append(newGradeInfo)
+    }
 }
 
 //MARK: - UITableViewDataSource, UITableViewDelegate
@@ -80,17 +85,13 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         cell.creditTextField.text = ""
         cell.gradeTextField.text = ""
         cell.tagNum = indexPath.row
-
+        
         cell.gradeCellDelegate = self
     
-        let newGradeInfo = GradeInfo(lectureName: nil, credit: nil, grade: nil)
-        totalGradeInfo.append(newGradeInfo)
+        createNewGradeInfo()
     
         return cell
     }
-        
-  
-    
 }
 
 //MARK: - GradeCellDelegate
@@ -99,17 +100,14 @@ extension GradeCalculatorViewController: GradeCellDelegate{
     
     func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].lectureName = lecture
-       
     }
     
     func didChangeCredit(credit: Int, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].credit = credit
-    
     }
 
     func didChangeGrade(grade: Double, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].grade = grade
-    
     }
     
 }
@@ -121,9 +119,6 @@ extension GradeCalculatorViewController: UITextFieldDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
     }
-    
-    
-    
 }
 
 

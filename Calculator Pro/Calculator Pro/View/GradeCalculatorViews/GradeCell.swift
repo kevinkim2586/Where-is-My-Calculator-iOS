@@ -2,14 +2,11 @@ import UIKit
 
 protocol GradeCellDelegate{
     
-    
-    
     func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell)
-    
     func didChangeCredit(credit: Int, tagNum: Int, cell: GradeCell)
-    
     func didChangeGrade(grade: Double, tagNum: Int, cell: GradeCell)
 }
+
 
 
 class GradeCell: UITableViewCell {

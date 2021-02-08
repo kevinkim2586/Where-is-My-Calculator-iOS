@@ -9,5 +9,3 @@ struct GradeInfo{
 }
 
 var totalGradeInfo: [GradeInfo] = []
-
-var count: Int = 0
