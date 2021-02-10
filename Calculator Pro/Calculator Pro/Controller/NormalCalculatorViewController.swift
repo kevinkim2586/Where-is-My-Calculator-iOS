@@ -23,7 +23,6 @@ class NormalCalculatorViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         calculatorResults.text = "0"
     }
 
@@ -87,7 +86,7 @@ class NormalCalculatorViewController: UIViewController {
                 }
                 leftValue = result
                 
-                if (Double(result)!.truncatingRemainder(dividingBy: 1) == 0){       // If is divisible by 1
+                if (Double(result)!.truncatingRemainder(dividingBy: 1) == 0){       // If divisible by 1
                     result = "\(Int(Double(result)!))"
                 }
                 calculatorResults.text = result

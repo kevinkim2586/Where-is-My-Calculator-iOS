@@ -15,8 +15,6 @@ class GradeCalculatorViewController: UIViewController{
         tableView.delegate = self
        
         tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
-        
-   
     }
 
     @IBAction func pressedAddButton(_ sender: UIButton) {
@@ -33,6 +31,8 @@ class GradeCalculatorViewController: UIViewController{
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
         
+        // 아래 수정 필요
+        
         var sum: Double = 0.0
         
         
@@ -41,7 +41,6 @@ class GradeCalculatorViewController: UIViewController{
             if let grade = grade.grade{
                 sum += grade
             }
-            
             
             
         }
@@ -73,7 +72,6 @@ extension GradeCalculatorViewController{
 extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return rowNum
     }
     
