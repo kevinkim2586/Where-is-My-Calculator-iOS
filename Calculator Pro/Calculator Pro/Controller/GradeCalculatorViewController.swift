@@ -4,12 +4,10 @@ class GradeCalculatorViewController: UIViewController{
 
     @IBOutlet weak var tableView: UITableView!
     
-    var rowNum = 0
+    var rowNum = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        increaseRowNum()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -58,6 +56,9 @@ extension GradeCalculatorViewController{
     func increaseRowNum(){
         rowNum += 1
     }
+    func decreaseRowNum(){
+        rowNum -= 1
+    }
 
     
     func createNewGradeInfo(){
@@ -90,6 +91,31 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
     
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    
+        if editingStyle == .delete{
+            
+            tableView.beginUpdates()
+            
+            totalGradeInfo.remove(at: indexPath.row)
+            decreaseRowNum()
+            tableView.deleteRows(at: [indexPath], with: .fade )
+            
+            tableView.endUpdates()
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
 }
 
 //MARK: - GradeCellDelegate

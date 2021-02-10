@@ -7,8 +7,6 @@ protocol GradeCellDelegate{
     func didChangeGrade(grade: Double, tagNum: Int, cell: GradeCell)
 }
 
-
-
 class GradeCell: UITableViewCell {
     
     @IBOutlet weak var lectureTextField: UITextField!
