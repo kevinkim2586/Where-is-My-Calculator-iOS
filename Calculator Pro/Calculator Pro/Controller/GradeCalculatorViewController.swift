@@ -59,8 +59,6 @@ extension GradeCalculatorViewController{
     func decreaseRowNum(){
         rowNum -= 1
     }
-
-    
     func createNewGradeInfo(){
         
         let newGradeInfo = GradeInfo(lectureName: nil, credit: nil, grade: nil)
