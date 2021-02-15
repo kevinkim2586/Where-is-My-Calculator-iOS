@@ -76,6 +76,8 @@ extension ExchangeRateManager{
         fetchCurrentDate()
         
         //let urlString = "\(Constants.ExchangeRateStrings.basicURL)\(Constants.ExchangeRateStrings.keyForExchangeRate)&searchdate=\(currentDate)&data=\(apiRequestType)"
+        
+        // 최종 출시 때 그날그날 Date 받아오는거 반드시 다시 설정!
     
         let urlString = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?authkey=0KWEJK5Ttln2L2s44erbx7aJbz0cCbdi&searchdate=20210203&data=AP01"
         

@@ -36,9 +36,9 @@ class GradeCell: UITableViewCell {
 
 extension GradeCell{
     
-    func registerGradeInfoToDB(_ gradeInfo: GradeInfo){
-        totalGradeInfo.insert(gradeInfo, at: totalGradeInfo.endIndex)
-    }
+    
+    
+    
 }
 
 
@@ -46,7 +46,6 @@ extension GradeCell{
 
 extension GradeCell: UITextFieldDelegate{
 
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
      
         switch textField{
@@ -73,6 +72,7 @@ extension GradeCell: UITextFieldDelegate{
                 if gradeString.isNumber || (Double(gradeString) != nil){
                     if let gradeDouble = Double(gradeString){
                         gradeCellDelegate?.didChangeGrade(grade: gradeDouble, tagNum: tagNum, cell: self)
+                        
                         break
                     }
                 }

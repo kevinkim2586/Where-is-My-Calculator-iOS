@@ -1,3 +1,4 @@
+
 import UIKit
 
 class GradeCalculatorViewController: UIViewController{
@@ -17,6 +18,12 @@ class GradeCalculatorViewController: UIViewController{
         tableView.delegate = self
        
         tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // View 를 껐다가 다시 키면 totalGradInfo.count 가 초기화되지 않는 상태임
     }
 
     @IBAction func pressedAddButton(_ sender: UIButton) {
@@ -46,7 +53,6 @@ class GradeCalculatorViewController: UIViewController{
 }
 
 //MARK: - Methods
-
 extension GradeCalculatorViewController{
     
     func increaseRowNum(){
@@ -63,7 +69,6 @@ extension GradeCalculatorViewController{
 }
 
 //MARK: - UITableViewDataSource, UITableViewDelegate
-
 extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,7 +111,6 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
 }
 
 //MARK: - GradeCellDelegate
-
 extension GradeCalculatorViewController: GradeCellDelegate{
     
     func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell) {
@@ -124,7 +128,6 @@ extension GradeCalculatorViewController: GradeCellDelegate{
 }
 
 //MARK: - UITextFieldDelegate
-
 extension GradeCalculatorViewController: UITextFieldDelegate{
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -134,7 +137,6 @@ extension GradeCalculatorViewController: UITextFieldDelegate{
 
 
 //MARK: - Alert Handling Method
-
 extension GradeCalculatorViewController{
     
     func createAlertMessage(_ title: String, _ message: String){

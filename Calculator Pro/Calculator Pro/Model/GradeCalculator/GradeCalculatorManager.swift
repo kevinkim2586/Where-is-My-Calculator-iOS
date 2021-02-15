@@ -27,13 +27,10 @@ struct GradeCalculatorManager{
             }
         }
         
-        totalGrade = totalGrade / Double(gradeInfo.count)
+        totalGrade = Double(totalGrade) / Double(gradeInfo.count)
+        print(gradeInfo.count)
         
         return totalGrade
     }
-    
-    
-    
-    
-    
+
 }

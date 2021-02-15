@@ -2,7 +2,6 @@ struct Constants{
     
     struct Segues{
         static let normalCalculatorSegue = "HomeToNormal"
-        
     }
     
     struct ExchangeRateStrings{
@@ -10,10 +9,12 @@ struct Constants{
         static let basicURL = "https://www.koreaexim.go.ksr/site/program/financial/exchangeJSON?authkey="
     }
     
-    
     struct GradeCalcStrings{
         static let cellIdentifier = "ReusableCell"
         static let cellNibName = "GradeCell"
+        static let userDefaultsKey = "savedGradeInfo"
     }
+    
+    
     
 }
