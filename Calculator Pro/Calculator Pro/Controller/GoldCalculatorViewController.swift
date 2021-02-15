@@ -3,7 +3,6 @@ import UIKit
 
 class GoldCalculatorViewController: UIViewController {
 
-    
     @IBOutlet weak var goldUnitPickerTextField: UITextField!
     @IBOutlet weak var userInputTextField: UITextField!
     @IBOutlet weak var resultTextField: UITextField!
@@ -26,10 +25,19 @@ class GoldCalculatorViewController: UIViewController {
         userInputTextField.becomeFirstResponder()
     
         createPickerView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
-        goldCalculatorManager.fetchGoldPrice()
+        let operation = OperationQueue()
+        operation.addOperation {
+            self.goldCalculatorManager.fetchGoldPrice()
+        }
     }
 }
+
+
+
 
 //MARK: - @IBAction Methods
 
@@ -41,14 +49,10 @@ extension GoldCalculatorViewController{
             goldCalculatorManager.inputAmount = inputAmount
         }
     }
-    
     func setGoldUnit(inputUnit: String){
-
         goldCalculatorManager.setGoldUnit(unit: inputUnit)
     }
     
-    
-    // 버튼을 누름과 동시에 계산이 될 수 있도록 구현
     @IBAction func pressedNumber(_ sender: UIButton) {
         
         if let inputNum = sender.currentTitle, let inputGoldUnit = goldUnitPickerTextField.text{

@@ -12,12 +12,4 @@ class HomeViewController: UIViewController {
 
         
     }
-    
-    @IBAction func pressedNormalCalculatorButton(_ sender: UIButton) {
-        
-        
-    }
-    
-
-
 }

@@ -5,7 +5,6 @@ import Foundation
 protocol GoldCalculatorManagerDelegate{
     
     func didUpdateGoldPrice(_ goldCalculatorManager: GoldCalculatorManager, goldModel: GoldModel)
-    
     func didFailWithError(error: Error)
 }
 
@@ -66,7 +65,6 @@ extension GoldCalculatorManager{
             let metal = decodedData.metal
             let price = decodedData.price
         
-            
             let goldModel = GoldModel(metal: metal, currency: currency, price: price, finalResult: nil)
             
             return goldModel

@@ -40,7 +40,6 @@ extension GradeCell{
         
         totalGradeInfo.insert(gradeInfo, at: totalGradeInfo.endIndex)
     }
-
 }
 
 

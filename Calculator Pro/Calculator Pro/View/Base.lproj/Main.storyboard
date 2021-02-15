@@ -32,8 +32,7 @@
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressedNormalCalculatorButton:" destination="qd3-6I-26W" eventType="touchUpInside" id="eR4-fB-pJq"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="5iU-3o-sLX"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="GiF-oh-n8Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onU-Rg-45f">
