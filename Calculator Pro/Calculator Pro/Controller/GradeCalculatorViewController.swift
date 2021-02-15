@@ -8,7 +8,7 @@ class GradeCalculatorViewController: UIViewController{
     
     var rowNum = 1
     
-    var activeTextField = UITextField()
+    var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,23 +32,13 @@ class GradeCalculatorViewController: UIViewController{
     @IBAction func pressedCalculate(_ sender: UIButton) {
 
         self.view.endEditing(true)
+    
+        let totalCredit = gradeCalculatorManager.calculateFinalCredit(gradeInfo: totalGradeInfo)
+        let totalGrade = gradeCalculatorManager.calculateFinalGrade(gradeInfo: totalGradeInfo)
         
         
-        var sumGrade: Double = 0.0
-        var sumCredit = 0
-        
-        
-        for grade in totalGradeInfo{
-            
-            if let grade = grade.grade{
-                sumGrade += grade
-            }
-            if let credit = grade.credit{
-                sumCredit += credit
-            }
-        }
-        print(sumGrade)
-        print(sumCredit)
+        totalCreditLabel.text = String(format: "%d", totalCredit)
+        totalGradeLabel.text = String(format: "%.2f", totalGrade)
     }
     
     
@@ -113,12 +103,6 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             tableView.endUpdates()
         }
     }
-    
-    
-    
-    
-    
-    
 }
 
 //MARK: - GradeCellDelegate

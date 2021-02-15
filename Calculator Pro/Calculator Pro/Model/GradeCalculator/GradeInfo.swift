@@ -7,5 +7,4 @@ struct GradeInfo{
     var grade: Double?
 
 }
-
 var totalGradeInfo: [GradeInfo] = []
