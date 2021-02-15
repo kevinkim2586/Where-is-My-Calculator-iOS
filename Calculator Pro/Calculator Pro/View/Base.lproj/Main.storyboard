@@ -28,7 +28,7 @@
                                 <rect key="frame" x="20" y="153" width="125" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="WIM_Blue"/>
-                                <state key="normal" backgroundImage="list.number" catalog="system">
+                                <state key="normal" backgroundImage="NormalCalc Button">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
@@ -36,10 +36,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onU-Rg-45f">
-                                <rect key="frame" x="21" y="358" width="133" height="96"/>
+                                <rect key="frame" x="21" y="342" width="133" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="WIM_Blue"/>
-                                <state key="normal" backgroundImage="macmini" catalog="system">
+                                <state key="normal" backgroundImage="GoldCalc Button">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
@@ -50,17 +50,16 @@
                                 <rect key="frame" x="218" y="152.33333333333337" width="125" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="WIM_Blue"/>
-                                <state key="normal" backgroundImage="dollarsign.circle" catalog="system"/>
+                                <state key="normal" backgroundImage="ExchangeRate Button"/>
                                 <connections>
-                                    <action selector="pressedNormalCalculatorButton:" destination="qd3-6I-26W" eventType="touchUpInside" id="SUd-Ly-EnH"/>
-                                    <segue destination="3mm-lk-Rep" kind="presentation" id="U0V-x1-dfp"/>
+                                    <segue destination="3mm-lk-Rep" kind="presentation" id="SAt-zY-uVG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFX-VY-rSd">
                                 <rect key="frame" x="218" y="342" width="125" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="WIM_Blue"/>
-                                <state key="normal" backgroundImage="pencil.circle" catalog="system"/>
+                                <state key="normal" backgroundImage="GradeCalc Button"/>
                                 <connections>
                                     <segue destination="h0l-1U-at8" kind="presentation" id="1TB-JB-dBE"/>
                                 </connections>
@@ -1061,15 +1060,15 @@
         <image name="Clear Button" width="35" height="35"/>
         <image name="Decimal Button" width="35.333332061767578" height="35"/>
         <image name="Equal Button" width="35.333332061767578" height="35"/>
+        <image name="ExchangeRate Button" width="57.666667938232422" height="57.666667938232422"/>
+        <image name="GoldCalc Button" width="57.666667938232422" height="57.666667938232422"/>
+        <image name="GradeCalc Button" width="57.666667938232422" height="57.666667938232422"/>
         <image name="Minus Button" width="35.333332061767578" height="35.666667938232422"/>
         <image name="Multiplication Button" width="35.333332061767578" height="35.333332061767578"/>
+        <image name="NormalCalc Button" width="57.666667938232422" height="57.666667938232422"/>
         <image name="Plus Button" width="35.333332061767578" height="35.333332061767578"/>
         <image name="Slash Button" width="35.333332061767578" height="35"/>
-        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="equal.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="list.number" catalog="system" width="128" height="97"/>
-        <image name="macmini" catalog="system" width="128" height="62"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
