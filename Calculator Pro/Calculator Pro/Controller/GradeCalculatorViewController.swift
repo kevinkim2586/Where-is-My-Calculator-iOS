@@ -6,6 +6,8 @@ class GradeCalculatorViewController: UIViewController{
     
     var rowNum = 1
     
+    var activeTextField = UITextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,21 +30,25 @@ class GradeCalculatorViewController: UIViewController{
     }
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
+
+        self.view.endEditing(true)
         
-        // 아래 수정 필요
         
-        var sum: Double = 0.0
+        var sumGrade: Double = 0.0
+        var sumCredit = 0
         
         
         for grade in totalGradeInfo{
             
             if let grade = grade.grade{
-                sum += grade
+                sumGrade += grade
             }
-            
-            
+            if let credit = grade.credit{
+                sumCredit += credit
+            }
         }
-        print(sum)
+        print(sumGrade)
+        print(sumCredit)
     }
     
     
@@ -105,7 +111,6 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             tableView.deleteRows(at: [indexPath], with: .fade )
             
             tableView.endUpdates()
-            
         }
     }
     

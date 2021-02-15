@@ -37,7 +37,6 @@ class GradeCell: UITableViewCell {
 extension GradeCell{
     
     func registerGradeInfoToDB(_ gradeInfo: GradeInfo){
-        
         totalGradeInfo.insert(gradeInfo, at: totalGradeInfo.endIndex)
     }
 }
@@ -46,10 +45,10 @@ extension GradeCell{
 //MARK: - UITextFieldDelegate
 
 extension GradeCell: UITextFieldDelegate{
+
     
     func textFieldDidEndEditing(_ textField: UITextField) {
      
-        
         switch textField{
         case lectureTextField:
             
@@ -104,8 +103,7 @@ extension GradeCell: UITextFieldDelegate{
 }
 
 
-
-
+//MARK: - String Extensions
 
 extension String  {
     var isNumber: Bool {
