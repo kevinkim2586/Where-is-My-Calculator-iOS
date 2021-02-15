@@ -694,8 +694,9 @@
                                     <constraint firstAttribute="height" constant="550" id="fjE-cA-LUU"/>
                                 </constraints>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bep-G4-lRz">
-                                    <rect key="frame" x="0.0" y="0.0" width="358" height="22"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="57"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <size key="titleShadowOffset" width="-20" height="0.0"/>
                                     <state key="normal" image="plus" catalog="system"/>
                                     <connections>
                                         <action selector="pressedAddButton:" destination="h0l-1U-at8" eventType="touchUpInside" id="b3G-9D-ady"/>
@@ -703,13 +704,41 @@
                                 </button>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdB-Ue-tgT">
-                                <rect key="frame" x="180" y="695" width="30" height="30"/>
+                                <rect key="frame" x="323" y="740" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="계산"/>
                                 <connections>
                                     <action selector="pressedCalculate:" destination="h0l-1U-at8" eventType="touchUpInside" id="Plo-88-OMY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwY-Ev-drh" userLabel="Result View">
+                                <rect key="frame" x="16" y="678" width="358" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="평균평점" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0F-cx-eGf" userLabel="평균평점">
+                                        <rect key="frame" x="24" y="8" width="70" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-tE-XE1">
+                                        <rect key="frame" x="176" y="8" width="70" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" systemColor="labelColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEI-Jr-fXY">
+                                        <rect key="frame" x="287" y="9" width="70" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QJT-S6-uby"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -720,6 +749,8 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="wsO-uc-tA8" id="J8V-dt-InQ"/>
+                        <outlet property="totalCreditLabel" destination="zqj-tE-XE1" id="jmE-4C-BTH"/>
+                        <outlet property="totalGradeLabel" destination="SEI-Jr-fXY" id="3LQ-mq-xNR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iJ-r9-zcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1076,6 +1107,9 @@
         <namedColor name="WIM_Blue">
             <color red="0.019607843137254902" green="0.83529411764705885" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

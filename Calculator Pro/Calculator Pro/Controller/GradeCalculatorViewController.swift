@@ -3,6 +3,8 @@ import UIKit
 class GradeCalculatorViewController: UIViewController{
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalCreditLabel: UILabel!
+    @IBOutlet weak var totalGradeLabel: UILabel!
     
     var rowNum = 1
     
@@ -23,10 +25,8 @@ class GradeCalculatorViewController: UIViewController{
             createAlertMessage("과목 수 제한", "10개 이상의 과목을 입력할 수 없습니다.")
             return
         }
-        
         increaseRowNum()
         tableView.insertRows(at: [IndexPath(row:rowNum-1, section: 0)], with: .bottom)
-        
     }
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
