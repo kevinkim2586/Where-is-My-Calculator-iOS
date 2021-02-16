@@ -3,6 +3,7 @@ import UIKit
 class UnitConverterViewController: UIViewController {
 
     @IBOutlet weak var unitFromButton: UIButton!
+    @IBOutlet weak var unitToButton: UIButton!
     
     var unitConverterManager = UnitConverterManager(selectedSection: 0)
     
@@ -57,7 +58,7 @@ class UnitConverterViewController: UIViewController {
             popoverPresentationController.sourceRect = buttonFrame
             popoverPresentationController.delegate = self
             
-            //popoverContentController?.delegate = self
+            popoverContentController?.unitPopOverToDelegate = self
             
             if let popoverController = popoverContentController{
                 present(popoverController, animated: true, completion: nil)
@@ -65,10 +66,6 @@ class UnitConverterViewController: UIViewController {
         }
         
     }
-    
-    
-    
-    
     
 
 }
@@ -83,6 +80,12 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
     }
 }
 
+extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
+    
+    func didSelectToUnit(controller: UnitPopOverToContentController, name: String) {
+        unitToButton.setTitle(name, for: .normal)
+    }
+}
 
 
 //MARK: - UIPopoverPresentationControllerDelegate

@@ -67,6 +67,18 @@ extension UnitPopOverToContentController: UITableViewDelegate, UITableViewDataSo
         
         let unitSelected: String
         
+        switch selectedSection {
+        case 0:
+            unitSelected = unitConverterManager.unitLengthArray[indexPath.row]
+        case 1:
+            unitSelected = unitConverterManager.unitMassArray[indexPath.row]
+        case 2:
+            unitSelected = unitConverterManager.unitTemperatureArray[indexPath.row]
+        default:
+            unitSelected = ""
+        }
+        unitPopOverToDelegate?.didSelectToUnit(controller: self, name: unitSelected)
+        self.dismiss(animated: true, completion: nil)
         
         
     }

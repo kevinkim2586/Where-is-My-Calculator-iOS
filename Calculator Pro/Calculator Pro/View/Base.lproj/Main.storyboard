@@ -632,6 +632,7 @@
                     </view>
                     <connections>
                         <outlet property="unitFromButton" destination="w5a-n5-WWn" id="Kcj-3E-7s8"/>
+                        <outlet property="unitToButton" destination="xNH-e2-2dd" id="mWB-JP-oha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgq-BQ-0iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
