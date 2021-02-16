@@ -1,6 +1,6 @@
 import UIKit
 
-protocol UnitPopOverContentControllerDelegate {
+protocol UnitPopOverFromContentControllerDelegate {
     func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String, selectedSection: Int)
 }
 
@@ -8,7 +8,7 @@ class UnitPopOverFromContentController: UIViewController {
 
     @IBOutlet weak var fromUnitSelectionTableView: UITableView!
     
-    var unitPopOverDelegate: UnitPopOverContentControllerDelegate?
+    var unitPopOverDelegate: UnitPopOverFromContentControllerDelegate?
     
     let unitConverterManager = UnitConverterManager(selectedSection: 0)
     

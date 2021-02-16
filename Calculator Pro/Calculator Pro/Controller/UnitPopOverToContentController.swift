@@ -65,9 +65,13 @@ extension UnitPopOverToContentController: UITableViewDelegate, UITableViewDataSo
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let unitSelected: String
+        
+        
+        
+    }
    
     
     
