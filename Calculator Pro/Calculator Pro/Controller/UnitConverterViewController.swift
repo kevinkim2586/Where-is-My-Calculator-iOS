@@ -18,7 +18,6 @@ class UnitConverterViewController: UIViewController {
         let buttonFrame = button.frame
         
         let popoverContentController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardID.unitPopoverStoryboardID) as? UnitPopOverContentController
-        
         popoverContentController?.modalPresentationStyle = .popover
         
         if let popoverPresentationController = popoverContentController?.popoverPresentationController{
@@ -27,6 +26,8 @@ class UnitConverterViewController: UIViewController {
             popoverPresentationController.sourceView = self.view
             popoverPresentationController.sourceRect = buttonFrame
             popoverPresentationController.delegate = self
+            
+            popoverContentController?.unitPopOverDelegate = self
             
             if let popoverController = popoverContentController{
                 present(popoverController, animated: true, completion: nil)
@@ -37,21 +38,28 @@ class UnitConverterViewController: UIViewController {
 
 }
 
+//MARK: - UnitPopOverContentControllerDelegate
+
+extension UnitConverterViewController: UnitPopOverContentControllerDelegate{
+    
+    func didSelectUnit(controller: UnitPopOverContentController, name: String) {
+        unitFromButton.setTitle(name, for: .normal)
+    }
+}
+
+
+
+//MARK: - UIPopoverPresentationControllerDelegate
+
 extension UnitConverterViewController: UIPopoverPresentationControllerDelegate{
     
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
-    
-//    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
-//        <#code#>
-//    }
-    
+
     func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
         return true
     }
-    
-    
-    
+ 
 }

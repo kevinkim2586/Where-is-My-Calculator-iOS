@@ -64,10 +64,10 @@ extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSour
         
         let text: String
         
-        if indexPath.section == 0{
+        if indexPath.section == UnitSections.Length.rawValue{
             text = unitConverterManager.unitLengthArray[indexPath.row]
         }
-        else if indexPath.section == 1{
+        else if indexPath.section == UnitSections.Mass.rawValue{
             text = unitConverterManager.unitMassArray[indexPath.row]
         }
         else{
@@ -93,15 +93,18 @@ extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSour
         
         let unitSelected: String
         
-        if indexPath.section == 0{
+        if indexPath.section == UnitSections.Length.rawValue{
             unitSelected = unitConverterManager.unitLengthArray[indexPath.row]
         }
-        else if indexPath.section == 1{
+        else if indexPath.section == UnitSections.Mass.rawValue{
             unitSelected = unitConverterManager.unitMassArray[indexPath.row]
         }
         else{
             unitSelected = unitConverterManager.unitTemperatureArray[indexPath.row]
         }
+        
+        self.unitPopOverDelegate?.didSelectUnit(controller: self, name: unitSelected)
+        self.dismiss(animated: true, completion: nil)
         
     
     }
