@@ -32,22 +32,42 @@ extension UnitPopOverToContentController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        
+        switch selectedSection {
+        case 0:
+            return unitConverterManager.unitLengthArray.count
+        case 1:
+            return unitConverterManager.unitMassArray.count
+        case 2:
+            return unitConverterManager.unitTemperatureArray.count
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UnitConverterStrings.cellIdentifierToPopoverView, for: indexPath)
         
+        let text: String
         
-        
+        switch selectedSection {
+        case 0:
+            text = unitConverterManager.unitLengthArray[indexPath.row]
+        case 1:
+            text = unitConverterManager.unitMassArray[indexPath.row]
+        case 2:
+            text = unitConverterManager.unitTemperatureArray[indexPath.row]
+        default:
+            text = ""
+        }
+        cell.textLabel?.text = text
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
    
     
     
