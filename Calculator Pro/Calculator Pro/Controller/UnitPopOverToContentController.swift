@@ -10,6 +10,10 @@ class UnitPopOverToContentController: UIViewController {
     
     var unitPopOverToDelegate: UnitPopOverToContentControllerDelegate?
     
+    let unitConverterManager = UnitConverterManager(selectedSection: 0)
+    
+    var selectedSection: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +31,8 @@ extension UnitPopOverToContentController: UITableViewDelegate, UITableViewDataSo
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+       
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -4,6 +4,9 @@ class UnitConverterViewController: UIViewController {
 
     @IBOutlet weak var unitFromButton: UIButton!
     
+    var unitConverterManager = UnitConverterManager(selectedSection: 0)
+    
+    var selectedSection: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +56,8 @@ class UnitConverterViewController: UIViewController {
 
 extension UnitConverterViewController: UnitPopOverContentControllerDelegate{
     
-    func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String) {
+    func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String, selectedSection: Int) {
+        self.selectedSection = selectedSection
         unitFromButton.setTitle(name, for: .normal)
     }
 }
