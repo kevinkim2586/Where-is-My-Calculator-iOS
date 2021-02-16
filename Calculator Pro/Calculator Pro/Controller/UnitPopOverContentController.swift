@@ -1,5 +1,9 @@
 import UIKit
 
+protocol UnitPopOverContentControllerDelegate {
+    func didSelectUnit(controller: UnitPopOverContentController, name: String)
+}
+
 class UnitPopOverContentController: UIViewController {
 
     @IBOutlet weak var unitSelectionTableView: UITableView!
@@ -74,6 +78,10 @@ extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSour
         else{
             return "온도"
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
     }
     
     
