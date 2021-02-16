@@ -1,34 +1,23 @@
 import UIKit
 
 protocol UnitPopOverContentControllerDelegate {
-    func didSelectUnit(controller: UnitPopOverContentController, name: String)
+    func didSelectFromUnit(controller: UnitPopOverContentController, name: String)
 }
-
-enum UnitSections: Int, CaseIterable{
-    
-    case Length = 0
-    case Mass = 1
-    case Temperature = 2
-    
-}
-
 
 class UnitPopOverContentController: UIViewController {
 
-    @IBOutlet weak var unitSelectionTableView: UITableView!
+    @IBOutlet weak var fromUnitSelectionTableView: UITableView!
     
     var unitPopOverDelegate: UnitPopOverContentControllerDelegate?
     
-    let unitConverterManager = UnitConverterManager()
+    let unitConverterManager = UnitConverterManager(selectedSection: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        unitSelectionTableView.delegate = self
-        unitSelectionTableView.dataSource = self
-
+        fromUnitSelectionTableView.delegate = self
+        fromUnitSelectionTableView.dataSource = self
         
-     
     }
     
 
@@ -39,9 +28,8 @@ class UnitPopOverContentController: UIViewController {
 
 extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSource{
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return UnitSections.allCases.count
+        return UnitConverterManager.UnitSections.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,14 +48,14 @@ extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UnitConverterStrings.cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UnitConverterStrings.cellIdentifierFromPopoverView, for: indexPath)
         
         let text: String
         
-        if indexPath.section == UnitSections.Length.rawValue{
+        if indexPath.section == UnitConverterManager.UnitSections.Length.rawValue{
             text = unitConverterManager.unitLengthArray[indexPath.row]
         }
-        else if indexPath.section == UnitSections.Mass.rawValue{
+        else if indexPath.section == UnitConverterManager.UnitSections.Mass.rawValue{
             text = unitConverterManager.unitMassArray[indexPath.row]
         }
         else{
@@ -93,20 +81,19 @@ extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSour
         
         let unitSelected: String
         
-        if indexPath.section == UnitSections.Length.rawValue{
+        if indexPath.section == UnitConverterManager.UnitSections.Length.rawValue{
             unitSelected = unitConverterManager.unitLengthArray[indexPath.row]
         }
-        else if indexPath.section == UnitSections.Mass.rawValue{
+        else if indexPath.section == UnitConverterManager.UnitSections.Mass.rawValue{
             unitSelected = unitConverterManager.unitMassArray[indexPath.row]
         }
         else{
             unitSelected = unitConverterManager.unitTemperatureArray[indexPath.row]
         }
-        
-        self.unitPopOverDelegate?.didSelectUnit(controller: self, name: unitSelected)
+        unitPopOverDelegate?.didSelectFromUnit(controller: self, name: unitSelected)
         self.dismiss(animated: true, completion: nil)
         
-    
+        
     }
     
 

@@ -12,7 +12,7 @@ class UnitConverterViewController: UIViewController {
     }
     
     
-    @IBAction func showUnitSelectionListButton(_ sender: UIButton) {
+    @IBAction func showUnitFromSelectionListButton(_ sender: UIButton) {
         
         let button = sender as UIButton
         let buttonFrame = button.frame
@@ -35,6 +35,17 @@ class UnitConverterViewController: UIViewController {
         }
         
     }
+    
+    
+    @IBAction func showUnitToSelectionListButton(_ sender: UIButton) {
+        
+        
+    }
+    
+    
+    
+    
+    
 
 }
 
@@ -42,7 +53,7 @@ class UnitConverterViewController: UIViewController {
 
 extension UnitConverterViewController: UnitPopOverContentControllerDelegate{
     
-    func didSelectUnit(controller: UnitPopOverContentController, name: String) {
+    func didSelectFromUnit(controller: UnitPopOverContentController, name: String) {
         unitFromButton.setTitle(name, for: .normal)
     }
 }

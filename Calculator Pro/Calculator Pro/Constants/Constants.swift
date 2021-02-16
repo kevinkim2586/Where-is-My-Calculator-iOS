@@ -6,6 +6,7 @@ struct Constants{
     
     struct StoryboardID{
         static let unitPopoverStoryboardID = "unitPopoverContentController"
+        static let unitPopoverToStoryboardID = "unitPopoverToContentController"
     }
     
     struct ExchangeRateStrings{
@@ -20,7 +21,9 @@ struct Constants{
     }
     
     struct UnitConverterStrings{
-        static let cellIdentifier = "PopoverCell"
+        static let cellIdentifierFromPopoverView = "PopoverFromCell"
+        static let cellIdentifierToPopoverView = "PopoverToCell"
+        
         
     }
     
