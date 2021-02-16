@@ -419,6 +419,9 @@
                                                 <state key="normal" backgroundImage="Clear Button">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedClearButton:" destination="h6e-8a-5Li" eventType="touchUpInside" id="d8Z-uX-4ub"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27X-eY-OwF">
                                                 <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="79.333333333333329"/>
@@ -632,7 +635,9 @@
                     </view>
                     <connections>
                         <outlet property="unitFromButton" destination="w5a-n5-WWn" id="Kcj-3E-7s8"/>
+                        <outlet property="unitFromTextField" destination="FW9-n8-Lwj" id="EMs-JE-m1g"/>
                         <outlet property="unitToButton" destination="xNH-e2-2dd" id="mWB-JP-oha"/>
+                        <outlet property="unitToTextField" destination="Ntl-mO-FCd" id="maZ-gd-H9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgq-BQ-0iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

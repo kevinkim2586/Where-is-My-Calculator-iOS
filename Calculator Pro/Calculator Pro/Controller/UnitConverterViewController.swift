@@ -4,6 +4,8 @@ class UnitConverterViewController: UIViewController {
 
     @IBOutlet weak var unitFromButton: UIButton!
     @IBOutlet weak var unitToButton: UIButton!
+    @IBOutlet weak var unitFromTextField: UITextField!
+    @IBOutlet weak var unitToTextField: UITextField!
     
     var unitConverterManager = UnitConverterManager(selectedSection: 0)
     
@@ -40,10 +42,20 @@ class UnitConverterViewController: UIViewController {
         showUnitToSelectionList()
     }
     
+    @IBAction func pressedClearButton(_ sender: UIButton) {
+        
+        unitFromTextField.text = ""
+        unitToTextField.text = ""
+        
+    }
+    
+    
+    
+    
     
 }
 
-//MARK: - UnitPopOverContentControllerDelegate
+//MARK: - UnitPopOverFromContentControllerDelegate
 
 extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
     
