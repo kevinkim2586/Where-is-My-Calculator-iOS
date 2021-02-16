@@ -379,7 +379,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="122"/>
+            <point key="canvasLocation" x="2000" y="-476"/>
+        </scene>
+        <!--Unit Converter View Controller-->
+        <scene sceneID="QaR-cD-RX2">
+            <objects>
+                <viewController title="Unit Converter View Controller" id="h6e-8a-5Li" customClass="UnitConverterViewController" customModule="Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cHF-z5-72H">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="s3v-ef-9ro"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgq-BQ-0iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="912"/>
         </scene>
         <!--Gold Calculator View Controller-->
         <scene sceneID="o3I-Rs-XmC">
@@ -648,7 +663,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsc-by-MME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="866"/>
+            <point key="canvasLocation" x="2000" y="1092"/>
         </scene>
         <!--Grade Calculator View Controller-->
         <scene sceneID="PUk-zn-9VR">
@@ -755,7 +770,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iJ-r9-zcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.6153846153845" y="865.87677725118476"/>
+            <point key="canvasLocation" x="2000" y="284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CO4-kS-gMz">
@@ -1073,7 +1088,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP7-dL-CPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.6153846153845" y="-604.26540284360192"/>
+            <point key="canvasLocation" x="1105" y="-717"/>
         </scene>
     </scenes>
     <color key="tintColor" name="WIM_Blue"/>
