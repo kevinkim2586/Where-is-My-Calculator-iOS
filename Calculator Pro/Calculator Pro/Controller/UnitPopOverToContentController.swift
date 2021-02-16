@@ -20,8 +20,6 @@ class UnitPopOverToContentController: UIViewController {
         toUnitSelectionTableView.delegate = self
         toUnitSelectionTableView.dataSource = self
     }
-    
-
 
 }
 

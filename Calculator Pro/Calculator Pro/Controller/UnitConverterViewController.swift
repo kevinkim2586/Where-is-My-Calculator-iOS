@@ -46,6 +46,8 @@ class UnitConverterViewController: UIViewController {
         let buttonFrame = button.frame
         
         let popoverContentController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardID.unitPopoverToStoryboardID) as? UnitPopOverToContentController
+        
+        popoverContentController?.selectedSection = self.selectedSection
         popoverContentController?.modalPresentationStyle = .popover
         
         if let popoverPresentationController = popoverContentController?.popoverPresentationController{
