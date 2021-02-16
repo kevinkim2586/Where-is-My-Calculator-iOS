@@ -690,7 +690,7 @@
         <!--Unit Popover Content Controller-->
         <scene sceneID="5mm-Pq-tdO">
             <objects>
-                <viewController storyboardIdentifier="unitPopoverContentController" title="Unit Popover Content Controller" id="noG-fK-rtY" customClass="UnitPopOverContentController" customModule="Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="unitPopoverContentController" title="Unit Popover Content Controller" id="noG-fK-rtY" customClass="UnitPopOverFromContentController" customModule="Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEq-Ha-WkM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

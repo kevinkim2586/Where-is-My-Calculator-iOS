@@ -17,7 +17,7 @@ class UnitConverterViewController: UIViewController {
         let button = sender as UIButton
         let buttonFrame = button.frame
         
-        let popoverContentController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardID.unitPopoverStoryboardID) as? UnitPopOverContentController
+        let popoverContentController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardID.unitPopoverStoryboardID) as? UnitPopOverFromContentController
         popoverContentController?.modalPresentationStyle = .popover
         
         if let popoverPresentationController = popoverContentController?.popoverPresentationController{
@@ -53,7 +53,7 @@ class UnitConverterViewController: UIViewController {
 
 extension UnitConverterViewController: UnitPopOverContentControllerDelegate{
     
-    func didSelectFromUnit(controller: UnitPopOverContentController, name: String) {
+    func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String) {
         unitFromButton.setTitle(name, for: .normal)
     }
 }

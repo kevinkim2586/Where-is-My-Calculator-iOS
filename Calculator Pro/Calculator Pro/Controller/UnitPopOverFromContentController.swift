@@ -1,10 +1,10 @@
 import UIKit
 
 protocol UnitPopOverContentControllerDelegate {
-    func didSelectFromUnit(controller: UnitPopOverContentController, name: String)
+    func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String)
 }
 
-class UnitPopOverContentController: UIViewController {
+class UnitPopOverFromContentController: UIViewController {
 
     @IBOutlet weak var fromUnitSelectionTableView: UITableView!
     
@@ -26,7 +26,7 @@ class UnitPopOverContentController: UIViewController {
 
 //MARK: - UITableViewDelegate, UITableViewDataSource
 
-extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSource{
+extension UnitPopOverFromContentController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return UnitConverterManager.UnitSections.allCases.count
