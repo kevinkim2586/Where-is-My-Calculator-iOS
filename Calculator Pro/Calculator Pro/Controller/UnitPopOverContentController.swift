@@ -4,9 +4,20 @@ protocol UnitPopOverContentControllerDelegate {
     func didSelectUnit(controller: UnitPopOverContentController, name: String)
 }
 
+enum UnitSections: Int, CaseIterable{
+    
+    case Length = 0
+    case Mass = 1
+    case Temperature = 2
+    
+}
+
+
 class UnitPopOverContentController: UIViewController {
 
     @IBOutlet weak var unitSelectionTableView: UITableView!
+    
+    var unitPopOverDelegate: UnitPopOverContentControllerDelegate?
     
     let unitConverterManager = UnitConverterManager()
     
@@ -21,8 +32,6 @@ class UnitPopOverContentController: UIViewController {
     }
     
 
-
-
 }
 
 
@@ -32,7 +41,7 @@ extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSour
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return UnitSections.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,8 +90,23 @@ extension UnitPopOverContentController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        
+        let unitSelected: String
+        
+        if indexPath.section == 0{
+            unitSelected = unitConverterManager.unitLengthArray[indexPath.row]
+        }
+        else if indexPath.section == 1{
+            unitSelected = unitConverterManager.unitMassArray[indexPath.row]
+        }
+        else{
+            unitSelected = unitConverterManager.unitTemperatureArray[indexPath.row]
+        }
+        
+    
     }
+    
+
     
     
     
