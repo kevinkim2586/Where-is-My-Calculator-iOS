@@ -2,6 +2,7 @@ import UIKit
 
 protocol UnitPopOverFromContentControllerDelegate {
     func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String, selectedSection: Int)
+    func showUnitToSelectionList()
 }
 
 class UnitPopOverFromContentController: UIViewController {
@@ -91,7 +92,9 @@ extension UnitPopOverFromContentController: UITableViewDelegate, UITableViewData
             unitSelected = unitConverterManager.unitTemperatureArray[indexPath.row]
         }
         unitPopOverDelegate?.didSelectFromUnit(controller: self, name: unitSelected, selectedSection: indexPath.section)
+        
         self.dismiss(animated: true, completion: nil)
+        unitPopOverDelegate?.showUnitToSelectionList()
     }
     
 

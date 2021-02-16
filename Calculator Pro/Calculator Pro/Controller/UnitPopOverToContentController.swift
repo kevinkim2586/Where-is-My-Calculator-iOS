@@ -79,8 +79,6 @@ extension UnitPopOverToContentController: UITableViewDelegate, UITableViewDataSo
         }
         unitPopOverToDelegate?.didSelectToUnit(controller: self, name: unitSelected)
         self.dismiss(animated: true, completion: nil)
-        
-        
     }
    
     

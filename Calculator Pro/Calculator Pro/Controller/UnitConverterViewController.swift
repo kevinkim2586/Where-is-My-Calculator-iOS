@@ -11,11 +11,8 @@ class UnitConverterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
     }
-    
-    
+
     @IBAction func showUnitFromSelectionListButton(_ sender: UIButton) {
         
         let button = sender as UIButton
@@ -37,15 +34,29 @@ class UnitConverterViewController: UIViewController {
                 present(popoverController, animated: true, completion: nil)
             }
         }
-        
+    }
+
+    @IBAction func showUnitToSelectionListButton(_ sender: UIButton) {
+        showUnitToSelectionList()
     }
     
     
-    @IBAction func showUnitToSelectionListButton(_ sender: UIButton) {
+}
+
+//MARK: - UnitPopOverContentControllerDelegate
+
+extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
+    
+    func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String, selectedSection: Int) {
+        self.selectedSection = selectedSection
+        unitFromButton.setTitle(name, for: .normal)
+    }
+    
+    func showUnitToSelectionList(){
         
-        let button = sender as UIButton
+        let button = unitToButton!
         let buttonFrame = button.frame
-        
+    
         let popoverContentController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardID.unitPopoverToStoryboardID) as? UnitPopOverToContentController
         
         popoverContentController?.selectedSection = self.selectedSection
@@ -64,21 +75,10 @@ class UnitConverterViewController: UIViewController {
                 present(popoverController, animated: true, completion: nil)
             }
         }
-        
-    }
-    
-
-}
-
-//MARK: - UnitPopOverContentControllerDelegate
-
-extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
-    
-    func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String, selectedSection: Int) {
-        self.selectedSection = selectedSection
-        unitFromButton.setTitle(name, for: .normal)
     }
 }
+
+//MARK: - UnitPopOverToContentControllerDelegate
 
 extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
     
@@ -86,7 +86,6 @@ extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
         unitToButton.setTitle(name, for: .normal)
     }
 }
-
 
 //MARK: - UIPopoverPresentationControllerDelegate
 
@@ -99,5 +98,4 @@ extension UnitConverterViewController: UIPopoverPresentationControllerDelegate{
     func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
         return true
     }
- 
 }
