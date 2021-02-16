@@ -35,6 +35,7 @@
 		7CDF6CE225CFA54E00DD67B3 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF6CE025CFA54E00DD67B3 /* GradeCell.swift */; };
 		7CDF6CE325CFA54E00DD67B3 /* GradeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF6CE125CFA54E00DD67B3 /* GradeCell.xib */; };
 		7CF352E025DB696E00815F63 /* UnitConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF352DF25DB696E00815F63 /* UnitConverterViewController.swift */; };
+		7CF352E825DB6E7C00815F63 /* UnitPopOverContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF352E725DB6E7C00815F63 /* UnitPopOverContentController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		7CDF6CE025CFA54E00DD67B3 /* GradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		7CDF6CE125CFA54E00DD67B3 /* GradeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeCell.xib; sourceTree = "<group>"; };
 		7CF352DF25DB696E00815F63 /* UnitConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterViewController.swift; sourceTree = "<group>"; };
+		7CF352E725DB6E7C00815F63 /* UnitPopOverContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPopOverContentController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */,
 				7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */,
 				7CF352DF25DB696E00815F63 /* UnitConverterViewController.swift */,
+				7CF352E725DB6E7C00815F63 /* UnitPopOverContentController.swift */,
 				7CB0196525C7B3AB004D9650 /* DiscountCalculatorViewController.swift */,
 				7CB0199B25C8E225004D9650 /* ExtraFiles.swift */,
 			);
@@ -416,6 +419,7 @@
 				7CA9327825D183B400BD71C2 /* ExchangeRateModel.swift in Sources */,
 				7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */,
 				7CA9327B25D183B400BD71C2 /* GradeCalculatorManager.swift in Sources */,
+				7CF352E825DB6E7C00815F63 /* UnitPopOverContentController.swift in Sources */,
 				7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */,
 				7CA9327525D183B400BD71C2 /* GoldModel.swift in Sources */,
 				7CA9327325D183B400BD71C2 /* GoldData.swift in Sources */,
