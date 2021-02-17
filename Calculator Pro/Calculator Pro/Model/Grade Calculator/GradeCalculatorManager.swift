@@ -5,6 +5,8 @@ struct GradeCalculatorManager{
     var totalCredit: Int
     var totalGrade: Double
     
+    let possibleGrades = ["A+","A0","A-", "B+", "B0", "B-", "C+", "C0", "C-", "D+", "D0","D-","F","P","NP"]
+    
     mutating func calculateFinalCredit(gradeInfo: [GradeInfo])->Int{
         
         totalCredit = 0

@@ -11,9 +11,10 @@ class GradeCell: UITableViewCell {
     
     @IBOutlet weak var lectureTextField: UITextField!
     @IBOutlet weak var creditTextField: UITextField!
-    @IBOutlet weak var gradeTextField: UITextField!
+    @IBOutlet weak var gradeTextField: UITextField!                 // Picker View 구현
     
     var newGradeInfo = GradeInfo()
+    var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0)
     
     var tagNum: Int = 0
     
@@ -25,6 +26,8 @@ class GradeCell: UITableViewCell {
         lectureTextField.delegate = self
         creditTextField.delegate = self
         gradeTextField.delegate = self
+        
+        createPickerView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -101,6 +104,63 @@ extension GradeCell: UITextFieldDelegate{
 
     
 }
+
+//MARK: - Picker View Related Methods & UIPickerViewDataSource & Delegate Methods
+
+extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
+    
+    func createPickerView(){
+        
+        let gradePickerView = UIPickerView()
+        gradePickerView.backgroundColor = .white
+        gradePickerView.dataSource = self
+        gradePickerView.delegate = self
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = .systemBlue
+        //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.dismissPicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissPicker))
+
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        
+        gradeTextField.inputView = gradePickerView
+        gradeTextField.inputAccessoryView = toolBar
+        
+    }
+    
+    @objc func dismissPicker(){
+        
+        GradeCalculatorViewController().view.endEditing(true)
+        gradeTextField.resignFirstResponder()
+    }
+
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return gradeCalculatorManager.possibleGrades.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return gradeCalculatorManager.possibleGrades[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        gradeTextField.text = gradeCalculatorManager.possibleGrades[row]
+    }
+    
+}
+
+
 
 
 //MARK: - String Extensions

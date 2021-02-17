@@ -1,6 +1,5 @@
 import UIKit
 
-
 class GoldCalculatorViewController: UIViewController {
 
     @IBOutlet weak var goldUnitPickerTextField: UITextField!
