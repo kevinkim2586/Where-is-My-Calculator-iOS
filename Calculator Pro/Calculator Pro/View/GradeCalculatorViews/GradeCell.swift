@@ -17,6 +17,7 @@ class GradeCell: UITableViewCell {
     var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0)
     
     var tagNum: Int = 0
+    var gradeToDisplay = ""
     
     var gradeCellDelegate: GradeCellDelegate?
     
@@ -43,7 +44,6 @@ extension GradeCell{
     
     
 }
-
 
 //MARK: - UITextFieldDelegate
 
@@ -101,8 +101,6 @@ extension GradeCell: UITextFieldDelegate{
         }
         return true
     }
-
-    
 }
 
 //MARK: - Picker View Related Methods & UIPickerViewDataSource & Delegate Methods
@@ -120,7 +118,6 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
         toolBar.tintColor = .systemBlue
-        //toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.dismissPicker))
@@ -130,19 +127,17 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
-        
         gradeTextField.inputView = gradePickerView
         gradeTextField.inputAccessoryView = toolBar
-        
     }
     
     @objc func dismissPicker(){
         
         gradeTextField.endEditing(true)
+        gradeTextField.text = gradeToDisplay
         gradeTextField.resignFirstResponder()
     }
 
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -155,13 +150,12 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
         return gradeCalculatorManager.possibleGrades[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
         gradeTextField.text = gradeCalculatorManager.possibleGrades[row]
+        gradeToDisplay = gradeCalculatorManager.possibleGrades[row]
     }
     
 }
-
-
-
 
 //MARK: - String Extensions
 

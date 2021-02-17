@@ -104,7 +104,6 @@ extension GoldCalculatorViewController{
 extension GoldCalculatorViewController: GoldCalculatorManagerDelegate{
     
     func didUpdateGoldPrice(_ goldCalculatorManager: GoldCalculatorManager, goldModel: GoldModel) {
-        
         goldModelReceived = goldModel
     }
         

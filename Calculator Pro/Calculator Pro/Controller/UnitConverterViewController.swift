@@ -7,6 +7,8 @@ class UnitConverterViewController: UIViewController {
     @IBOutlet weak var unitFromTextField: UITextField!
     @IBOutlet weak var unitToTextField: UITextField!
     
+    var inputWorkings: String = ""
+    
     var unitConverterManager = UnitConverterManager(selectedSection: 0)
     
     var selectedSection: Int = 0
@@ -14,6 +16,7 @@ class UnitConverterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        unitFromTextField.becomeFirstResponder()
         unitFromTextField.delegate = self
         unitToTextField.delegate = self
         
@@ -55,14 +58,20 @@ class UnitConverterViewController: UIViewController {
     }
     
     @IBAction func pressedDeleteButton(_ sender: UIButton) {
-        //func backTap(_ sender: UIButton) {
-        
-//        if(!runningNumber.isEmpty){
-//            runningNumber.removeLast()
-//            calculatorResults.text = runningNumber
-//        }
-
+     
+        if(!inputWorkings.isEmpty){
+            inputWorkings.removeLast()
+            unitFromTextField.text = inputWorkings
+        }
     }
+    
+
+    @IBAction func pressedNumber(_ sender: UIButton) {
+        
+        inputWorkings += sender.currentTitle!
+        unitFromTextField.text = inputWorkings
+    }
+    
     
     
     
