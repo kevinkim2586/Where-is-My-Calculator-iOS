@@ -16,6 +16,8 @@ class UnitConverterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         unitFromTextField.becomeFirstResponder()
         unitFromTextField.delegate = self
         unitToTextField.delegate = self
@@ -54,7 +56,6 @@ class UnitConverterViewController: UIViewController {
         
         unitFromTextField.text = ""
         unitToTextField.text = ""
-        
     }
     
     @IBAction func pressedDeleteButton(_ sender: UIButton) {
@@ -107,7 +108,7 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
     }
     
     func showUnitToSelectionList(){
-        
+
         let button = unitToButton!
         let buttonFrame = button.frame
     

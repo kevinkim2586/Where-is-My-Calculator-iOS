@@ -23,7 +23,6 @@ struct ExchangeRateManager{
     var inputAmount: Int = 0
     
     var delegate: ExchangeRateManagerDelegate?
-    
 }
 
 
