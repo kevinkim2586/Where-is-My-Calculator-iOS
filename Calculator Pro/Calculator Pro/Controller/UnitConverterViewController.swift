@@ -13,6 +13,12 @@ class UnitConverterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        unitFromTextField.delegate = self
+        unitToTextField.delegate = self
+        
+        unitFromTextField.inputView = UIView()
     }
 
     @IBAction func showUnitFromSelectionListButton(_ sender: UIButton) {
@@ -49,11 +55,39 @@ class UnitConverterViewController: UIViewController {
         
     }
     
+    @IBAction func pressedDeleteButton(_ sender: UIButton) {
+        //func backTap(_ sender: UIButton) {
+        
+//        if(!runningNumber.isEmpty){
+//            runningNumber.removeLast()
+//            calculatorResults.text = runningNumber
+//        }
+
+    }
     
     
     
     
 }
+
+
+//MARK: - UITextFieldDelegate
+
+extension UnitConverterViewController: UITextFieldDelegate{
+    
+    
+    
+    
+    
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.view.endEditing(true)
+    }
+}
+
+
+
 
 //MARK: - UnitPopOverFromContentControllerDelegate
 

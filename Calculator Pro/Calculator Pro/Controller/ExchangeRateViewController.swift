@@ -28,7 +28,8 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateFromTextField.delegate = self
         exchangeRateToTextField.delegate = self
         
-        // Inserting a dummy view to not display default keyboard
+        // Inserting a dummy view to block automatically displaying the iPhone default keyboard
+        // when textfield is touched.
         exchangeRateFromTextField.inputView = UIView()
         exchangeRateToTextField.inputView = UIView()
         
@@ -258,10 +259,7 @@ extension ExchangeRateViewController: UITextFieldDelegate{
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        
     }
-
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
