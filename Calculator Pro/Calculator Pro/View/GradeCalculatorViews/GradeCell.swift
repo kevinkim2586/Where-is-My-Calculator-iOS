@@ -138,7 +138,7 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
     
     @objc func dismissPicker(){
         
-        GradeCalculatorViewController().view.endEditing(true)
+        gradeTextField.endEditing(true)
         gradeTextField.resignFirstResponder()
     }
 
