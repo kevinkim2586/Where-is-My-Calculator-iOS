@@ -186,7 +186,6 @@ enum UnitLength: Int{
                 constant = 0.000568
             }
         }
-        
         return constant * val
     }
 }

@@ -61,6 +61,7 @@ class UnitConverterViewController: UIViewController {
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
         
+
         if let inputText = unitFromTextField.text {
             
             if !inputText.isEmpty{
@@ -82,11 +83,6 @@ class UnitConverterViewController: UIViewController {
 
 
 
-
-
-
-
-
 //MARK: - UnitPopOverFromContentControllerDelegate
 
 extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
@@ -102,7 +98,6 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
         default: return
         }
     }
-    
 
     func setUnitFromLength(for name: String){
         
@@ -110,14 +105,16 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
             unitFromLength = unitLength
             return
         }
-        else{
-            print("Error while setUnitFrom()")
-        }
+        else{ print("Error while setUnitFromLength()") }
     }
     
     func setUnitFromMass(for name: String){
         
-        //if let unitMass = UnitMass
+        if let unitMass = UnitMass.setUnit(name){
+            unitFromMass = unitMass
+            return
+        }
+        else{ print("Error while setUnitFromMass") }
     }
     
     func setUnitFromTemperature(for name: String){
@@ -177,12 +174,16 @@ extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
             unitToLength = unitLength
             return
         }
-        else{
-            print("Error while setUnitTo()")
-        }
+        else { print("Error while setUnitToLength()") }
     }
     
     func setUnitToMass(for name: String){
+        
+        if let unitMass = UnitMass.setUnit(name){
+            unitToMass = unitMass
+            return
+        }
+        else { print("Error while setUnitToMass()") }
         
     }
     
