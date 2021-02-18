@@ -13,6 +13,16 @@ class UnitConverterViewController: UIViewController {
     
     var selectedSection: Int = 0
     
+    var unitFromLength: UnitLength = .millimeter
+    var unitToLength: UnitLength = .centimeter
+    
+    var unitFromMass: UnitMass = .grams
+    var unitToMass: UnitMass = .kilograms
+    
+    var unitFromTemperature: UnitTemperature = .celsius
+    var unitToTemperature: UnitTemperature = .fahrenheit
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,7 +115,40 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
     func didSelectFromUnit(controller: UnitPopOverFromContentController, name: String, selectedSection: Int) {
         self.selectedSection = selectedSection
         unitFromButton.setTitle(name, for: .normal)
+        
+        switch selectedSection{
+        case 0: setUnitFromLength(for: name)
+        case 1: setUnitFromMass(for: name)
+        case 2: setUnitFromTemperature(for: name)
+        default: return
+        }
     }
+    
+
+    func setUnitFromLength(for name: String){
+        
+        if let unitLength = UnitLength.setFromUnit(name){
+            unitFromLength = unitLength
+            return
+        }
+        else{
+            print("Error while setUnitFrom()")
+        }
+    }
+    
+    func setUnitFromMass(for name: String){
+        
+        //if let unitMass = UnitMass
+    }
+    
+    func setUnitFromTemperature(for name: String){
+        
+        
+    }
+    
+    
+    
+    
     
     func showUnitToSelectionList(){
 
@@ -138,8 +181,16 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
 extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
     
     func didSelectToUnit(controller: UnitPopOverToContentController, name: String) {
+        
+        
+        
         unitToButton.setTitle(name, for: .normal)
     }
+    
+   
+    
+    
+    
 }
 
 //MARK: - UIPopoverPresentationControllerDelegate
