@@ -79,6 +79,7 @@ class UnitConverterViewController: UIViewController {
                     result = unitFromTemperature.convertTo(unit: unitToTemperature, value: inputNum)
                 }
                 print(result)
+
                 unitToTextField.text = String(format: "%.5f", result)
             }
         }
@@ -119,16 +120,17 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
             unitFromMass = unitMass
             return
         }
-        else{ print("Error while setUnitFromMass") }
+        else{ print("Error while setUnitFromMass()") }
     }
     
     func setUnitFromTemperature(for name: String){
         
-        
+        if let unitTemp = UnitTemperature.setUnit(name){
+            unitFromTemperature = unitTemp
+            return
+        }
+        else{ print("Error while setUnitFromTemperature()") }
     }
-    
-    
-    
     
     
     func showUnitToSelectionList(){
@@ -194,11 +196,13 @@ extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
     
     func setUnitToTemperature(for name: String){
         
+        if let unitTemp = UnitTemperature.setUnit(name){
+            unitToTemperature = unitTemp
+            return
+        }
+        else { print("Error while setUnitToTemperature()") }
     }
-   
-    
-    
-    
+ 
 }
 
 //MARK: - @IBAction Methods to show Unit Selection Popovers

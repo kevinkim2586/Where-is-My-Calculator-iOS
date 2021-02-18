@@ -10,7 +10,6 @@ enum UnitTemperature: Int{
         if string == Constants.UnitConverterStrings.unitTemperatureArray[.celsius]{
             return .celsius
         } else if string == Constants.UnitConverterStrings.unitTemperatureArray[.fahrenheit]{
-            
             return .fahrenheit
         } else if string == Constants.UnitConverterStrings.unitTemperatureArray[.kelvin]{
             return .kelvin
