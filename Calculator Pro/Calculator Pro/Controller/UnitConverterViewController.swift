@@ -61,26 +61,31 @@ class UnitConverterViewController: UIViewController {
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
         
-
+        unitToTextField.text = ""
+        
+        var result: Double = 0.0
+        
         if let inputText = unitFromTextField.text {
             
             if !inputText.isEmpty{
                 
                 let inputNum = Double(inputText)!
-                let result = unitFromLength.convertTo(unit: unitToLength, value: inputNum)
                 
-                unitToTextField.text = String(result)
+                if selectedSection == 0 {
+                    result = unitFromLength.convertTo(unit: unitToLength, value: inputNum)
+                } else if selectedSection == 1 {
+                    result = unitFromMass.convertTo(unit: unitToMass, value: inputNum)
+                } else if selectedSection == 2 {
+                    result = unitFromTemperature.convertTo(unit: unitToTemperature, value: inputNum)
+                }
+                print(result)
+                unitToTextField.text = String(format: "%.5f", result)
             }
         }
-        
-        
     }
     
     
 }
-
-
-
 
 
 //MARK: - UnitPopOverFromContentControllerDelegate
