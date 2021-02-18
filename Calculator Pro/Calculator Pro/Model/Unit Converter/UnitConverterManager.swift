@@ -4,7 +4,7 @@ enum UnitLength: Int{
     
     case millimeter = 0, centimeter, meter, kilometer, inch, feet, yard, mile
     
-    static func setFromUnit(_ string: String) -> UnitLength?{
+    static func setUnit(_ string: String) -> UnitLength?{
         
         if string == "밀리미터(mm)"{
             return .millimeter
@@ -26,6 +26,7 @@ enum UnitLength: Int{
             return nil
         }
     }
+
     
     func convertTo(unit to: UnitLength, value val: Double) -> Double {
         var constant = 1.0

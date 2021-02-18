@@ -26,8 +26,7 @@ class UnitConverterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+    
         unitFromTextField.becomeFirstResponder()
         unitFromTextField.delegate = self
         unitToTextField.delegate = self
@@ -35,32 +34,7 @@ class UnitConverterViewController: UIViewController {
         unitFromTextField.inputView = UIView()
     }
 
-    @IBAction func showUnitFromSelectionListButton(_ sender: UIButton) {
-        
-        let button = sender as UIButton
-        let buttonFrame = button.frame
-        
-        let popoverContentController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardID.unitPopoverFromStoryboardID) as? UnitPopOverFromContentController
-        popoverContentController?.modalPresentationStyle = .popover
-        
-        if let popoverPresentationController = popoverContentController?.popoverPresentationController{
-            
-            popoverPresentationController.permittedArrowDirections = .up
-            popoverPresentationController.sourceView = self.view
-            popoverPresentationController.sourceRect = buttonFrame
-            popoverPresentationController.delegate = self
-            
-            popoverContentController?.unitPopOverDelegate = self
-            
-            if let popoverController = popoverContentController{
-                present(popoverController, animated: true, completion: nil)
-            }
-        }
-    }
-
-    @IBAction func showUnitToSelectionListButton(_ sender: UIButton) {
-        showUnitToSelectionList()
-    }
+   
     
     @IBAction func pressedClearButton(_ sender: UIButton) {
         
@@ -85,25 +59,30 @@ class UnitConverterViewController: UIViewController {
     
     
     
-    
-    
-}
-
-
-//MARK: - UITextFieldDelegate
-
-extension UnitConverterViewController: UITextFieldDelegate{
-    
-    
-    
-    
-    
-    
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-          self.view.endEditing(true)
+    @IBAction func pressedCalculate(_ sender: UIButton) {
+        
+        if let inputText = unitFromTextField.text {
+            
+            if !inputText.isEmpty{
+                
+                let inputNum = Double(inputText)!
+                let result = unitFromLength.convertTo(unit: unitToLength, value: inputNum)
+                
+                unitToTextField.text = String(result)
+            }
+        }
+        
+        
     }
+    
+    
 }
+
+
+
+
+
+
 
 
 
@@ -127,7 +106,7 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
 
     func setUnitFromLength(for name: String){
         
-        if let unitLength = UnitLength.setFromUnit(name){
+        if let unitLength = UnitLength.setUnit(name){
             unitFromLength = unitLength
             return
         }
@@ -182,15 +161,70 @@ extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
     
     func didSelectToUnit(controller: UnitPopOverToContentController, name: String) {
         
-        
-        
         unitToButton.setTitle(name, for: .normal)
+        switch selectedSection{
+        case 0: setUnitToLength(for: name)
+        case 1: setUnitFromMass(for: name)
+        case 2: setUnitFromTemperature(for: name)
+        default: return
+        }
     }
     
+    
+    func setUnitToLength(for name: String){
+        
+        if let unitLength = UnitLength.setUnit(name){
+            unitToLength = unitLength
+            return
+        }
+        else{
+            print("Error while setUnitTo()")
+        }
+    }
+    
+    func setUnitToMass(for name: String){
+        
+    }
+    
+    func setUnitToTemperature(for name: String){
+        
+    }
    
     
     
     
+}
+
+//MARK: - @IBAction Methods to show Unit Selection Popovers
+
+extension UnitConverterViewController{
+    
+    @IBAction func showUnitFromSelectionListButton(_ sender: UIButton) {
+        
+        let button = sender as UIButton
+        let buttonFrame = button.frame
+        
+        let popoverContentController = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardID.unitPopoverFromStoryboardID) as? UnitPopOverFromContentController
+        popoverContentController?.modalPresentationStyle = .popover
+        
+        if let popoverPresentationController = popoverContentController?.popoverPresentationController{
+            
+            popoverPresentationController.permittedArrowDirections = .up
+            popoverPresentationController.sourceView = self.view
+            popoverPresentationController.sourceRect = buttonFrame
+            popoverPresentationController.delegate = self
+            
+            popoverContentController?.unitPopOverDelegate = self
+            
+            if let popoverController = popoverContentController{
+                present(popoverController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func showUnitToSelectionListButton(_ sender: UIButton) {
+        showUnitToSelectionList()
+    }
 }
 
 //MARK: - UIPopoverPresentationControllerDelegate
@@ -203,5 +237,14 @@ extension UnitConverterViewController: UIPopoverPresentationControllerDelegate{
 
     func presentationControllerShouldDismiss(_ presentationController: UIPresentationController) -> Bool {
         return true
+    }
+}
+
+//MARK: - UITextFieldDelegate
+
+extension UnitConverterViewController: UITextFieldDelegate{
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.view.endEditing(true)
     }
 }

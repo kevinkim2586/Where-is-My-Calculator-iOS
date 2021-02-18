@@ -613,6 +613,9 @@
                                                 <state key="normal" title="=" backgroundImage="Equal Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalculate:" destination="h6e-8a-5Li" eventType="touchUpInside" id="Boj-T7-1xY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
