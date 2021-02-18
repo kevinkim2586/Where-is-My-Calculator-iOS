@@ -16,8 +16,8 @@ class UnitConverterViewController: UIViewController {
     var unitFromLength: UnitLength = .millimeter
     var unitToLength: UnitLength = .centimeter
     
-    var unitFromMass: UnitMass = .grams
-    var unitToMass: UnitMass = .kilograms
+    var unitFromMass: UnitMass = .gram
+    var unitToMass: UnitMass = .kilogram
     
     var unitFromTemperature: UnitTemperature = .celsius
     var unitToTemperature: UnitTemperature = .fahrenheit

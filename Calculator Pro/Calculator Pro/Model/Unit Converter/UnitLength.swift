@@ -6,25 +6,44 @@ enum UnitLength: Int{
     
     static func setUnit(_ string: String) -> UnitLength?{
         
-        if string == "밀리미터(mm)"{
+        if string == Constants.UnitConverterStrings.unitLengthArray[.millimeter]{
             return .millimeter
-        } else if string == "센티미터(cm)"{
+        } else if string == Constants.UnitConverterStrings.unitLengthArray[.centimeter]{
             return .centimeter
-        } else if string == "미터(m)"{
+        } else if string == Constants.UnitConverterStrings.unitLengthArray[.meter]{
             return .meter
-        } else if string == "킬로미터(km)"{
+        } else if string == Constants.UnitConverterStrings.unitLengthArray[.kilometer]{
             return .kilometer
-        } else if string == "인치(in)"{
+        } else if string == Constants.UnitConverterStrings.unitLengthArray[.inch]{
             return .inch
-        } else if string == "피트(ft)"{
+        } else if string == Constants.UnitConverterStrings.unitLengthArray[.feet]{
             return .feet
-        } else if string == "야드(yd)"{
+        } else if string == Constants.UnitConverterStrings.unitLengthArray[.yard]{
             return .yard
-        } else if string == "마일(mile)"{
+        } else if string == Constants.UnitConverterStrings.unitLengthArray[.mile]{
             return .mile
         } else{
             return nil
         }
+//        if string == Constants.UnitConverterStrings.unitLengthArray[.millimeter]{
+//            return .millimeter
+//        } else if string == "센티미터(cm)"{
+//            return .centimeter
+//        } else if string == "미터(m)"{
+//            return .meter
+//        } else if string == "킬로미터(km)"{
+//            return .kilometer
+//        } else if string == "인치(in)"{
+//            return .inch
+//        } else if string == "피트(ft)"{
+//            return .feet
+//        } else if string == "야드(yd)"{
+//            return .yard
+//        } else if string == "마일(mile)"{
+//            return .mile
+//        } else{
+//            return nil
+//        }
     }
 
     
