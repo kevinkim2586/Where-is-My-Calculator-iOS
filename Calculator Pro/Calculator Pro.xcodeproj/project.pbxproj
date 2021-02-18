@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1EB4CA25DE3BDD00E56B08 /* UnitLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1EB4C925DE3BDD00E56B08 /* UnitLength.swift */; };
+		7C1EB4CF25DE3BE400E56B08 /* UnitMass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1EB4CE25DE3BE400E56B08 /* UnitMass.swift */; };
+		7C1EB4D425DE3BF300E56B08 /* UnitTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1EB4D325DE3BF300E56B08 /* UnitTemperature.swift */; };
 		7CA9327225D183B400BD71C2 /* NormalCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326525D183B400BD71C2 /* NormalCalculatorManager.swift */; };
 		7CA9327325D183B400BD71C2 /* GoldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326725D183B400BD71C2 /* GoldData.swift */; };
 		7CA9327425D183B400BD71C2 /* GoldCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */; };
@@ -58,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C1EB4C925DE3BDD00E56B08 /* UnitLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitLength.swift; sourceTree = "<group>"; };
+		7C1EB4CE25DE3BE400E56B08 /* UnitMass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMass.swift; sourceTree = "<group>"; };
+		7C1EB4D325DE3BF300E56B08 /* UnitTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTemperature.swift; sourceTree = "<group>"; };
 		7CA9326525D183B400BD71C2 /* NormalCalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalCalculatorManager.swift; sourceTree = "<group>"; };
 		7CA9326725D183B400BD71C2 /* GoldData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldData.swift; sourceTree = "<group>"; };
 		7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldCalculatorManager.swift; sourceTree = "<group>"; };
@@ -289,6 +295,9 @@
 			isa = PBXGroup;
 			children = (
 				7CF352FC25DB750300815F63 /* UnitConverterManager.swift */,
+				7C1EB4C925DE3BDD00E56B08 /* UnitLength.swift */,
+				7C1EB4CE25DE3BE400E56B08 /* UnitMass.swift */,
+				7C1EB4D325DE3BF300E56B08 /* UnitTemperature.swift */,
 			);
 			path = "Unit Converter";
 			sourceTree = "<group>";
@@ -436,11 +445,14 @@
 				7CA9327B25D183B400BD71C2 /* GradeCalculatorManager.swift in Sources */,
 				7CF352E825DB6E7C00815F63 /* UnitPopOverFromContentController.swift in Sources */,
 				7CDE25B925C13BD50048B3CC /* Constants.swift in Sources */,
+				7C1EB4CF25DE3BE400E56B08 /* UnitMass.swift in Sources */,
 				7CA9327525D183B400BD71C2 /* GoldModel.swift in Sources */,
 				7CA9327325D183B400BD71C2 /* GoldData.swift in Sources */,
 				7CDF6CD825CF9FEE00DD67B3 /* GradeCalculatorViewController.swift in Sources */,
 				7CA9327425D183B400BD71C2 /* GoldCalculatorManager.swift in Sources */,
 				7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */,
+				7C1EB4D425DE3BF300E56B08 /* UnitTemperature.swift in Sources */,
+				7C1EB4CA25DE3BDD00E56B08 /* UnitLength.swift in Sources */,
 				7CF352FD25DB750300815F63 /* UnitConverterManager.swift in Sources */,
 				7CDE257D25C125D80048B3CC /* NormalCalculatorViewController.swift in Sources */,
 				7CDE257925C125D80048B3CC /* AppDelegate.swift in Sources */,
