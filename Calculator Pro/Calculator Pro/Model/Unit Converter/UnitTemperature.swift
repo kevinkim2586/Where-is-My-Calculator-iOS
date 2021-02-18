@@ -18,7 +18,6 @@ enum UnitTemperature: Int{
         }
     }
     
-    
     func convertTo(unit to: UnitTemperature, value val: Double) -> Double{
         
         switch self {
@@ -48,7 +47,4 @@ enum UnitTemperature: Int{
         }
         return 0.0
     }
-    
-    
-    
 }

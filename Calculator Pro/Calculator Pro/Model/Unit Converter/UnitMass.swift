@@ -23,7 +23,6 @@ enum UnitMass: Int{
         }
     }
     
-    
     func convertTo(unit to: UnitMass, value val: Double) -> Double{
         
         var constant = 1.0

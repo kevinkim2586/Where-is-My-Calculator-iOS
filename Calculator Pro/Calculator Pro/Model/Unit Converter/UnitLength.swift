@@ -25,28 +25,8 @@ enum UnitLength: Int{
         } else{
             return nil
         }
-//        if string == Constants.UnitConverterStrings.unitLengthArray[.millimeter]{
-//            return .millimeter
-//        } else if string == "센티미터(cm)"{
-//            return .centimeter
-//        } else if string == "미터(m)"{
-//            return .meter
-//        } else if string == "킬로미터(km)"{
-//            return .kilometer
-//        } else if string == "인치(in)"{
-//            return .inch
-//        } else if string == "피트(ft)"{
-//            return .feet
-//        } else if string == "야드(yd)"{
-//            return .yard
-//        } else if string == "마일(mile)"{
-//            return .mile
-//        } else{
-//            return nil
-//        }
     }
 
-    
     func convertTo(unit to: UnitLength, value val: Double) -> Double {
         var constant = 1.0
         switch self {
