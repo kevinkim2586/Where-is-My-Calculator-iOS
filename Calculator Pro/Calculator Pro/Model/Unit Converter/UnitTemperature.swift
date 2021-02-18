@@ -32,6 +32,7 @@ enum UnitTemperature: Int{
 
         case .fahrenheit:
             if to == .celsius{
+        
                 return (val - 32) * 5 / 9
             } else if to == .kelvin{
                 return (val - 32) * 5 / 9 + 273.15

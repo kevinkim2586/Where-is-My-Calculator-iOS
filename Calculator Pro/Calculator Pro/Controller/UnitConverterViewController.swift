@@ -61,7 +61,6 @@ class UnitConverterViewController: UIViewController {
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
         
-        unitToTextField.text = ""
         
         var result: Double = 0.0
         
@@ -78,8 +77,7 @@ class UnitConverterViewController: UIViewController {
                 } else if selectedSection == 2 {
                     result = unitFromTemperature.convertTo(unit: unitToTemperature, value: inputNum)
                 }
-                print(result)
-
+        
                 unitToTextField.text = String(format: "%.5f", result)
             }
         }
@@ -168,8 +166,8 @@ extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
         unitToButton.setTitle(name, for: .normal)
         switch selectedSection{
         case 0: setUnitToLength(for: name)
-        case 1: setUnitFromMass(for: name)
-        case 2: setUnitFromTemperature(for: name)
+        case 1: setUnitToMass(for: name)
+        case 2: setUnitToTemperature(for: name)
         default: return
         }
     }
