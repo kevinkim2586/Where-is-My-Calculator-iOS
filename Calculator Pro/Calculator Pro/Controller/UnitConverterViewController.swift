@@ -40,6 +40,7 @@ class UnitConverterViewController: UIViewController {
     
     @IBAction func pressedClearButton(_ sender: UIButton) {
         
+        inputWorkings = ""
         unitFromTextField.text = ""
         unitToTextField.text = ""
     }
