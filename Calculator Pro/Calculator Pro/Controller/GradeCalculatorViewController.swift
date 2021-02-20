@@ -31,7 +31,7 @@ class GradeCalculatorViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        // View 를 껐다가 다시 키면 totalGradInfo.count 가 초기화되지 않는 상태임
+        // View 를 껐다가 다시 키면 totalGradeInfo.count 가 초기화되지 않는 상태임
     }
 
     @IBAction func pressedAddButton(_ sender: UIButton) {
