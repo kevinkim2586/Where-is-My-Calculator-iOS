@@ -4,57 +4,53 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="61" id="KGk-i7-Jjw" customClass="GradeCell" customModule="Calculator_Pro" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="358" height="61"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="73" id="KGk-i7-Jjw" customClass="GradeCell" customModule="Calculator_Pro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="73"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="358" height="61"/>
+                <rect key="frame" x="0.0" y="0.0" width="378" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adv-rL-ISM" userLabel="InfoInputView">
-                        <rect key="frame" x="0.0" y="0.0" width="358" height="61"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Iu9-7o-caQ">
+                        <rect key="frame" x="25" y="1" width="298" height="66"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="Iu9-7o-caQ">
-                                <rect key="frame" x="8" y="8" width="342" height="45"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="강의명 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0e4-mz-BTY">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-iC-qkb">
-                                        <rect key="frame" x="188" y="0.0" width="38" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A+" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sz5-6a-vYw">
-                                        <rect key="frame" x="294" y="0.0" width="48" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="강의명 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0e4-mz-BTY">
+                                <rect key="frame" x="0.0" y="0.0" width="148.5" height="66"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-iC-qkb">
+                                <rect key="frame" x="208.5" y="0.0" width="9.5" height="66"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="A+" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sz5-6a-vYw">
+                                <rect key="frame" x="278" y="0.0" width="20" height="66"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Iu9-7o-caQ" firstAttribute="leading" secondItem="Adv-rL-ISM" secondAttribute="leading" constant="8" id="he6-vj-Xbv"/>
-                            <constraint firstAttribute="bottom" secondItem="Iu9-7o-caQ" secondAttribute="bottom" constant="8" id="lva-fT-3Z7"/>
-                            <constraint firstItem="Iu9-7o-caQ" firstAttribute="top" secondItem="Adv-rL-ISM" secondAttribute="top" constant="8" id="vcj-Ly-wWa"/>
-                            <constraint firstAttribute="trailing" secondItem="Iu9-7o-caQ" secondAttribute="trailing" constant="8" id="xkX-Hn-wvo"/>
-                        </constraints>
-                    </view>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="zhL-M0-5jM">
+                        <rect key="frame" x="10" y="0.0" width="368" height="73"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.78132241960000004" green="0.73551940920000003" blue="0.70226603750000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="Adv-rL-ISM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5uy-CH-AxI"/>
-                    <constraint firstAttribute="trailing" secondItem="Adv-rL-ISM" secondAttribute="trailing" id="IWd-qY-34A"/>
-                    <constraint firstAttribute="bottom" secondItem="Adv-rL-ISM" secondAttribute="bottom" id="Xvw-uV-s4l"/>
-                    <constraint firstItem="Adv-rL-ISM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="co6-Pk-OdN"/>
+                    <constraint firstItem="zhL-M0-5jM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3lB-ti-KkM"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Iu9-7o-caQ" secondAttribute="trailing" constant="35" id="Oe2-mG-s9O"/>
+                    <constraint firstAttribute="trailing" secondItem="zhL-M0-5jM" secondAttribute="trailing" id="eIA-6A-7Ad"/>
+                    <constraint firstAttribute="bottom" secondItem="zhL-M0-5jM" secondAttribute="bottom" id="hBw-za-8qQ"/>
+                    <constraint firstItem="Iu9-7o-caQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="mbu-Xp-0eQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Iu9-7o-caQ" secondAttribute="bottom" constant="-5" id="sGP-Pz-e30"/>
+                    <constraint firstItem="Iu9-7o-caQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="sPL-cF-IlW"/>
+                    <constraint firstItem="zhL-M0-5jM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wAs-nq-doS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -63,12 +59,10 @@
                 <outlet property="gradeTextField" destination="sz5-6a-vYw" id="I5W-lm-6h5"/>
                 <outlet property="lectureTextField" destination="0e4-mz-BTY" id="xMN-6e-oCh"/>
             </connections>
-            <point key="canvasLocation" x="56.521739130434788" y="100.11160714285714"/>
+            <point key="canvasLocation" x="42.028985507246382" y="106.80803571428571"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="TextField Button" width="366.5" height="90.5"/>
     </resources>
 </document>
