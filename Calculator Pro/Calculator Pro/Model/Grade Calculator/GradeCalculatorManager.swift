@@ -5,8 +5,10 @@ struct GradeCalculatorManager{
     var totalCredit: Int
     var totalGrade: Double
     
-    let possibleGrades = ["A+","A0","A-", "B+", "B0", "B-", "C+", "C0", "C-", "D+", "D0","D-","F","P","NP"]
+    let possibleGrades = ["A+","A0","A-", "B+", "B0", "B-", "C+", "C0", "C-", "D+", "D0","D-","F"]
     
+    
+    // Calculate credit (학점)
     mutating func calculateFinalCredit(gradeInfo: [GradeInfo])->Int{
         
         totalCredit = 0
@@ -18,6 +20,8 @@ struct GradeCalculatorManager{
         }
         return totalCredit
     }
+    
+    // Calculate Final GPA (성적)
     
     mutating func calculateFinalGrade(gradeInfo: [GradeInfo])->Double{
         
