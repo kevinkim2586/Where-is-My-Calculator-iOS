@@ -53,9 +53,6 @@ extension GradeCell{
     
     func convertGradeStringToDouble(_ grade: String) -> Double{
         
-//        static let possibleGradeArrayOne = ["A+","A","B+","B","C+","C","D+","D","F"]
-//        static let possibleGradesArrayTwo = ["A+","A0","A-", "B+", "B0", "B-", "C+", "C0", "C-", "D+", "D0","D-","F"]
-        
         if grade == "A+"{
             return highestPossibleGrade == 4.5 ? 4.5 : 4.3
         } else if grade == "A" || grade == "A0"{
@@ -111,25 +108,13 @@ extension GradeCell: UITextFieldDelegate{
                 }
                 else{ creditTextField.text = "" }
             }
-
         case gradeTextField:
             
             if let gradeString = gradeTextField.text{
            
                 let gradeDouble = convertGradeStringToDouble(gradeString)
                 gradeCellDelegate?.didChangeGrade(grade: gradeDouble, tagNum: tagNum, cell: self)
-                break
-                
-//                if gradeString.isNumber || (Double(gradeString) != nil){
-//                    if let gradeDouble = Double(gradeString){
-//                        gradeCellDelegate?.didChangeGrade(grade: gradeDouble, tagNum: tagNum, cell: self)
-//
-//                        break
-//                    }
-//                }
-                
             }
-            
         default: break
         }
     }

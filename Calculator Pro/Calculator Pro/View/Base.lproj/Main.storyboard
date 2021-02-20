@@ -668,8 +668,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfV-zz-bTl" userLabel="To View">
                                 <rect key="frame" x="5" y="178" width="380" height="81"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-6b-rbx" userLabel="To TextField Background">
-                                        <rect key="frame" x="0.0" y="0.0" width="380" height="81"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-6b-rbx" userLabel="To TextField Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="80"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="eec-Jp-yJe">
                                         <rect key="frame" x="52" y="18" width="276" height="35"/>
@@ -837,24 +837,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwp-yv-She">
-                                <rect key="frame" x="181" y="121" width="166" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="단위" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LWU-y8-I77">
-                                <rect key="frame" x="41" y="49" width="86" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBE-Sp-px7">
-                                <rect key="frame" x="179" y="49" width="171" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dWu-nL-6If" userLabel="Calc Stack View">
                                 <rect key="frame" x="20" y="346" width="350" height="400"/>
                                 <subviews>
@@ -1078,14 +1060,67 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="dUK-Pv-wFq"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJR-k0-jpe" userLabel="To View">
+                                <rect key="frame" x="16" y="206" width="358" height="110"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="o01-jX-0fs">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="110"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwp-yv-She">
+                                        <rect key="frame" x="161" y="32" width="166" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="o01-jX-0fs" firstAttribute="leading" secondItem="BJR-k0-jpe" secondAttribute="leading" id="LtH-hA-1uU"/>
+                                    <constraint firstAttribute="trailing" secondItem="o01-jX-0fs" secondAttribute="trailing" constant="-8" id="OWl-x8-GaZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="o01-jX-0fs" secondAttribute="bottom" id="bKp-gk-FgJ"/>
+                                    <constraint firstItem="o01-jX-0fs" firstAttribute="top" secondItem="BJR-k0-jpe" secondAttribute="top" id="vta-8E-RfF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-K9-l3L" userLabel="From View">
+                                <rect key="frame" x="16" y="86" width="358" height="90.333333333333314"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="iDG-u8-gcN">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="90.333333333333329"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="단위" textAlignment="center" minimumFontSize="17" background="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="LWU-y8-I77">
+                                        <rect key="frame" x="32" y="22" width="63" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 입력" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBE-Sp-px7">
+                                        <rect key="frame" x="155" y="22" width="171" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iDG-u8-gcN" firstAttribute="leading" secondItem="MVD-K9-l3L" secondAttribute="leading" id="Ceb-EU-a9T"/>
+                                    <constraint firstItem="iDG-u8-gcN" firstAttribute="top" secondItem="MVD-K9-l3L" secondAttribute="top" id="QMR-OZ-MNy"/>
+                                    <constraint firstAttribute="trailing" secondItem="iDG-u8-gcN" secondAttribute="trailing" constant="-8" id="il4-La-oMk"/>
+                                    <constraint firstAttribute="bottom" secondItem="iDG-u8-gcN" secondAttribute="bottom" id="xIh-Ua-s3d"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9oA-4L-7W1"/>
                         <color key="backgroundColor" red="0.66591674089999997" green="0.54945057630000005" blue="0.74581617119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BJR-k0-jpe" firstAttribute="leading" secondItem="MVD-K9-l3L" secondAttribute="leading" id="9Nx-58-E0S"/>
+                            <constraint firstItem="BJR-k0-jpe" firstAttribute="top" secondItem="MVD-K9-l3L" secondAttribute="bottom" constant="30" id="AS3-71-AIK"/>
+                            <constraint firstItem="BJR-k0-jpe" firstAttribute="leading" secondItem="1Pr-DB-htT" secondAttribute="leadingMargin" id="GPq-Yn-S7L"/>
                             <constraint firstItem="dWu-nL-6If" firstAttribute="centerX" secondItem="1Pr-DB-htT" secondAttribute="centerX" id="P8q-Uv-FPj"/>
                             <constraint firstItem="9oA-4L-7W1" firstAttribute="bottom" secondItem="dWu-nL-6If" secondAttribute="bottom" constant="10" id="Pyn-GA-oSs"/>
                             <constraint firstItem="9oA-4L-7W1" firstAttribute="trailing" secondItem="dWu-nL-6If" secondAttribute="trailing" constant="20" id="XPn-SC-jnz"/>
+                            <constraint firstItem="dWu-nL-6If" firstAttribute="top" secondItem="MVD-K9-l3L" secondAttribute="bottom" constant="170" id="lT4-Hl-5Ux"/>
+                            <constraint firstItem="MVD-K9-l3L" firstAttribute="centerX" secondItem="1Pr-DB-htT" secondAttribute="centerX" id="pkA-mh-lXh"/>
+                            <constraint firstItem="dWu-nL-6If" firstAttribute="top" secondItem="BJR-k0-jpe" secondAttribute="bottom" constant="30" id="uwK-qw-M5V"/>
                             <constraint firstItem="dWu-nL-6If" firstAttribute="leading" secondItem="9oA-4L-7W1" secondAttribute="leading" constant="20" id="whJ-mq-vrM"/>
+                            <constraint firstItem="BJR-k0-jpe" firstAttribute="centerX" secondItem="1Pr-DB-htT" secondAttribute="centerX" id="yRZ-Cq-mC3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1096,7 +1131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsc-by-MME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000" y="1092"/>
+            <point key="canvasLocation" x="2000" y="1091.9431279620853"/>
         </scene>
         <!--Grade Calculator View Controller-->
         <scene sceneID="PUk-zn-9VR">

@@ -66,7 +66,7 @@ extension GoldCalculatorViewController{
             
             let finalResult = goldCalculatorManager.calculateFinalResult(currentGoldPrice: goldPrice)
             
-            resultTextField.text = String(format: "%.2f", finalResult)
+            resultTextField.text = String(format: "%.2f", finalResult) + " KRW"
             
         }
     }
@@ -158,7 +158,6 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
 
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
-        
         
         goldUnitPickerTextField.inputView = goldUnitPickerView
         goldUnitPickerTextField.inputAccessoryView = toolBar
