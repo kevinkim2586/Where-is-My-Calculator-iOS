@@ -1066,7 +1066,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="o01-jX-0fs">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="110"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwp-yv-She">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwp-yv-She">
                                         <rect key="frame" x="161" y="32" width="166" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
@@ -1081,23 +1081,27 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-K9-l3L" userLabel="From View">
-                                <rect key="frame" x="16" y="86" width="358" height="90.333333333333314"/>
+                                <rect key="frame" x="16" y="85.666666666666686" width="358" height="90.333333333333314"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="iDG-u8-gcN">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="90.333333333333329"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="iDG-u8-gcN">
+                                        <rect key="frame" x="0.0" y="-1" width="366" height="90.333333333333329"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="단위" textAlignment="center" minimumFontSize="17" background="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="LWU-y8-I77">
-                                        <rect key="frame" x="32" y="22" width="63" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="단위" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LWU-y8-I77">
+                                        <rect key="frame" x="32" y="22.000000000000057" width="52" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숫자 입력" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBE-Sp-px7">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="숫자 입력" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBE-Sp-px7">
                                         <rect key="frame" x="155" y="22" width="171" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="moR-FE-F8x">
+                                        <rect key="frame" x="76" y="32.000000000000057" width="25" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="iDG-u8-gcN" firstAttribute="leading" secondItem="MVD-K9-l3L" secondAttribute="leading" id="Ceb-EU-a9T"/>
@@ -1167,7 +1171,7 @@
                                 <rect key="frame" x="10" y="670" width="375.66666666666669" height="105"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grade Title Image" translatesAutoresizingMaskIntoConstraints="NO" id="qBQ-Rw-B5i">
-                                        <rect key="frame" x="0.0" y="0.0" width="375.66666666666669" height="97"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375.66666666666669" height="101"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="103" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-db-6gL">
                                         <rect key="frame" x="33" y="33" width="309.66666666666669" height="31"/>
@@ -1312,53 +1316,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="국가를 선택해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-RL-0Qh">
-                                <rect key="frame" x="42" y="45" width="86" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rg-Qb-Osz">
-                                <rect key="frame" x="175" y="100" width="40" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" backgroundImage="equal.circle.fill" catalog="system">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedCalculate:" destination="3mm-lk-Rep" eventType="touchUpInside" id="ACV-K5-dPf"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="금액을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-J4-MwF">
-                                <rect key="frame" x="180" y="45" width="171" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="금액을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-DJ-G9J">
-                                <rect key="frame" x="182" y="159" width="166" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="원" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUB-HK-sWF">
-                                <rect key="frame" x="295" y="103" width="56" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="국가를 선택해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-Kl-scs">
-                                <rect key="frame" x="42" y="159" width="86" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="달러" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v6S-5A-cdV">
-                                <rect key="frame" x="295" y="201" width="56" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="au8-Z9-iGm" userLabel="Calc Stack View">
                                 <rect key="frame" x="20" y="346" width="350" height="400"/>
                                 <subviews>
@@ -1580,6 +1537,77 @@
                                     <constraint firstAttribute="height" constant="400" id="zgi-8i-0cw"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGs-Ic-xwe" userLabel="From View">
+                                <rect key="frame" x="16" y="72" width="358" height="90.333333333333314"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="5OI-Ol-yap">
+                                        <rect key="frame" x="0.0" y="-1" width="366" height="90.333333333333329"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-zv-jcb">
+                                        <rect key="frame" x="98" y="32" width="25" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="국가 선택" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-RL-0Qh">
+                                        <rect key="frame" x="22" y="22" width="86" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금액 입력" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-J4-MwF">
+                                        <rect key="frame" x="153" y="22" width="171" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5OI-Ol-yap" firstAttribute="leading" secondItem="dGs-Ic-xwe" secondAttribute="leading" id="3Qf-XW-ujH"/>
+                                    <constraint firstAttribute="trailing" secondItem="5OI-Ol-yap" secondAttribute="trailing" constant="-8" id="Bki-zM-Xn0"/>
+                                    <constraint firstItem="5OI-Ol-yap" firstAttribute="top" secondItem="dGs-Ic-xwe" secondAttribute="top" id="Mvy-GZ-Qvm"/>
+                                    <constraint firstAttribute="bottom" secondItem="5OI-Ol-yap" secondAttribute="bottom" id="TO4-GE-brb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rg-Qb-Osz">
+                                <rect key="frame" x="141" y="316" width="40" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" backgroundImage="equal.circle.fill" catalog="system">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedCalculate:" destination="3mm-lk-Rep" eventType="touchUpInside" id="ACV-K5-dPf"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="riX-aI-FKH" userLabel="To View">
+                                <rect key="frame" x="16" y="226" width="358" height="90.333333333333314"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="f8u-Y0-1Ga">
+                                        <rect key="frame" x="0.0" y="-1" width="366" height="90.333333333333329"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="CSR-Rz-KOp">
+                                        <rect key="frame" x="98" y="32" width="25" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="국가 선택" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-Kl-scs">
+                                        <rect key="frame" x="24" y="22" width="86" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="결과 KRW" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-DJ-G9J">
+                                        <rect key="frame" x="171" y="23" width="154" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f8u-Y0-1Ga" firstAttribute="leading" secondItem="riX-aI-FKH" secondAttribute="leading" id="08h-Eg-DZq"/>
+                                    <constraint firstItem="f8u-Y0-1Ga" firstAttribute="top" secondItem="riX-aI-FKH" secondAttribute="top" id="Gdk-og-qWr"/>
+                                    <constraint firstAttribute="trailing" secondItem="f8u-Y0-1Ga" secondAttribute="trailing" constant="-8" id="IQU-jg-gJf"/>
+                                    <constraint firstAttribute="bottom" secondItem="f8u-Y0-1Ga" secondAttribute="bottom" id="VTY-ya-1RZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d1c-Lr-Qyn"/>
                         <color key="backgroundColor" red="0.87276035549999997" green="0.55802577730000003" blue="0.5569537282" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1592,8 +1620,6 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="BM9-LF-hZG"/>
                     <connections>
-                        <outlet property="currencyUnitFromTextField" destination="ZUB-HK-sWF" id="5Au-s1-pAc"/>
-                        <outlet property="currencyUnitToTextField" destination="v6S-5A-cdV" id="rjw-Bf-s5V"/>
                         <outlet property="exchangeRateFromPicker" destination="Slv-RL-0Qh" id="Qvk-P1-NxX"/>
                         <outlet property="exchangeRateFromTextField" destination="lOh-J4-MwF" id="bqd-8v-q5e"/>
                         <outlet property="exchangeRateToPicker" destination="qpQ-Kl-scs" id="dOp-9A-9jX"/>
@@ -1602,7 +1628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP7-dL-CPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1105" y="-717"/>
+            <point key="canvasLocation" x="1104.6153846153845" y="-717.29857819905214"/>
         </scene>
     </scenes>
     <color key="tintColor" name="WIM_Blue"/>
