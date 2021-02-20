@@ -1,12 +1,11 @@
 import Foundation
 
 struct GradeCalculatorManager{
-
+    
     var totalCredit: Int
     var totalGrade: Double
     
-    let possibleGrades = ["A+","A0","A-", "B+", "B0", "B-", "C+", "C0", "C-", "D+", "D0","D-","F"]
-    
+    let possibleGrades = Constants.GradeCalcStrings.possibleGradeArrayOne
     
     // Calculate credit (학점)
     mutating func calculateFinalCredit(gradeInfo: [GradeInfo])->Int{
@@ -27,16 +26,23 @@ struct GradeCalculatorManager{
         
         totalGrade = 0.0
         
-        for grades in gradeInfo{
-            if let grade = grades.grade{
-                totalGrade += grade
+        for grade in gradeInfo{
+            
+            if let eachCredit = grade.credit, let eachGrade = grade.grade{
+                
+                let eachCreditInDouble = Double(eachCredit)
+                totalGrade += (eachCreditInDouble * eachGrade)
+                
             }
         }
         
-        totalGrade = Double(totalGrade) / Double(gradeInfo.count)
-        print(gradeInfo.count)
+        let totalCreditInDouble = Double(totalCredit)
+        totalGrade = totalGrade / totalCreditInDouble
         
+//        print(gradeInfo.count)
+//        print(totalGrade)
+//
         return totalGrade
     }
-
+    
 }

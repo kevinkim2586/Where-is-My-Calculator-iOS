@@ -11,12 +11,13 @@ class GradeCell: UITableViewCell {
     
     @IBOutlet weak var lectureTextField: UITextField!
     @IBOutlet weak var creditTextField: UITextField!
-    @IBOutlet weak var gradeTextField: UITextField!                 // Picker View 구현
+    @IBOutlet weak var gradeTextField: UITextField!                  // Picker View 구현
     
     var newGradeInfo = GradeInfo()
     var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0)
     
     var tagNum: Int = 0
+    var highestPossibleGrade: Double = 0.0
     var gradeToDisplay = ""
     
     var gradeCellDelegate: GradeCellDelegate?
@@ -38,12 +39,49 @@ class GradeCell: UITableViewCell {
 
 //MARK: - Methods
 
-extension GradeCell{
-    
-    
-    
-    
-}
+//extension GradeCell{
+//    
+//    func convertGradeToDoubleValue(_ grade: String) -> Double{
+//        
+//        
+        //static let possibleGradesArray = ["A+","A0","A-", "B+", "B0", "B-", "C+", "C0", "C-", "D+", "D0","D-","F"]
+        
+//        if grade == Constants.GradeCalcStrings.possibleGradesArray[0]{
+//            return highestPossibleGrade == 4.5 ?  4.5 : 4.3
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[1]{
+//            return highestPossibleGrade == 4.5 ?  4.0 : 4.0
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[2]{
+//            return highestPossibleGrade == 4.5 ?  3.5 : 3.7
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[3]{
+//            return highestPossibleGrade == 4.5 ?  3.0 : 3.3
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[4]{
+//            return highestPossibleGrade == 4.5 ?  2.5 : 3.0
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[5]{
+//            return highestPossibleGrade == 4.5 ?  2.0 : 2.7
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[6]{
+//            return highestPossibleGrade == 4.5 ?  1.5 : 2.3
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[7]{
+//            return highestPossibleGrade == 4.5 ?  1.0 : 2.0
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[8]{
+//            return highestPossibleGrade == 4.5 ?  0.5 : 1.7
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[9]{
+//            return highestPossibleGrade == 4.5 ?  0.5 : 1.3
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[10]{
+//            return highestPossibleGrade == 4.5 ?  0.5 : 1.0
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[11]{
+//            return highestPossibleGrade == 4.5 ?  0.5 : 0.7
+//        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[12]{
+//            return highestPossibleGrade == 4.5 ?  0.5 : 0.0
+//        }
+//        
+//        
+//        
+//
+//    }
+//
+//
+//
+//}
 
 //MARK: - UITextFieldDelegate
 
@@ -71,7 +109,10 @@ extension GradeCell: UITextFieldDelegate{
 
         case gradeTextField:
             
+            
             if let gradeString = gradeTextField.text{
+                //여기에 함수 (gradeString 보내기)
+                
                 if gradeString.isNumber || (Double(gradeString) != nil){
                     if let gradeDouble = Double(gradeString){
                         gradeCellDelegate?.didChangeGrade(grade: gradeDouble, tagNum: tagNum, cell: self)

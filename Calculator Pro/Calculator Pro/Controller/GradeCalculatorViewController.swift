@@ -6,18 +6,26 @@ class GradeCalculatorViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalCreditLabel: UILabel!
     @IBOutlet weak var totalGradeLabel: UILabel!
+    @IBOutlet weak var highestPossibleGradeTextField: UITextField!
     
     var rowNum = 1
+    
+    var selectedHighestPossibleGrade: String = ""
     
     var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        highestPossibleGradeTextField.delegate = self
+        
         tableView.dataSource = self
         tableView.delegate = self
        
         tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
+        
+        createPickerView()
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -133,6 +141,68 @@ extension GradeCalculatorViewController: UITextFieldDelegate{
           self.view.endEditing(true)
     }
 }
+
+//MARK: - Picker View Related Methods & UIPickerViewDataSource & Delegate Methods
+
+extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate{
+    
+    
+    func createPickerView(){
+        
+        let highestGradePickerView = UIPickerView()
+        highestGradePickerView.backgroundColor = .white
+        highestGradePickerView.dataSource = self
+        highestGradePickerView.delegate = self
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = .systemBlue
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.dismissPicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissPicker))
+
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        highestPossibleGradeTextField.inputView = highestGradePickerView
+        highestPossibleGradeTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc func dismissPicker(){
+        
+        highestPossibleGradeTextField.endEditing(true)
+        //gradeTextField.text = gradeToDisplay
+        highestPossibleGradeTextField.resignFirstResponder()
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Constants.GradeCalcStrings.highestPossibleGradeArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Constants.GradeCalcStrings.highestPossibleGradeArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        let selectedOption = Constants.GradeCalcStrings.highestPossibleGradeArray[row]
+        
+        highestPossibleGradeTextField.text = selectedOption
+        selectedHighestPossibleGrade = selectedOption
+        
+        
+        
+    }
+    
+}
+
 
 
 //MARK: - Alert Handling Method

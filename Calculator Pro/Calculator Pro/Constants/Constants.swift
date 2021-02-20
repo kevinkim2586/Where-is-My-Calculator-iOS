@@ -15,6 +15,12 @@ struct Constants{
     }
     
     struct GradeCalcStrings{
+        
+        static let possibleGradeArrayOne = ["A+","A","B+","B","C+","C","D+","D","F"]
+        static let possibleGradesArrayTwo = ["A+","A0","A-", "B+", "B0", "B-", "C+", "C0", "C-", "D+", "D0","D-","F"]
+        
+        static let highestPossibleGradeArray = ["4.5", "4.3"]
+        
         static let cellIdentifier = "ReusableCell"
         static let cellNibName = "GradeCell"
         static let userDefaultsKey = "savedGradeInfo"

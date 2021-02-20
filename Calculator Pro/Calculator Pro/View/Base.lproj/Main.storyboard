@@ -1165,6 +1165,12 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4.5 만점" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj0-Fc-LDY">
+                                        <rect key="frame" x="-5" y="0.0" width="70" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="qBQ-Rw-B5i" firstAttribute="leading" secondItem="GHf-bL-wFA" secondAttribute="leading" id="0TT-qY-C1N"/>
@@ -1236,6 +1242,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="highestPossibleGradeTextField" destination="hj0-Fc-LDY" id="K5B-Sy-mJi"/>
                         <outlet property="tableView" destination="wsO-uc-tA8" id="J8V-dt-InQ"/>
                         <outlet property="totalCreditLabel" destination="zqj-tE-XE1" id="jmE-4C-BTH"/>
                         <outlet property="totalGradeLabel" destination="SEI-Jr-fXY" id="3LQ-mq-xNR"/>
