@@ -10,7 +10,7 @@ class GradeCalculatorViewController: UIViewController{
     
     var rowNum = 1
     
-    var selectedHighestPossibleGrade: String = ""
+    var selectedHighestPossibleGrade: Double = 0.0
     
     var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0.0)
     
@@ -76,6 +76,7 @@ extension GradeCalculatorViewController{
 }
 
 //MARK: - UITableViewDataSource, UITableViewDelegate
+
 extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,6 +91,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         cell.creditTextField.text = ""
         cell.gradeTextField.text = ""
         cell.tagNum = indexPath.row
+        cell.highestPossibleGrade = selectedHighestPossibleGrade
         
         cell.gradeCellDelegate = self
     
@@ -174,8 +176,8 @@ extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDel
     @objc func dismissPicker(){
         
         highestPossibleGradeTextField.endEditing(true)
-        //gradeTextField.text = gradeToDisplay
         highestPossibleGradeTextField.resignFirstResponder()
+        tableView.reloadData()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -195,10 +197,8 @@ extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDel
         let selectedOption = Constants.GradeCalcStrings.highestPossibleGradeArray[row]
         
         highestPossibleGradeTextField.text = selectedOption
-        selectedHighestPossibleGrade = selectedOption
         
-        
-        
+        selectedHighestPossibleGrade = Double( selectedOption) ?? 4.5
     }
     
 }

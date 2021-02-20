@@ -24,10 +24,13 @@ class GradeCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUpPossibleGradesList()
         
         lectureTextField.delegate = self
         creditTextField.delegate = self
         gradeTextField.delegate = self
+        
+        
         
         createPickerView()
     }
@@ -39,11 +42,19 @@ class GradeCell: UITableViewCell {
 
 //MARK: - Methods
 
-//extension GradeCell{
-//    
+extension GradeCell{
+
+    func setUpPossibleGradesList(){
+        
+        if highestPossibleGrade == 4.5{
+            gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradeArrayOne
+        }else if highestPossibleGrade == 4.3{
+            gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradesArrayTwo
+        }
+    }
 //    func convertGradeToDoubleValue(_ grade: String) -> Double{
-//        
-//        
+//
+//
         //static let possibleGradesArray = ["A+","A0","A-", "B+", "B0", "B-", "C+", "C0", "C-", "D+", "D0","D-","F"]
         
 //        if grade == Constants.GradeCalcStrings.possibleGradesArray[0]{
@@ -73,15 +84,15 @@ class GradeCell: UITableViewCell {
 //        } else if grade == Constants.GradeCalcStrings.possibleGradesArray[12]{
 //            return highestPossibleGrade == 4.5 ?  0.5 : 0.0
 //        }
-//        
-//        
-//        
 //
-//    }
 //
 //
 //
-//}
+//    }
+
+
+
+}
 
 //MARK: - UITextFieldDelegate
 
@@ -184,12 +195,23 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return gradeCalculatorManager.possibleGrades.count
+        
+        if highestPossibleGrade == 4.5{
+            return Constants.GradeCalcStrings.possibleGradeArrayOne.count
+        }else{
+            return Constants.GradeCalcStrings.possibleGradesArrayTwo.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return gradeCalculatorManager.possibleGrades[row]
+        
+        if highestPossibleGrade == 4.5{
+            return Constants.GradeCalcStrings.possibleGradeArrayOne[row]
+        }else{
+            return Constants.GradeCalcStrings.possibleGradesArrayTwo[row]
+        }
     }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         gradeTextField.text = gradeCalculatorManager.possibleGrades[row]

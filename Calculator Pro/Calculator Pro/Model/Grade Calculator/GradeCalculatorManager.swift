@@ -5,7 +5,7 @@ struct GradeCalculatorManager{
     var totalCredit: Int
     var totalGrade: Double
     
-    let possibleGrades = Constants.GradeCalcStrings.possibleGradeArrayOne
+    var possibleGrades = Constants.GradeCalcStrings.possibleGradeArrayOne
     
     // Calculate credit (학점)
     mutating func calculateFinalCredit(gradeInfo: [GradeInfo])->Int{
