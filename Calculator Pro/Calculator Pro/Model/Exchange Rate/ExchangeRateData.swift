@@ -12,7 +12,7 @@ struct ExchangeRateData: Codable{
     
     let result: String                              // "success" or "error"
     let base_code: String                           // 기준이 되는 통화 ex. "USD"
-    let conversion_rates: [ConversionRates]
+    let conversion_rates: ConversionRates
     
     struct ConversionRates: Codable{
         

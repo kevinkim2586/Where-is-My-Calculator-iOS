@@ -69,6 +69,7 @@ extension ExchangeRateViewController{
             }
         }
         else{
+            // Create an alert pop up saying : "입력값을 다시 확인해주세요"
             print("Error in pressedCalculate( )")
             return
         }
@@ -127,7 +128,7 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
     func didUpdateExchangeRate(_ exchangeRateManager: ExchangeRateManager, exchange: ExchangeRateModel) {
   
         DispatchQueue.main.async {
-            self.exchangeRateToTextField.text = String(format: "%.2f", exchange.resultValue)
+            self.exchangeRateToTextField.text = String(format: "%.2f", exchange.finalResult)
         }
     }
     func didFailWithError(error: Error) {

@@ -160,8 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				7CA9326B25D183B400BD71C2 /* ExchangeRateManager.swift */,
-				7CA9326D25D183B400BD71C2 /* ExchangeRateModel.swift */,
 				7CA9326E25D183B400BD71C2 /* ExchangeRateData.swift */,
+				7CA9326D25D183B400BD71C2 /* ExchangeRateModel.swift */,
 			);
 			path = "Exchange Rate";
 			sourceTree = "<group>";
