@@ -10,8 +10,8 @@ struct Constants{
     }
     
     struct ExchangeRateStrings{
-        static let keyForExchangeRate = "0KWEJK5Ttln2L2s44erbx7aJbz0cCbdi"
-        static let basicURL = "https://www.koreaexim.go.ksr/site/program/financial/exchangeJSON?authkey="
+        static let keyForExchangeRate = "0017fb5715b05218a5601cf9"
+        static let basicURL = "https://v6.exchangerate-api.com/v6/0017fb5715b05218a5601cf9/latest/" // To
     }
     
     struct GradeCalcStrings{

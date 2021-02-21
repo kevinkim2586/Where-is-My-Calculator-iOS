@@ -15,7 +15,6 @@
 		7CA9327425D183B400BD71C2 /* GoldCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */; };
 		7CA9327525D183B400BD71C2 /* GoldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326925D183B400BD71C2 /* GoldModel.swift */; };
 		7CA9327625D183B400BD71C2 /* ExchangeRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326B25D183B400BD71C2 /* ExchangeRateManager.swift */; };
-		7CA9327725D183B400BD71C2 /* ExchangeRateCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326C25D183B400BD71C2 /* ExchangeRateCalculation.swift */; };
 		7CA9327825D183B400BD71C2 /* ExchangeRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326D25D183B400BD71C2 /* ExchangeRateModel.swift */; };
 		7CA9327925D183B400BD71C2 /* ExchangeRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326E25D183B400BD71C2 /* ExchangeRateData.swift */; };
 		7CA9327A25D183B400BD71C2 /* GradeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9327025D183B400BD71C2 /* GradeInfo.swift */; };
@@ -69,7 +68,6 @@
 		7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldCalculatorManager.swift; sourceTree = "<group>"; };
 		7CA9326925D183B400BD71C2 /* GoldModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldModel.swift; sourceTree = "<group>"; };
 		7CA9326B25D183B400BD71C2 /* ExchangeRateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateManager.swift; sourceTree = "<group>"; };
-		7CA9326C25D183B400BD71C2 /* ExchangeRateCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalculation.swift; sourceTree = "<group>"; };
 		7CA9326D25D183B400BD71C2 /* ExchangeRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateModel.swift; sourceTree = "<group>"; };
 		7CA9326E25D183B400BD71C2 /* ExchangeRateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateData.swift; sourceTree = "<group>"; };
 		7CA9327025D183B400BD71C2 /* GradeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeInfo.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				7CA9326B25D183B400BD71C2 /* ExchangeRateManager.swift */,
-				7CA9326C25D183B400BD71C2 /* ExchangeRateCalculation.swift */,
 				7CA9326D25D183B400BD71C2 /* ExchangeRateModel.swift */,
 				7CA9326E25D183B400BD71C2 /* ExchangeRateData.swift */,
 			);
@@ -433,7 +430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CA9327725D183B400BD71C2 /* ExchangeRateCalculation.swift in Sources */,
 				7CDF6CE225CFA54E00DD67B3 /* GradeCell.swift in Sources */,
 				7CF3530225DB890700815F63 /* UnitPopOverToContentController.swift in Sources */,
 				7CA9327225D183B400BD71C2 /* NormalCalculatorManager.swift in Sources */,
