@@ -276,15 +276,10 @@ extension ExchangeRateViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 
         if pickerView.tag == 0{
-
             exchangeRateFromPicker.text = exchangeRateManager.countries[row]
-            //self.view.endEditing(true)
-
         }
         else if pickerView.tag == 1{
-
             exchangeRateToPicker.text = exchangeRateManager.countries[row]
-            //self.view.endEditing(true)
         }
         else {
 
@@ -292,7 +287,6 @@ extension ExchangeRateViewController: UIPickerViewDelegate{
             
         }
     }
-    
 }
 
 //MARK: - UIPickerViewDataSource
