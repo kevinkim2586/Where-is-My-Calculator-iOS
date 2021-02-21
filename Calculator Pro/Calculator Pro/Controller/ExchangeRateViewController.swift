@@ -174,8 +174,6 @@ extension ExchangeRateViewController{
     
     @objc func dismissPicker(){
         
-        
-        
         if let fromCountry = exchangeRateFromPicker.text{
             
             exchangeRateManager.setCurrencyUnitForFrom(country: fromCountry)
@@ -188,9 +186,8 @@ extension ExchangeRateViewController{
         }
         else {
             return
-            
         }
-
+        self.view.endEditing(true)
     }
 }
 
@@ -294,7 +291,6 @@ extension ExchangeRateViewController: UIPickerViewDelegate{
             return
             
         }
-        self.view.endEditing(true)
     }
     
 }
