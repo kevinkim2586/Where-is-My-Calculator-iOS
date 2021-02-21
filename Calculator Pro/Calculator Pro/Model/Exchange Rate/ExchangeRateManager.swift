@@ -8,7 +8,7 @@ protocol ExchangeRateManagerDelegate {
 
 struct ExchangeRateManager{
     
-    let countries = ["미국 달러","위안화", "유로","영국 파운드","일본 옌", "한국 원"]
+    let countries = ["미국 달러","위안화", "유로","일본 옌", "한국 원"]
     
     // Properties for API Networking
     let exchangeRateURL = Constants.ExchangeRateStrings.basicURL
