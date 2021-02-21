@@ -90,11 +90,7 @@ extension ExchangeRateViewController{
     
     @IBAction func pressedClear(_ sender: UIButton) {
         
-        exchangeRateFromTextField.text = ""
-        fromWorkings = ""
-    
-        exchangeRateToTextField.text = ""
-        toWorkings = ""
+        clearAllTexts()
         
         exchangeRateFromTextField.becomeFirstResponder()
     }
@@ -177,12 +173,12 @@ extension ExchangeRateViewController{
             exchangeRateManager.setCurrencyUnitForFrom(country: fromCountry)
 
         }
-
+        
         if let toCountry = exchangeRateToPicker.text{
             exchangeRateManager.setCurrencyUnitForTo(country: toCountry)
         }
-        exchangeRateFromTextField.text = ""
-        exchangeRateToTextField.text = ""
+        
+        clearAllTexts()
         self.view.endEditing(true)
     }
 }
@@ -294,3 +290,19 @@ extension ExchangeRateViewController: UIPickerViewDataSource{
     }
 }
 
+
+//MARK: - Other Methods
+
+extension ExchangeRateViewController{
+    
+    func clearAllTexts(){
+        
+        exchangeRateFromTextField.text = ""
+        fromWorkings = ""
+    
+        exchangeRateToTextField.text = ""
+        toWorkings = ""
+        
+    }
+    
+}
