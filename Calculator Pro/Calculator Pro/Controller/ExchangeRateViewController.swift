@@ -38,7 +38,7 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateToTextField.tag = 1
         
         // Initialize Picker's text
-        exchangeRateFromPicker.text = "대한민국 원"
+        exchangeRateFromPicker.text = "한국 원"
         exchangeRateToPicker.text = "미국 달러"
         
         exchangeRateFromTextField.becomeFirstResponder()

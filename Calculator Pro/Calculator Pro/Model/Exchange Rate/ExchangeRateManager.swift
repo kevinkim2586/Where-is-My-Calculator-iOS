@@ -8,7 +8,7 @@ protocol ExchangeRateManagerDelegate {
 
 struct ExchangeRateManager{
     
-    let countries = ["미국 달러","위안화", "유로","일본 옌", "한국 원"]
+    let countries = Constants.ExchangeRateStrings.countries
     
     // Properties for API Networking
     let exchangeRateURL = Constants.ExchangeRateStrings.basicURL
@@ -177,24 +177,23 @@ extension ExchangeRateManager{
     }
     
     func convertCurrencyUnitToJSONKey(country: String)->String{
-        
         switch country {
-        case "한국 원":
-            return "KRW"
-        case "미국 달러":
+        
+        case countries[0]:
             return "USD"
-        case "위안화":
-            return "CNH"
-        case "유로":
+        case countries[1]:
+            return "CNY"
+        case countries[2]:
             return "EUR"
-        case "일본 옌":
+        case countries[3]:
             return "JPY"
-            
+        case countries[4]:
+            return "KRW"
+
         default:
             print("Error in converting currency unit to JSON key value")
             return "Error in converting currency unit to JSON key value"
         }
-
     }
     
     // Method to calculate final result to show User
