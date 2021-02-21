@@ -13,12 +13,7 @@ class ExchangeRateViewController: UIViewController{
     
     var exchangeRateManager = ExchangeRateManager()
     
-    var fromWorkings: String = ""
-    var toWorkings: String = ""
-    
-    var fromTextFieldIsEditing = false
-    var toTextFieldIsEditing = false
-
+    var inputWorkings: String = ""                               // For TextField String input
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,25 +28,14 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateFromTextField.inputView = UIView()
         exchangeRateToTextField.inputView = UIView()
         
-        // A Tag to identify each UITextField
-        exchangeRateFromTextField.tag = 0
-        exchangeRateToTextField.tag = 1
         
         // Initialize Picker's text
         exchangeRateFromPicker.text = "한국 원"
         exchangeRateToPicker.text = "미국 달러"
         
         exchangeRateFromTextField.becomeFirstResponder()
-        
         createPickerView()
- 
-        
-
-        
-        //exchangeRateFromPicker.setLeftIcon(icon: #imageLiteral(resourceName: "USA"))
     }
-
-    
 }
 
 //MARK: - @IBAction Methods
@@ -69,53 +53,32 @@ extension ExchangeRateViewController{
             }
         }
         else{
-            // Create an alert pop up saying : "입력값을 다시 확인해주세요"
+            createAlertMessage("입력 값 확인", "입력 값을 다시 확인해주세요.")
             print("Error in pressedCalculate( )")
             return
         }
     }
 
     @IBAction func pressedNumber(_ sender: UIButton) {
-        
-        if fromTextFieldIsEditing == true{
-            fromWorkings += sender.currentTitle!
-            exchangeRateFromTextField.text = fromWorkings
-        }
-        else if toTextFieldIsEditing == true{
-            toWorkings += sender.currentTitle!
-            exchangeRateToTextField.text = toWorkings
-        }
-
+    
+        inputWorkings += sender.currentTitle!
+        exchangeRateFromTextField.text = inputWorkings
     }
     
     @IBAction func pressedClear(_ sender: UIButton) {
         
         clearAllTexts()
-        
         exchangeRateFromTextField.becomeFirstResponder()
     }
 
-
     @IBAction func pressedDelete(_ sender: UIButton) {
-
-        if fromTextFieldIsEditing == true{
-            if(!fromWorkings.isEmpty){
-                fromWorkings.removeLast()
-                exchangeRateFromTextField.text = fromWorkings
-            }
+        
+        if(!inputWorkings.isEmpty){
+            inputWorkings.removeLast()
+            exchangeRateFromTextField.text = inputWorkings
         }
-        else if toTextFieldIsEditing == true{
-            if(!toWorkings.isEmpty){
-                toWorkings.removeLast()
-                exchangeRateToTextField.text = toWorkings
-            }
-        }
-        else { return }
     }
 }
-
-
-
 
 //MARK: -  Implementation of ExchangeRateManagerDelegate Protocol
 
@@ -128,7 +91,7 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
         }
     }
     func didFailWithError(error: Error) {
-        print(error)
+        print(error.localizedDescription)
     }
 }
 
@@ -177,46 +140,11 @@ extension ExchangeRateViewController{
         if let toCountry = exchangeRateToPicker.text{
             exchangeRateManager.setCurrencyUnitForTo(country: toCountry)
         }
-        
         clearAllTexts()
         self.view.endEditing(true)
+        exchangeRateFromTextField.becomeFirstResponder()
     }
 }
-
-//MARK: - UITextField Related Methods
-extension UITextField {
-    
-    func setLeftIcon(icon: UIImage) {
-        let padding = 5
-        let size = 45
-        
-        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size + padding, height: 20))
-        let iconView = UIImageView(frame: CGRect(x: padding, y: 0, width: 35, height: 20))
-        iconView.image = icon
-        outerView.addSubview(iconView)
-        
-        leftView = outerView
-        leftViewMode = .always
-    }
-    
-//    func setRightIcon() {
-//        let size = 30
-//        let outerView = UIView(frame: CGRect(x: 0, y: 0, width: size, height: 20))
-//        let iconView = UIImageView(frame: CGRect(x: 0, y: 5, width: 13, height: 10))
-//        iconView.image = UIImage(named: "triangle")
-//        outerView.addSubview(iconView)
-//
-//        rightView = outerView
-//        rightViewMode = .always
-//    }
-    
-    func setRightPadding() {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 34, height: self.frame.height))
-        rightView = paddingView
-        rightViewMode = ViewMode.always
-    }
-}
-
 
 //MARK: - UITextFieldDelegate
 
@@ -230,20 +158,6 @@ extension ExchangeRateViewController: UITextFieldDelegate{
         }
         else{
             return false
-        }
-    }
-
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        if textField.tag == 0{
-            fromTextFieldIsEditing = true
-            toTextFieldIsEditing = false
-            exchangeRateFromTextField.becomeFirstResponder()
-        }
-        else{
-            toTextFieldIsEditing = true
-            fromTextFieldIsEditing = false
-            exchangeRateToTextField.becomeFirstResponder()
         }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -270,9 +184,7 @@ extension ExchangeRateViewController: UIPickerViewDelegate{
             exchangeRateToPicker.text = exchangeRateManager.countries[row]
         }
         else {
-
             return
-            
         }
     }
 }
@@ -290,7 +202,6 @@ extension ExchangeRateViewController: UIPickerViewDataSource{
     }
 }
 
-
 //MARK: - Other Methods
 
 extension ExchangeRateViewController{
@@ -298,11 +209,15 @@ extension ExchangeRateViewController{
     func clearAllTexts(){
         
         exchangeRateFromTextField.text = ""
-        fromWorkings = ""
-    
         exchangeRateToTextField.text = ""
-        toWorkings = ""
+        inputWorkings = ""
+    }
+    
+    func createAlertMessage(_ title: String, _ message: String){
         
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
