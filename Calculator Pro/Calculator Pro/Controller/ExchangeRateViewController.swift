@@ -44,7 +44,7 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateFromTextField.becomeFirstResponder()
         
         createPickerView()
-        dismissPickerView()
+ 
         
 
         
@@ -157,9 +157,6 @@ extension ExchangeRateViewController{
         // Inserting PickerView to UITextField
         exchangeRateFromPicker.inputView = fromPickerView
         exchangeRateToPicker.inputView = toPickerView
-    }
-    
-    func dismissPickerView() {
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -172,6 +169,8 @@ extension ExchangeRateViewController{
         exchangeRateFromPicker.inputAccessoryView = toolBar
         exchangeRateToPicker.inputAccessoryView = toolBar
     }
+    
+    
     
     @objc func dismissPicker(){
         
