@@ -64,6 +64,16 @@ class NormalCalculatorViewController: UIViewController {
         operation(operation: .divide)
     }
     
+    func checkIfValidNumber(_ value: String) -> Double{
+        
+        guard let value = Double(value) else{
+            createAlertMessage("유효하지 않은 입력", "다시 입력해주세요.")
+            calculatorResults.text = ""
+            return 0
+        }
+        return value
+    }
+    
     func operation(operation: Operation){
         
         if currentOperation != .NULL{
@@ -72,22 +82,28 @@ class NormalCalculatorViewController: UIViewController {
                 rightValue = runningNumber
                 runningNumber = ""
                 
+                let leftNum = checkIfValidNumber(leftValue)
+                let rightNum = checkIfValidNumber(rightValue)
+                
                 if currentOperation == .add{
-                    result = "\(Double(leftValue)! + Double(rightValue)!)"
+                    
+                    result = "\(leftNum + rightNum)"
                 }
                 else if currentOperation == .subtract{
-                    result = "\(Double(leftValue)! - Double(rightValue)!)"
+                    result = "\(leftNum - rightNum)"
                 }
                 else if currentOperation == .multiply{
-                    result = "\(Double(leftValue)! * Double(rightValue)!)"
+                    result = "\(leftNum * rightNum)"
                 }
                 else if currentOperation == .divide{
-                    result = "\(Double(leftValue)! / Double(rightValue)!)"
+                    result = "\(leftNum / rightNum)"
                 }
                 leftValue = result
                 
-                if (Double(result)!.truncatingRemainder(dividingBy: 1) == 0){       // If divisible by 1
-                    result = "\(Int(Double(result)!))"
+                let finalResult = checkIfValidNumber(result)
+                
+                if (finalResult.truncatingRemainder(dividingBy: 1) == 0){               // If divisible by 1
+                    result = "\(Int(finalResult))"
                 }
                 calculatorResults.text = result
             }
@@ -119,5 +135,15 @@ class NormalCalculatorViewController: UIViewController {
         }
     }
     
+}
+
+extension NormalCalculatorViewController{
+    
+    func createAlertMessage(_ title: String, _ message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
