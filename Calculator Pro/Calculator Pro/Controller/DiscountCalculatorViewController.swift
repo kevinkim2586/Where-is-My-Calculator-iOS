@@ -65,6 +65,28 @@ class DiscountCalculatorViewController: UIViewController {
         finalResultTextField.text = String(format: "%.1f", finalResult)
     
     }
+    
+    @IBAction func pressedDelete(_ sender: UIButton) {
+        
+        if originalPriceTextField.isEditing{
+            
+            if !originalPriceWorkings.isEmpty {
+                originalPriceWorkings.removeLast()
+                originalPriceTextField.text = originalPriceWorkings
+            }
+            
+        }
+        else if discountPercentageTextField.isEditing{
+            
+            if !discountPercentageWorkings.isEmpty {
+                discountPercentageWorkings.removeLast()
+                discountPercentageTextField.text = discountPercentageWorkings
+            }
+            
+        }
+    }
+    
+    
 }
 
 //MARK: - UITextFieldDelegate
