@@ -87,6 +87,17 @@ class DiscountCalculatorViewController: UIViewController {
     }
     
     
+    @IBAction func pressedSwapButton(_ sender: UIButton) {
+        
+        if originalPriceTextField.isEditing {
+            discountPercentageTextField.becomeFirstResponder()
+        } else if discountPercentageTextField.isEditing {
+            originalPriceTextField.becomeFirstResponder()
+        }
+    }
+    
+    
+    
 }
 
 //MARK: - UITextFieldDelegate
@@ -96,8 +107,6 @@ extension DiscountCalculatorViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
     }
-    
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         

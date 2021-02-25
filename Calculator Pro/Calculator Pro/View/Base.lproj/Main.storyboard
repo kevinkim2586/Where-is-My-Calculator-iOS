@@ -1532,9 +1532,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-iI-d10">
                                                 <rect key="frame" x="263.33333333333331" y="0.0" width="86.666666666666686" height="81.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" backgroundImage="DiscountCalculator_Swap">
+                                                <state key="normal" title="Swap" backgroundImage="DiscountCalculator_Swap">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedSwapButton:" destination="ICU-nA-FeE" eventType="touchUpInside" id="f3w-P5-g94"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
