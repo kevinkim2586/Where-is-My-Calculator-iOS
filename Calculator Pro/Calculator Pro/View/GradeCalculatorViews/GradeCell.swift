@@ -189,7 +189,7 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
             gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradeArrayOne
             return Constants.GradeCalcStrings.possibleGradeArrayOne[row]
         }else {
-            gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradesArrayTwoㄴ
+            gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradesArrayTwo
             return Constants.GradeCalcStrings.possibleGradesArrayTwo[row]
         }
     }
