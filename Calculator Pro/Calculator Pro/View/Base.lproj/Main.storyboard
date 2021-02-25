@@ -1570,6 +1570,9 @@
                                                 <state key="normal" title="=" backgroundImage="DiscountCalculator_Equal">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedCalculate:" destination="ICU-nA-FeE" eventType="touchUpInside" id="b7X-UH-bJf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

@@ -52,15 +52,12 @@ class UnitConverterViewController: UIViewController {
             unitFromTextField.text = inputWorkings
         }
     }
-    
 
     @IBAction func pressedNumber(_ sender: UIButton) {
         
         inputWorkings += sender.currentTitle!
         unitFromTextField.text = inputWorkings
     }
-    
-    
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
         
