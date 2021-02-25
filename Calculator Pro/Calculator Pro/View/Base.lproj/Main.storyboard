@@ -1396,7 +1396,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DsN-UB-7f7" userLabel="Final Result TextField">
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DsN-UB-7f7" userLabel="Final Result TextField">
                                         <rect key="frame" x="204" y="17" width="97" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1417,6 +1417,9 @@
                                                 <state key="normal" title="7" backgroundImage="7 Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="DX0-MQ-cSK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgH-5s-sxZ">
                                                 <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="81.666666666666671"/>
@@ -1424,6 +1427,9 @@
                                                 <state key="normal" title="8" backgroundImage="8 Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="yZz-Dg-ZZT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DE-Nx-nER">
                                                 <rect key="frame" x="175.66666666666666" y="0.0" width="86.666666666666657" height="81.666666666666671"/>
@@ -1431,6 +1437,9 @@
                                                 <state key="normal" title="9" backgroundImage="9 Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="CsL-Si-YTP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xR-W5-bq2">
                                                 <rect key="frame" x="263.33333333333331" y="0.0" width="86.666666666666686" height="81.666666666666671"/>
@@ -1450,6 +1459,9 @@
                                                 <state key="normal" title="4" backgroundImage="4 Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="X2B-XO-7ve"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9To-rh-UKW">
                                                 <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="82"/>
@@ -1457,6 +1469,9 @@
                                                 <state key="normal" title="5" backgroundImage="5 Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="k34-sy-L3e"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pB-nT-jDn">
                                                 <rect key="frame" x="175.66666666666666" y="0.0" width="86.666666666666657" height="82"/>
@@ -1465,6 +1480,9 @@
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="get-K3-raO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGV-ae-Mvd">
                                                 <rect key="frame" x="263.33333333333331" y="0.0" width="86.666666666666686" height="82"/>
@@ -1484,6 +1502,9 @@
                                                 <state key="normal" title="1" backgroundImage="1 Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="qAB-UC-R7Z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNn-A4-Ldv">
                                                 <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="81.666666666666671"/>
@@ -1491,6 +1512,9 @@
                                                 <state key="normal" title="2" backgroundImage="2 Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="PHg-yN-Fgx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t60-Tg-jPw">
                                                 <rect key="frame" x="175.66666666666666" y="0.0" width="86.666666666666657" height="81.666666666666671"/>
@@ -1498,6 +1522,9 @@
                                                 <state key="normal" title="3" backgroundImage="3 Button">
                                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="KfW-tQ-k7I"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-iI-d10">
                                                 <rect key="frame" x="263.33333333333331" y="0.0" width="86.666666666666686" height="81.666666666666671"/>
@@ -1511,13 +1538,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="NGQ-lc-dp4">
                                         <rect key="frame" x="0.0" y="248.33333333333334" width="350" height="81.666666666666657"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ss1-CO-Hu0">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ss1-CO-Hu0" userLabel="0">
                                                 <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="81.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <size key="titleShadowOffset" width="5" height="0.0"/>
-                                                <state key="normal" backgroundImage="0 Button">
+                                                <state key="normal" title="0" backgroundImage="0 Button">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="pzi-PP-ePO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0W-OV-XBH">
                                                 <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="81.666666666666671"/>
