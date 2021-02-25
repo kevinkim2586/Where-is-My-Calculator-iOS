@@ -17,7 +17,13 @@ class DiscountCalculatorViewController: UIViewController {
         originalPriceTextField.delegate = self
         discountPercentageTextField.delegate = self
         
+        // Inserting a dummy UIView to prevent iPhone default keyboard from appearing
+        originalPriceTextField.inputView = UIView()
+        discountPercentageTextField.inputView = UIView()
+        
         originalPriceTextField.becomeFirstResponder()
+        
+        
     }
     
     @IBAction func pressedNumber(_ sender: UIButton) {
@@ -30,7 +36,7 @@ class DiscountCalculatorViewController: UIViewController {
         else if discountPercentageTextField.isEditing{
             
             discountPercentageWorkings += sender.currentTitle!
-            discountPercentageTextField.text = discountPercentageWorkings + " %"
+            discountPercentageTextField.text = discountPercentageWorkings
         }
     }
 
@@ -50,6 +56,12 @@ class DiscountCalculatorViewController: UIViewController {
         }
         
         let finalResult = discountCalculatorManager.calculateFinalResult()
+        
+        if finalResult.truncatingRemainder(dividingBy: 1) == 0 {        // Determine if whole number
+            let result = "\(Int(finalResult))"
+            finalResultTextField.text = result
+            return
+        }
         finalResultTextField.text = String(format: "%.1f", finalResult)
     
     }
