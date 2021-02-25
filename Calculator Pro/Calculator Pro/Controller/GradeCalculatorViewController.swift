@@ -60,6 +60,7 @@ class GradeCalculatorViewController: UIViewController{
 }
 
 //MARK: - Methods
+
 extension GradeCalculatorViewController{
     
     func increaseRowNum(){
@@ -120,6 +121,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
 }
 
 //MARK: - GradeCellDelegate
+
 extension GradeCalculatorViewController: GradeCellDelegate{
     
     func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell) {
@@ -137,6 +139,7 @@ extension GradeCalculatorViewController: GradeCellDelegate{
 }
 
 //MARK: - UITextFieldDelegate
+
 extension GradeCalculatorViewController: UITextFieldDelegate{
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -147,7 +150,6 @@ extension GradeCalculatorViewController: UITextFieldDelegate{
 //MARK: - Picker View Related Methods & UIPickerViewDataSource & Delegate Methods
 
 extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate{
-    
     
     func createPickerView(){
         
@@ -197,8 +199,7 @@ extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDel
         let selectedOption = Constants.GradeCalcStrings.highestPossibleGradeArray[row]
         
         highestPossibleGradeTextField.text = selectedOption
-        
-        selectedHighestPossibleGrade = Double( selectedOption) ?? 4.5
+        selectedHighestPossibleGrade = Double(selectedOption) ?? 4.5
     }
     
 }

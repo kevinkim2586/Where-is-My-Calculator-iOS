@@ -106,7 +106,7 @@ extension GradeCell: UITextFieldDelegate{
                     }
                     break
                 }
-                else{ creditTextField.text = "" }
+                else { creditTextField.text = "" }
             }
         case gradeTextField:
             
@@ -178,7 +178,7 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
         
         if highestPossibleGrade == 4.5{
             return Constants.GradeCalcStrings.possibleGradeArrayOne.count
-        }else{
+        }else {
             return Constants.GradeCalcStrings.possibleGradesArrayTwo.count
         }
     }
@@ -186,8 +186,10 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if highestPossibleGrade == 4.5{
+            gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradeArrayOne
             return Constants.GradeCalcStrings.possibleGradeArrayOne[row]
-        }else{
+        }else {
+            gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradesArrayTwoㄴ
             return Constants.GradeCalcStrings.possibleGradesArrayTwo[row]
         }
     }
