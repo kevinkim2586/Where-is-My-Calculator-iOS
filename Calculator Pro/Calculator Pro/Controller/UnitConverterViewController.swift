@@ -22,7 +22,6 @@ class UnitConverterViewController: UIViewController {
     var unitFromTemperature: UnitTemperature = .celsius
     var unitToTemperature: UnitTemperature = .fahrenheit
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,11 +31,7 @@ class UnitConverterViewController: UIViewController {
         unitToTextField.delegate = self
         
         unitFromTextField.inputView = UIView()
-        
-   
     }
-
-   
     
     @IBAction func pressedClearButton(_ sender: UIButton) {
         
@@ -60,7 +55,6 @@ class UnitConverterViewController: UIViewController {
     }
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
-        
         
         var result: Double = 0.0
         
@@ -129,7 +123,6 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
         }
         else{ print("Error while setUnitFromTemperature()") }
     }
-    
     
     func showUnitToSelectionList(){
 

@@ -97,6 +97,16 @@ class DiscountCalculatorViewController: UIViewController {
     }
     
     
+    @IBAction func pressedClearButton(_ sender: UIButton) {
+        
+        originalPriceTextField.text = ""
+        originalPriceWorkings = ""
+        
+        discountPercentageTextField.text = ""
+        discountPercentageWorkings = ""
+        
+        finalResultTextField.text = ""
+    }
     
 }
 

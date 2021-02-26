@@ -20,7 +20,6 @@ class NormalCalculatorViewController: UIViewController {
     var result = ""
     var currentOperation: Operation = .NULL
 
-  
     override func viewDidLoad() {
         super.viewDidLoad()
         calculatorResults.text = "0"

@@ -28,7 +28,6 @@ class ExchangeRateViewController: UIViewController{
         exchangeRateFromTextField.inputView = UIView()
         exchangeRateToTextField.inputView = UIView()
         
-        
         // Initialize Picker's text
         exchangeRateFromPicker.text = "한국 원"
         exchangeRateToPicker.text = "미국 달러"
@@ -54,7 +53,6 @@ extension ExchangeRateViewController{
         }
         else{
             createAlertMessage("입력 값 확인", "입력 값을 다시 확인해주세요.")
-            print("Error in pressedCalculate( )")
             return
         }
     }
@@ -134,7 +132,6 @@ extension ExchangeRateViewController{
         
         if let fromCountry = exchangeRateFromPicker.text{
             exchangeRateManager.setCurrencyUnitForFrom(country: fromCountry)
-
         }
         
         if let toCountry = exchangeRateToPicker.text{

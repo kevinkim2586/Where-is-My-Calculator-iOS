@@ -35,9 +35,6 @@ class GoldCalculatorViewController: UIViewController {
     }
 }
 
-
-
-
 //MARK: - @IBAction Methods
 
 extension GoldCalculatorViewController{
@@ -48,6 +45,7 @@ extension GoldCalculatorViewController{
             goldCalculatorManager.inputAmount = inputAmount
         }
     }
+    
     func setGoldUnit(inputUnit: String){
         goldCalculatorManager.setGoldUnit(unit: inputUnit)
     }
@@ -67,7 +65,6 @@ extension GoldCalculatorViewController{
             let finalResult = goldCalculatorManager.calculateFinalResult(currentGoldPrice: goldPrice)
             
             resultTextField.text = String(format: "%.2f", finalResult) + " KRW"
-            
         }
     }
     
