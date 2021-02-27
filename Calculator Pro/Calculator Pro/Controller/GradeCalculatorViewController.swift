@@ -48,8 +48,14 @@ class GradeCalculatorViewController: UIViewController{
 
         self.view.endEditing(true)
     
-        let totalCredit = gradeCalculatorManager.calculateFinalCredit(gradeInfo: totalGradeInfo)
-        let totalGrade = gradeCalculatorManager.calculateFinalGrade(gradeInfo: totalGradeInfo)
+        
+        let totalCredit = gradeCalculatorManager.calculateFinalCredit(totalGradeInfo)
+        let totalGrade = gradeCalculatorManager.calculateFinalGrade(totalGradeInfo)
+        
+        gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
+
+        
+        
         
         totalCreditLabel.text = String(format: "%d", totalCredit)
         totalGradeLabel.text = String(format: "%.2f", totalGrade)

@@ -1,6 +1,6 @@
 import Foundation
 
-struct GradeInfo {
+struct GradeInfo: Codable{
     
     var lectureName: String?
     var credit: Int?

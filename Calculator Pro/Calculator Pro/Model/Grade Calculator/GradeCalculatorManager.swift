@@ -8,7 +8,7 @@ struct GradeCalculatorManager{
     var possibleGrades = Constants.GradeCalcStrings.possibleGradeArrayOne
     
     // Calculate credit (학점)
-    mutating func calculateFinalCredit(gradeInfo: [GradeInfo])->Int{
+    mutating func calculateFinalCredit(_ gradeInfo: [GradeInfo]) ->Int {
         
         totalCredit = 0
         
@@ -21,7 +21,7 @@ struct GradeCalculatorManager{
     }
     
     // Calculate Final GPA (성적)
-    mutating func calculateFinalGrade(gradeInfo: [GradeInfo])->Double{
+    mutating func calculateFinalGrade(_ gradeInfo: [GradeInfo]) ->Double {
         
         totalGrade = 0.0
         
@@ -39,5 +39,16 @@ struct GradeCalculatorManager{
         totalGrade = totalGrade / totalCreditInDouble
         return totalGrade
     }
+    
+    // Save to User Defaults
+    func saveToUserDefaults(_ gradeInfo: [GradeInfo]) {
+        
+        let data = gradeInfo.map { try? JSONEncoder().encode($0) }
+        UserDefaults.standard.set(data, forKey: "gradeKey")
+        
+    }
+    
+    // Load User Defaults Data
+    
     
 }
