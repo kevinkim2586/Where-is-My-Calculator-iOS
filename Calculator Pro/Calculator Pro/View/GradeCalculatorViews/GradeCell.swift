@@ -83,6 +83,41 @@ extension GradeCell{
             return 0
         }
     }
+    
+    func convertGradeDoubleToString(_ grade: Double) -> String {
+        
+        if grade == 4.5 || grade == 4.3 {
+            return "A+"
+        } else if grade == 4.0 {
+            return "A0"
+        } else if grade == 3.7 {
+            return "A-"
+        } else if grade == 3.5 || grade == 3.3 {
+            return "B+"
+        } else if grade == 3.0 {
+            return "B0"
+        } else if grade == 2.7 {
+            return "B-"
+        } else if grade == 2.5 || grade == 2.3 {
+            return "C+"
+        } else if grade == 2.0 {
+            return "C0"
+        } else if grade == 1.7 {
+            return "C-"
+        } else if grade == 1.5 || grade == 1.3 {
+            return "D+"
+        } else if grade == 1.0 {
+            return "D0"
+        } else if grade == 0.7 {
+            return "D-"
+        } else if grade == 0.0 {
+            return "F"
+        } else {
+            return ""
+        }
+
+        
+    }
 }
 
 //MARK: - UITextFieldDelegate

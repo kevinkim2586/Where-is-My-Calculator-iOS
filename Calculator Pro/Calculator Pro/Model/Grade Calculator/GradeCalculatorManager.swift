@@ -56,10 +56,8 @@ struct GradeCalculatorManager{
         }
         
         return encodedData.map { try! JSONDecoder().decode(GradeInfo.self, from: $0) }
-        
-        
     }
     
-    
+
     
 }

@@ -8,11 +8,13 @@ class GradeCalculatorViewController: UIViewController{
     @IBOutlet weak var totalGradeLabel: UILabel!
     @IBOutlet weak var highestPossibleGradeTextField: UITextField!
     
-    var rowNum = 1
+    var rowNum = 0
     
     var selectedHighestPossibleGrade: Double = 0.0
     
     var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0.0)
+    
+    var loadedGradeInfo = [GradeInfo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,8 @@ class GradeCalculatorViewController: UIViewController{
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
        
         tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
         
@@ -30,33 +34,37 @@ class GradeCalculatorViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-        // View 를 껐다가 다시 키면 totalGradeInfo.count 가 초기화되지 않는 상태임
     }
 
     @IBAction func pressedAddButton(_ sender: UIButton) {
         
-        if rowNum == 10{
+        if totalGradeInfo.count == 10 || loadedGradeInfo.count == 10 {
             createAlertMessage("과목 수 제한", "10개 이상의 과목을 입력할 수 없습니다.")
             return
         }
-        increaseRowNum()
-        tableView.insertRows(at: [IndexPath(row:rowNum-1, section: 0)], with: .bottom)
+
+        createNewGradeInfo()        // and append to totalGradeInfo[]
+        gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
+        loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
+        
+        tableView.insertRows(at: [IndexPath(row:totalGradeInfo.count - 1, section: 0)], with: .bottom)
+
+        
     }
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
 
         self.view.endEditing(true)
     
-        
         let totalCredit = gradeCalculatorManager.calculateFinalCredit(totalGradeInfo)
         let totalGrade = gradeCalculatorManager.calculateFinalGrade(totalGradeInfo)
         
+        // User Defaults에 이때까지 작성한 데이터 저장
         gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
+        
+        print(totalCredit)
+        print(totalGrade)
 
-        
-        
-        
         totalCreditLabel.text = String(format: "%d", totalCredit)
         totalGradeLabel.text = String(format: "%.2f", totalGrade)
     }
@@ -87,38 +95,60 @@ extension GradeCalculatorViewController{
 extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rowNum
+        
+        // User Defaults 에 정보가 저장되어 있으면~
+        if loadedGradeInfo.count > 0 {
+            totalGradeInfo = loadedGradeInfo
+            return loadedGradeInfo.count
+        } else {
+            return totalGradeInfo.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
+
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.GradeCalcStrings.cellIdentifier, for: indexPath) as! GradeCell
         
-        cell.lectureTextField.text = ""
-        cell.creditTextField.text = ""
-        cell.gradeTextField.text = ""
-        cell.tagNum = indexPath.row
-        cell.highestPossibleGrade = selectedHighestPossibleGrade
+        print("indexPath: \(indexPath.row)")
+       
         
-        cell.gradeCellDelegate = self
-    
-        createNewGradeInfo()
-    
+        if loadedGradeInfo.count > 0 {
+
+            
+            if let credit = loadedGradeInfo[indexPath.row].credit, let grade = loadedGradeInfo[indexPath.row].grade {
+                
+            
+                let creditString = String(format: "%d", credit)
+                let gradeString = cell.convertGradeDoubleToString(grade)
+                
+                cell.creditTextField.text = creditString
+                cell.gradeTextField.text = gradeString
+                cell.lectureTextField.text = loadedGradeInfo[indexPath.row].lectureName
+                cell.tagNum = indexPath.row
+                cell.highestPossibleGrade = selectedHighestPossibleGrade
+                cell.gradeCellDelegate = self
+                
+            }
+            else {
+                cell.tagNum = indexPath.row
+                cell.highestPossibleGrade = selectedHighestPossibleGrade
+                cell.gradeCellDelegate = self
+            }
+        }
+        
+        else {
+            cell.lectureTextField.text = ""
+            cell.creditTextField.text = ""
+            cell.gradeTextField.text = ""
+            cell.tagNum = indexPath.row
+            cell.highestPossibleGrade = selectedHighestPossibleGrade
+            cell.gradeCellDelegate = self
+            
+            //createNewGradeInfo()
+            
+            return cell
+        }
         return cell
     }
     
@@ -132,11 +162,21 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             
             tableView.beginUpdates()
             
+            print("trying to delete indexPath: \(indexPath.row)")
+            
+            
             totalGradeInfo.remove(at: indexPath.row)
-            decreaseRowNum()
+            loadedGradeInfo.remove(at: indexPath.row)
+         
             tableView.deleteRows(at: [indexPath], with: .fade )
             
+            
+            print("count of totalGradeInfo: \(totalGradeInfo.count)")
+            
             tableView.endUpdates()
+            
+            gradeCalculatorManager.saveToUserDefaults(loadedGradeInfo)
+            loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
         }
     }
 }
@@ -147,14 +187,19 @@ extension GradeCalculatorViewController: GradeCellDelegate{
     
     func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].lectureName = lecture
+        gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
     }
     
     func didChangeCredit(credit: Int, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].credit = credit
+        print("didChangeCredit activated: \(credit)")
+        gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
     }
 
     func didChangeGrade(grade: Double, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].grade = grade
+        print("didChangeGrade activated: \(grade)")
+        gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
     }
     
 }
@@ -224,8 +269,6 @@ extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDel
     }
     
 }
-
-
 
 //MARK: - Alert Handling Method
 extension GradeCalculatorViewController{
