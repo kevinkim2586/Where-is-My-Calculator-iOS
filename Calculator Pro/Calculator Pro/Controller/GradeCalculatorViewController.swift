@@ -8,8 +8,6 @@ class GradeCalculatorViewController: UIViewController{
     @IBOutlet weak var totalGradeLabel: UILabel!
     @IBOutlet weak var highestPossibleGradeTextField: UITextField!
     
-    var rowNum = 0
-    
     var selectedHighestPossibleGrade: Double = 0.0
     
     var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0.0)
@@ -29,7 +27,6 @@ class GradeCalculatorViewController: UIViewController{
         tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
         
         createPickerView()
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,12 +74,6 @@ class GradeCalculatorViewController: UIViewController{
 
 extension GradeCalculatorViewController{
     
-    func increaseRowNum(){
-        rowNum += 1
-    }
-    func decreaseRowNum(){
-        rowNum -= 1
-    }
     func createNewGradeInfo(){
         
         let newGradeInfo = GradeInfo(lectureName: nil, credit: nil, grade: nil)
