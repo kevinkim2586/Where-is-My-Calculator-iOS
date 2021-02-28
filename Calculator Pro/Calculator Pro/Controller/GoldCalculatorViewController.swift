@@ -105,6 +105,7 @@ extension GoldCalculatorViewController: GoldCalculatorManagerDelegate{
     }
         
     func didFailWithError(error: Error) {
+        createAlertMessage("금 시세 가져오기 실패", "데이터 연결 확인 후 다시 시도 부탁드립니다.")
         print("Failed to fetch Gold Price at this moment")
     }
 }
@@ -180,5 +181,17 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         goldUnitPickerTextField.text = goldCalculatorManager.goldUnitArray[row]
+    }
+}
+
+//MARK: - Other Methods
+
+extension GoldCalculatorViewController {
+
+    func createAlertMessage(_ title: String, _ message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

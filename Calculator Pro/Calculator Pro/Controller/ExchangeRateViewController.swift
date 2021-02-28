@@ -89,6 +89,7 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
         }
     }
     func didFailWithError(error: Error) {
+        createAlertMessage("환율 데이터 가져오기 실패", "데이터 연결 확인 후 다시 시도 부탁드립니다.")
         print(error.localizedDescription)
     }
 }
