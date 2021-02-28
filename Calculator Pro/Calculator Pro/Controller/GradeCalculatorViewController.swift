@@ -18,14 +18,12 @@ class GradeCalculatorViewController: UIViewController{
         super.viewDidLoad()
         
         highestPossibleGradeTextField.delegate = self
-        
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
         
         loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
        
-        tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
-        
         createPickerView()
     }
     
@@ -39,14 +37,11 @@ class GradeCalculatorViewController: UIViewController{
             createAlertMessage("과목 수 제한", "10개 이상의 과목을 입력할 수 없습니다.")
             return
         }
-
-        createNewGradeInfo()        // and append to totalGradeInfo[]
+        createNewGradeInfo()                                                    // and appends to totalGradeInfo[]
         gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
         loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
         
         tableView.insertRows(at: [IndexPath(row:totalGradeInfo.count - 1, section: 0)], with: .bottom)
-
-        
     }
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
@@ -65,9 +60,6 @@ class GradeCalculatorViewController: UIViewController{
         totalCreditLabel.text = String(format: "%d", totalCredit)
         totalGradeLabel.text = String(format: "%.2f", totalGrade)
     }
-    
-    
-    
 }
 
 //MARK: - Methods

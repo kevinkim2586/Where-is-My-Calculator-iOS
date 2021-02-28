@@ -17,7 +17,7 @@ class GradeCell: UITableViewCell {
     var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0)
     
     var tagNum: Int = 0
-    var highestPossibleGrade: Double = 0.0
+    var highestPossibleGrade: Double = 4.5
     var gradeToDisplay = ""                                         // Grade to display in each TextField
     
     var gradeCellDelegate: GradeCellDelegate?
