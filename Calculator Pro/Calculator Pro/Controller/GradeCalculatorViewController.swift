@@ -8,7 +8,7 @@ class GradeCalculatorViewController: UIViewController{
     @IBOutlet weak var totalGradeLabel: UILabel!
     @IBOutlet weak var highestPossibleGradeTextField: UITextField!
     
-    var selectedHighestPossibleGrade: Double = 0.0
+    var selectedHighestPossibleGrade: Double = 4.5
     
     var gradeCalculatorManager = GradeCalculatorManager(totalCredit: 0, totalGrade: 0.0)
     
@@ -95,13 +95,11 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         
         print("indexPath: \(indexPath.row)")
        
-        
         if loadedGradeInfo.count > 0 {
 
             
             if let credit = loadedGradeInfo[indexPath.row].credit, let grade = loadedGradeInfo[indexPath.row].grade {
                 
-            
                 let creditString = String(format: "%d", credit)
                 let gradeString = cell.convertGradeDoubleToString(grade)
                 
@@ -250,6 +248,7 @@ extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDel
         
         highestPossibleGradeTextField.text = selectedOption
         selectedHighestPossibleGrade = Double(selectedOption) ?? 4.5
+        tableView.reloadData()
     }
     
 }
