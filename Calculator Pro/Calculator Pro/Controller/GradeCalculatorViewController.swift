@@ -34,7 +34,7 @@ class GradeCalculatorViewController: UIViewController{
     @IBAction func pressedAddButton(_ sender: UIButton) {
         
         if totalGradeInfo.count == 10 || loadedGradeInfo.count == 10 {
-            createAlertMessage("과목 수 제한", "10개 이상의 과목을 입력할 수 없습니다.")
+            createAlertMessage("과목 수 제한", "10개 이상의 과목을 입력할 수 없습니다.")    // 굳이 제한을 둬야하는지 생각 다시 해보기
             return
         }
         createNewGradeInfo()                                                    // and appends to totalGradeInfo[]
@@ -145,12 +145,10 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             
             print("trying to delete indexPath: \(indexPath.row)")
             
-            
             totalGradeInfo.remove(at: indexPath.row)
             loadedGradeInfo.remove(at: indexPath.row)
          
             tableView.deleteRows(at: [indexPath], with: .fade )
-            
             
             print("count of totalGradeInfo: \(totalGradeInfo.count)")
             
