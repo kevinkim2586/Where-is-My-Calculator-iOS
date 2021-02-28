@@ -214,6 +214,7 @@ extension GradeCalculatorViewController: UITextFieldDelegate{
 }
 
 //MARK: - Picker View Related Methods & UIPickerViewDataSource & Delegate Methods
+// The below picker view related methods are for picking ["4.5", "4.3"], not the ones in Grade Cell
 
 extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     
@@ -230,9 +231,9 @@ extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDel
         toolBar.tintColor = .systemBlue
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.dismissPicker))
+        let doneButton = UIBarButtonItem(title: "완료", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.dismissPicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissPicker))
+        let cancelButton = UIBarButtonItem(title: "취소", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissPicker))
 
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true

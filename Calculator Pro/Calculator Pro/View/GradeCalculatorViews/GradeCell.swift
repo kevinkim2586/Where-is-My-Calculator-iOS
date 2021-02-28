@@ -18,7 +18,7 @@ class GradeCell: UITableViewCell {
     
     var tagNum: Int = 0
     var highestPossibleGrade: Double = 0.0
-    var gradeToDisplay = ""
+    var gradeToDisplay = ""                                         // Grade to display in each TextField
     
     var gradeCellDelegate: GradeCellDelegate?
     
@@ -145,6 +145,11 @@ extension GradeCell: UITextFieldDelegate{
             }
         case gradeTextField:
             
+            if gradeToDisplay.isEmpty {
+                gradeToDisplay = "A+"
+                gradeTextField.text = "A+"
+            }
+        
             if let gradeString = gradeTextField.text{
            
                 let gradeDouble = convertGradeStringToDouble(gradeString)
@@ -187,9 +192,9 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
         toolBar.tintColor = .systemBlue
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.dismissPicker))
+        let doneButton = UIBarButtonItem(title: "완료", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.dismissPicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissPicker))
+        let cancelButton = UIBarButtonItem(title: "취소", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.dismissPicker))
 
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
