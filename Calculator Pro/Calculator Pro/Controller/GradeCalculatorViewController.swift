@@ -89,15 +89,18 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.GradeCalcStrings.cellIdentifier, for: indexPath) as! GradeCell
         
+        func configureCell(){
+            cell.tagNum = indexPath.row
+            cell.highestPossibleGrade = selectedHighestPossibleGrade
+            cell.gradeCellDelegate = self
+        }
         print("indexPath: \(indexPath.row)")
-       
+        
         if loadedGradeInfo.count > 0 {
 
-            
             if let credit = loadedGradeInfo[indexPath.row].credit, let grade = loadedGradeInfo[indexPath.row].grade {
                 
                 let creditString = String(format: "%d", credit)
@@ -106,15 +109,11 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
                 cell.creditTextField.text = creditString
                 cell.gradeTextField.text = gradeString
                 cell.lectureTextField.text = loadedGradeInfo[indexPath.row].lectureName
-                cell.tagNum = indexPath.row
-                cell.highestPossibleGrade = selectedHighestPossibleGrade
-                cell.gradeCellDelegate = self
+                configureCell()
                 
             }
             else {
-                cell.tagNum = indexPath.row
-                cell.highestPossibleGrade = selectedHighestPossibleGrade
-                cell.gradeCellDelegate = self
+                configureCell()
             }
         }
         
@@ -122,12 +121,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             cell.lectureTextField.text = ""
             cell.creditTextField.text = ""
             cell.gradeTextField.text = ""
-            cell.tagNum = indexPath.row
-            cell.highestPossibleGrade = selectedHighestPossibleGrade
-            cell.gradeCellDelegate = self
-            
-            //createNewGradeInfo()
-            
+            configureCell()
             return cell
         }
         return cell
