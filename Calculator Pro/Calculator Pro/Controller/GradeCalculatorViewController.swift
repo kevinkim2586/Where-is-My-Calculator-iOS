@@ -130,6 +130,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
+
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     
@@ -145,6 +146,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             cell.lectureTextField.text = ""
             cell.creditTextField.text = ""
             cell.gradeTextField.text = ""
+            cell.gradeToDisplay = ""
             
             
             print("before deletion for totalGradeInfo: \(totalGradeInfo[indexPath.row].credit) and \(totalGradeInfo[indexPath.row].grade)")

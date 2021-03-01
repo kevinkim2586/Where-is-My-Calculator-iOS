@@ -145,7 +145,7 @@ extension GradeCell: UITextFieldDelegate{
             }
         case gradeTextField:
             
-            if gradeToDisplay.isEmpty {
+            if gradeToDisplay == "" || gradeToDisplay.isEmpty {
                 gradeToDisplay = "A+"
                 gradeTextField.text = "A+"
             }
