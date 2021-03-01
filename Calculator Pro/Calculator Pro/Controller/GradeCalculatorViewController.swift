@@ -131,40 +131,23 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         return .delete
     }
 
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     
         if editingStyle == .delete{
             
             tableView.beginUpdates()
-            
-            print("trying to delete indexPath: \(indexPath.row)")
-            
-            
-            
+                        
             let cell = self.tableView.cellForRow(at: indexPath) as! GradeCell
-            cell.lectureTextField.text = ""
-            cell.creditTextField.text = ""
-            cell.gradeTextField.text = ""
-            cell.gradeToDisplay = ""
+            cell.clearCellContents()
             
-            
-            print("before deletion for totalGradeInfo: \(totalGradeInfo[indexPath.row].credit) and \(totalGradeInfo[indexPath.row].grade)")
-            print("before deletion for loadedGradeInfo: \(loadedGradeInfo[indexPath.row].credit) and \(loadedGradeInfo[indexPath.row].grade)")
             totalGradeInfo.remove(at: indexPath.row)
             
             gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
             loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
             
-            
             tableView.deleteRows(at: [indexPath], with: .fade )
             
-        
-            
-            
             tableView.endUpdates()
-            
-            
         }
     }
 }

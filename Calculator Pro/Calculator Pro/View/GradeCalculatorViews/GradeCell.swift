@@ -115,8 +115,14 @@ extension GradeCell{
         } else {
             return ""
         }
-
+    }
+    
+    func clearCellContents(){
         
+        lectureTextField.text = ""
+        creditTextField.text = ""
+        gradeTextField.text = ""
+        gradeToDisplay = ""
     }
 }
 
