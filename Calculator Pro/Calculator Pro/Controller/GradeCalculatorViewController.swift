@@ -80,8 +80,8 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // User Defaults 에 정보가 저장되어 있으면~
-        if loadedGradeInfo.count > 0 {
-            totalGradeInfo = loadedGradeInfo
+        if !loadedGradeInfo.isEmpty {
+            totalGradeInfo = loadedGradeInfo // 굳이 필요?
             return loadedGradeInfo.count
         } else {
             return totalGradeInfo.count
@@ -99,7 +99,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         }
         print("indexPath: \(indexPath.row)")
         
-        if loadedGradeInfo.count > 0 {
+        if !loadedGradeInfo.isEmpty {
 
             if let credit = loadedGradeInfo[indexPath.row].credit, let grade = loadedGradeInfo[indexPath.row].grade {
                 
@@ -139,17 +139,30 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             
             print("trying to delete indexPath: \(indexPath.row)")
             
+            
+            
+            let cell = self.tableView.cellForRow(at: indexPath) as! GradeCell
+            cell.lectureTextField.text = ""
+            cell.creditTextField.text = ""
+            cell.gradeTextField.text = ""
+            
+            
+            print("before deletion for totalGradeInfo: \(totalGradeInfo[indexPath.row].credit) and \(totalGradeInfo[indexPath.row].grade)")
+            print("before deletion for loadedGradeInfo: \(loadedGradeInfo[indexPath.row].credit) and \(loadedGradeInfo[indexPath.row].grade)")
             totalGradeInfo.remove(at: indexPath.row)
-            loadedGradeInfo.remove(at: indexPath.row)
-         
+            
+            gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
+            loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
+            
+            
             tableView.deleteRows(at: [indexPath], with: .fade )
             
-            print("count of totalGradeInfo: \(totalGradeInfo.count)")
+        
+            
             
             tableView.endUpdates()
             
-            gradeCalculatorManager.saveToUserDefaults(loadedGradeInfo)
-            loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
+            
         }
     }
 }
@@ -161,18 +174,21 @@ extension GradeCalculatorViewController: GradeCellDelegate{
     func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].lectureName = lecture
         gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
+        loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
     }
     
     func didChangeCredit(credit: Int, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].credit = credit
-        print("didChangeCredit activated: \(credit)")
+        print("didChangeCredit activated: \(credit) for tagNum: \(tagNum)")
         gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
+        loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
     }
 
     func didChangeGrade(grade: Double, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].grade = grade
-        print("didChangeGrade activated: \(grade)")
+        print("didChangeGrade activated: \(grade) for tagNum: \(tagNum)")
         gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
+        loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
     }
     
 }
