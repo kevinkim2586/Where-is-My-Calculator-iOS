@@ -43,8 +43,16 @@ class UnitConverterViewController: UIViewController {
     @IBAction func pressedDeleteButton(_ sender: UIButton) {
      
         if(!inputWorkings.isEmpty){
+            
             inputWorkings.removeLast()
             unitFromTextField.text = inputWorkings
+            
+            if inputWorkings.isEmpty {
+                unitToTextField.text = ""
+                return
+            }
+            
+            calculateResult()
         }
     }
 
@@ -52,9 +60,15 @@ class UnitConverterViewController: UIViewController {
         
         inputWorkings += sender.currentTitle!
         unitFromTextField.text = inputWorkings
+        calculateResult()
+        
     }
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
+        calculateResult()
+    }
+    
+    func calculateResult() {
         
         var result: Double = 0.0
         
@@ -72,7 +86,7 @@ class UnitConverterViewController: UIViewController {
                     result = unitFromTemperature.convertTo(unit: unitToTemperature, value: inputNum)
                 }
         
-                unitToTextField.text = String(format: "%.5f", result)
+                unitToTextField.text = String(format: "%.2f", result)
             }
         }
     }
