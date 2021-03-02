@@ -81,13 +81,16 @@ extension GoldCalculatorViewController{
             workings.removeLast()
             userInputTextField.text = workings
             
-         
+            if workings.isEmpty {
+                resultTextField.text = ""
+                return
+            }
             setInputAmount(inputAmount: workings)
             goldPrice = goldModelReceived.price
             
             let finalResult = goldCalculatorManager.calculateFinalResult(currentGoldPrice: goldPrice)
             
-            resultTextField.text = String(format: "%.2f", finalResult)
+            resultTextField.text = String(format: "%.2f", finalResult) + " KRW"
         }
         else if(workings.isEmpty){
             
