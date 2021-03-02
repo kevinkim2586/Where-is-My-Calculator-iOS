@@ -7,7 +7,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "계산기 Pro"
+        //title = "계산기 Pro"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .bold)]
+    
   
     }
 }
+
+

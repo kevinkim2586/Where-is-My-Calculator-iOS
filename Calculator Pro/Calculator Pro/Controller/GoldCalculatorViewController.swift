@@ -81,6 +81,7 @@ extension GoldCalculatorViewController{
             workings.removeLast()
             userInputTextField.text = workings
             
+         
             setInputAmount(inputAmount: workings)
             goldPrice = goldModelReceived.price
             
@@ -117,7 +118,7 @@ extension GoldCalculatorViewController: GoldCalculatorManagerDelegate{
 extension GoldCalculatorViewController: UITextFieldDelegate{
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        
+
         if textField.text != nil{
             view.endEditing(true)
             return true
@@ -163,6 +164,8 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
     
     @objc func dismissPicker(){
         self.view.endEditing(true)
+        userInputTextField.text = ""
+        resultTextField.text = ""
         userInputTextField.becomeFirstResponder()
     }
 
