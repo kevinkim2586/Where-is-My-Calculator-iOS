@@ -137,7 +137,7 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
         if let popoverPresentationController = popoverContentController?.popoverPresentationController{
             
             popoverPresentationController.permittedArrowDirections = .up
-            popoverPresentationController.sourceView = self.view
+            popoverPresentationController.sourceView = self.unitToButton
             popoverPresentationController.sourceRect = buttonFrame
             popoverPresentationController.delegate = self
             
@@ -211,7 +211,7 @@ extension UnitConverterViewController{
         if let popoverPresentationController = popoverContentController?.popoverPresentationController{
             
             popoverPresentationController.permittedArrowDirections = .up
-            popoverPresentationController.sourceView = self.view
+            popoverPresentationController.sourceView = self.unitFromButton
             popoverPresentationController.sourceRect = buttonFrame
             popoverPresentationController.delegate = self
             
