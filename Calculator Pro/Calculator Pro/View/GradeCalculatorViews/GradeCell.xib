@@ -23,8 +23,8 @@
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Iu9-7o-caQ">
                         <rect key="frame" x="-15" y="33" width="358" height="22"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="강의명 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0e4-mz-BTY">
-                                <rect key="frame" x="0.0" y="0.0" width="170.5" height="22"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="강의명 입력" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0e4-mz-BTY">
+                                <rect key="frame" x="50" y="0.0" width="120.5" height="22"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -44,6 +44,9 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="0e4-mz-BTY" firstAttribute="leading" secondItem="Iu9-7o-caQ" secondAttribute="leading" constant="50" id="39L-P1-Cyp"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" red="0.78132241960000004" green="0.73551940920000003" blue="0.70226603750000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

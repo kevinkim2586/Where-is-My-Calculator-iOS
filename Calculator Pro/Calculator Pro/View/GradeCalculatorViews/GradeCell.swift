@@ -124,6 +124,7 @@ extension GradeCell{
         gradeTextField.text = ""
         gradeToDisplay = ""
     }
+    
 }
 
 //MARK: - UITextFieldDelegate
