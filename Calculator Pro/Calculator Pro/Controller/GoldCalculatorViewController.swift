@@ -64,7 +64,7 @@ extension GoldCalculatorViewController{
             
             let finalResult = goldCalculatorManager.calculateFinalResult(currentGoldPrice: goldPrice)
             
-            resultTextField.text = String(format: "%.2f", finalResult) + " KRW"
+            resultTextField.text = String(format: "%.2f", finalResult) + " USD"
         }
     }
     
@@ -90,7 +90,7 @@ extension GoldCalculatorViewController{
             
             let finalResult = goldCalculatorManager.calculateFinalResult(currentGoldPrice: goldPrice)
             
-            resultTextField.text = String(format: "%.2f", finalResult) + " KRW"
+            resultTextField.text = String(format: "%.2f", finalResult) + " USD"
         }
         else if(workings.isEmpty){
             
