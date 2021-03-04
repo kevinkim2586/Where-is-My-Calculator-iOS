@@ -9,6 +9,8 @@ protocol GradeCellDelegate{
 
 class GradeCell: UITableViewCell {
     
+    @IBOutlet weak var backgroundTextField: UITextField!
+    @IBOutlet weak var textfieldImageView: UIImageView!
     @IBOutlet weak var lectureTextField: UITextField!
     @IBOutlet weak var creditTextField: UITextField!
     @IBOutlet weak var gradeTextField: UITextField!                  // Picker View 구현
@@ -26,6 +28,30 @@ class GradeCell: UITableViewCell {
         super.awakeFromNib()
         setUpPossibleGradesList()
         
+        //Basic texfield Setup
+        backgroundTextField.borderStyle = .none
+        backgroundTextField.backgroundColor = UIColor.groupTableViewBackground // Use anycolor that give you a 2d look.
+
+        //To apply corner radius
+        backgroundTextField.layer.cornerRadius = 30
+
+        //To apply border
+        backgroundTextField.layer.borderWidth = 0.25
+        backgroundTextField.layer.borderColor = UIColor.white.cgColor
+
+        //To apply Shadow
+        backgroundTextField.layer.shadowOpacity = 1
+        backgroundTextField.layer.shadowRadius = 3.0
+        backgroundTextField.layer.shadowOffset = CGSize.zero // Use any CGSize
+        backgroundTextField.layer.shadowColor = UIColor.gray.cgColor
+
+        //To apply padding
+//        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: backgroundTextField.frame.height))
+//        backgroundTextField.leftView = paddingView
+    
+      
+        
+        
         lectureTextField.delegate = self
         creditTextField.delegate = self
         gradeTextField.delegate = self
@@ -36,6 +62,7 @@ class GradeCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
 }
 
 //MARK: - Methods
@@ -179,6 +206,16 @@ extension GradeCell: UITextFieldDelegate{
             break
         }
         return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let currentCharacterCount = textField.text?.count ?? 0
+            if range.length + range.location > currentCharacterCount {
+                return false
+            }
+            let newLength = currentCharacterCount + string.count - range.length
+            return newLength <= 30
     }
 }
 
