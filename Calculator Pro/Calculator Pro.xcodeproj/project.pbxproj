@@ -24,7 +24,6 @@
 		7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */; };
 		7CB0196B25C7B945004D9650 /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */; };
 		7CB0198925C838C4004D9650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB0198825C838C4004D9650 /* Assets.xcassets */; };
-		7CB0199C25C8E225004D9650 /* ExtraFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0199B25C8E225004D9650 /* ExtraFiles.swift */; };
 		7CDE257925C125D80048B3CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE257825C125D80048B3CC /* AppDelegate.swift */; };
 		7CDE257B25C125D80048B3CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE257A25C125D80048B3CC /* SceneDelegate.swift */; };
 		7CDE257D25C125D80048B3CC /* NormalCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE257C25C125D80048B3CC /* NormalCalculatorViewController.swift */; };
@@ -37,6 +36,7 @@
 		7CDF6CD825CF9FEE00DD67B3 /* GradeCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF6CD725CF9FEE00DD67B3 /* GradeCalculatorViewController.swift */; };
 		7CDF6CE225CFA54E00DD67B3 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF6CE025CFA54E00DD67B3 /* GradeCell.swift */; };
 		7CDF6CE325CFA54E00DD67B3 /* GradeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF6CE125CFA54E00DD67B3 /* GradeCell.xib */; };
+		7CE92D6225F1CD4D00DEF864 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE92D6125F1CD4D00DEF864 /* TestViewController.swift */; };
 		7CF352E025DB696E00815F63 /* UnitConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF352DF25DB696E00815F63 /* UnitConverterViewController.swift */; };
 		7CF352E825DB6E7C00815F63 /* UnitPopOverFromContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF352E725DB6E7C00815F63 /* UnitPopOverFromContentController.swift */; };
 		7CF352FD25DB750300815F63 /* UnitConverterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF352FC25DB750300815F63 /* UnitConverterManager.swift */; };
@@ -78,7 +78,6 @@
 		7CB0196025C7B227004D9650 /* GoldCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CB0196A25C7B945004D9650 /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
 		7CB0198825C838C4004D9650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7CB0199B25C8E225004D9650 /* ExtraFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraFiles.swift; sourceTree = "<group>"; };
 		7CDE257525C125D80048B3CC /* Calculator Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDE257825C125D80048B3CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CDE257A25C125D80048B3CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		7CDF6CD725CF9FEE00DD67B3 /* GradeCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCalculatorViewController.swift; sourceTree = "<group>"; };
 		7CDF6CE025CFA54E00DD67B3 /* GradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		7CDF6CE125CFA54E00DD67B3 /* GradeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeCell.xib; sourceTree = "<group>"; };
+		7CE92D6125F1CD4D00DEF864 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		7CF352DF25DB696E00815F63 /* UnitConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterViewController.swift; sourceTree = "<group>"; };
 		7CF352E725DB6E7C00815F63 /* UnitPopOverFromContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPopOverFromContentController.swift; sourceTree = "<group>"; };
 		7CF352FC25DB750300815F63 /* UnitConverterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterManager.swift; sourceTree = "<group>"; };
@@ -259,8 +259,8 @@
 				7CF352DF25DB696E00815F63 /* UnitConverterViewController.swift */,
 				7CF352E725DB6E7C00815F63 /* UnitPopOverFromContentController.swift */,
 				7CF3530125DB890700815F63 /* UnitPopOverToContentController.swift */,
-				7CB0199B25C8E225004D9650 /* ExtraFiles.swift */,
 				7C0B8DE525E75CA70037A43E /* DiscountCalculatorViewController.swift */,
+				7CE92D6125F1CD4D00DEF864 /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -446,7 +446,6 @@
 				7CA9327225D183B400BD71C2 /* NormalCalculatorManager.swift in Sources */,
 				7CF352E025DB696E00815F63 /* UnitConverterViewController.swift in Sources */,
 				7CA9327A25D183B400BD71C2 /* GradeInfo.swift in Sources */,
-				7CB0199C25C8E225004D9650 /* ExtraFiles.swift in Sources */,
 				7CA9327825D183B400BD71C2 /* ExchangeRateModel.swift in Sources */,
 				7CB0196125C7B227004D9650 /* GoldCalculatorViewController.swift in Sources */,
 				7CA9327B25D183B400BD71C2 /* GradeCalculatorManager.swift in Sources */,
@@ -456,6 +455,7 @@
 				7C1EB4CF25DE3BE400E56B08 /* UnitMass.swift in Sources */,
 				7C0B8DDE25E75C820037A43E /* DiscountCalculatorManager.swift in Sources */,
 				7CA9327525D183B400BD71C2 /* GoldModel.swift in Sources */,
+				7CE92D6225F1CD4D00DEF864 /* TestViewController.swift in Sources */,
 				7CA9327325D183B400BD71C2 /* GoldData.swift in Sources */,
 				7CDF6CD825CF9FEE00DD67B3 /* GradeCalculatorViewController.swift in Sources */,
 				7CA9327425D183B400BD71C2 /* GoldCalculatorManager.swift in Sources */,
