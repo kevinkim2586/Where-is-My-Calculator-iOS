@@ -16,6 +16,7 @@ struct Constants{
     }
     
     struct GoldCalcStrings {
+        static let goldUnitArray = ["oz", "g", "kg"]
         static let apiKey                                   = "goldapi-3ldrukkm196k6-io"
         static let basicURL                                 = "https://www.goldapi.io/api/XAU/USD"
     }

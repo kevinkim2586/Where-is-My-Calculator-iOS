@@ -10,16 +10,15 @@ protocol GoldCalculatorManagerDelegate{
 
 struct GoldCalculatorManager{
     
-    let goldUnitArray = ["oz", "g", "kg"]
+    let goldUnitArray = Constants.GoldCalcStrings.goldUnitArray
     
-    let APIKey = Constants.GoldCalcStrings.apiKey           //"goldapi-3ldrukkm196k6-io"
-    let urlString = Constants.GoldCalcStrings.basicURL      //"https://www.goldapi.io/api/XAU/USD"
+    let APIKey = Constants.GoldCalcStrings.apiKey
+    let urlString = Constants.GoldCalcStrings.basicURL
     
     var inputAmount: Float = 0.0
     var goldUnit: String = "oz"
     
     var goldDelegate: GoldCalculatorManagerDelegate?
-
 }
 
 //MARK: - API Networking Methods
@@ -32,7 +31,7 @@ extension GoldCalculatorManager{
     
         if let url = URL(string: urlString){
             var request = URLRequest(url: url, timeoutInterval:  Double.infinity)
-            request.addValue("goldapi-3ldrukkm196k6-io", forHTTPHeaderField: "x-access-token")
+            request.addValue(Constants.GoldCalcStrings.apiKey, forHTTPHeaderField: "x-access-token")
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "GET"
             
