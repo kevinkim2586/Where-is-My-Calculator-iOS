@@ -90,8 +90,6 @@ class UnitConverterViewController: UIViewController {
             }
         }
     }
-    
-    
 }
 
 
@@ -177,6 +175,8 @@ extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
         case 2: setUnitToTemperature(for: name)
         default: return
         }
+        unitFromTextField.text = ""
+        unitToTextField.text = ""
     }
     
     
