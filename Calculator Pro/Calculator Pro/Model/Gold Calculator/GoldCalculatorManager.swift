@@ -8,13 +8,12 @@ protocol GoldCalculatorManagerDelegate{
     func didFailWithError(error: Error)
 }
 
-
 struct GoldCalculatorManager{
     
     let goldUnitArray = ["oz", "g", "kg"]
     
-    let APIKey = "goldapi-3ldrukkm196k6-io"
-    let urlString = "https://www.goldapi.io/api/XAU/USD"
+    let APIKey = Constants.GoldCalcStrings.apiKey           //"goldapi-3ldrukkm196k6-io"
+    let urlString = Constants.GoldCalcStrings.basicURL      //"https://www.goldapi.io/api/XAU/USD"
     
     var inputAmount: Float = 0.0
     var goldUnit: String = "oz"
@@ -51,7 +50,6 @@ extension GoldCalculatorManager{
             task.resume()
             semaphore.wait()
         }
- 
     }
     
     func parseJSON(for goldData: Data)->GoldModel?{

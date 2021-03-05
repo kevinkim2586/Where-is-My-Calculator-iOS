@@ -12,7 +12,12 @@ struct Constants{
     struct ExchangeRateStrings{
         static let countries                                = ["미국 달러","위안화", "유로","일본 엔", "한국 원"]
         static let keyForExchangeRate                       = "0017fb5715b05218a5601cf9"
-        static let basicURL                     = "https://v6.exchangerate-api.com/v6/0017fb5715b05218a5601cf9/latest/" // To
+        static let basicURL                     = "https://v6.exchangerate-api.com/v6/0017fb5715b05218a5601cf9/latest/" 
+    }
+    
+    struct GoldCalcStrings {
+        static let apiKey                                   = "goldapi-3ldrukkm196k6-io"
+        static let basicURL                                 = "https://www.goldapi.io/api/XAU/USD"
     }
     
     struct GradeCalcStrings{
