@@ -2293,10 +2293,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IS0-Sd-K9N" userLabel="Calculator View">
-                                <rect key="frame" x="20" y="10" width="350" height="716"/>
+                                <rect key="frame" x="20" y="350" width="350" height="376"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hZ6-6m-M6l">
-                                        <rect key="frame" x="10" y="371" width="330" height="345"/>
+                                        <rect key="frame" x="10" y="31" width="330" height="345"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hDz-0n-MGg">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="345"/>
@@ -2549,7 +2549,7 @@
                         <viewLayoutGuide key="safeArea" id="d1c-Lr-Qyn"/>
                         <color key="backgroundColor" red="0.97724992036819458" green="0.84273023488986332" blue="0.83055581474932783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IS0-Sd-K9N" firstAttribute="top" secondItem="Gu0-Ca-8OO" secondAttribute="topMargin" constant="10" id="6DU-YP-wAC"/>
+                            <constraint firstItem="IS0-Sd-K9N" firstAttribute="top" secondItem="Gu0-Ca-8OO" secondAttribute="topMargin" constant="350" id="6DU-YP-wAC"/>
                             <constraint firstItem="ctW-JX-TEj" firstAttribute="top" secondItem="d1c-Lr-Qyn" secondAttribute="top" constant="40" id="Z1x-eI-9k6"/>
                             <constraint firstItem="IS0-Sd-K9N" firstAttribute="leading" secondItem="d1c-Lr-Qyn" secondAttribute="leading" constant="20" id="amc-Jd-5bC"/>
                             <constraint firstItem="d1c-Lr-Qyn" firstAttribute="trailing" secondItem="IS0-Sd-K9N" secondAttribute="trailing" constant="20" id="gQH-Ib-sBt"/>
