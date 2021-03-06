@@ -1075,7 +1075,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wX4-Yg-TLO">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wX4-Yg-TLO">
                                 <rect key="frame" x="16" y="40.000000000000014" width="358.33333333333331" height="210.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-K9-l3L" userLabel="From View">
@@ -1388,6 +1388,7 @@
                         <color key="backgroundColor" red="0.80984919145118428" green="0.73802430120050655" blue="0.85965841876971605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5ez-t1-B29" secondAttribute="trailing" constant="20" id="2Ju-ID-i51"/>
+                            <constraint firstItem="wX4-Yg-TLO" firstAttribute="centerX" secondItem="1Pr-DB-htT" secondAttribute="centerX" id="SYs-01-2tg"/>
                             <constraint firstItem="wX4-Yg-TLO" firstAttribute="top" secondItem="9oA-4L-7W1" secondAttribute="top" constant="40" id="TmF-h5-ZyS"/>
                             <constraint firstItem="5ez-t1-B29" firstAttribute="leading" secondItem="9oA-4L-7W1" secondAttribute="leading" constant="20" id="Xmw-VI-A20"/>
                             <constraint firstItem="5ez-t1-B29" firstAttribute="top" secondItem="1Pr-DB-htT" secondAttribute="top" constant="350" id="sqd-qy-36l"/>
