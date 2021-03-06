@@ -10,6 +10,8 @@ enum Operation: String{
     
 }
 
+let operationSFSymbolArray = ["divide", "equal", "multiply", "plus", "minus"]
+
 class NormalCalculatorViewController: UIViewController {
 
     @IBOutlet weak var calculatorResults: UILabel!
@@ -148,6 +150,8 @@ extension NormalCalculatorViewController {
     
     func configureButtonUI() {
         
+        var index = 0
+        
         
         // Number buttons
         for button in numberButtonCollection {
@@ -161,10 +165,11 @@ extension NormalCalculatorViewController {
             
        
         }
-        
+
         // Operation buttons
         for button in operationButtonCollection {
             
+
             button.backgroundColor = UIColor(red: 0.02, green: 0.42, blue: 0.91, alpha: 1.00)
             button.layer.cornerRadius = button.frame.width / 2
             
@@ -174,7 +179,13 @@ extension NormalCalculatorViewController {
             
             button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
             button.setTitleColor(.white, for: .normal)
+           
+        
             
+            let smallConfiguration = UIImage.SymbolConfiguration(pointSize: 40, weight: .bold, scale: .small)
+            let smallSymbolImage = UIImage(systemName: operationSFSymbolArray[index], withConfiguration: smallConfiguration)
+            button.setImage(smallSymbolImage, for: .normal)
+            index += 1
         }
         
         // Clear buttons
