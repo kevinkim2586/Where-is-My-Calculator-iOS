@@ -1751,8 +1751,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-TC-Lwe" userLabel="Calculator View">
                                 <rect key="frame" x="20" y="350" width="350" height="376"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-rA-lPN">
-                                        <rect key="frame" x="20" y="30" width="330" height="345"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-rA-lPN">
+                                        <rect key="frame" x="10" y="31" width="330" height="345"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dui-Sk-9Zs">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="345"/>
@@ -2002,6 +2002,10 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="eCv-rA-lPN" secondAttribute="bottom" id="B8t-UJ-DE1"/>
+                                    <constraint firstItem="eCv-rA-lPN" firstAttribute="centerX" secondItem="w0K-TC-Lwe" secondAttribute="centerX" id="MKP-N8-AcW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uJZ-pc-5ul"/>
@@ -2011,6 +2015,7 @@
                             <constraint firstItem="uJZ-pc-5ul" firstAttribute="bottom" secondItem="w0K-TC-Lwe" secondAttribute="bottom" constant="30" id="NUp-pp-oTJ"/>
                             <constraint firstItem="9eY-Yh-66l" firstAttribute="centerX" secondItem="qQm-Ld-nRW" secondAttribute="centerX" id="S40-Hh-hxX"/>
                             <constraint firstItem="w0K-TC-Lwe" firstAttribute="leading" secondItem="uJZ-pc-5ul" secondAttribute="leading" constant="20" id="U8A-Tp-T9T"/>
+                            <constraint firstItem="w0K-TC-Lwe" firstAttribute="centerX" secondItem="qQm-Ld-nRW" secondAttribute="centerX" id="eLm-Ax-wHX"/>
                             <constraint firstItem="w0K-TC-Lwe" firstAttribute="top" secondItem="qQm-Ld-nRW" secondAttribute="topMargin" constant="350" id="nQq-vG-ulF"/>
                             <constraint firstItem="uJZ-pc-5ul" firstAttribute="trailing" secondItem="w0K-TC-Lwe" secondAttribute="trailing" constant="20" id="wAk-ZD-ytE"/>
                         </constraints>
