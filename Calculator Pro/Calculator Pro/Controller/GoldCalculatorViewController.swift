@@ -6,6 +6,9 @@ class GoldCalculatorViewController: UIViewController {
     @IBOutlet weak var userInputTextField: UITextField!
     @IBOutlet weak var resultTextField: UITextField!
     
+    @IBOutlet var numberButtonCollection: [UIButton]!
+    @IBOutlet var operationButtonCollection: [UIButton]!
+    
     var workings: String = ""
     var goldPrice: Float = 0.0
     
@@ -24,6 +27,7 @@ class GoldCalculatorViewController: UIViewController {
         userInputTextField.becomeFirstResponder()
     
         createPickerView()
+        configureUIButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -189,6 +193,74 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
         goldUnitPickerTextField.text = goldCalculatorManager.goldUnitArray[row]
     }
 }
+
+//MARK: -  UI Configuration Methods
+
+extension GoldCalculatorViewController {
+    
+    func setButtonUI(for button: UIButton, color: UIColor) {
+        
+        button.backgroundColor = color
+        button.layer.cornerRadius = button.frame.width / 2
+        
+        button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+        button.layer.shadowRadius = 2.0
+        button.layer.shadowOpacity = 0.5
+        
+        button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
+    }
+    
+    func configureUIButton() {
+    
+        // Number buttons
+        for button in numberButtonCollection {
+            setButtonUI(for: button, color: .white)
+        }
+        
+        // Operation buttons - Basic configurations
+        for button in operationButtonCollection {
+            
+            let color = UIColor(red: 0.43, green: 0.21, blue: 0.59, alpha: 1.00)
+            
+            setButtonUI(for: button, color: color)
+        }
+        
+        // Separate button configurations for each operation buttons
+        let smallConfiguration = UIImage.SymbolConfiguration(pointSize: 40, weight: .bold, scale: .small)
+        
+        // Equal button
+        let equalButtonImage = UIImage(systemName: "equal", withConfiguration: smallConfiguration)
+        operationButtonCollection[0].setImage(equalButtonImage, for: .normal)
+        
+        // Swap button
+        operationButtonCollection[2].titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
+        
+    
+        
+        // Delete button
+        let deleteButtonImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
+        operationButtonCollection[3].setImage(deleteButtonImage, for: .normal)
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 //MARK: - Other Methods
 
