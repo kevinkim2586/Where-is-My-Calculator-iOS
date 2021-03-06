@@ -152,7 +152,6 @@ extension NormalCalculatorViewController {
         
         var index = 0
         
-        
         // Number buttons
         for button in numberButtonCollection {
             
@@ -162,14 +161,11 @@ extension NormalCalculatorViewController {
             button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
             button.layer.shadowRadius = 2.0
             button.layer.shadowOpacity = 0.5
-            
-       
         }
 
         // Operation buttons
         for button in operationButtonCollection {
-            
-
+        
             button.backgroundColor = UIColor(red: 0.02, green: 0.42, blue: 0.91, alpha: 1.00)
             button.layer.cornerRadius = button.frame.width / 2
             
@@ -180,8 +176,6 @@ extension NormalCalculatorViewController {
             button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
             button.setTitleColor(.white, for: .normal)
            
-        
-            
             let smallConfiguration = UIImage.SymbolConfiguration(pointSize: 40, weight: .bold, scale: .small)
             let smallSymbolImage = UIImage(systemName: operationSFSymbolArray[index], withConfiguration: smallConfiguration)
             button.setImage(smallSymbolImage, for: .normal)
@@ -198,9 +192,15 @@ extension NormalCalculatorViewController {
             button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
             button.layer.shadowRadius = 2.0
             button.layer.shadowOpacity = 0.5
-            button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
+            button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
             button.setTitleColor(.white, for: .normal)
         }
+        
+        // Separate button configuration for "delete" button
+        let smallConfiguration = UIImage.SymbolConfiguration(pointSize: 50, weight: .bold, scale: .small)
+        let smallSymbolImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
+        clearButtonCollection[1].setImage(smallSymbolImage, for: .normal)
+        
     }
 }
 

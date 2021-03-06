@@ -384,14 +384,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cWx-g5-jtx">
                                                 <rect key="frame" x="170" y="0.0" width="75" height="435"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-2z-XC4">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-2z-XC4">
                                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="75" id="8kb-xE-cRP"/>
                                                             <constraint firstAttribute="width" constant="75" id="nqG-rO-bnO"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="DEL">
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="delete.left" catalog="system">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
@@ -2134,6 +2134,7 @@
         <image name="UnitConverter_Equal" width="105.66666412353516" height="105.66666412353516"/>
         <image name="UnitConverter_NormalCalc" width="105.66666412353516" height="105.66666412353516"/>
         <image name="UnitConverter_Swap" width="105.66666412353516" height="105.66666412353516"/>
+        <image name="delete.left" catalog="system" width="128" height="104"/>
         <image name="divide" catalog="system" width="128" height="103"/>
         <image name="equal" catalog="system" width="128" height="72"/>
         <image name="minus" catalog="system" width="128" height="24"/>
