@@ -227,84 +227,6 @@
                                     <action selector="allClearTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6b-X5-vEp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-2z-XC4">
-                                <rect key="frame" x="147" y="350" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="DEL">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="backTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slH-io-PQ8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5A-hE-Svj">
-                                <rect key="frame" x="147" y="350" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title="/">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPh-Uw-SRx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ns6-eV-sTd">
-                                <rect key="frame" x="147" y="350" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title="9">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIv-LN-hzm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COv-72-iiB">
-                                <rect key="frame" x="147" y="350" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="*">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efj-To-CIU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lH-Z2-chI">
-                                <rect key="frame" x="147" y="350" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title="6">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vqu-Eu-OZU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-26-UqH">
-                                <rect key="frame" x="147" y="350" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="-">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedSubtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4y-gi-Wuk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e4-eu-K8U">
-                                <rect key="frame" x="147" y="350" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title="3">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3yB-pQ-05f"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wr-4z-TQ1">
                                 <rect key="frame" x="161" y="357" width="67.333333333333314" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -315,39 +237,6 @@
                                 </state>
                                 <connections>
                                     <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jwe-Bh-HWS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eu-TM-jmU">
-                                <rect key="frame" x="161" y="357" width="67.666666666666686" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                <state key="normal" title=".">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedDot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wV4-p4-7Du"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anU-pE-HgA">
-                                <rect key="frame" x="161" y="357" width="67.333333333333343" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="=">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedEqual:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cw8-ua-lI2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p7-R1-Bua">
-                                <rect key="frame" x="147" y="350" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXx-h8-e6N"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-K9-9CW" userLabel="Result Stack View">
@@ -366,132 +255,303 @@
                                     <constraint firstAttribute="height" constant="120" id="lmg-cG-VXI"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8TD-8n-B0e">
-                                <rect key="frame" x="49" y="243" width="75" height="435"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-qV-Dwb">
+                                <rect key="frame" x="20" y="230" width="350" height="516"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPB-By-sI9">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="03C-hc-ett"/>
-                                            <constraint firstAttribute="width" constant="75" id="uDv-Ip-Vph"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="C">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="allClearTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O4C-JI-YD3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oK9-d7-v8u">
-                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="2K9-a5-O4n"/>
-                                            <constraint firstAttribute="width" constant="75" id="IOk-3I-Aq2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                        <state key="normal" title="1">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkb-xc-qqa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="548-sm-pnA">
-                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="hOc-97-7ub"/>
-                                            <constraint firstAttribute="width" constant="75" id="j2I-15-nDK"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                        <state key="normal" title="4">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35a-PQ-eSU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQh-r4-PkK">
-                                        <rect key="frame" x="0.0" y="270" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="5ZY-aS-kme"/>
-                                            <constraint firstAttribute="width" constant="75" id="mRQ-Uv-l3L"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                        <state key="normal" title="7">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ruE-y6-xVC"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYi-3h-XCq">
-                                        <rect key="frame" x="0.0" y="360" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="aBa-YT-gHm"/>
-                                            <constraint firstAttribute="height" constant="75" id="xF0-kk-QMG"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                        <size key="titleShadowOffset" width="5" height="0.0"/>
-                                        <state key="normal" title="0">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8LU-iB-JXj">
+                                        <rect key="frame" x="10" y="40.666666666666686" width="330" height="435"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8TD-8n-B0e">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="435"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPB-By-sI9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="03C-hc-ett"/>
+                                                            <constraint firstAttribute="width" constant="75" id="uDv-Ip-Vph"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="C">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="allClearTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O4C-JI-YD3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oK9-d7-v8u">
+                                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="2K9-a5-O4n"/>
+                                                            <constraint firstAttribute="width" constant="75" id="IOk-3I-Aq2"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkb-xc-qqa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="548-sm-pnA">
+                                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="hOc-97-7ub"/>
+                                                            <constraint firstAttribute="width" constant="75" id="j2I-15-nDK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35a-PQ-eSU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQh-r4-PkK">
+                                                        <rect key="frame" x="0.0" y="269.99999999999994" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="5ZY-aS-kme"/>
+                                                            <constraint firstAttribute="width" constant="75" id="mRQ-Uv-l3L"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ruE-y6-xVC"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYi-3h-XCq">
+                                                        <rect key="frame" x="0.0" y="359.99999999999994" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="aBa-YT-gHm"/>
+                                                            <constraint firstAttribute="height" constant="75" id="xF0-kk-QMG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="5" height="0.0"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0FM-zx-jOP">
+                                                <rect key="frame" x="85" y="90" width="75" height="255"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-Gv-368">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="Udu-si-01m"/>
+                                                            <constraint firstAttribute="width" constant="75" id="n10-37-FZM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69X-vz-OU3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PM-hv-1S5">
+                                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="Ys8-w2-cQA"/>
+                                                            <constraint firstAttribute="height" constant="75" id="byG-Gb-Urr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DRf-Hp-gfX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfx-5f-5T8">
+                                                        <rect key="frame" x="0.0" y="179.99999999999994" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="ZEL-5A-nUF"/>
+                                                            <constraint firstAttribute="width" constant="75" id="tpq-Tf-U0y"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTs-pq-UCg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cWx-g5-jtx">
+                                                <rect key="frame" x="170" y="0.0" width="75" height="435"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bci-2z-XC4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="8kb-xE-cRP"/>
+                                                            <constraint firstAttribute="width" constant="75" id="nqG-rO-bnO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="DEL">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="backTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slH-io-PQ8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ns6-eV-sTd">
+                                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="0mw-wH-Ubs"/>
+                                                            <constraint firstAttribute="height" constant="75" id="ghz-TF-qtb"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIv-LN-hzm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lH-Z2-chI">
+                                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="YBh-an-cam"/>
+                                                            <constraint firstAttribute="height" constant="75" id="oIj-aq-pDf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vqu-Eu-OZU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e4-eu-K8U">
+                                                        <rect key="frame" x="0.0" y="269.99999999999994" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="Vsx-CI-irm"/>
+                                                            <constraint firstAttribute="width" constant="75" id="nig-iL-b8z"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3yB-pQ-05f"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eu-TM-jmU">
+                                                        <rect key="frame" x="0.0" y="359.99999999999994" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="1yd-5n-DIg"/>
+                                                            <constraint firstAttribute="width" constant="75" id="3ut-1T-VW6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedDot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wV4-p4-7Du"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NFh-Fw-r35">
+                                                <rect key="frame" x="255" y="0.0" width="75" height="435"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5A-hE-Svj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="EnD-Ba-NAi"/>
+                                                            <constraint firstAttribute="height" constant="75" id="xTY-Ej-c6w"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="/">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPh-Uw-SRx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COv-72-iiB">
+                                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="GsO-t9-gFx"/>
+                                                            <constraint firstAttribute="width" constant="75" id="XZo-xV-0dk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="X">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efj-To-CIU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-26-UqH">
+                                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="0Ia-vR-a1a"/>
+                                                            <constraint firstAttribute="width" constant="75" id="BeF-jd-2wT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedSubtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4y-gi-Wuk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8p7-R1-Bua">
+                                                        <rect key="frame" x="0.0" y="269.99999999999994" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="w2M-QS-MuR"/>
+                                                            <constraint firstAttribute="width" constant="75" id="xAi-KT-XFn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXx-h8-e6N"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anU-pE-HgA">
+                                                        <rect key="frame" x="0.0" y="359.99999999999994" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="eVf-7C-85k"/>
+                                                            <constraint firstAttribute="height" constant="75" id="fk5-72-KR6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedEqual:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cw8-ua-lI2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0FM-zx-jOP">
-                                <rect key="frame" x="250" y="334" width="75" height="255"/>
-                                <subviews>
-                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-Gv-368">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="Udu-si-01m"/>
-                                            <constraint firstAttribute="width" constant="75" id="n10-37-FZM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                        <state key="normal" title="8">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69X-vz-OU3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PM-hv-1S5">
-                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="Ys8-w2-cQA"/>
-                                            <constraint firstAttribute="height" constant="75" id="byG-Gb-Urr"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                        <state key="normal" title="5">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DRf-Hp-gfX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfx-5f-5T8">
-                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="ZEL-5A-nUF"/>
-                                            <constraint firstAttribute="width" constant="75" id="tpq-Tf-U0y"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
-                                        <state key="normal" title="2">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressedNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTs-pq-UCg"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8LU-iB-JXj" firstAttribute="centerX" secondItem="WSf-qV-Dwb" secondAttribute="centerX" id="Pp1-Ss-HHd"/>
+                                    <constraint firstItem="8LU-iB-JXj" firstAttribute="centerY" secondItem="WSf-qV-Dwb" secondAttribute="centerY" id="RLb-EX-Da1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gUI-r3-BLF"/>
                         <color key="backgroundColor" red="0.840359509" green="0.92423683400000001" blue="0.99216812850000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jEP-K9-9CW" firstAttribute="leading" secondItem="gUI-r3-BLF" secondAttribute="leading" constant="20" id="5xs-AX-U2Z"/>
+                            <constraint firstItem="WSf-qV-Dwb" firstAttribute="leading" secondItem="gUI-r3-BLF" secondAttribute="leading" constant="20" id="BmL-tH-XI6"/>
+                            <constraint firstItem="gUI-r3-BLF" firstAttribute="bottom" secondItem="WSf-qV-Dwb" secondAttribute="bottom" constant="10" id="EyR-Fr-cWS"/>
                             <constraint firstItem="jEP-K9-9CW" firstAttribute="top" secondItem="gUI-r3-BLF" secondAttribute="top" constant="70" id="J4t-30-ONj"/>
+                            <constraint firstItem="WSf-qV-Dwb" firstAttribute="centerX" secondItem="Vh0-yj-2H2" secondAttribute="centerX" id="JlL-r5-NSq"/>
+                            <constraint firstItem="WSf-qV-Dwb" firstAttribute="top" secondItem="jEP-K9-9CW" secondAttribute="bottom" constant="40" id="XuM-of-k0s"/>
+                            <constraint firstItem="gUI-r3-BLF" firstAttribute="trailing" secondItem="WSf-qV-Dwb" secondAttribute="trailing" constant="20" id="lkX-U5-eVf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Thh-JD-FKc">
@@ -499,24 +559,24 @@
                     </navigationItem>
                     <connections>
                         <outlet property="calculatorResults" destination="HPh-5P-kNi" id="rWK-nY-sh0"/>
-                        <outletCollection property="clearButtonCollection" destination="Bci-2z-XC4" collectionClass="NSMutableArray" id="Hwd-fp-cC1"/>
-                        <outletCollection property="operationButtonCollection" destination="V5A-hE-Svj" collectionClass="NSMutableArray" id="2r3-FM-6qk"/>
-                        <outletCollection property="numberButtonCollection" destination="Ns6-eV-sTd" collectionClass="NSMutableArray" id="gVc-rQ-kS5"/>
-                        <outletCollection property="operationButtonCollection" destination="COv-72-iiB" collectionClass="NSMutableArray" id="na6-yG-oBh"/>
-                        <outletCollection property="numberButtonCollection" destination="0lH-Z2-chI" collectionClass="NSMutableArray" id="S47-vV-5mo"/>
-                        <outletCollection property="operationButtonCollection" destination="NeQ-26-UqH" collectionClass="NSMutableArray" id="WZg-93-tu1"/>
-                        <outletCollection property="numberButtonCollection" destination="6e4-eu-K8U" collectionClass="NSMutableArray" id="pMU-cv-auS"/>
-                        <outletCollection property="operationButtonCollection" destination="8p7-R1-Bua" collectionClass="NSMutableArray" id="bBW-Li-A0L"/>
-                        <outletCollection property="numberButtonCollection" destination="0eu-TM-jmU" collectionClass="NSMutableArray" id="ixV-1K-Nht"/>
-                        <outletCollection property="operationButtonCollection" destination="anU-pE-HgA" collectionClass="NSMutableArray" id="Jas-SP-llZ"/>
-                        <outletCollection property="numberButtonCollection" destination="CYi-3h-XCq" collectionClass="NSMutableArray" id="8Pz-En-J7A"/>
-                        <outletCollection property="numberButtonCollection" destination="LQh-r4-PkK" collectionClass="NSMutableArray" id="zFF-WJ-eSC"/>
                         <outletCollection property="numberButtonCollection" destination="548-sm-pnA" collectionClass="NSMutableArray" id="lqs-Ql-W4I"/>
+                        <outletCollection property="numberButtonCollection" destination="CYi-3h-XCq" collectionClass="NSMutableArray" id="8Pz-En-J7A"/>
                         <outletCollection property="numberButtonCollection" destination="oK9-d7-v8u" collectionClass="NSMutableArray" id="RH8-IV-CHM"/>
+                        <outletCollection property="numberButtonCollection" destination="LQh-r4-PkK" collectionClass="NSMutableArray" id="zFF-WJ-eSC"/>
                         <outletCollection property="clearButtonCollection" destination="HPB-By-sI9" collectionClass="NSMutableArray" id="RGV-WA-DXT"/>
-                        <outletCollection property="numberButtonCollection" destination="ee7-Gv-368" collectionClass="NSMutableArray" id="9Ie-aa-Qu5"/>
-                        <outletCollection property="numberButtonCollection" destination="9PM-hv-1S5" collectionClass="NSMutableArray" id="stK-dm-IIR"/>
                         <outletCollection property="numberButtonCollection" destination="nfx-5f-5T8" collectionClass="NSMutableArray" id="1ff-5B-KhU"/>
+                        <outletCollection property="numberButtonCollection" destination="9PM-hv-1S5" collectionClass="NSMutableArray" id="stK-dm-IIR"/>
+                        <outletCollection property="numberButtonCollection" destination="ee7-Gv-368" collectionClass="NSMutableArray" id="9Ie-aa-Qu5"/>
+                        <outletCollection property="numberButtonCollection" destination="Ns6-eV-sTd" collectionClass="NSMutableArray" id="gVc-rQ-kS5"/>
+                        <outletCollection property="clearButtonCollection" destination="Bci-2z-XC4" collectionClass="NSMutableArray" id="Hwd-fp-cC1"/>
+                        <outletCollection property="numberButtonCollection" destination="0lH-Z2-chI" collectionClass="NSMutableArray" id="S47-vV-5mo"/>
+                        <outletCollection property="numberButtonCollection" destination="0eu-TM-jmU" collectionClass="NSMutableArray" id="ixV-1K-Nht"/>
+                        <outletCollection property="numberButtonCollection" destination="6e4-eu-K8U" collectionClass="NSMutableArray" id="pMU-cv-auS"/>
+                        <outletCollection property="operationButtonCollection" destination="V5A-hE-Svj" collectionClass="NSMutableArray" id="2r3-FM-6qk"/>
+                        <outletCollection property="operationButtonCollection" destination="anU-pE-HgA" collectionClass="NSMutableArray" id="Jas-SP-llZ"/>
+                        <outletCollection property="operationButtonCollection" destination="COv-72-iiB" collectionClass="NSMutableArray" id="na6-yG-oBh"/>
+                        <outletCollection property="operationButtonCollection" destination="8p7-R1-Bua" collectionClass="NSMutableArray" id="bBW-Li-A0L"/>
+                        <outletCollection property="operationButtonCollection" destination="NeQ-26-UqH" collectionClass="NSMutableArray" id="WZg-93-tu1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1412,7 +1472,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-Yh-66l" userLabel="Inuput Stack View">
-                                <rect key="frame" x="15.666666666666657" y="64" width="359" height="272"/>
+                                <rect key="frame" x="15.666666666666657" y="63.666666666666657" width="359" height="272.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-SP-iaT" userLabel="Original Price View">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="90.666666666666671"/>
@@ -1450,7 +1510,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gx-zP-whu" userLabel="Discount Percentage View">
-                                        <rect key="frame" x="0.0" y="90.666666666666657" width="359" height="91"/>
+                                        <rect key="frame" x="0.0" y="90.666666666666686" width="359" height="91"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-KR-aV3" userLabel="Discount Percentage Background">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="91"/>
@@ -1485,10 +1545,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBY-o2-cBB" userLabel="Final Result View">
-                                        <rect key="frame" x="0.0" y="181.66666666666666" width="359" height="90.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="181.66666666666669" width="359" height="90.666666666666686"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="oKy-PK-uR2" userLabel="Final Result Background">
-                                                <rect key="frame" x="0.0" y="0.0" width="367" height="90.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="90.666666666666671"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="최종 가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNa-X4-96X">
                                                 <rect key="frame" x="30" y="30" width="64" height="21"/>
