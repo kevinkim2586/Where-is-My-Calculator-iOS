@@ -1639,7 +1639,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-Yh-66l" userLabel="Inuput Stack View">
-                                <rect key="frame" x="15.666666666666657" y="63.666666666666657" width="359" height="272.33333333333337"/>
+                                <rect key="frame" x="15.666666666666657" y="50" width="359" height="272.33333333333331"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-SP-iaT" userLabel="Original Price View">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="90.666666666666671"/>
@@ -1677,7 +1677,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gx-zP-whu" userLabel="Discount Percentage View">
-                                        <rect key="frame" x="0.0" y="90.666666666666686" width="359" height="91"/>
+                                        <rect key="frame" x="0.0" y="90.666666666666657" width="359" height="91"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-KR-aV3" userLabel="Discount Percentage Background">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="91"/>
@@ -1712,7 +1712,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBY-o2-cBB" userLabel="Final Result View">
-                                        <rect key="frame" x="0.0" y="181.66666666666669" width="359" height="90.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="181.66666666666666" width="359" height="90.666666666666657"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="oKy-PK-uR2" userLabel="Final Result Background">
                                                 <rect key="frame" x="0.0" y="0.0" width="367" height="90.666666666666671"/>
@@ -1748,209 +1748,292 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="BT9-BB-Zep" userLabel="Calc Stack View">
-                                <rect key="frame" x="20" y="426" width="350" height="330"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-TC-Lwe" userLabel="Calculator View">
+                                <rect key="frame" x="20" y="350" width="350" height="376"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6ZK-51-U9l">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="81.666666666666671"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-rA-lPN">
+                                        <rect key="frame" x="20" y="30" width="330" height="345"/>
                                         <subviews>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0z-nS-0pa">
-                                                <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                <state key="normal" title="7" backgroundImage="7 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="DX0-MQ-cSK"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgH-5s-sxZ">
-                                                <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="8" backgroundImage="8 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="yZz-Dg-ZZT"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DE-Nx-nER">
-                                                <rect key="frame" x="175.66666666666666" y="0.0" width="86.666666666666657" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="9" backgroundImage="9 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="CsL-Si-YTP"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xR-W5-bq2">
-                                                <rect key="frame" x="263.33333333333331" y="0.0" width="86.666666666666686" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" backgroundImage="DiscountCalculator_Delete">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedDelete:" destination="ICU-nA-FeE" eventType="touchUpInside" id="ixH-8M-vPA"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="caB-g2-tFK">
-                                        <rect key="frame" x="0.0" y="82.666666666666686" width="350" height="82"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sct-QS-9Oe">
-                                                <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="82"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="4" backgroundImage="4 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="X2B-XO-7ve"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9To-rh-UKW">
-                                                <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="82"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="5" backgroundImage="5 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="k34-sy-L3e"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pB-nT-jDn">
-                                                <rect key="frame" x="175.66666666666666" y="0.0" width="86.666666666666657" height="82"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="6" backgroundImage="6 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="get-K3-raO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGV-ae-Mvd">
-                                                <rect key="frame" x="263.33333333333331" y="0.0" width="86.666666666666686" height="82"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" backgroundImage="DiscountCalculator_NormalCalc">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedClearButton:" destination="ICU-nA-FeE" eventType="touchUpInside" id="KlX-eh-YYw"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wc4-ql-ZhN">
-                                        <rect key="frame" x="0.0" y="165.66666666666663" width="350" height="81.666666666666686"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDU-mH-FtC">
-                                                <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="1" backgroundImage="1 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="qAB-UC-R7Z"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNn-A4-Ldv">
-                                                <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="2" backgroundImage="2 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="PHg-yN-Fgx"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t60-Tg-jPw">
-                                                <rect key="frame" x="175.66666666666666" y="0.0" width="86.666666666666657" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="3" backgroundImage="3 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="KfW-tQ-k7I"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-iI-d10">
-                                                <rect key="frame" x="263.33333333333331" y="0.0" width="86.666666666666686" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="Swap" backgroundImage="DiscountCalculator_Swap">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedSwapButton:" destination="ICU-nA-FeE" eventType="touchUpInside" id="f3w-P5-g94"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="NGQ-lc-dp4">
-                                        <rect key="frame" x="0.0" y="248.33333333333334" width="350" height="81.666666666666657"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ss1-CO-Hu0" userLabel="0">
-                                                <rect key="frame" x="0.0" y="0.0" width="86.666666666666671" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <size key="titleShadowOffset" width="5" height="0.0"/>
-                                                <state key="normal" title="0" backgroundImage="0 Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="pzi-PP-ePO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0W-OV-XBH">
-                                                <rect key="frame" x="87.666666666666686" y="0.0" width="87" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <size key="titleShadowOffset" width="5" height="0.0"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn5-dP-yW7">
-                                                <rect key="frame" x="175.66666666666666" y="0.0" width="86.666666666666657" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                <state key="normal" title="." backgroundImage="Decimal Button">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="OjD-ks-HmU"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCW-fq-VVT">
-                                                <rect key="frame" x="263.33333333333331" y="0.0" width="86.666666666666686" height="81.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                <state key="normal" title="=" backgroundImage="DiscountCalculator_Equal">
-                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="pressedCalculate:" destination="ICU-nA-FeE" eventType="touchUpInside" id="b7X-UH-bJf"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dui-Sk-9Zs">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="345"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-ck-jYd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="7Q5-lB-BgH"/>
+                                                            <constraint firstAttribute="width" constant="75" id="mBt-xl-Fhs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="lPt-xV-Oev"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaA-25-7NC">
+                                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="80f-2v-qc3"/>
+                                                            <constraint firstAttribute="width" constant="75" id="CPL-bw-lsu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="yet-EW-Efn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N22-HH-KAq">
+                                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="cGM-ax-t5o"/>
+                                                            <constraint firstAttribute="width" constant="75" id="o8J-YQ-5vs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="4WC-8x-bZH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiB-fe-eWS">
+                                                        <rect key="frame" x="0.0" y="270" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="7Ow-aM-lpY"/>
+                                                            <constraint firstAttribute="width" constant="75" id="iGw-A0-iLD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <size key="titleShadowOffset" width="5" height="0.0"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="jiY-DI-o1f"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="X6Q-uD-dzs">
+                                                <rect key="frame" x="85" y="0.0" width="75" height="345"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYo-8X-3Sj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="GBk-2m-8Pq"/>
+                                                            <constraint firstAttribute="width" constant="75" id="MFy-zO-Sil"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="6C4-sg-SeO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3y-Fq-eDX">
+                                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="5tA-KV-Qcg"/>
+                                                            <constraint firstAttribute="width" constant="75" id="aCH-8F-fgF"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="0lA-ZH-bCf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-TL-gXe">
+                                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="9s4-JP-VAe"/>
+                                                            <constraint firstAttribute="height" constant="75" id="gbe-hA-bcT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="KJY-zU-Qs5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnW-FL-Z9Q">
+                                                        <rect key="frame" x="0.0" y="270" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="NJM-7u-lqZ"/>
+                                                            <constraint firstAttribute="height" constant="75" id="SVl-s5-xyJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ebl-Gx-ul2">
+                                                <rect key="frame" x="170" y="0.0" width="75" height="345"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wD8-oS-W9X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="Zpg-gC-ONK"/>
+                                                            <constraint firstAttribute="width" constant="75" id="z60-Ao-UaU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="s6u-6W-67b"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sa-eg-F3H">
+                                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="LFF-bH-JxU"/>
+                                                            <constraint firstAttribute="height" constant="75" id="sPI-kD-LRh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="YEr-9v-YTc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBs-Jq-vuf">
+                                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="6dk-w9-3SD"/>
+                                                            <constraint firstAttribute="width" constant="75" id="yrl-ir-m48"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="d5k-nE-Lnl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-hH-ox9">
+                                                        <rect key="frame" x="0.0" y="270" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="614-oX-fLL"/>
+                                                            <constraint firstAttribute="height" constant="75" id="YyZ-Cd-Pqr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedNumber:" destination="ICU-nA-FeE" eventType="touchUpInside" id="n7w-xy-nFn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qKy-y9-UxY">
+                                                <rect key="frame" x="255" y="0.0" width="75" height="345"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3F-eq-oXg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="EUg-tK-Iu3"/>
+                                                            <constraint firstAttribute="width" constant="75" id="IHs-2h-3nU"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="delete.left.fill" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedDelete:" destination="ICU-nA-FeE" eventType="touchUpInside" id="YLx-Th-fDa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs4-Ta-zMd">
+                                                        <rect key="frame" x="0.0" y="90" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="83E-Tu-CkI"/>
+                                                            <constraint firstAttribute="width" constant="75" id="nfO-Qv-rIb"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="C">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedClearButton:" destination="ICU-nA-FeE" eventType="touchUpInside" id="zrC-bn-lha"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJA-wa-LcM">
+                                                        <rect key="frame" x="0.0" y="180" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="LzY-iW-qQL"/>
+                                                            <constraint firstAttribute="width" constant="75" id="bna-Z3-elJ"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="swap">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedSwapButton:" destination="ICU-nA-FeE" eventType="touchUpInside" id="B0B-pB-UgO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEq-sO-kCI">
+                                                        <rect key="frame" x="0.0" y="270" width="75" height="75"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="75" id="73W-ze-0gF"/>
+                                                            <constraint firstAttribute="height" constant="75" id="8HP-Xh-b5H"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="equal" catalog="system">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="pressedCalculate:" destination="ICU-nA-FeE" eventType="touchUpInside" id="kHV-Rc-JJ3"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="fMH-jS-JLW"/>
-                                    <constraint firstAttribute="height" constant="330" id="pN3-4w-YXz"/>
-                                </constraints>
-                            </stackView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uJZ-pc-5ul"/>
                         <color key="backgroundColor" red="0.63921568627450975" green="0.82352941176470584" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="BT9-BB-Zep" firstAttribute="top" secondItem="9eY-Yh-66l" secondAttribute="bottom" constant="90" id="NGQ-dk-xaQ"/>
+                            <constraint firstItem="9eY-Yh-66l" firstAttribute="top" secondItem="uJZ-pc-5ul" secondAttribute="top" constant="50" id="Mrz-AW-y3s"/>
+                            <constraint firstItem="uJZ-pc-5ul" firstAttribute="bottom" secondItem="w0K-TC-Lwe" secondAttribute="bottom" constant="30" id="NUp-pp-oTJ"/>
                             <constraint firstItem="9eY-Yh-66l" firstAttribute="centerX" secondItem="qQm-Ld-nRW" secondAttribute="centerX" id="S40-Hh-hxX"/>
-                            <constraint firstItem="BT9-BB-Zep" firstAttribute="centerX" secondItem="qQm-Ld-nRW" secondAttribute="centerX" id="uZa-aw-tVy"/>
-                            <constraint firstItem="uJZ-pc-5ul" firstAttribute="bottom" secondItem="BT9-BB-Zep" secondAttribute="bottom" id="yoI-qc-OYF"/>
+                            <constraint firstItem="w0K-TC-Lwe" firstAttribute="leading" secondItem="uJZ-pc-5ul" secondAttribute="leading" constant="20" id="U8A-Tp-T9T"/>
+                            <constraint firstItem="w0K-TC-Lwe" firstAttribute="top" secondItem="qQm-Ld-nRW" secondAttribute="topMargin" constant="350" id="nQq-vG-ulF"/>
+                            <constraint firstItem="uJZ-pc-5ul" firstAttribute="trailing" secondItem="w0K-TC-Lwe" secondAttribute="trailing" constant="20" id="wAk-ZD-ytE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="discountPercentageTextField" destination="p6E-3f-0xw" id="C31-fb-J7T"/>
                         <outlet property="finalResultTextField" destination="DsN-UB-7f7" id="eXc-eH-soR"/>
                         <outlet property="originalPriceTextField" destination="YX4-Ta-7CI" id="gq4-Af-fVM"/>
+                        <outletCollection property="numberButtonCollection" destination="xiB-fe-eWS" collectionClass="NSMutableArray" id="PRp-Iz-2TB"/>
+                        <outletCollection property="numberButtonCollection" destination="N22-HH-KAq" collectionClass="NSMutableArray" id="a9l-VO-Tec"/>
+                        <outletCollection property="numberButtonCollection" destination="gmf-TL-gXe" collectionClass="NSMutableArray" id="Ezu-Xd-4vJ"/>
+                        <outletCollection property="numberButtonCollection" destination="sBs-Jq-vuf" collectionClass="NSMutableArray" id="SVx-Yi-8tw"/>
+                        <outletCollection property="numberButtonCollection" destination="IaA-25-7NC" collectionClass="NSMutableArray" id="Nko-8V-HR6"/>
+                        <outletCollection property="numberButtonCollection" destination="w3y-Fq-eDX" collectionClass="NSMutableArray" id="hbz-Cp-t3V"/>
+                        <outletCollection property="numberButtonCollection" destination="8sa-eg-F3H" collectionClass="NSMutableArray" id="eWS-qk-0Gm"/>
+                        <outletCollection property="numberButtonCollection" destination="SMR-ck-jYd" collectionClass="NSMutableArray" id="lUx-S8-4QZ"/>
+                        <outletCollection property="numberButtonCollection" destination="zYo-8X-3Sj" collectionClass="NSMutableArray" id="L4C-10-Z8L"/>
+                        <outletCollection property="numberButtonCollection" destination="wD8-oS-W9X" collectionClass="NSMutableArray" id="esg-Wx-W5O"/>
+                        <outletCollection property="numberButtonCollection" destination="dMg-hH-ox9" collectionClass="NSMutableArray" id="kWR-em-Qhm"/>
+                        <outletCollection property="operationButtonCollection" destination="mEq-sO-kCI" collectionClass="NSMutableArray" id="EPF-RH-uTo"/>
+                        <outletCollection property="operationButtonCollection" destination="MJA-wa-LcM" collectionClass="NSMutableArray" id="p6r-7D-Xov"/>
+                        <outletCollection property="operationButtonCollection" destination="cs4-Ta-zMd" collectionClass="NSMutableArray" id="mGg-0y-ng7"/>
+                        <outletCollection property="operationButtonCollection" destination="F3F-eq-oXg" collectionClass="NSMutableArray" id="2PK-eI-bnO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgM-4r-Xwk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2327,22 +2410,7 @@
     </scenes>
     <color key="tintColor" name="WIM_Blue"/>
     <resources>
-        <image name="0 Button" width="35" height="35"/>
-        <image name="1 Button" width="35" height="35.333332061767578"/>
-        <image name="2 Button" width="35.666667938232422" height="35.333332061767578"/>
-        <image name="3 Button" width="35.333332061767578" height="35.333332061767578"/>
-        <image name="4 Button" width="35" height="35.666667938232422"/>
-        <image name="5 Button" width="35.666667938232422" height="35.666667938232422"/>
-        <image name="6 Button" width="35.333332061767578" height="35.666667938232422"/>
-        <image name="7 Button" width="35" height="35.333332061767578"/>
-        <image name="8 Button" width="35.666667938232422" height="35.333332061767578"/>
-        <image name="9 Button" width="35.333332061767578" height="35.333332061767578"/>
-        <image name="Decimal Button" width="35.333332061767578" height="35"/>
         <image name="DiscountCalc Button" width="57.666667938232422" height="57.666667938232422"/>
-        <image name="DiscountCalculator_Delete" width="35.333332061767578" height="35.333332061767578"/>
-        <image name="DiscountCalculator_Equal" width="35.333332061767578" height="35.333332061767578"/>
-        <image name="DiscountCalculator_NormalCalc" width="35.333332061767578" height="35.333332061767578"/>
-        <image name="DiscountCalculator_Swap" width="35.333332061767578" height="35.333332061767578"/>
         <image name="ExchangeRate Button" width="57.666667938232422" height="57.666667938232422"/>
         <image name="Expand Button" width="10" height="9.3333330154418945"/>
         <image name="GoldCalc Button" width="57.666667938232422" height="57.666667938232422"/>
