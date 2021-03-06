@@ -181,6 +181,7 @@ extension UnitConverterViewController: UnitPopOverToContentControllerDelegate{
         }
         unitFromTextField.text = ""
         unitToTextField.text = ""
+        inputWorkings = ""
     }
     
     
