@@ -252,24 +252,8 @@ extension ExchangeRateViewController {
         let deleteButtonImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
         operationButtonCollection[3].setImage(deleteButtonImage, for: .normal)
         
-        
-        
-        
-        
-        
     }
-    
-    
-    
-    
 }
-
-
-
-
-
-
-
 
 //MARK: - Other Methods
 
