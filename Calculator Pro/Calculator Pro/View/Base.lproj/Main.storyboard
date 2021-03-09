@@ -17,191 +17,206 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="KHH-sZ-mws">
-                                <rect key="frame" x="45" y="189" width="300" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHj-54-Ttp">
+                                <rect key="frame" x="20" y="107" width="350" height="630"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vQF-Qt-RuB" userLabel="Normal Calc Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="172" height="100"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="EYA-HR-qh3" userLabel="First Row Stack View">
+                                        <rect key="frame" x="20" y="20" width="310" height="164.66666666666666"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoV-se-kw1">
-                                                <rect key="frame" x="57.333333333333329" y="0.0" width="57.333333333333329" height="69.333333333333329"/>
-                                                <color key="tintColor" name="WIM_Blue"/>
-                                                <state key="normal" backgroundImage="NormalCalc Button">
-                                                    <color key="titleColor" name="AccentColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="presentation" id="GiF-oh-n8Y"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기본 계산기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZZ-ng-7vP">
-                                                <rect key="frame" x="47" y="79.333333333333314" width="78" height="20.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="vQF-Qt-RuB" userLabel="Normal Calc Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="164.66666666666666"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoV-se-kw1" userLabel="Normal Calculator Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="130" id="gim-YG-ZkW"/>
+                                                            <constraint firstAttribute="width" constant="130" id="jxi-am-GPE"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="WIM_Blue"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" red="0.54509803921568623" green="0.49803921568627452" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="BYZ-38-t0r" kind="presentation" id="GiF-oh-n8Y"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기본 계산기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZZ-ng-7vP">
+                                                        <rect key="frame" x="26" y="144" width="78" height="20.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xy3-1E-eth" userLabel="Unit Converter Stack View">
+                                                <rect key="frame" x="180" y="0.0" width="130" height="164.66666666666666"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuA-o2-uny" userLabel="Unit Converter Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="130" id="SFF-kD-Hhy"/>
+                                                            <constraint firstAttribute="width" constant="130" id="qSV-ge-aFn"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="WIM_Blue"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" name="AccentColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="h6e-8a-5Li" kind="presentation" id="Ub6-M5-VAK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단위 계산기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-pl-U4r">
+                                                        <rect key="frame" x="26" y="144" width="78" height="20.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="AoV-se-kw1" firstAttribute="leading" secondItem="vQF-Qt-RuB" secondAttribute="leading" constant="57.333333333333321" id="Fjy-QE-guG"/>
-                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Xy3-1E-eth" userLabel="Unit Converter Stack View">
-                                        <rect key="frame" x="222" y="0.0" width="78" height="100"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-Zw-9Rl" userLabel="Third Row Stack View">
+                                        <rect key="frame" x="20" y="389.33333333333331" width="310" height="164.66666666666669"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuA-o2-uny" userLabel="Unit Converter Button">
-                                                <rect key="frame" x="10.333333333333318" y="0.0" width="57.333333333333343" height="61.333333333333336"/>
-                                                <color key="tintColor" name="WIM_Blue"/>
-                                                <state key="normal" backgroundImage="UnitCalc Button">
-                                                    <color key="titleColor" name="AccentColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="h6e-8a-5Li" kind="presentation" id="Ub6-M5-VAK"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단위 계산기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR8-pl-U4r">
-                                                <rect key="frame" x="0.0" y="79.333333333333314" width="78" height="20.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="9eK-aN-1p8" userLabel="Exchange Rate Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="164.66666666666666"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqK-7F-73M" userLabel="Exchange Rate Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="130" id="II5-76-dyj"/>
+                                                            <constraint firstAttribute="width" constant="130" id="vYy-ir-7wp"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="WIM_Blue"/>
+                                                        <connections>
+                                                            <segue destination="3mm-lk-Rep" kind="presentation" id="SAt-zY-uVG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환율 계산기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1v-qH-yBI">
+                                                        <rect key="frame" x="26" y="144.00000000000006" width="78" height="20.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xh8-is-Zoi" userLabel="Grade Calc Stack View">
+                                                <rect key="frame" x="180" y="0.0" width="130" height="164.66666666666666"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFX-VY-rSd" userLabel="Grade Calculator Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="130" id="8au-ko-g9c"/>
+                                                            <constraint firstAttribute="width" constant="130" id="A5i-jx-WXv"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="WIM_Blue"/>
+                                                        <connections>
+                                                            <segue destination="h0l-1U-at8" kind="presentation" id="1TB-JB-dBE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학점 계산기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0A-7D-0zY">
+                                                        <rect key="frame" x="26" y="144.00000000000006" width="78" height="20.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="fR8-pl-U4r" firstAttribute="leading" secondItem="Xy3-1E-eth" secondAttribute="leading" id="I7U-UX-qj9"/>
-                                            <constraint firstItem="OuA-o2-uny" firstAttribute="leading" secondItem="Xy3-1E-eth" secondAttribute="leading" constant="10.333333333333314" id="S5d-6D-pyv"/>
-                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="VWu-U2-0cO" userLabel="Second Row Stack View">
+                                        <rect key="frame" x="20" y="204.66666666666669" width="310" height="164.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="WNW-N0-Af8" userLabel="Gold Calc Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="164.66666666666666"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onU-Rg-45f" userLabel="Gold Calculator Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="130" id="DiB-Rj-FbD"/>
+                                                            <constraint firstAttribute="width" constant="130" id="TyK-x1-75E"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="WIM_Blue"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" name="AccentColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="Sdb-NN-1Ig" kind="presentation" id="Hl1-0j-1E6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금 값 계산기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRq-LL-WkB">
+                                                        <rect key="frame" x="23.666666666666664" y="144" width="82.666666666666686" height="20.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="BqX-r7-u7b" userLabel="Discount Calc Stack View">
+                                                <rect key="frame" x="180" y="0.0" width="130" height="164.66666666666666"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLC-nl-Lkm" userLabel="Discount Calculator Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="130" id="BV0-IE-bd4"/>
+                                                            <constraint firstAttribute="width" constant="130" id="YZl-r3-PQK"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="WIM_Blue"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" name="AccentColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="ICU-nA-FeE" kind="presentation" id="l1p-Qx-2lw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 할인 계산기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5d-EO-qts">
+                                                        <rect key="frame" x="23.666666666666664" y="144" width="82.666666666666686" height="20.666666666666657"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="JOf-q9-6mq"/>
-                                    <constraint firstAttribute="height" constant="100" id="ofE-oN-kQe"/>
+                                    <constraint firstItem="VWu-U2-0cO" firstAttribute="leading" secondItem="xHj-54-Ttp" secondAttribute="leading" constant="20" id="9YP-6e-Scs"/>
+                                    <constraint firstItem="bsa-Zw-9Rl" firstAttribute="top" secondItem="VWu-U2-0cO" secondAttribute="bottom" constant="20" id="FSM-wG-RCm"/>
+                                    <constraint firstItem="EYA-HR-qh3" firstAttribute="top" secondItem="xHj-54-Ttp" secondAttribute="top" constant="20" id="ITI-hZ-5yb"/>
+                                    <constraint firstAttribute="width" constant="350" id="J5l-3o-64I"/>
+                                    <constraint firstAttribute="trailing" secondItem="bsa-Zw-9Rl" secondAttribute="trailing" constant="20" id="NKO-I8-Kr6"/>
+                                    <constraint firstAttribute="height" constant="630" id="Svb-qX-Gdp"/>
+                                    <constraint firstAttribute="trailing" secondItem="EYA-HR-qh3" secondAttribute="trailing" constant="20" id="Tmc-Ae-JX5"/>
+                                    <constraint firstItem="EYA-HR-qh3" firstAttribute="leading" secondItem="xHj-54-Ttp" secondAttribute="leading" constant="20" id="cqU-AM-ElZ"/>
+                                    <constraint firstItem="bsa-Zw-9Rl" firstAttribute="leading" secondItem="xHj-54-Ttp" secondAttribute="leading" constant="20" id="dxR-Ty-3Ig"/>
+                                    <constraint firstItem="VWu-U2-0cO" firstAttribute="top" secondItem="EYA-HR-qh3" secondAttribute="bottom" constant="20" id="hS8-Ee-Nua"/>
+                                    <constraint firstAttribute="trailing" secondItem="VWu-U2-0cO" secondAttribute="trailing" constant="20" id="mFb-zm-WHZ"/>
                                 </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="9rd-rO-gUH">
-                                <rect key="frame" x="45" y="357" width="300" height="100"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="WNW-N0-Af8" userLabel="Gold Calc Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="191.33333333333334" height="100"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onU-Rg-45f" userLabel="Gold Calculator Button">
-                                                <rect key="frame" x="67" y="0.0" width="57.333333333333343" height="67.333333333333329"/>
-                                                <color key="tintColor" name="WIM_Blue"/>
-                                                <state key="normal" backgroundImage="GoldCalc Button">
-                                                    <color key="titleColor" name="AccentColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="Sdb-NN-1Ig" kind="presentation" id="Hl1-0j-1E6"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금 값 계산기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRq-LL-WkB">
-                                                <rect key="frame" x="54.333333333333321" y="79.333333333333314" width="82.666666666666686" height="20.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="onU-Rg-45f" firstAttribute="leading" secondItem="WNW-N0-Af8" secondAttribute="leading" constant="67" id="efF-rO-PM0"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="BqX-r7-u7b" userLabel="Discount Calc Stack View">
-                                        <rect key="frame" x="217.33333333333329" y="0.0" width="82.666666666666657" height="100"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLC-nl-Lkm" userLabel="Unit Converter Button">
-                                                <rect key="frame" x="12.666666666666689" y="0.0" width="57.333333333333343" height="60.333333333333336"/>
-                                                <color key="tintColor" name="WIM_Blue"/>
-                                                <state key="normal" backgroundImage="DiscountCalc Button">
-                                                    <color key="titleColor" name="AccentColor"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="ICU-nA-FeE" kind="presentation" id="l1p-Qx-2lw"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 할인 계산기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5d-EO-qts">
-                                                <rect key="frame" x="0.0" y="79.333333333333314" width="82.666666666666671" height="20.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="v5d-EO-qts" firstAttribute="leading" secondItem="BqX-r7-u7b" secondAttribute="leading" id="ZCr-f6-uo3"/>
-                                            <constraint firstItem="KLC-nl-Lkm" firstAttribute="leading" secondItem="BqX-r7-u7b" secondAttribute="leading" constant="12.666666666666686" id="qaW-Fs-mRh"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="bp8-S5-P46"/>
-                                    <constraint firstAttribute="width" constant="300" id="nag-vm-roe"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="pb3-DZ-e6Z">
-                                <rect key="frame" x="45" y="549" width="300" height="100"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9eK-aN-1p8" userLabel="Exchange Rate Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="100"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqK-7F-73M" userLabel="Exchange Rate Button">
-                                                <rect key="frame" x="41.333333333333329" y="0.0" width="57.333333333333329" height="69.333333333333329"/>
-                                                <color key="tintColor" name="WIM_Blue"/>
-                                                <state key="normal" backgroundImage="ExchangeRate Button"/>
-                                                <connections>
-                                                    <segue destination="3mm-lk-Rep" kind="presentation" id="SAt-zY-uVG"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환율 계산기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1v-qH-yBI">
-                                                <rect key="frame" x="31" y="79.333333333333371" width="78" height="20.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="GqK-7F-73M" firstAttribute="leading" secondItem="9eK-aN-1p8" secondAttribute="leading" constant="41.333333333333321" id="5GS-WN-cdT"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xh8-is-Zoi" userLabel="Grade Calc Stack View">
-                                        <rect key="frame" x="222" y="0.0" width="78" height="100"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFX-VY-rSd" userLabel="Grade Calculator Button">
-                                                <rect key="frame" x="10.333333333333318" y="0.0" width="57.333333333333343" height="71.333333333333329"/>
-                                                <color key="tintColor" name="WIM_Blue"/>
-                                                <state key="normal" backgroundImage="GradeCalc Button"/>
-                                                <connections>
-                                                    <segue destination="h0l-1U-at8" kind="presentation" id="1TB-JB-dBE"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학점 계산기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0A-7D-0zY">
-                                                <rect key="frame" x="0.0" y="79.333333333333371" width="78" height="20.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="u0A-7D-0zY" firstAttribute="leading" secondItem="Xh8-is-Zoi" secondAttribute="leading" id="FE6-sp-4yd"/>
-                                            <constraint firstItem="LFX-VY-rSd" firstAttribute="leading" secondItem="Xh8-is-Zoi" secondAttribute="leading" constant="10.333333333333314" id="M7k-Mb-3mB"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="9JH-J6-0Gy"/>
-                                    <constraint firstAttribute="height" constant="100" id="IIF-wI-RJK"/>
-                                </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qWF-Sg-b3w"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pb3-DZ-e6Z" firstAttribute="top" secondItem="9rd-rO-gUH" secondAttribute="bottom" constant="92" id="3Wk-8Z-9wH"/>
-                            <constraint firstItem="9rd-rO-gUH" firstAttribute="top" secondItem="KAD-nK-aUY" secondAttribute="top" constant="357" id="Uco-05-cDE"/>
-                            <constraint firstItem="KHH-sZ-mws" firstAttribute="centerX" secondItem="KAD-nK-aUY" secondAttribute="centerX" id="Xne-yQ-MT8"/>
-                            <constraint firstItem="pb3-DZ-e6Z" firstAttribute="centerX" secondItem="KAD-nK-aUY" secondAttribute="centerX" id="cY1-zo-BSA"/>
-                            <constraint firstItem="9rd-rO-gUH" firstAttribute="top" secondItem="KHH-sZ-mws" secondAttribute="bottom" constant="68" id="mrw-Xf-pdn"/>
-                            <constraint firstItem="9rd-rO-gUH" firstAttribute="centerX" secondItem="KAD-nK-aUY" secondAttribute="centerX" id="owG-tp-doA"/>
+                            <constraint firstItem="xHj-54-Ttp" firstAttribute="centerY" secondItem="KAD-nK-aUY" secondAttribute="centerY" id="pcg-4F-1PK"/>
+                            <constraint firstItem="xHj-54-Ttp" firstAttribute="centerX" secondItem="KAD-nK-aUY" secondAttribute="centerX" id="zGv-Y1-uEl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="계산기 Pro" largeTitleDisplayMode="never" id="zjW-cK-sfQ"/>
                     <connections>
-                        <outlet property="normalCalculatorButton" destination="AoV-se-kw1" id="oqh-Zo-MWa"/>
+                        <outletCollection property="calculatorButtonCollection" destination="AoV-se-kw1" collectionClass="NSMutableArray" id="flA-eL-T2S"/>
+                        <outletCollection property="calculatorLabelCollection" destination="NZZ-ng-7vP" collectionClass="NSMutableArray" id="F7d-f4-7GE"/>
+                        <outletCollection property="calculatorButtonCollection" destination="OuA-o2-uny" collectionClass="NSMutableArray" id="6P2-z8-Rnr"/>
+                        <outletCollection property="calculatorLabelCollection" destination="fR8-pl-U4r" collectionClass="NSMutableArray" id="49z-s6-V58"/>
+                        <outletCollection property="calculatorLabelCollection" destination="v5d-EO-qts" collectionClass="NSMutableArray" id="Nhe-Kv-Kcr"/>
+                        <outletCollection property="calculatorButtonCollection" destination="KLC-nl-Lkm" collectionClass="NSMutableArray" id="mZY-Ld-wxc"/>
+                        <outletCollection property="calculatorLabelCollection" destination="tRq-LL-WkB" collectionClass="NSMutableArray" id="ik2-T9-fQB"/>
+                        <outletCollection property="calculatorButtonCollection" destination="onU-Rg-45f" collectionClass="NSMutableArray" id="hK0-ez-L13"/>
+                        <outletCollection property="calculatorButtonCollection" destination="GqK-7F-73M" collectionClass="NSMutableArray" id="401-3q-eKq"/>
+                        <outletCollection property="calculatorLabelCollection" destination="w1v-qH-yBI" collectionClass="NSMutableArray" id="MaD-fo-cHS"/>
+                        <outletCollection property="calculatorLabelCollection" destination="u0A-7D-0zY" collectionClass="NSMutableArray" id="YJ1-kK-Sak"/>
+                        <outletCollection property="calculatorButtonCollection" destination="LFX-VY-rSd" collectionClass="NSMutableArray" id="Cjx-2U-m5b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3i-Op-Z5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2415,15 +2430,9 @@
     </scenes>
     <color key="tintColor" name="WIM_Blue"/>
     <resources>
-        <image name="DiscountCalc Button" width="57.666667938232422" height="57.666667938232422"/>
-        <image name="ExchangeRate Button" width="57.666667938232422" height="57.666667938232422"/>
         <image name="Expand Button" width="10" height="9.3333330154418945"/>
-        <image name="GoldCalc Button" width="57.666667938232422" height="57.666667938232422"/>
         <image name="Grade Title Image" width="373" height="87.333335876464844"/>
-        <image name="GradeCalc Button" width="57.666667938232422" height="57.666667938232422"/>
-        <image name="NormalCalc Button" width="57.666667938232422" height="57.666667938232422"/>
         <image name="TextField Button" width="366.33334350585938" height="90.333335876464844"/>
-        <image name="UnitCalc Button" width="57.666667938232422" height="57.666667938232422"/>
         <image name="delete.left" catalog="system" width="128" height="104"/>
         <image name="delete.left.fill" catalog="system" width="128" height="104"/>
         <image name="divide" catalog="system" width="128" height="103"/>
