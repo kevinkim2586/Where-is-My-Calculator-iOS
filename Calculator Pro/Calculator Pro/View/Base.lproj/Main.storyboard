@@ -199,6 +199,7 @@
                         <viewLayoutGuide key="safeArea" id="qWF-Sg-b3w"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xHj-54-Ttp" firstAttribute="top" secondItem="qWF-Sg-b3w" secondAttribute="top" constant="19" id="VKu-HZ-km0"/>
                             <constraint firstItem="xHj-54-Ttp" firstAttribute="centerY" secondItem="KAD-nK-aUY" secondAttribute="centerY" id="pcg-4F-1PK"/>
                             <constraint firstItem="xHj-54-Ttp" firstAttribute="centerX" secondItem="KAD-nK-aUY" secondAttribute="centerX" id="zGv-Y1-uEl"/>
                         </constraints>
@@ -610,19 +611,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wPu-kX-U1D">
-                                <rect key="frame" x="5" y="39.999999999999986" width="380" height="190.66666666666663"/>
+                                <rect key="frame" x="5" y="40.000000000000014" width="380" height="191.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2l-uM-ZRL" userLabel="From View">
-                                        <rect key="frame" x="0.0" y="0.0" width="380" height="90.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="90.666666666666671"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-wI-rEM" userLabel="From TextField Background">
-                                                <rect key="frame" x="0.0" y="0.0" width="380" height="90.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="380" height="90.666666666666671"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ohi-Bo-FAc">
-                                                <rect key="frame" x="52" y="18.000000000000004" width="276" height="44.333333333333343"/>
+                                                <rect key="frame" x="52" y="17.999999999999996" width="276" height="44.666666666666657"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5a-n5-WWn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="44.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="44.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
                                                         <state key="normal" title="밀리미터(mm)  " image="Expand Button">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -632,7 +633,7 @@
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="숫자 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FW9-n8-Lwj" userLabel="Unit From TextField">
-                                                        <rect key="frame" x="212.66666666666669" y="0.0" width="63.333333333333314" height="44.333333333333336"/>
+                                                        <rect key="frame" x="212.66666666666669" y="0.0" width="63.333333333333314" height="44.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -651,16 +652,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfV-zz-bTl" userLabel="To View">
-                                        <rect key="frame" x="0.0" y="100.33333333333334" width="380" height="90.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="100.66666666666666" width="380" height="90.666666666666657"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-6b-rbx" userLabel="To TextField Background">
                                                 <rect key="frame" x="0.0" y="0.0" width="358" height="80"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="eec-Jp-yJe">
-                                                <rect key="frame" x="52" y="18.000000000000004" width="276" height="44.333333333333343"/>
+                                                <rect key="frame" x="52" y="17.999999999999996" width="276" height="44.666666666666657"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNH-e2-2dd" userLabel="Unit To Button">
-                                                        <rect key="frame" x="0.0" y="0.0" width="177.66666666666666" height="44.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="177.66666666666666" height="44.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
                                                         <state key="normal" title="센티미터(cm)  " image="Expand Button">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -670,7 +671,7 @@
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="결과 출력  " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ntl-mO-FCd" userLabel="Unit To TextField">
-                                                        <rect key="frame" x="203.66666666666669" y="0.0" width="72.333333333333314" height="44.333333333333336"/>
+                                                        <rect key="frame" x="203.66666666666669" y="0.0" width="72.333333333333314" height="44.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1091,10 +1092,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wX4-Yg-TLO">
-                                <rect key="frame" x="16" y="40.000000000000014" width="358.33333333333331" height="210.33333333333337"/>
+                                <rect key="frame" x="15.666666666666657" y="39.999999999999986" width="358.66666666666674" height="210.66666666666663"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVD-K9-l3L" userLabel="From View">
-                                        <rect key="frame" x="0.0" y="0.0" width="358.33333333333331" height="90.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358.66666666666669" height="90.666666666666671"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="iDG-u8-gcN">
                                                 <rect key="frame" x="0.0" y="-1" width="366" height="90.333333333333329"/>
@@ -1124,10 +1125,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJR-k0-jpe" userLabel="To View">
-                                        <rect key="frame" x="0.0" y="100.33333333333334" width="358.33333333333331" height="110"/>
+                                        <rect key="frame" x="0.0" y="100.66666666666666" width="358.66666666666669" height="110"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="o01-jX-0fs">
-                                                <rect key="frame" x="0.0" y="0.0" width="366.33333333333331" height="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="366.66666666666669" height="110"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금 시세" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwp-yv-She">
                                                 <rect key="frame" x="161" y="32" width="166" height="34"/>
@@ -2069,10 +2070,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ctW-JX-TEj">
-                                <rect key="frame" x="16" y="39.999999999999986" width="358.33333333333331" height="190.66666666666663"/>
+                                <rect key="frame" x="15.666666666666657" y="40.000000000000014" width="358.66666666666674" height="191.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGs-Ic-xwe" userLabel="From View">
-                                        <rect key="frame" x="0.0" y="0.0" width="358.33333333333331" height="90.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358.66666666666669" height="90.666666666666671"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="5OI-Ol-yap" userLabel="TextField Button Image">
                                                 <rect key="frame" x="0.0" y="-1" width="366" height="90.333333333333329"/>
@@ -2103,7 +2104,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riX-aI-FKH" userLabel="To View">
-                                        <rect key="frame" x="0.0" y="100.33333333333334" width="358.33333333333331" height="90.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="100.66666666666666" width="358.66666666666669" height="90.666666666666657"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="f8u-Y0-1Ga">
                                                 <rect key="frame" x="0.0" y="-1" width="366" height="90.333333333333329"/>
