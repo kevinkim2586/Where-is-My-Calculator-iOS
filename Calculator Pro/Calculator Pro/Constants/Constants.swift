@@ -1,5 +1,7 @@
+import UIKit
+
 struct Constants{
-    
+
     struct Segues{
         static let normalCalculatorSegue                    = "HomeToNormal"
     }
@@ -43,6 +45,18 @@ struct Constants{
         
         static let unitTemperatureArray: [UnitTemperature : String] = [.celsius : "섭씨(°C)", .fahrenheit : "화씨(°F)", .kelvin : "절대온도(K)"]
 
+    }
+    
+    struct Colors {
+        
+        static let normalCalculatorButtonColor: UIColor = UIColor(red: 0.23, green: 0.53, blue: 0.93, alpha: 1.00)
+        static let unitConverterButtonColor: UIColor = UIColor(red: 0.79, green: 0.60, blue: 0.31, alpha: 1.00)
+        static let goldCalculatorButtonColor: UIColor = UIColor(red: 0.42, green: 0.27, blue: 0.53, alpha: 1.00)
+        static let discountCalculatorButtonColor: UIColor = UIColor(red: 0.16, green: 0.53, blue: 0.33, alpha: 1.00)
+        static let exchangeRateButtonColor: UIColor = UIColor(red: 0.64, green: 0.26, blue: 0.27, alpha: 1.00)
+        static let gradeCalculatorButtonColor: UIColor = UIColor(red: 0.55, green: 0.50, blue: 0.45, alpha: 1.00)
+        
+        
     }
     
 }
