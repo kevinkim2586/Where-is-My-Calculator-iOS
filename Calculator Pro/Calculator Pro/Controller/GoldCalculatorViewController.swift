@@ -203,9 +203,9 @@ extension GoldCalculatorViewController {
         button.backgroundColor = color
         button.layer.cornerRadius = button.frame.width / 2
         
-        button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-        button.layer.shadowRadius = 2.0
-        button.layer.shadowOpacity = 0.5
+//        button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+//        button.layer.shadowRadius = 2.0
+//        button.layer.shadowOpacity = 0.5
         
         button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
     }

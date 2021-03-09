@@ -29,12 +29,13 @@ class HomeViewController: UIViewController {
         }
         
         calculatorButtonCollection[0].backgroundColor = Constants.Colors.normalCalculatorButtonColor
-        calculatorButtonCollection[1].backgroundColor = UIColor(red: 0.23, green: 0.53, blue: 0.93, alpha: 1.00)
+        calculatorButtonCollection[1].backgroundColor = Constants.Colors.unitConverterButtonColor
         
-        calculatorButtonCollection[2].backgroundColor = UIColor(red: 0.16, green: 0.53, blue: 0.33, alpha: 1.00)
-        calculatorButtonCollection[3].backgroundColor = UIColor(red: 0.42, green: 0.27, blue: 0.53, alpha: 1.00)
-        calculatorButtonCollection[4].backgroundColor = UIColor(red: 0.55, green: 0.50, blue: 0.45, alpha: 1.00)
-        calculatorButtonCollection[5].backgroundColor = UIColor(red: 0.64, green: 0.26, blue: 0.27, alpha: 1.00)
+        calculatorButtonCollection[2].backgroundColor = Constants.Colors.discountCalculatorButtonColor
+        calculatorButtonCollection[3].backgroundColor = Constants.Colors.goldCalculatorButtonColor
+        calculatorButtonCollection[4].backgroundColor =
+            Constants.Colors.exchangeRateButtonColor
+        calculatorButtonCollection[5].backgroundColor = Constants.Colors.gradeCalculatorButtonColor
         
         
     }
