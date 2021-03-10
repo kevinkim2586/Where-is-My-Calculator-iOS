@@ -616,9 +616,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2l-uM-ZRL" userLabel="From View">
                                         <rect key="frame" x="0.0" y="0.0" width="409.33333333333331" height="90.666666666666671"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-wI-rEM" userLabel="From TextField Background">
-                                                <rect key="frame" x="0.0" y="0.0" width="409.33333333333331" height="90.666666666666671"/>
-                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDw-qj-lo0" userLabel="Background Text Field">
+                                                <rect key="frame" x="10" y="5" width="389.33333333333331" height="80.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ohi-Bo-FAc">
                                                 <rect key="frame" x="52" y="17.999999999999996" width="305.33333333333331" height="44.666666666666657"/>
                                                 <subviews>
@@ -648,22 +650,27 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="eJb-wI-rEM" secondAttribute="bottom" id="EPI-sL-f3S"/>
+                                            <constraint firstAttribute="bottom" secondItem="vDw-qj-lo0" secondAttribute="bottom" constant="5" id="3Bf-Zw-dup"/>
+                                            <constraint firstItem="vDw-qj-lo0" firstAttribute="top" secondItem="c2l-uM-ZRL" secondAttribute="top" constant="5" id="3p6-bC-zH8"/>
                                             <constraint firstItem="ohi-Bo-FAc" firstAttribute="leading" secondItem="c2l-uM-ZRL" secondAttribute="leading" constant="52" id="IbT-pk-Tdz"/>
-                                            <constraint firstAttribute="trailing" secondItem="eJb-wI-rEM" secondAttribute="trailing" id="WpD-Oz-vmU"/>
-                                            <constraint firstItem="eJb-wI-rEM" firstAttribute="top" secondItem="c2l-uM-ZRL" secondAttribute="top" id="ZQm-yh-d8h"/>
+                                            <constraint firstAttribute="trailing" secondItem="vDw-qj-lo0" secondAttribute="trailing" constant="10" id="bvJ-cR-YZE"/>
+                                            <constraint firstItem="vDw-qj-lo0" firstAttribute="leading" secondItem="c2l-uM-ZRL" secondAttribute="leading" constant="10" id="cjv-F6-IVi"/>
                                             <constraint firstAttribute="bottom" secondItem="ohi-Bo-FAc" secondAttribute="bottom" constant="28" id="dhT-hY-fLh"/>
                                             <constraint firstAttribute="trailing" secondItem="ohi-Bo-FAc" secondAttribute="trailing" constant="52" id="peX-b5-q6k"/>
                                             <constraint firstItem="ohi-Bo-FAc" firstAttribute="top" secondItem="c2l-uM-ZRL" secondAttribute="top" constant="18" id="und-He-Nh9"/>
-                                            <constraint firstItem="eJb-wI-rEM" firstAttribute="leading" secondItem="c2l-uM-ZRL" secondAttribute="leading" id="vgf-dm-ss3"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfV-zz-bTl" userLabel="To View">
                                         <rect key="frame" x="0.0" y="100.66666666666666" width="409.33333333333331" height="90.666666666666657"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TextField Button" translatesAutoresizingMaskIntoConstraints="NO" id="ycq-6b-rbx" userLabel="To TextField Background">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="80"/>
-                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rli-AT-QOl" userLabel="Background Text Field">
+                                                <rect key="frame" x="10" y="5" width="389.33333333333331" height="80.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="toBackgroundTextField:" destination="9EX-xX-aXO" eventType="editingDidEnd" id="AWU-6p-Fie"/>
+                                                </connections>
+                                            </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="eec-Jp-yJe">
                                                 <rect key="frame" x="52" y="17.999999999999996" width="305.33333333333331" height="44.666666666666657"/>
                                                 <subviews>
@@ -692,14 +699,14 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="ycq-6b-rbx" firstAttribute="leading" secondItem="NfV-zz-bTl" secondAttribute="leading" id="8Tz-gd-ENs"/>
-                                            <constraint firstItem="ycq-6b-rbx" firstAttribute="top" secondItem="NfV-zz-bTl" secondAttribute="top" id="9gN-ar-P70"/>
+                                            <constraint firstItem="Rli-AT-QOl" firstAttribute="leading" secondItem="NfV-zz-bTl" secondAttribute="leading" constant="10" id="0iW-vC-mFJ"/>
+                                            <constraint firstItem="Rli-AT-QOl" firstAttribute="top" secondItem="NfV-zz-bTl" secondAttribute="top" constant="5" id="DQa-mu-ngv"/>
                                             <constraint firstAttribute="bottom" secondItem="eec-Jp-yJe" secondAttribute="bottom" constant="28" id="ICA-ns-lP1"/>
-                                            <constraint firstAttribute="bottom" secondItem="ycq-6b-rbx" secondAttribute="bottom" id="Qpl-pn-47z"/>
                                             <constraint firstItem="eec-Jp-yJe" firstAttribute="leading" secondItem="NfV-zz-bTl" secondAttribute="leading" constant="52" id="VwT-l9-cz3"/>
                                             <constraint firstAttribute="trailing" secondItem="eec-Jp-yJe" secondAttribute="trailing" constant="52" id="dMJ-1g-5k1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rli-AT-QOl" secondAttribute="trailing" constant="10" id="kO4-bm-IzU"/>
                                             <constraint firstItem="eec-Jp-yJe" firstAttribute="top" secondItem="NfV-zz-bTl" secondAttribute="top" constant="18" id="koA-6z-bm4"/>
-                                            <constraint firstAttribute="trailing" secondItem="ycq-6b-rbx" secondAttribute="trailing" id="l8Q-PD-O4d"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rli-AT-QOl" secondAttribute="bottom" constant="5" id="lYo-mf-F2v"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -965,7 +972,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s3v-ef-9ro"/>
-                        <color key="backgroundColor" red="0.98431372549019602" green="0.93333333333333335" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99597948790000002" green="0.82511764759999995" blue="0.62096315619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yAb-Ys-WqC" firstAttribute="top" secondItem="cHF-z5-72H" secondAttribute="top" constant="350" id="Lxs-vV-ZO7"/>
                             <constraint firstAttribute="trailing" secondItem="yAb-Ys-WqC" secondAttribute="trailing" constant="20" id="N0s-vl-vjB"/>
@@ -976,6 +983,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fromBackgroundTextField" destination="vDw-qj-lo0" id="UtQ-HA-LHa"/>
+                        <outlet property="toBackgroundTextField" destination="Rli-AT-QOl" id="Qs8-VC-aJY"/>
                         <outlet property="unitFromButton" destination="w5a-n5-WWn" id="Kcj-3E-7s8"/>
                         <outlet property="unitFromTextField" destination="FW9-n8-Lwj" id="EMs-JE-m1g"/>
                         <outlet property="unitToButton" destination="xNH-e2-2dd" id="mWB-JP-oha"/>
@@ -995,9 +1004,12 @@
                         <outletCollection property="operationButtonCollection" destination="xLD-iP-Wbu" collectionClass="NSMutableArray" id="L1R-Cj-fEN"/>
                         <outletCollection property="operationButtonCollection" destination="Eia-UY-9ER" collectionClass="NSMutableArray" id="6PS-pW-5bR"/>
                         <outletCollection property="operationButtonCollection" destination="zoh-iZ-1xl" collectionClass="NSMutableArray" id="Km7-a2-CMR"/>
+                        <outletCollection property="textFieldCollection" destination="vDw-qj-lo0" collectionClass="NSMutableArray" id="f4p-Lb-eON"/>
+                        <outletCollection property="textFieldCollection" destination="Rli-AT-QOl" collectionClass="NSMutableArray" id="SRs-MA-Leh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgq-BQ-0iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9EX-xX-aXO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="640" y="911"/>
         </scene>

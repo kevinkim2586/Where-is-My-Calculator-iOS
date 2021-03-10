@@ -1,7 +1,12 @@
 import UIKit
 
 class UnitConverterViewController: UIViewController {
-
+    
+    @IBOutlet weak var fromBackgroundTextField: UITextField!
+    @IBOutlet weak var toBackgroundTextField: UITextField!
+    
+    @IBOutlet var textFieldCollection: [UITextField]!
+    
     @IBOutlet weak var unitFromButton: UIButton!
     @IBOutlet weak var unitToButton: UIButton!
     @IBOutlet weak var unitFromTextField: UITextField!
@@ -32,9 +37,27 @@ class UnitConverterViewController: UIViewController {
         unitFromTextField.becomeFirstResponder()
         unitFromTextField.delegate = self
         unitToTextField.delegate = self
-        
+
+        configureTextFieldUI()
         unitFromTextField.inputView = UIView()
         configureUIButton()
+    }
+    
+    func configureTextFieldUI() {
+ 
+        for textField in textFieldCollection {
+            //Basic texfield Setup
+            textField.borderStyle = .none
+            textField.backgroundColor = UIColor.groupTableViewBackground // Use anycolor that give you a 2d look.
+
+            //To apply corner radius
+            textField.layer.cornerRadius = 30
+
+            //To apply border
+            textField.layer.borderWidth = 0.25
+            textField.layer.borderColor = UIColor.white.cgColor
+        }
+        
     }
     
     @IBAction func pressedClearButton(_ sender: UIButton) {

@@ -71,8 +71,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="backgroundTextField" destination="wg2-6a-8dl" id="AFh-qg-Bob"/>
                 <outlet property="creditTextField" destination="ge6-iC-qkb" id="nXg-Fs-Ywa"/>
+                <outlet property="fromBackgroundTextField" destination="wg2-6a-8dl" id="AFh-qg-Bob"/>
                 <outlet property="gradeTextField" destination="sz5-6a-vYw" id="I5W-lm-6h5"/>
                 <outlet property="lectureTextField" destination="0e4-mz-BTY" id="xMN-6e-oCh"/>
             </connections>
