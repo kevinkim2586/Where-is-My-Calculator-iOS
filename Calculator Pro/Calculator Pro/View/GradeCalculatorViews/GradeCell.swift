@@ -40,10 +40,10 @@ class GradeCell: UITableViewCell {
         backgroundTextField.layer.borderColor = UIColor.white.cgColor
 
         //To apply Shadow
-        backgroundTextField.layer.shadowOpacity = 1
-        backgroundTextField.layer.shadowRadius = 3.0
-        backgroundTextField.layer.shadowOffset = CGSize.zero // Use any CGSize
-        backgroundTextField.layer.shadowColor = UIColor.gray.cgColor
+//        backgroundTextField.layer.shadowOpacity = 1
+//        backgroundTextField.layer.shadowRadius = 3.0
+//        backgroundTextField.layer.shadowOffset = CGSize.zero // Use any CGSize
+//        backgroundTextField.layer.shadowColor = UIColor.gray.cgColor
 
         //To apply padding
 //        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: backgroundTextField.frame.height))
