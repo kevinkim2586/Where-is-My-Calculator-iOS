@@ -89,8 +89,10 @@ class UnitConverterViewController: UIViewController {
                 } else if selectedSection == 2 {
                     result = unitFromTemperature.convertTo(unit: unitToTemperature, value: inputNum)
                 }
-        
-                unitToTextField.text = String(format: "%.2f", result)
+                
+                let formattedResult = String(format: "%.1f", locale: Locale.current, Double(result))
+                unitToTextField.text = formattedResult
+
             }
         }
     }
