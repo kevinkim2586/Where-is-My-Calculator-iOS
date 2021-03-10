@@ -64,8 +64,9 @@ class DiscountCalculatorViewController: UIViewController {
             finalResultTextField.text = result
             return
         }
-        finalResultTextField.text = String(format: "%.1f", finalResult)
-    
+
+        let formattedResult = String(format: "%.1f", locale: Locale.current, Double(finalResult))
+        finalResultTextField.text = formattedResult
     }
     
     @IBAction func pressedDelete(_ sender: UIButton) {
