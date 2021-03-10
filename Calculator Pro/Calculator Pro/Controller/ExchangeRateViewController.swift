@@ -2,6 +2,10 @@ import UIKit
 
 class ExchangeRateViewController: UIViewController{
     
+    @IBOutlet weak var fromBackgroundTextField: UITextField!
+    @IBOutlet weak var toBackgroundTextField: UITextField!
+    @IBOutlet var textFieldCollection: [UITextField]!
+    
     @IBOutlet weak var exchangeRateFromPicker: UITextField!
     @IBOutlet weak var exchangeRateToPicker: UITextField!
     
@@ -39,6 +43,7 @@ class ExchangeRateViewController: UIViewController{
         createPickerView()
         
         configureUIButton()
+        configureTextFieldUI()
     }
 }
 
@@ -231,10 +236,6 @@ extension ExchangeRateViewController {
         button.backgroundColor = color
         button.layer.cornerRadius = button.frame.width / 2
         
-//        button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-//        button.layer.shadowRadius = 2.0
-//        button.layer.shadowOpacity = 0.5
-        
         button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
     }
     
@@ -268,6 +269,22 @@ extension ExchangeRateViewController {
         // Delete button
         let deleteButtonImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
         operationButtonCollection[3].setImage(deleteButtonImage, for: .normal)
+    }
+    
+    func configureTextFieldUI() {
+ 
+        for textField in textFieldCollection {
+
+            textField.borderStyle = .none
+            textField.backgroundColor = .white
+
+            //To apply corner radius
+            textField.layer.cornerRadius = 30
+
+            //To apply border
+            textField.layer.borderWidth = 0.25
+            textField.layer.borderColor = UIColor.white.cgColor
+        }
         
     }
 }
