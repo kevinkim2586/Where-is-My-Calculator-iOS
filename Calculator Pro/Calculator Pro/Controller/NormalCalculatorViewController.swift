@@ -157,9 +157,6 @@ extension NormalCalculatorViewController {
             button.backgroundColor = .white
             button.layer.cornerRadius = button.frame.width / 2
             
-//            button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-//            button.layer.shadowRadius = 2.0
-//            button.layer.shadowOpacity = 0.5
         }
 
         // Operation buttons
@@ -167,10 +164,6 @@ extension NormalCalculatorViewController {
         
             button.backgroundColor = UIColor(red: 0.02, green: 0.42, blue: 0.91, alpha: 1.00)
             button.layer.cornerRadius = button.frame.width / 2
-            
-//            button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-//            button.layer.shadowRadius = 2.0
-//            button.layer.shadowOpacity = 0.5
             
             button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
             button.setTitleColor(.white, for: .normal)
@@ -188,9 +181,7 @@ extension NormalCalculatorViewController {
             
             button.layer.cornerRadius = button.frame.width / 2
             
-//            button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-//            button.layer.shadowRadius = 2.0
-//            button.layer.shadowOpacity = 0.5
+
             button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
             button.setTitleColor(.white, for: .normal)
         }
