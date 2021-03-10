@@ -72,6 +72,15 @@ class UnitConverterViewController: UIViewController {
         calculateResult()
     }
     
+    @IBAction func pressedSwap(_ sender: UIButton) {
+        
+        let temp: String = unitToButton.currentTitle!
+        unitToButton.setTitle(unitFromButton.currentTitle!, for: .normal)
+        unitFromButton.setTitle(temp, for: .normal)
+        
+        pressedClearButton(sender)
+    }
+
     func calculateResult() {
         
         var result: Double = 0.0
@@ -96,6 +105,7 @@ class UnitConverterViewController: UIViewController {
             }
         }
     }
+   
 }
 
 
