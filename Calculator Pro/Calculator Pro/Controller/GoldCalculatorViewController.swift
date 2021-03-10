@@ -68,7 +68,8 @@ extension GoldCalculatorViewController{
             
             let finalResult = goldCalculatorManager.calculateFinalResult(currentGoldPrice: goldPrice)
             
-            resultTextField.text = String(format: "%.2f", finalResult) + " USD"
+            let formattedResult = String(format: "%.1f", locale: Locale.current, Double(finalResult))
+            resultTextField.text = formattedResult + " USD"
         }
     }
     
