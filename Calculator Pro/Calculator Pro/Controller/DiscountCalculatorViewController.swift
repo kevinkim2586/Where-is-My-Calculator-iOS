@@ -60,8 +60,8 @@ class DiscountCalculatorViewController: UIViewController {
         let finalResult = discountCalculatorManager.calculateFinalResult()
         
         if finalResult.truncatingRemainder(dividingBy: 1) == 0 {        // Determine if whole number
-            let result = "\(Int(finalResult))"
-            finalResultTextField.text = result
+            let formattedResult = String(format: "%.0f", locale: Locale.current, Double(finalResult))
+            finalResultTextField.text = formattedResult
             return
         }
 
