@@ -1,6 +1,10 @@
 import UIKit
 
 class GoldCalculatorViewController: UIViewController {
+    
+    @IBOutlet weak var fromBackgroundTextField: UITextField!
+    @IBOutlet weak var toBackgroundTextField: UITextField!
+    @IBOutlet var textFieldCollection: [UITextField]!
 
     @IBOutlet weak var goldUnitPickerTextField: UITextField!
     @IBOutlet weak var userInputTextField: UITextField!
@@ -25,7 +29,8 @@ class GoldCalculatorViewController: UIViewController {
         userInputTextField.delegate = self
         userInputTextField.inputView = UIView()
         userInputTextField.becomeFirstResponder()
-    
+        
+        configureTextFieldUI()
         createPickerView()
         configureUIButton()
     }
@@ -36,6 +41,28 @@ class GoldCalculatorViewController: UIViewController {
         operation.addOperation {
             self.goldCalculatorManager.fetchGoldPrice()
         }
+    }
+}
+
+//MARK: - UI Configuration Methods
+
+extension GoldCalculatorViewController {
+    
+    func configureTextFieldUI() {
+ 
+        for textField in textFieldCollection {
+
+            textField.borderStyle = .none
+            textField.backgroundColor = .white
+
+            //To apply corner radius
+            textField.layer.cornerRadius = 30
+
+            //To apply border
+            textField.layer.borderWidth = 0.25
+            textField.layer.borderColor = UIColor.white.cgColor
+        }
+        
     }
 }
 

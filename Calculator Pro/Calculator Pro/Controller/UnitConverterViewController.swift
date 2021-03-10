@@ -4,7 +4,6 @@ class UnitConverterViewController: UIViewController {
     
     @IBOutlet weak var fromBackgroundTextField: UITextField!
     @IBOutlet weak var toBackgroundTextField: UITextField!
-    
     @IBOutlet var textFieldCollection: [UITextField]!
     
     @IBOutlet weak var unitFromButton: UIButton!
@@ -46,9 +45,9 @@ class UnitConverterViewController: UIViewController {
     func configureTextFieldUI() {
  
         for textField in textFieldCollection {
-            //Basic texfield Setup
+
             textField.borderStyle = .none
-            textField.backgroundColor = UIColor.groupTableViewBackground // Use anycolor that give you a 2d look.
+            textField.backgroundColor = .white
 
             //To apply corner radius
             textField.layer.cornerRadius = 30
@@ -313,10 +312,6 @@ extension UnitConverterViewController {
         button.backgroundColor = color
         button.layer.cornerRadius = button.frame.width / 2
         
-//        button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-//        button.layer.shadowRadius = 2.0
-//        button.layer.shadowOpacity = 0.5
-        
         button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
     }
     
@@ -344,15 +339,10 @@ extension UnitConverterViewController {
         
         // Swap button
         operationButtonCollection[2].titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
-        
-    
-        
+
         // Delete button
         let deleteButtonImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
         operationButtonCollection[3].setImage(deleteButtonImage, for: .normal)
         
     }
-    
-    
-    
 }
