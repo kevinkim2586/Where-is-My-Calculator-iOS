@@ -42,23 +42,6 @@ class UnitConverterViewController: UIViewController {
         configureUIButton()
     }
     
-    func configureTextFieldUI() {
- 
-        for textField in textFieldCollection {
-
-            textField.borderStyle = .none
-            textField.backgroundColor = .white
-
-            //To apply corner radius
-            textField.layer.cornerRadius = 30
-
-            //To apply border
-            textField.layer.borderWidth = 0.25
-            textField.layer.borderColor = UIColor.white.cgColor
-        }
-        
-    }
-    
     @IBAction func pressedClearButton(_ sender: UIButton) {
         
         inputWorkings = ""
@@ -87,7 +70,6 @@ class UnitConverterViewController: UIViewController {
         inputWorkings += sender.currentTitle!
         unitFromTextField.text = inputWorkings
         calculateResult()
-        
     }
     
     @IBAction func pressedCalculate(_ sender: UIButton) {
@@ -99,6 +81,20 @@ class UnitConverterViewController: UIViewController {
         let temp: String = unitToButton.currentTitle!
         unitToButton.setTitle(unitFromButton.currentTitle!, for: .normal)
         unitFromButton.setTitle(temp, for: .normal)
+        
+        if selectedSection == 0 {
+            let temp: UnitLength = unitFromLength
+            unitFromLength = unitToLength
+            unitToLength = temp
+        } else if selectedSection == 1 {
+            let temp: UnitMass = unitFromMass
+            unitFromMass = unitToMass
+            unitToMass = temp
+        } else if selectedSection == 2 {
+            let temp: UnitTemperature = unitFromTemperature
+            unitFromTemperature = unitToTemperature
+            unitToTemperature = temp
+        }
         
         pressedClearButton(sender)
     }
@@ -130,7 +126,6 @@ class UnitConverterViewController: UIViewController {
    
 }
 
-
 //MARK: - UnitPopOverFromContentControllerDelegate
 
 extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
@@ -153,7 +148,7 @@ extension UnitConverterViewController: UnitPopOverFromContentControllerDelegate{
             unitFromLength = unitLength
             return
         }
-        else{ print("Error while setUnitFromLength()") }
+        else { print("Error while setUnitFromLength()") }
     }
     
     func setUnitFromMass(for name: String){
@@ -343,6 +338,22 @@ extension UnitConverterViewController {
         // Delete button
         let deleteButtonImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
         operationButtonCollection[3].setImage(deleteButtonImage, for: .normal)
+    }
+    
+    func configureTextFieldUI() {
+ 
+        for textField in textFieldCollection {
+
+            textField.borderStyle = .none
+            textField.backgroundColor = .white
+
+            //To apply corner radius
+            textField.layer.cornerRadius = 30
+
+            //To apply border
+            textField.layer.borderWidth = 0.25
+            textField.layer.borderColor = UIColor.white.cgColor
+        }
         
     }
 }
