@@ -199,6 +199,7 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
     
     @objc func dismissPicker(){
         self.view.endEditing(true)
+        workings = ""
         userInputTextField.text = ""
         resultTextField.text = ""
         userInputTextField.becomeFirstResponder()
