@@ -6,6 +6,16 @@ class HomeViewController: UIViewController {
     @IBOutlet var calculatorButtonCollection: [UIButton]!
     @IBOutlet var calculatorLabelCollection: [UILabel]!
     
+    let buttonIconArray: [UIImage] = [
+        
+        UIImage(named: "Normal white icon")!,
+        UIImage(named: "Normal white icon")!,
+        UIImage(named: "Discount white icon")!,
+        UIImage(named: "Gold white icon")!,
+        UIImage(named: "Exchange white icon")!,
+        UIImage(named: "Grade white icon")!
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "계산기"
@@ -18,13 +28,15 @@ class HomeViewController: UIViewController {
     
     func configureButtonUI() {
         
+        var index = 0
+        
         for button in calculatorButtonCollection {
             
             button.layer.cornerRadius = button.frame.width / 2
-            
-//            button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-//            button.layer.shadowRadius = 2.0
-//            button.layer.shadowOpacity = 0.5
+            //button.setBackgroundImage(buttonIconArray[index], for: .normal)
+            button.setImage(buttonIconArray[index], for: .normal)
+   
+            index += 1
             
         }
         
