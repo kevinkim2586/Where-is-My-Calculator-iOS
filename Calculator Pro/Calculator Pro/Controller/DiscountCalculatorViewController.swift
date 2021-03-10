@@ -2,6 +2,11 @@ import UIKit
 
 class DiscountCalculatorViewController: UIViewController {
     
+    @IBOutlet weak var originalPriceBackgroundTextField: UITextField!
+    @IBOutlet weak var discountPercentageBackgroundTextField: UITextField!
+    @IBOutlet weak var finalResultBackgroundTextField: UITextField!
+    @IBOutlet var textFieldCollection: [UITextField]!
+    
     @IBOutlet weak var originalPriceTextField: UITextField!
     @IBOutlet weak var discountPercentageTextField: UITextField!
     @IBOutlet weak var finalResultTextField: UITextField!
@@ -26,6 +31,7 @@ class DiscountCalculatorViewController: UIViewController {
         
         originalPriceTextField.becomeFirstResponder()
         configureUIButton()
+        configureTextFieldUI()
     }
     
     @IBAction func pressedNumber(_ sender: UIButton) {
@@ -181,6 +187,23 @@ extension DiscountCalculatorViewController {
         // Delete button
         let deleteButtonImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
         operationButtonCollection[3].setImage(deleteButtonImage, for: .normal)
+        
+    }
+    
+    func configureTextFieldUI() {
+ 
+        for textField in textFieldCollection {
+
+            textField.borderStyle = .none
+            textField.backgroundColor = .white
+
+            //To apply corner radius
+            textField.layer.cornerRadius = 30
+
+            //To apply border
+            textField.layer.borderWidth = 0.25
+            textField.layer.borderColor = UIColor.white.cgColor
+        }
         
     }
     
