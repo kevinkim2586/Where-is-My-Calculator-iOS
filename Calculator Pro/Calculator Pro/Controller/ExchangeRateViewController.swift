@@ -81,6 +81,20 @@ extension ExchangeRateViewController{
             exchangeRateFromTextField.text = inputWorkings
         }
     }
+    
+    @IBAction func pressedSwap(_ sender: UIButton) {
+        
+        let temp: String = exchangeRateToPicker.text!
+        exchangeRateToPicker.text = exchangeRateFromPicker.text
+        exchangeRateFromPicker.text = temp
+        
+        pressedCalculate(sender)
+    
+    }
+    
+    
+    
+    
 }
 
 //MARK: -  Implementation of ExchangeRateManagerDelegate Protocol
@@ -90,7 +104,10 @@ extension ExchangeRateViewController: ExchangeRateManagerDelegate{
     func didUpdateExchangeRate(_ exchangeRateManager: ExchangeRateManager, exchange: ExchangeRateModel) {
   
         DispatchQueue.main.async {
-            self.exchangeRateToTextField.text = String(format: "%.2f", exchange.finalResult)
+            
+            let formattedFinalResult = String(format: "%.1f", locale: Locale.current, Double(exchange.finalResult))
+            self.exchangeRateToTextField.text = formattedFinalResult
+
         }
     }
     func didFailWithError(error: Error) {
