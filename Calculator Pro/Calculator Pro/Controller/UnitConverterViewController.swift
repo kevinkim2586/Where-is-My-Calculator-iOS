@@ -333,6 +333,10 @@ extension UnitConverterViewController {
         operationButtonCollection[0].setImage(equalButtonImage, for: .normal)
         
         // Swap button
+        let swapButtonImage = UIImage(named: "Swap Button")
+        operationButtonCollection[1].setImage(swapButtonImage, for: .normal)
+        
+        // Clear button
         operationButtonCollection[2].titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
 
         // Delete button
