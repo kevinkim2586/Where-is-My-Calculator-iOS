@@ -37,7 +37,7 @@ class DiscountCalculatorViewController: UIViewController {
     @IBAction func pressedNumber(_ sender: UIButton) {
         
         if originalPriceTextField.isEditing{
-         
+            
             originalPriceWorkings += sender.currentTitle!
             originalPriceTextField.text = originalPriceWorkings
         }
@@ -91,10 +91,8 @@ class DiscountCalculatorViewController: UIViewController {
                 discountPercentageWorkings.removeLast()
                 discountPercentageTextField.text = discountPercentageWorkings
             }
-            
         }
     }
-    
     
     @IBAction func pressedSwapButton(_ sender: UIButton) {
         
@@ -104,7 +102,6 @@ class DiscountCalculatorViewController: UIViewController {
             originalPriceTextField.becomeFirstResponder()
         }
     }
-    
     
     @IBAction func pressedClearButton(_ sender: UIButton) {
         
@@ -116,7 +113,6 @@ class DiscountCalculatorViewController: UIViewController {
         
         finalResultTextField.text = ""
     }
-    
 }
 
 //MARK: - UITextFieldDelegate
@@ -149,11 +145,6 @@ extension DiscountCalculatorViewController {
         
         button.backgroundColor = color
         button.layer.cornerRadius = button.frame.width / 2
-        
-//        button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-//        button.layer.shadowRadius = 2.0
-//        button.layer.shadowOpacity = 0.5
-        
         button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
     }
     
@@ -166,9 +157,7 @@ extension DiscountCalculatorViewController {
         
         // Operation buttons - Basic configurations
         for button in operationButtonCollection {
-            
             let color = UIColor(red: 0.00, green: 0.41, blue: 0.22, alpha: 1.00)
-            
             setButtonUI(for: button, color: color)
         }
         
@@ -182,8 +171,6 @@ extension DiscountCalculatorViewController {
         // Swap button
         operationButtonCollection[2].titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
         
-    
-        
         // Delete button
         let deleteButtonImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
         operationButtonCollection[3].setImage(deleteButtonImage, for: .normal)
@@ -196,25 +183,12 @@ extension DiscountCalculatorViewController {
 
             textField.borderStyle = .none
             textField.backgroundColor = .white
-
-            //To apply corner radius
             textField.layer.cornerRadius = 30
-
-            //To apply border
             textField.layer.borderWidth = 0.25
             textField.layer.borderColor = UIColor.white.cgColor
         }
-        
     }
-    
-    
-    
-    
-    
 }
-
-
-
 
 //MARK: - Other Methods
 
@@ -226,5 +200,4 @@ extension DiscountCalculatorViewController {
         alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
 }
