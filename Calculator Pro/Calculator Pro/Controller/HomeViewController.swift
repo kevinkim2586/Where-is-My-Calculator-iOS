@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
         configureButtonUI()
     }
     
-    
     func configureButtonUI() {
         
         var index = 0
@@ -47,10 +46,7 @@ class HomeViewController: UIViewController {
         calculatorButtonCollection[4].backgroundColor =
             Constants.Colors.exchangeRateButtonColor
         calculatorButtonCollection[5].backgroundColor = Constants.Colors.gradeCalculatorButtonColor
-        
-        
     }
-
 }
 
 extension UIImage {

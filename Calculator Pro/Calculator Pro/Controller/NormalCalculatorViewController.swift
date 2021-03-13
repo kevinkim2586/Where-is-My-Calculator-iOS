@@ -156,7 +156,6 @@ extension NormalCalculatorViewController {
             
             button.backgroundColor = .white
             button.layer.cornerRadius = button.frame.width / 2
-            
         }
 
         // Operation buttons
