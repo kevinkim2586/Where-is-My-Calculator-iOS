@@ -213,7 +213,6 @@ extension GoldCalculatorViewController: UIPickerViewDataSource, UIPickerViewDele
         return goldCalculatorManager.goldUnitArray.count
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return goldCalculatorManager.goldUnitArray[row]
     }
@@ -231,11 +230,6 @@ extension GoldCalculatorViewController {
         
         button.backgroundColor = color
         button.layer.cornerRadius = button.frame.width / 2
-        
-//        button.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
-//        button.layer.shadowRadius = 2.0
-//        button.layer.shadowOpacity = 0.5
-        
         button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
     }
     
@@ -250,7 +244,6 @@ extension GoldCalculatorViewController {
         for button in operationButtonCollection {
             
             let color = UIColor(red: 0.43, green: 0.21, blue: 0.59, alpha: 1.00)
-            
             setButtonUI(for: button, color: color)
         }
         
@@ -264,32 +257,12 @@ extension GoldCalculatorViewController {
         // Swap button
         operationButtonCollection[2].titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
         
-    
-        
         // Delete button
         let deleteButtonImage = UIImage(systemName: "delete.left.fill", withConfiguration: smallConfiguration)
         operationButtonCollection[3].setImage(deleteButtonImage, for: .normal)
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
 
 //MARK: - Other Methods
 

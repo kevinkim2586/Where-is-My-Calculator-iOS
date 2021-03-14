@@ -20,14 +20,12 @@ class UnitPopOverFromContentController: UIViewController {
         fromUnitSelectionTableView.dataSource = self
         
     }
-    
-
 }
 
 
 //MARK: - UITableViewDelegate, UITableViewDataSource
 
-extension UnitPopOverFromContentController: UITableViewDelegate, UITableViewDataSource{
+extension UnitPopOverFromContentController: UITableViewDelegate, UITableViewDataSource { 
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return UnitConverterManager.UnitSections.allCases.count

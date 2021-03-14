@@ -83,7 +83,6 @@ class DiscountCalculatorViewController: UIViewController {
                 originalPriceWorkings.removeLast()
                 originalPriceTextField.text = originalPriceWorkings
             }
-            
         }
         else if discountPercentageTextField.isEditing{
             
