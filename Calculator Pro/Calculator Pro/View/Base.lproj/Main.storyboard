@@ -1133,11 +1133,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="UJ0-kU-NPV">
                                                 <rect key="frame" x="52" y="25" width="295" height="37.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5fJ-jY-QGa">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fJ-jY-QGa">
                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="37.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="단위" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LWU-y8-I77">
-                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="37.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="37.5"/>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
