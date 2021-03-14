@@ -1499,62 +1499,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wsO-uc-tA8">
-                                <rect key="frame" x="0.0" y="117.5" width="358" height="550"/>
-                                <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="358" id="GxF-lQ-iNf"/>
-                                    <constraint firstAttribute="height" constant="550" id="fjE-cA-LUU"/>
-                                </constraints>
-                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bep-G4-lRz">
-                                    <rect key="frame" x="0.0" y="0.0" width="358" height="57"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                    <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <size key="titleShadowOffset" width="-20" height="0.0"/>
-                                    <state key="normal" image="plus" catalog="system"/>
-                                    <connections>
-                                        <action selector="pressedAddButton:" destination="h0l-1U-at8" eventType="touchUpInside" id="b3G-9D-ady"/>
-                                    </connections>
-                                </button>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHf-bL-wFA" userLabel="Result View">
-                                <rect key="frame" x="10" y="667.5" width="358" height="106.5"/>
+                                <rect key="frame" x="10" y="529.5" width="358" height="107.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grade Title Image" translatesAutoresizingMaskIntoConstraints="NO" id="qBQ-Rw-B5i">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="88.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-db-6gL">
-                                        <rect key="frame" x="33" y="33" width="280" height="32.5"/>
+                                        <rect key="frame" x="33" y="33" width="280" height="33.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="평균평점" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0F-cx-eGf" userLabel="평균평점">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="32.5"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4.5 만점" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj0-Fc-LDY">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="33.5"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-tE-XE1">
-                                                <rect key="frame" x="157" y="0.0" width="9.5" height="32.5"/>
+                                                <rect key="frame" x="157" y="0.0" width="9.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEI-Jr-fXY">
-                                                <rect key="frame" x="256.5" y="0.0" width="23.5" height="32.5"/>
+                                                <rect key="frame" x="256.5" y="0.0" width="23.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4.5 만점" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj0-Fc-LDY">
-                                        <rect key="frame" x="-5" y="0.0" width="81" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="qBQ-Rw-B5i" firstAttribute="leading" secondItem="GHf-bL-wFA" secondAttribute="leading" id="0TT-qY-C1N"/>
@@ -1567,14 +1540,6 @@
                                     <constraint firstAttribute="bottom" secondItem="qBQ-Rw-B5i" secondAttribute="bottomMargin" constant="27" id="fgt-Tp-AVn"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdB-Ue-tgT">
-                                <rect key="frame" x="323" y="740" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="계산"/>
-                                <connections>
-                                    <action selector="pressedCalculate:" destination="h0l-1U-at8" eventType="touchUpInside" id="Plo-88-OMY"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUn-J0-wXQ" userLabel="Title View">
                                 <rect key="frame" x="10" y="15" width="358" height="94.5"/>
                                 <subviews>
@@ -1626,13 +1591,34 @@
                                     <constraint firstItem="xZP-4u-wmP" firstAttribute="leading" secondItem="yUn-J0-wXQ" secondAttribute="leading" constant="33" id="jCQ-1j-m8b"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wsO-uc-tA8">
+                                <rect key="frame" x="10" y="89" width="358" height="404"/>
+                                <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="GxF-lQ-iNf"/>
+                                </constraints>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bep-G4-lRz">
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="57"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="tintColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <size key="titleShadowOffset" width="-20" height="0.0"/>
+                                    <state key="normal" image="plus" catalog="system"/>
+                                    <connections>
+                                        <action selector="pressedAddButton:" destination="h0l-1U-at8" eventType="touchUpInside" id="b3G-9D-ady"/>
+                                    </connections>
+                                </button>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QJT-S6-uby"/>
                         <color key="backgroundColor" red="0.83529411764705885" green="0.80392156862745101" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="yUn-J0-wXQ" firstAttribute="top" secondItem="QJT-S6-uby" secondAttribute="top" constant="15" id="6Ak-tn-bYU"/>
                             <constraint firstItem="GHf-bL-wFA" firstAttribute="top" secondItem="wsO-uc-tA8" secondAttribute="bottom" id="70W-Kt-gda"/>
-                            <constraint firstAttribute="bottom" secondItem="GHf-bL-wFA" secondAttribute="bottom" constant="15" id="Bsy-HT-b5I"/>
+                            <constraint firstAttribute="bottom" secondItem="GHf-bL-wFA" secondAttribute="bottom" constant="10" id="Bsy-HT-b5I"/>
+                            <constraint firstItem="wsO-uc-tA8" firstAttribute="centerX" secondItem="wZh-Md-jtA" secondAttribute="centerX" id="EDC-ZF-UkG"/>
                             <constraint firstItem="GHf-bL-wFA" firstAttribute="leading" secondItem="QJT-S6-uby" secondAttribute="leading" constant="10" id="KLL-X9-ok9"/>
                             <constraint firstItem="wsO-uc-tA8" firstAttribute="top" secondItem="yUn-J0-wXQ" secondAttribute="bottom" constant="8" id="YFN-JH-7pl"/>
                             <constraint firstItem="GHf-bL-wFA" firstAttribute="trailing" secondItem="QJT-S6-uby" secondAttribute="trailing" constant="10" id="Yl2-pd-G41"/>
@@ -1652,7 +1638,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iJ-r9-zcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000" y="283.64928909952607"/>
+            <point key="canvasLocation" x="1999.2" y="282.90854572713647"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="0Y5-hl-QsG">
@@ -2184,37 +2170,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ctW-JX-TEj">
-                                <rect key="frame" x="-12" y="40" width="399" height="191.5"/>
+                                <rect key="frame" x="-16.5" y="40" width="408" height="191.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGs-Ic-xwe" userLabel="From View">
-                                        <rect key="frame" x="0.0" y="0.0" width="399" height="90.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="408" height="90.5"/>
                                         <subviews>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTL-f1-zID" userLabel="Background Text Field">
-                                                <rect key="frame" x="25" y="5" width="349" height="80.5"/>
+                                                <rect key="frame" x="25" y="5" width="358" height="80.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="bOB-wU-qIp">
-                                                <rect key="frame" x="52" y="25" width="295" height="37.5"/>
+                                                <rect key="frame" x="52" y="25" width="304" height="37.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OgQ-lK-jTd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="37.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgQ-lK-jTd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="37.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="국가 선택" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-RL-0Qh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="37.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="37.5"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-zv-jcb">
-                                                                <rect key="frame" x="75" y="0.0" width="10" height="37.5"/>
+                                                                <rect key="frame" x="64" y="0.0" width="10" height="37.5"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금액 입력" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-J4-MwF">
-                                                        <rect key="frame" x="165" y="0.0" width="130" height="37.5"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금액 입력 후 = 터치!" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-J4-MwF">
+                                                        <rect key="frame" x="154" y="0.0" width="150" height="37.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="130" id="nKa-Xc-jnU"/>
+                                                            <constraint firstAttribute="width" constant="150" id="nKa-Xc-jnU"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -2234,32 +2220,32 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riX-aI-FKH" userLabel="To View">
-                                        <rect key="frame" x="0.0" y="100.5" width="399" height="91"/>
+                                        <rect key="frame" x="0.0" y="100.5" width="408" height="91"/>
                                         <subviews>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaT-51-dD6" userLabel="Background Text Field">
-                                                <rect key="frame" x="25" y="5" width="349" height="81"/>
+                                                <rect key="frame" x="25" y="5" width="358" height="81"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="4he-LP-tpm">
-                                                <rect key="frame" x="52" y="25" width="295" height="38"/>
+                                                <rect key="frame" x="52" y="25" width="304" height="38"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bRD-Dz-H5L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="38"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRD-Dz-H5L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="38"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="국가 선택" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-Kl-scs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="38"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="84" height="38"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="CSR-Rz-KOp">
-                                                                <rect key="frame" x="75" y="0.0" width="10" height="38"/>
+                                                                <rect key="frame" x="84" y="0.0" width="10" height="38"/>
                                                             </imageView>
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="결과" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-DJ-G9J">
-                                                        <rect key="frame" x="165" y="0.0" width="130" height="38"/>
+                                                        <rect key="frame" x="174" y="0.0" width="130" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="130" id="hrC-fg-uP2"/>
                                                         </constraints>
@@ -2297,7 +2283,7 @@
                                                             <constraint firstAttribute="width" constant="75" id="1lQ-Rd-Dxb"/>
                                                             <constraint firstAttribute="height" constant="75" id="fOA-o9-C8V"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="7">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2311,7 +2297,7 @@
                                                             <constraint firstAttribute="height" constant="75" id="0Dm-v7-rdc"/>
                                                             <constraint firstAttribute="width" constant="75" id="6Hs-pM-Io2"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="4">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2325,7 +2311,7 @@
                                                             <constraint firstAttribute="width" constant="75" id="5Tw-mq-YpV"/>
                                                             <constraint firstAttribute="height" constant="75" id="T94-4c-ibs"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2339,7 +2325,7 @@
                                                             <constraint firstAttribute="width" constant="75" id="Dx9-zA-17m"/>
                                                             <constraint firstAttribute="height" constant="75" id="jnV-Qr-NqQ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <size key="titleShadowOffset" width="5" height="0.0"/>
                                                         <state key="normal" title="0">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2359,7 +2345,7 @@
                                                             <constraint firstAttribute="width" constant="75" id="4Za-Mg-4SC"/>
                                                             <constraint firstAttribute="height" constant="75" id="jO6-cS-TCL"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="8">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2373,7 +2359,7 @@
                                                             <constraint firstAttribute="height" constant="75" id="jDL-Wf-8Tb"/>
                                                             <constraint firstAttribute="width" constant="75" id="nfe-e4-Wdd"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="5">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2387,7 +2373,7 @@
                                                             <constraint firstAttribute="height" constant="75" id="YjQ-6H-IDf"/>
                                                             <constraint firstAttribute="width" constant="75" id="nyh-eA-jbR"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2417,7 +2403,7 @@
                                                             <constraint firstAttribute="height" constant="75" id="erJ-8i-KtD"/>
                                                             <constraint firstAttribute="width" constant="75" id="tcV-3n-f39"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="9">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2431,7 +2417,7 @@
                                                             <constraint firstAttribute="height" constant="75" id="7Af-2N-Rnj"/>
                                                             <constraint firstAttribute="width" constant="75" id="bxo-Uj-lTx"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="6">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2446,7 +2432,7 @@
                                                             <constraint firstAttribute="width" constant="75" id="RQN-HD-Z95"/>
                                                             <constraint firstAttribute="height" constant="75" id="mJf-Qa-ZHn"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title="3">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
@@ -2460,7 +2446,7 @@
                                                             <constraint firstAttribute="width" constant="75" id="9V1-cE-ZaV"/>
                                                             <constraint firstAttribute="height" constant="75" id="ZGw-zV-a8t"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                                         <state key="normal" title=".">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>

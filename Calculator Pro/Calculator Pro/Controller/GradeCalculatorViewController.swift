@@ -44,8 +44,25 @@ class GradeCalculatorViewController: UIViewController{
         tableView.insertRows(at: [IndexPath(row:totalGradeInfo.count - 1, section: 0)], with: .bottom)
     }
     
-    @IBAction func pressedCalculate(_ sender: UIButton) {
-
+//    @IBAction func pressedCalculate(_ sender: UIButton) {
+//
+//        self.view.endEditing(true)
+//
+//        let totalCredit = gradeCalculatorManager.calculateFinalCredit(totalGradeInfo)
+//        let totalGrade = gradeCalculatorManager.calculateFinalGrade(totalGradeInfo)
+//
+//        // User Defaults에 이때까지 작성한 데이터 저장
+//        gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
+//
+//        print(totalCredit)
+//        print(totalGrade)
+//
+//        totalCreditLabel.text = String(format: "%d", totalCredit)
+//        totalGradeLabel.text = String(format: "%.2f", totalGrade)
+//    }
+    
+    func calculateResult() {
+        
         self.view.endEditing(true)
     
         let totalCredit = gradeCalculatorManager.calculateFinalCredit(totalGradeInfo)
@@ -153,7 +170,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
 
 //MARK: - GradeCellDelegate
 
-extension GradeCalculatorViewController: GradeCellDelegate{
+extension GradeCalculatorViewController: GradeCellDelegate {
     
     func didChangeLectureName(lecture: String, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].lectureName = lecture
@@ -163,16 +180,20 @@ extension GradeCalculatorViewController: GradeCellDelegate{
     
     func didChangeCredit(credit: Int, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].credit = credit
-        print("didChangeCredit activated: \(credit) for tagNum: \(tagNum)")
         gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
         loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
+        
+        calculateResult()
+        
+        self.view.endEditing(true)
     }
 
     func didChangeGrade(grade: Double, tagNum: Int, cell: GradeCell) {
         totalGradeInfo[tagNum].grade = grade
-        print("didChangeGrade activated: \(grade) for tagNum: \(tagNum)")
         gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
         loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
+        
+        calculateResult()
     }
     
 }

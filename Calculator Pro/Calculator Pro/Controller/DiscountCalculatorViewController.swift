@@ -144,7 +144,8 @@ extension DiscountCalculatorViewController {
         
         button.backgroundColor = color
         button.layer.cornerRadius = button.frame.width / 2
-        button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
+        button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
+        //button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
     }
     
     func configureUIButton() {

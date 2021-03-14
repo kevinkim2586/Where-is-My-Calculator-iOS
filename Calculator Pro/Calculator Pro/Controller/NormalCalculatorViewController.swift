@@ -154,6 +154,7 @@ extension NormalCalculatorViewController {
         // Number buttons
         for button in numberButtonCollection {
             
+            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             button.backgroundColor = .white
             button.layer.cornerRadius = button.frame.width / 2
         }
@@ -164,7 +165,8 @@ extension NormalCalculatorViewController {
             button.backgroundColor = UIColor(red: 0.02, green: 0.42, blue: 0.91, alpha: 1.00)
             button.layer.cornerRadius = button.frame.width / 2
             
-            button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
+            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
+            //button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 30)
             button.setTitleColor(.white, for: .normal)
            
             let smallConfiguration = UIImage.SymbolConfiguration(pointSize: 40, weight: .bold, scale: .small)
