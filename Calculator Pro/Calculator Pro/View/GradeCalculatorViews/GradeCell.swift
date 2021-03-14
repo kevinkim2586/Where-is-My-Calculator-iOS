@@ -28,9 +28,9 @@ class GradeCell: UITableViewCell {
         super.awakeFromNib()
         setUpPossibleGradesList()
         
-        //Basic texfield Setup
+        //Basic textfield Setup
         fromBackgroundTextField.borderStyle = .none
-        fromBackgroundTextField.backgroundColor = UIColor.groupTableViewBackground // Use anycolor that give you a 2d look.
+        fromBackgroundTextField.backgroundColor = UIColor.white
 
         //To apply corner radius
         fromBackgroundTextField.layer.cornerRadius = 30
@@ -50,6 +50,12 @@ class GradeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    override func prepareForReuse() {
+        
+        lectureTextField.text = ""
+        creditTextField.text = ""
+        gradeTextField.text = ""
+    }
 }
 
 //MARK: - Methods
@@ -67,31 +73,31 @@ extension GradeCell{
     
     func convertGradeStringToDouble(_ grade: String) -> Double{
         
-        if grade == "A+"{
+        if grade == "A+" {
             return highestPossibleGrade == 4.5 ? 4.5 : 4.3
         } else if grade == "A" || grade == "A0"{
             return 4.0
-        } else if grade == "A-"{
+        } else if grade == "A-" {
             return 3.7
-        } else if grade == "B+"{
+        } else if grade == "B+" {
             return highestPossibleGrade == 4.5 ? 3.5 : 3.3
-        } else if grade == "B" || grade == "B0"{
+        } else if grade == "B" || grade == "B0" {
             return 3.0
-        } else if grade == "B-"{
+        } else if grade == "B-" {
             return 2.7
-        } else if grade == "C+"{
+        } else if grade == "C+" {
             return highestPossibleGrade == 4.5 ? 2.5 : 2.3
-        } else if grade == "C" || grade == "C0"{
+        } else if grade == "C" || grade == "C0" {
             return 2.0
-        } else if grade == "C-"{
+        } else if grade == "C-" {
             return 1.7
-        } else if grade == "D+"{
+        } else if grade == "D+" {
             return highestPossibleGrade == 4.5 ? 1.5 : 1.3
-        } else if grade == "D" || grade == "D0"{
+        } else if grade == "D" || grade == "D0" {
             return 1.0
-        } else if grade == "D-"{
+        } else if grade == "D-" {
             return 0.7
-        } else if grade == "F"{
+        } else if grade == "F" {
             return 0.0
         } else{
             return 0
@@ -138,7 +144,6 @@ extension GradeCell{
         gradeTextField.text = ""
         gradeToDisplay = ""
     }
-    
 }
 
 //MARK: - UITextFieldDelegate
@@ -270,7 +275,6 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
         gradeTextField.text = gradeCalculatorManager.possibleGrades[row]
         gradeToDisplay = gradeCalculatorManager.possibleGrades[row]
     }
-    
 }
 
 //MARK: - String Extensions
