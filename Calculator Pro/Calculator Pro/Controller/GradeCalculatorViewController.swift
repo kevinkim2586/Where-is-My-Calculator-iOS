@@ -110,7 +110,6 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
                 cell.gradeTextField.text = gradeString
                 cell.lectureTextField.text = loadedGradeInfo[indexPath.row].lectureName
                 configureCell()
-                
             }
             else {
                 configureCell()

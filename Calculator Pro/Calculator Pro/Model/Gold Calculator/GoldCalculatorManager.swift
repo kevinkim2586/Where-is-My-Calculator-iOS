@@ -73,7 +73,6 @@ extension GoldCalculatorManager{
     }
 }
 
-
 //MARK: - Calculation Methods
 
 extension GoldCalculatorManager{
@@ -95,7 +94,6 @@ extension GoldCalculatorManager{
         return finalResult
     }
     
-    
     mutating func setGoldUnit(unit: String){
         
         switch unit {
@@ -109,5 +107,4 @@ extension GoldCalculatorManager{
             return
         }
     }
-    
 }

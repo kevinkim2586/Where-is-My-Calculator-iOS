@@ -12,7 +12,6 @@
 		7C1EB4CA25DE3BDD00E56B08 /* UnitLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1EB4C925DE3BDD00E56B08 /* UnitLength.swift */; };
 		7C1EB4CF25DE3BE400E56B08 /* UnitMass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1EB4CE25DE3BE400E56B08 /* UnitMass.swift */; };
 		7C1EB4D425DE3BF300E56B08 /* UnitTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1EB4D325DE3BF300E56B08 /* UnitTemperature.swift */; };
-		7CA9327225D183B400BD71C2 /* NormalCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326525D183B400BD71C2 /* NormalCalculatorManager.swift */; };
 		7CA9327325D183B400BD71C2 /* GoldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326725D183B400BD71C2 /* GoldData.swift */; };
 		7CA9327425D183B400BD71C2 /* GoldCalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */; };
 		7CA9327525D183B400BD71C2 /* GoldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9326925D183B400BD71C2 /* GoldModel.swift */; };
@@ -66,7 +65,6 @@
 		7C1EB4C925DE3BDD00E56B08 /* UnitLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitLength.swift; sourceTree = "<group>"; };
 		7C1EB4CE25DE3BE400E56B08 /* UnitMass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitMass.swift; sourceTree = "<group>"; };
 		7C1EB4D325DE3BF300E56B08 /* UnitTemperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTemperature.swift; sourceTree = "<group>"; };
-		7CA9326525D183B400BD71C2 /* NormalCalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalCalculatorManager.swift; sourceTree = "<group>"; };
 		7CA9326725D183B400BD71C2 /* GoldData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldData.swift; sourceTree = "<group>"; };
 		7CA9326825D183B400BD71C2 /* GoldCalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldCalculatorManager.swift; sourceTree = "<group>"; };
 		7CA9326925D183B400BD71C2 /* GoldModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldModel.swift; sourceTree = "<group>"; };
@@ -141,20 +139,11 @@
 			children = (
 				7C0B8DDC25E75C650037A43E /* Discount Calculator */,
 				7CF352EF25DB74D800815F63 /* Unit Converter */,
-				7CA9326425D183B400BD71C2 /* Normal Calculator */,
 				7CA9326625D183B400BD71C2 /* Gold Calculator */,
 				7CA9326A25D183B400BD71C2 /* Exchange Rate */,
 				7CA9326F25D183B400BD71C2 /* Grade Calculator */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		7CA9326425D183B400BD71C2 /* Normal Calculator */ = {
-			isa = PBXGroup;
-			children = (
-				7CA9326525D183B400BD71C2 /* NormalCalculatorManager.swift */,
-			);
-			path = "Normal Calculator";
 			sourceTree = "<group>";
 		};
 		7CA9326625D183B400BD71C2 /* Gold Calculator */ = {
@@ -443,7 +432,6 @@
 			files = (
 				7CDF6CE225CFA54E00DD67B3 /* GradeCell.swift in Sources */,
 				7CF3530225DB890700815F63 /* UnitPopOverToContentController.swift in Sources */,
-				7CA9327225D183B400BD71C2 /* NormalCalculatorManager.swift in Sources */,
 				7CF352E025DB696E00815F63 /* UnitConverterViewController.swift in Sources */,
 				7CA9327A25D183B400BD71C2 /* GradeInfo.swift in Sources */,
 				7CA9327825D183B400BD71C2 /* ExchangeRateModel.swift in Sources */,

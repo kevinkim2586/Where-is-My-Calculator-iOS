@@ -31,7 +31,6 @@ struct GradeCalculatorManager{
                 
                 let eachCreditInDouble = Double(eachCredit)
                 totalGrade += (eachCreditInDouble * eachGrade)
-                
             }
         }
         let totalCreditInDouble = Double(totalCredit)
@@ -43,7 +42,6 @@ struct GradeCalculatorManager{
     func saveToUserDefaults(_ gradeInfo: [GradeInfo]) {
         
         let data = gradeInfo.map { try? JSONEncoder().encode($0) }
-        //UserDefaults.standard.removeObject(forKey: "gradeKey")
         UserDefaults.standard.set(data, forKey: "gradeKey")
     }
     
@@ -53,7 +51,6 @@ struct GradeCalculatorManager{
         guard let encodedData = UserDefaults.standard.array(forKey: "gradeKey") as? [Data] else{
             return []
         }
-        print(encodedData.map { try! JSONDecoder().decode(GradeInfo.self, from: $0) })
         return encodedData.map { try! JSONDecoder().decode(GradeInfo.self, from: $0) }
     }
 }
