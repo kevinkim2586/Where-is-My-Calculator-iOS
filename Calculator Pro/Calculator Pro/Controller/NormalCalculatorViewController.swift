@@ -177,10 +177,7 @@ extension NormalCalculatorViewController {
         for button in clearButtonCollection {
             
             button.backgroundColor = UIColor(red: 0.73, green: 0.73, blue: 0.73, alpha: 1.00)
-            
             button.layer.cornerRadius = button.frame.width / 2
-            
-
             button.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
             button.setTitleColor(.white, for: .normal)
         }
