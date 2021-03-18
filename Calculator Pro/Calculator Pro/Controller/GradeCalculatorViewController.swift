@@ -219,7 +219,7 @@ extension GradeCalculatorViewController: UIPickerViewDataSource, UIPickerViewDel
     }
     
     @objc func dismissPicker(){
-        
+
         highestPossibleGradeTextField.endEditing(true)
         highestPossibleGradeTextField.resignFirstResponder()
         tableView.reloadData()
