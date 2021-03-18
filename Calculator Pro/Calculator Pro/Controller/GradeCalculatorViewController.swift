@@ -44,23 +44,6 @@ class GradeCalculatorViewController: UIViewController{
         tableView.insertRows(at: [IndexPath(row:totalGradeInfo.count - 1, section: 0)], with: .bottom)
     }
     
-//    @IBAction func pressedCalculate(_ sender: UIButton) {
-//
-//        self.view.endEditing(true)
-//
-//        let totalCredit = gradeCalculatorManager.calculateFinalCredit(totalGradeInfo)
-//        let totalGrade = gradeCalculatorManager.calculateFinalGrade(totalGradeInfo)
-//
-//        // User Defaults에 이때까지 작성한 데이터 저장
-//        gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
-//
-//        print(totalCredit)
-//        print(totalGrade)
-//
-//        totalCreditLabel.text = String(format: "%d", totalCredit)
-//        totalGradeLabel.text = String(format: "%.2f", totalGrade)
-//    }
-    
     func calculateResult() {
         
         self.view.endEditing(true)
@@ -70,9 +53,6 @@ class GradeCalculatorViewController: UIViewController{
         
         // User Defaults에 이때까지 작성한 데이터 저장
         gradeCalculatorManager.saveToUserDefaults(totalGradeInfo)
-        
-        print(totalCredit)
-        print(totalGrade)
 
         totalCreditLabel.text = String(format: "%d", totalCredit)
         totalGradeLabel.text = String(format: "%.2f", totalGrade)
@@ -164,6 +144,8 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             tableView.deleteRows(at: [indexPath], with: .fade )
             
             tableView.endUpdates()
+            
+            calculateResult()
         }
     }
 }
