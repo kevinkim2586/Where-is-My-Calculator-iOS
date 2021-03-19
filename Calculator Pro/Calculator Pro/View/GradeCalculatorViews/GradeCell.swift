@@ -213,7 +213,7 @@ extension GradeCell: UITextFieldDelegate{
 
 //MARK: - Picker View Related Methods & UIPickerViewDataSource & Delegate Methods
 
-extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
+extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func createPickerView(){
         
@@ -235,6 +235,7 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate{
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
         
+     
         gradeTextField.inputView = gradePickerView
         gradeTextField.inputAccessoryView = toolBar
     }

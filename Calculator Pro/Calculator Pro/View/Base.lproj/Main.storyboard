@@ -1594,7 +1594,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="4.2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEI-Jr-fXY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEI-Jr-fXY">
                                                 <rect key="frame" x="269.5" y="0.0" width="10.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2171,35 +2171,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ctW-JX-TEj">
-                                <rect key="frame" x="-16.5" y="40" width="408" height="191.5"/>
+                                <rect key="frame" x="-31.5" y="40" width="438" height="191.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGs-Ic-xwe" userLabel="From View">
-                                        <rect key="frame" x="0.0" y="0.0" width="408" height="90.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="438" height="90.5"/>
                                         <subviews>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTL-f1-zID" userLabel="Background Text Field">
-                                                <rect key="frame" x="25" y="5" width="358" height="80.5"/>
+                                                <rect key="frame" x="25" y="5" width="388" height="80.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="bOB-wU-qIp">
-                                                <rect key="frame" x="52" y="25" width="304" height="37.5"/>
+                                                <rect key="frame" x="52" y="25" width="334" height="37.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgQ-lK-jTd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="37.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OgQ-lK-jTd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="37.5"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="국가 선택" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-RL-0Qh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="37.5"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="국가 선택" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slv-RL-0Qh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="84" height="37.5"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-zv-jcb">
-                                                                <rect key="frame" x="64" y="0.0" width="10" height="37.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="t2K-zv-jcb" userLabel="Expand Button Image View">
+                                                                <rect key="frame" x="94" y="0.0" width="10" height="37.5"/>
                                                             </imageView>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Slv-RL-0Qh" firstAttribute="leading" secondItem="OgQ-lK-jTd" secondAttribute="leading" id="mbR-cQ-yi1"/>
+                                                        </constraints>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="금액 입력 후 = 터치!" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOh-J4-MwF">
-                                                        <rect key="frame" x="154" y="0.0" width="150" height="37.5"/>
+                                                        <rect key="frame" x="184" y="0.0" width="150" height="37.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="150" id="nKa-Xc-jnU"/>
                                                         </constraints>
@@ -2221,34 +2224,37 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riX-aI-FKH" userLabel="To View">
-                                        <rect key="frame" x="0.0" y="100.5" width="408" height="91"/>
+                                        <rect key="frame" x="0.0" y="100.5" width="438" height="91"/>
                                         <subviews>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaT-51-dD6" userLabel="Background Text Field">
-                                                <rect key="frame" x="25" y="5" width="358" height="81"/>
+                                                <rect key="frame" x="25" y="5" width="388" height="81"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="4he-LP-tpm">
-                                                <rect key="frame" x="52" y="25" width="304" height="38"/>
+                                                <rect key="frame" x="52" y="25" width="334" height="38"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRD-Dz-H5L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="38"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bRD-Dz-H5L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="38"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="국가 선택" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-Kl-scs">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="국가 선택" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-Kl-scs">
                                                                 <rect key="frame" x="0.0" y="0.0" width="84" height="38"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Expand Button" translatesAutoresizingMaskIntoConstraints="NO" id="CSR-Rz-KOp">
-                                                                <rect key="frame" x="84" y="0.0" width="10" height="38"/>
+                                                                <rect key="frame" x="94" y="0.0" width="10" height="38"/>
                                                             </imageView>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="qpQ-Kl-scs" firstAttribute="leading" secondItem="bRD-Dz-H5L" secondAttribute="leading" id="82h-sQ-oMz"/>
+                                                        </constraints>
                                                     </stackView>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="결과" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDN-DJ-G9J">
-                                                        <rect key="frame" x="174" y="0.0" width="130" height="38"/>
+                                                        <rect key="frame" x="184" y="0.0" width="150" height="38"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="130" id="hrC-fg-uP2"/>
+                                                            <constraint firstAttribute="width" constant="150" id="hrC-fg-uP2"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -2489,7 +2495,6 @@
                                                         <rect key="frame" x="0.0" y="180" width="75" height="75"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="75" id="hS2-Vl-CXr"/>
-                                                            <constraint firstAttribute="width" constant="75" id="kVP-CQ-pcP"/>
                                                         </constraints>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="swap">

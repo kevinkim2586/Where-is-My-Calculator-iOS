@@ -15,7 +15,6 @@ class ExchangeRateViewController: UIViewController{
     @IBOutlet weak var currencyUnitFromTextField: UITextField!
     @IBOutlet weak var currencyUnitToTextField: UITextField!
     
-    
     @IBOutlet var numberButtonCollection: [UIButton]!
     @IBOutlet var operationButtonCollection: [UIButton]!
     
@@ -94,12 +93,7 @@ extension ExchangeRateViewController{
         exchangeRateFromPicker.text = temp
         
         pressedCalculate(sender)
-    
     }
-    
-    
-    
-    
 }
 
 //MARK: -  Implementation of ExchangeRateManagerDelegate Protocol
