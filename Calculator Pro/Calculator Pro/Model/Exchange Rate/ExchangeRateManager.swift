@@ -17,7 +17,7 @@ struct ExchangeRateManager{
     var exchangeRateFrom = ""
     var exchangeRateTo = ""
 
-    var inputAmount: Int = 0
+    var inputAmount: Double = 0.0
     
     var delegate: ExchangeRateManagerDelegate?
 }
@@ -26,7 +26,7 @@ struct ExchangeRateManager{
 
 extension ExchangeRateManager{
     
-    mutating func fetchExchangeRate(for amount: Int){
+    mutating func fetchExchangeRate(for amount: Double){
         
         inputAmount = amount
         

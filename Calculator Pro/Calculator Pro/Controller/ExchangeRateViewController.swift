@@ -57,7 +57,7 @@ extension ExchangeRateViewController{
         
         if let inputString = exchangeRateFromTextField.text, let inputCountry = exchangeRateFromPicker.text, let toCountry = exchangeRateToPicker.text{
             
-            if let inputNumber = Int(inputString){
+            if let inputNumber = Double(inputString){
                 exchangeRateManager.setCurrencyUnitForFrom(country: inputCountry)
                 exchangeRateManager.setCurrencyUnitForTo(country: toCountry)
                 exchangeRateManager.fetchExchangeRate(for: inputNumber)
