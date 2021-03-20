@@ -21,7 +21,7 @@ struct GradeCalculatorManager{
     }
     
     // Calculate Final GPA (성적)
-    mutating func calculateFinalGrade(_ gradeInfo: [GradeInfo]) ->Double {
+    mutating func calculateFinalGrade(_ gradeInfo: [GradeInfo]) -> Double {
         
         totalGrade = 0.0
         
@@ -33,6 +33,11 @@ struct GradeCalculatorManager{
                 totalGrade += (eachCreditInDouble * eachGrade)
             }
         }
+        
+        if totalCredit == 0 {
+            return 0.0
+        }
+        
         let totalCreditInDouble = Double(totalCredit)
         totalGrade = totalGrade / totalCreditInDouble
         return totalGrade

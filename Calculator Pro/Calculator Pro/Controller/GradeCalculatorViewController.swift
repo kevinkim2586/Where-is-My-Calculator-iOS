@@ -94,8 +94,7 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
             cell.highestPossibleGrade = selectedHighestPossibleGrade
             cell.gradeCellDelegate = self
         }
-        print("indexPath: \(indexPath.row)")
-        
+
         if !loadedGradeInfo.isEmpty {
 
             if let credit = loadedGradeInfo[indexPath.row].credit, let grade = loadedGradeInfo[indexPath.row].grade {
