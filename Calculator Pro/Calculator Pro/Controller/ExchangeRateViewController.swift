@@ -18,8 +18,8 @@ class ExchangeRateViewController: UIViewController{
     @IBOutlet var numberButtonCollection: [UIButton]!
     @IBOutlet var operationButtonCollection: [UIButton]!
     
-    @IBOutlet weak var expandButtonImageView: UIImageView!
-    
+    @IBOutlet weak var expandButtonFrom: UITextField!
+    @IBOutlet weak var expandButtonTo: UITextField!
     
     var exchangeRateManager = ExchangeRateManager()
     
@@ -140,6 +140,9 @@ extension ExchangeRateViewController{
         exchangeRateFromPicker.inputView = fromPickerView
         exchangeRateToPicker.inputView = toPickerView
         
+        expandButtonFrom.inputView = fromPickerView
+        expandButtonTo.inputView = toPickerView
+        
         
         // Toolbar for PickerView
         let toolBar = UIToolbar()
@@ -152,6 +155,9 @@ extension ExchangeRateViewController{
         
         exchangeRateFromPicker.inputAccessoryView = toolBar
         exchangeRateToPicker.inputAccessoryView = toolBar
+        
+        expandButtonFrom.inputAccessoryView = toolBar
+        expandButtonTo.inputAccessoryView = toolBar
     }
     
     @objc func dismissPicker(){
