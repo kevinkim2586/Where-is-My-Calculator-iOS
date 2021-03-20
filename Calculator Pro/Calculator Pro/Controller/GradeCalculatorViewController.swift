@@ -1,4 +1,3 @@
-
 import UIKit
 
 class GradeCalculatorViewController: UIViewController{
@@ -25,6 +24,7 @@ class GradeCalculatorViewController: UIViewController{
         loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
        
         createPickerView()
+        calculateResult()
     }
     
     override func viewWillAppear(_ animated: Bool) {

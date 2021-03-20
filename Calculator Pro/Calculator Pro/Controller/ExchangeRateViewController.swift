@@ -18,6 +18,9 @@ class ExchangeRateViewController: UIViewController{
     @IBOutlet var numberButtonCollection: [UIButton]!
     @IBOutlet var operationButtonCollection: [UIButton]!
     
+    @IBOutlet weak var expandButtonImageView: UIImageView!
+    
+    
     var exchangeRateManager = ExchangeRateManager()
     
     var inputWorkings: String = ""                               // For TextField String input
@@ -137,6 +140,8 @@ extension ExchangeRateViewController{
         exchangeRateFromPicker.inputView = fromPickerView
         exchangeRateToPicker.inputView = toPickerView
         
+        
+        // Toolbar for PickerView
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(self.dismissPicker))
@@ -149,7 +154,6 @@ extension ExchangeRateViewController{
         exchangeRateToPicker.inputAccessoryView = toolBar
     }
     
-
     @objc func dismissPicker(){
         
         if let fromCountry = exchangeRateFromPicker.text{
