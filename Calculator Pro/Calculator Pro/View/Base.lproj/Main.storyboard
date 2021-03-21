@@ -271,7 +271,7 @@
                                     <constraint firstAttribute="height" constant="120" id="lmg-cG-VXI"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-qV-Dwb">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-qV-Dwb" userLabel="Calculator View">
                                 <rect key="frame" x="20" y="200" width="335" height="417"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8LU-iB-JXj">
@@ -1503,26 +1503,29 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grade Title Image" translatesAutoresizingMaskIntoConstraints="NO" id="5d8-Bw-p1N">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="94.5"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-4u-wmP">
-                                        <rect key="frame" x="33" y="33" width="280" height="20.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-4u-wmP">
+                                        <rect key="frame" x="29.5" y="33" width="299" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="강의명" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaH-hj-lVE" userLabel="강의명">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="nUI-fm-67g"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ruu-Qi-YvU">
-                                                <rect key="frame" x="186" y="0.0" width="94" height="20.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ruu-Qi-YvU" userLabel="Internal Stack View">
+                                                <rect key="frame" x="210" y="0.0" width="89" height="20.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학점" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPD-02-vTq">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="학점" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPD-02-vTq">
                                                         <rect key="frame" x="0.0" y="0.0" width="29.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평점" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spq-0p-CUY">
-                                                        <rect key="frame" x="64.5" y="0.0" width="29.5" height="20.5"/>
+                                                        <rect key="frame" x="59.5" y="0.0" width="29.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1540,12 +1543,11 @@
                                 <constraints>
                                     <constraint firstItem="5d8-Bw-p1N" firstAttribute="leading" secondItem="yUn-J0-wXQ" secondAttribute="leading" id="3TJ-Kg-ZXy"/>
                                     <constraint firstItem="xZP-4u-wmP" firstAttribute="top" secondItem="yUn-J0-wXQ" secondAttribute="top" constant="33" id="55M-Ex-Wk9"/>
-                                    <constraint firstAttribute="trailing" secondItem="xZP-4u-wmP" secondAttribute="trailing" constant="45" id="5Pv-ho-Z6V"/>
                                     <constraint firstAttribute="trailing" secondItem="5d8-Bw-p1N" secondAttribute="trailing" constant="13" id="7LX-Ud-VqT"/>
                                     <constraint firstAttribute="bottom" secondItem="5d8-Bw-p1N" secondAttribute="bottom" id="QnV-Xg-WMQ"/>
+                                    <constraint firstItem="xZP-4u-wmP" firstAttribute="centerX" secondItem="yUn-J0-wXQ" secondAttribute="centerX" id="TmV-cw-y04"/>
                                     <constraint firstAttribute="bottom" secondItem="xZP-4u-wmP" secondAttribute="bottom" constant="41" id="ZH2-e1-Dnw"/>
                                     <constraint firstItem="5d8-Bw-p1N" firstAttribute="top" secondItem="yUn-J0-wXQ" secondAttribute="top" id="aaA-qv-Oqo"/>
-                                    <constraint firstItem="xZP-4u-wmP" firstAttribute="leading" secondItem="yUn-J0-wXQ" secondAttribute="leading" constant="33" id="jCQ-1j-m8b"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wsO-uc-tA8">
