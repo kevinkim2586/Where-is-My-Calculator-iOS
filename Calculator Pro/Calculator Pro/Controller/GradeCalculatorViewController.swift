@@ -29,6 +29,7 @@ class GradeCalculatorViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        calculateResult()
     }
 
     @IBAction func pressedAddButton(_ sender: UIButton) {
