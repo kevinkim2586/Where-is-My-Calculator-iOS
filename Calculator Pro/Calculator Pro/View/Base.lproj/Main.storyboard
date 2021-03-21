@@ -1574,8 +1574,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grade Title Image" translatesAutoresizingMaskIntoConstraints="NO" id="qBQ-Rw-B5i">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="87.5"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-db-6gL">
-                                        <rect key="frame" x="33" y="28" width="280" height="22"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-db-6gL">
+                                        <rect key="frame" x="43" y="28" width="272.5" height="22"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4.5 만점 ▼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj0-Fc-LDY">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="22"/>
@@ -1587,13 +1587,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqj-tE-XE1">
-                                                <rect key="frame" x="100" y="0.0" width="137" height="22"/>
+                                                <rect key="frame" x="160" y="0.0" width="9.5" height="22"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" systemColor="labelColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEI-Jr-fXY">
-                                                <rect key="frame" x="257" y="0.0" width="23" height="22"/>
+                                                <rect key="frame" x="249.5" y="0.0" width="23" height="22"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1603,11 +1603,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="qBQ-Rw-B5i" firstAttribute="leading" secondItem="GHf-bL-wFA" secondAttribute="leading" id="0TT-qY-C1N"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vs3-db-6gL" secondAttribute="trailing" constant="45" id="7GQ-dX-VAp"/>
+                                    <constraint firstItem="Vs3-db-6gL" firstAttribute="centerX" secondItem="GHf-bL-wFA" secondAttribute="centerX" id="FAu-jV-zCZ"/>
                                     <constraint firstItem="Vs3-db-6gL" firstAttribute="top" secondItem="GHf-bL-wFA" secondAttribute="top" constant="28" id="GiO-bG-uOV"/>
                                     <constraint firstAttribute="trailing" secondItem="qBQ-Rw-B5i" secondAttribute="trailing" constant="13" id="TsQ-xd-zXN"/>
                                     <constraint firstItem="qBQ-Rw-B5i" firstAttribute="top" secondItem="GHf-bL-wFA" secondAttribute="top" id="Xzt-p5-tMR"/>
-                                    <constraint firstItem="Vs3-db-6gL" firstAttribute="leading" secondItem="GHf-bL-wFA" secondAttribute="leading" constant="33" id="bDJ-gE-31G"/>
                                     <constraint firstAttribute="bottom" secondItem="qBQ-Rw-B5i" secondAttribute="bottomMargin" constant="27" id="fgt-Tp-AVn"/>
                                 </constraints>
                             </view>
