@@ -256,6 +256,14 @@ extension GoldCalculatorViewController {
         operationButtonCollection[0].setImage(equalButtonImage, for: .normal)
         
         // Swap button
+        var swapButtonImage = UIImage(named: "swapbutton_icon")
+        swapButtonImage = swapButtonImage?.scalePreservingAspectRatio(targetSize: CGSize(width: 60, height: 60))
+        operationButtonCollection[1].setImage(swapButtonImage, for: .normal)
+        
+        
+
+        
+        // Clear button
         operationButtonCollection[2].titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
         
         // Delete button
@@ -276,3 +284,6 @@ extension GoldCalculatorViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+
+

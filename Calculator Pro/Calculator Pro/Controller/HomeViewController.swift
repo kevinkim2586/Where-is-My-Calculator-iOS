@@ -9,7 +9,7 @@ class HomeViewController: UIViewController {
     let buttonIconArray: [UIImage] = [
         
         UIImage(named: "Normal white icon")!,
-        UIImage(named: "Normal white icon")!,
+        UIImage(named: "Unit white icon")!,
         UIImage(named: "Discount white icon")!,
         UIImage(named: "Gold white icon")!,
         UIImage(named: "Exchange white icon")!,

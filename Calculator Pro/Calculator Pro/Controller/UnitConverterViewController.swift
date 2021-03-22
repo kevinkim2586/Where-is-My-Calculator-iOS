@@ -332,8 +332,10 @@ extension UnitConverterViewController {
         operationButtonCollection[0].setImage(equalButtonImage, for: .normal)
         
         // Swap button
-        let swapButtonImage = UIImage(named: "Swap Button")
+        var swapButtonImage = UIImage(named: "swapbutton_icon2")
+        swapButtonImage = swapButtonImage?.scalePreservingAspectRatio(targetSize: CGSize(width: 60, height: 60))
         operationButtonCollection[1].setImage(swapButtonImage, for: .normal)
+        
         
         // Clear button
         operationButtonCollection[2].titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Bold", size: 40)
