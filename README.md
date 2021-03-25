@@ -4,6 +4,12 @@
 - A simple, elegant calculator that helps you with 6 different calculations!
 - After learning about Swift and iOS for about a month, I started this small project to increase my beginner-level app development skills. 
 - Although it is a very small-scale project, I learned a lot from making this app.  
+1. Normal Calculator
+2. Unit Converter (supports mass, length, and temperature conversion)
+3. Gold Calculator (tells you the gold price in ounces, grams, or kilograms!)
+4. Discount Calculator
+5. Exchange Rate Calculator (supports USD, KRW, CNY, JPY, EUR)
+6. GPA Calculator
 
 ## What did I learn by doing this project?
 - The MVC Design Pattern (and its advantages & disadvantages : i.e Massive View Controller)
