@@ -14,7 +14,14 @@
 
 
 ## In Action
+![Mar-25-2021 14-28-09](https://user-images.githubusercontent.com/44637101/112423762-97f4eb00-8d76-11eb-83b8-7767f8aa155b.gif)
 
+![Mar-25-2021 14-28-22](https://user-images.githubusercontent.com/44637101/112423766-99beae80-8d76-11eb-8e4a-8c4997d02c0c.gif)
+
+![Mar-25-2021 14-28-29](https://user-images.githubusercontent.com/44637101/112423769-9b887200-8d76-11eb-9761-53e426fb60ef.gif)
+![Mar-25-2021 14-28-35](https://user-images.githubusercontent.com/44637101/112423772-9c210880-8d76-11eb-8b3d-95184d98257e.gif)
+![Uploading Mar-25-2021 14-28-44.gif…]()
+![Mar-25-2021 14-28-50](https://user-images.githubusercontent.com/44637101/112423783-a0e5bc80-8d76-11eb-895e-1576a1491a4e.gif)
 
 
 
