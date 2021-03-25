@@ -9,6 +9,8 @@
 - The MVC Design Pattern (and its advantages & disadvantages : i.e Massive View Controller)
 - How to use User Defaults. →      Create, Read, Update, Delete
 - Basics of configuring UI elements programatically, instead of using storyboards.
+- The Delegate Design Pattern
+- How to use the Codable protocol
 - Fetching external data using REST API (i.e exchange rate data, gold price, etc)
 - The importance of communication between team members.     → always be super clear on what you need to talk about, respect others, understand different professions
 
