@@ -1,7 +1,7 @@
 # Where is My Calculator? 
 
 ## What app is this?
-- A simple, elegant calculator that helps you with 6 different calculations!
+- A simple, yet elegant calculator that helps you with 6 different calculations!
 - After learning about Swift and iOS for about a month, I started this small project to increase my beginner-level app development skills. 
 - Although it is a very small-scale project, I learned a lot from making this app.  
 1. Normal Calculator
