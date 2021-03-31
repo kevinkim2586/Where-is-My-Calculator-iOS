@@ -7,7 +7,7 @@
 1. Normal Calculator
 2. Unit Converter (supports mass, length, and temperature conversion)
 3. Gold Calculator (tells you the gold price in ounces, grams, or kilograms!)
-4. Discount Calculator
+4. Discount Calculator (i.e tells you how much 23% off is from 245430 WON)
 5. Exchange Rate Calculator (supports USD, KRW, CNY, JPY, EUR)
 6. GPA Calculator
 
@@ -17,7 +17,7 @@
 - Basics of configuring UI elements programatically, instead of using storyboards.
 - The Delegate Design Pattern
 - How to use the Codable protocol (Decodable, Encodable)
-- Fetching external data using REST API (i.e exchange rate data, gold price, etc)
+- Fetching external data using REST API (i.e exchange rate data, gold price, etc) 
 - The importance of communication between team members.     → always be super clear on what you need to talk about, respect others, understand different professions
 
 
