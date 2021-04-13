@@ -39,6 +39,8 @@
 
 - 앱 스토어 출시도 할 예정이다. 심사 통과하고 앱 스토어에 등록되면 추후에 여기에 앱 링크를 올릴 예정~
 
+![Screen Shot 2021-04-13 at 8 21 19 PM](https://user-images.githubusercontent.com/44637101/114544609-d73b9b00-9c95-11eb-87ea-5b8025fc1376.png)
+
 
 
 
