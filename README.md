@@ -36,11 +36,11 @@
 ![](https://images.velog.io/images/kevinkim2586/post/599cfc5d-533a-4d10-874c-dc7d60cdfe19/Mar-25-2021%2014-28-50.gif)
 
 
+## 앱 스토어 링크
 
-- 앱 스토어 출시도 할 예정이다. 심사 통과하고 앱 스토어에 등록되면 추후에 여기에 앱 링크를 올릴 예정~
+<img width="250" alt="Screen Shot 2021-04-14 at 2 51 00 PM" src="https://user-images.githubusercontent.com/44637101/114660767-d9066c80-9d30-11eb-8a4d-021872cd423d.png">
 
-![Screen Shot 2021-04-13 at 8 21 19 PM](https://user-images.githubusercontent.com/44637101/114544609-d73b9b00-9c95-11eb-87ea-5b8025fc1376.png)
-
+[https://apps.apple.com/kr/app/my%EA%B3%84%EC%82%B0%EA%B8%B0/id1562660543?l=en](https://apps.apple.com/kr/app/my%EA%B3%84%EC%82%B0%EA%B8%B0/id1562660543?l=en)
 
 
 
