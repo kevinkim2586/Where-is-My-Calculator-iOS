@@ -1,7 +1,5 @@
 import Foundation
 
-// Using https://www.goldapi.io/dashboard
-
 protocol GoldCalculatorManagerDelegate{
     
     func didUpdateGoldPrice(_ goldCalculatorManager: GoldCalculatorManager, goldModel: GoldModel)
@@ -25,11 +23,11 @@ struct GoldCalculatorManager{
 
 extension GoldCalculatorManager{
     
-    func fetchGoldPrice(){
+    func fetchGoldPrice() {
         
         let semaphore = DispatchSemaphore (value: 0)
     
-        if let url = URL(string: urlString){
+        if let url = URL(string: urlString) {
             
             var request = URLRequest(url: url,
                                      timeoutInterval:  Double.infinity)
@@ -56,11 +54,11 @@ extension GoldCalculatorManager{
         }
     }
     
-    func parseJSON(for goldData: Data)->GoldModel?{
+    func parseJSON(for goldData: Data)->GoldModel? {
         
         let decoder = JSONDecoder()
         
-        do{
+        do {
             let decodedData = try decoder.decode(GoldData.self, from: goldData)
             
             let currency = decodedData.currency
@@ -74,7 +72,7 @@ extension GoldCalculatorManager{
             
             return goldModel
         }
-        catch{
+        catch {
             goldDelegate?.didFailWithError(error: error)
             return nil
         }
@@ -85,7 +83,7 @@ extension GoldCalculatorManager{
 
 extension GoldCalculatorManager{
     
-     func calculateFinalResult(currentGoldPrice: Float)->Float{
+     func calculateFinalResult(currentGoldPrice: Float)->Float {
         
         var finalResult: Float
        
@@ -102,7 +100,7 @@ extension GoldCalculatorManager{
         return finalResult
     }
     
-    mutating func setGoldUnit(unit: String){
+    mutating func setGoldUnit(unit: String) {
         
         switch unit {
         case "oz":

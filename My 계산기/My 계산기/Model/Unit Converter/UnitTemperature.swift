@@ -4,8 +4,7 @@ enum UnitTemperature: Int{
     
     case celsius = 0, fahrenheit, kelvin
     
-    
-    static func setUnit(_ string: String) -> UnitTemperature?{
+    static func setUnit(_ string: String) -> UnitTemperature? {
         
         if string == Constants.UnitConverterStrings.unitTemperatureArray[.celsius]{
             return .celsius
@@ -18,7 +17,7 @@ enum UnitTemperature: Int{
         }
     }
     
-    func convertTo(unit to: UnitTemperature, value val: Double) -> Double{
+    func convertTo(unit to: UnitTemperature, value val: Double) -> Double {
         
         switch self {
         

@@ -12,7 +12,7 @@ struct GradeCalculatorManager{
         
         totalCredit = 0
         
-        for credits in gradeInfo{
+        for credits in gradeInfo {
             if let credit = credits.credit{
                 totalCredit += credit
             }
@@ -53,7 +53,7 @@ struct GradeCalculatorManager{
     // Load User Defaults Data
     func loadUserDefaultData() -> [GradeInfo] {
         
-        guard let encodedData = UserDefaults.standard.array(forKey: "gradeKey") as? [Data] else{
+        guard let encodedData = UserDefaults.standard.array(forKey: "gradeKey") as? [Data] else {
             return []
         }
         return encodedData.map { try! JSONDecoder().decode(GradeInfo.self, from: $0) }

@@ -26,11 +26,10 @@ struct ExchangeRateManager{
 
 extension ExchangeRateManager{
     
-    mutating func fetchExchangeRate(for amount: Double){
+    mutating func fetchExchangeRate(for amount: Double) {
         
         inputAmount = amount
         
-        // ex. https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/USD
         let urlString = exchangeRateURL + exchangeRateFrom
         performRequest(with: urlString)
     }
@@ -41,13 +40,14 @@ extension ExchangeRateManager{
             
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
+            
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 
-                guard let data = data else{
+                guard let data = data else {
                     delegate?.didFailWithError(error: error!)
                     return
                 }
-                if let exchangeModel = parseJSON(for: data){
+                if let exchangeModel = parseJSON(for: data) {
                     delegate?.didUpdateExchangeRate(self, exchange: exchangeModel)
                 }
             }
@@ -59,12 +59,12 @@ extension ExchangeRateManager{
         
         let decoder = JSONDecoder()
     
-        do{
+        do {
             let decodedData = try decoder.decode(ExchangeRateData.self, from: exchangeData)
 
             if decodedData.result == "error" { print("There was an error decoding data") }
             
-            else{
+            else {
                 
                 let responseResult = decodedData.result
                 let base_code = decodedData.base_code
@@ -87,15 +87,15 @@ extension ExchangeRateManager{
 
 extension ExchangeRateManager{
     
-    mutating func setCurrencyUnitForFrom(country: String){
+    mutating func setCurrencyUnitForFrom(country: String) {
         exchangeRateFrom = convertCurrencyUnitToJSONKey(country: country)
     }
     
-    mutating func setCurrencyUnitForTo(country: String){
+    mutating func setCurrencyUnitForTo(country: String) {
         exchangeRateTo = convertCurrencyUnitToJSONKey(country: country)
     }
     
-    func convertCurrencyUnitToJSONKey(country: String)->String{
+    func convertCurrencyUnitToJSONKey(country: String)->String {
         switch country {
         
         case countries[0]:
@@ -114,7 +114,7 @@ extension ExchangeRateManager{
         }
     }
 
-    func determineConversionRate(_ data: ExchangeRateData) -> Double{
+    func determineConversionRate(_ data: ExchangeRateData) -> Double {
         
         switch exchangeRateTo{
         case "USD":

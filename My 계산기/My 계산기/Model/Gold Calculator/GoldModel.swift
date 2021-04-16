@@ -1,6 +1,6 @@
 import Foundation
 
-struct GoldModel{
+struct GoldModel {
     
     let metal: String
     let currency: String

@@ -19,7 +19,9 @@ class GradeCalculatorViewController: UIViewController{
         highestPossibleGradeTextField.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
+        tableView.register(UINib(nibName: Constants.GradeCalcStrings.cellNibName,
+                                 bundle: nil),
+                           forCellReuseIdentifier: Constants.GradeCalcStrings.cellIdentifier)
         
         loadedGradeInfo = gradeCalculatorManager.loadUserDefaultData()
        
@@ -94,7 +96,6 @@ extension GradeCalculatorViewController: UITableViewDataSource, UITableViewDeleg
         func configureCell(){
             cell.tagNum = indexPath.row
             cell.highestPossibleGrade = selectedHighestPossibleGrade
-            //cell.textFieldDidEndEditing(cell.gradeTextField)
             cell.gradeCellDelegate = self
         }
 

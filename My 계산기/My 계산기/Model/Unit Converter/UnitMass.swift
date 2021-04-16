@@ -4,7 +4,7 @@ enum UnitMass: Int{
     
     case milligram = 0, gram, kilogram, ton, ounce, pound
     
-    static func setUnit(_ string: String) -> UnitMass?{
+    static func setUnit(_ string: String) -> UnitMass? {
         
         if string == Constants.UnitConverterStrings.unitMassArray[.milligram]{
             return .milligram
@@ -23,7 +23,7 @@ enum UnitMass: Int{
         }
     }
     
-    func convertTo(unit to: UnitMass, value val: Double) -> Double{
+    func convertTo(unit to: UnitMass, value val: Double) -> Double {
         
         var constant = 1.0
         

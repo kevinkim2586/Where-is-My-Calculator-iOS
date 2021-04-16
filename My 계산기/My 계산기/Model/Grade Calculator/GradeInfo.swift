@@ -6,4 +6,6 @@ struct GradeInfo: Codable{
     var credit: Int?
     var grade: Double?
 }
+
+/// global variable
 var totalGradeInfo: [GradeInfo] = []

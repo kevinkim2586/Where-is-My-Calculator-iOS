@@ -1,10 +1,10 @@
 import Foundation
 
-enum UnitLength: Int{
+enum UnitLength: Int {
     
     case millimeter = 0, centimeter, meter, kilometer, inch, feet, yard, mile
     
-    static func setUnit(_ string: String) -> UnitLength?{
+    static func setUnit(_ string: String) -> UnitLength? {
         
         if string == Constants.UnitConverterStrings.unitLengthArray[.millimeter]{
             return .millimeter

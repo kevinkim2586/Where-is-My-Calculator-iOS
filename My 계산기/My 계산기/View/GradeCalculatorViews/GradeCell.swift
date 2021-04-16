@@ -28,16 +28,7 @@ class GradeCell: UITableViewCell {
         super.awakeFromNib()
         setUpPossibleGradesList()
         
-        //Basic textfield Setup
-        fromBackgroundTextField.borderStyle = .none
-        fromBackgroundTextField.backgroundColor = UIColor.white
-
-        //To apply corner radius
-        fromBackgroundTextField.layer.cornerRadius = 30
-
-        //To apply border
-        fromBackgroundTextField.layer.borderWidth = 0.25
-        fromBackgroundTextField.layer.borderColor = UIColor.white.cgColor
+        configureUI()
 
         lectureTextField.delegate = self
         creditTextField.delegate = self
@@ -45,7 +36,7 @@ class GradeCell: UITableViewCell {
         
         createPickerView()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -63,9 +54,9 @@ extension GradeCell{
 
     func setUpPossibleGradesList(){
         
-        if highestPossibleGrade == 4.5{
+        if highestPossibleGrade == 4.5 {
             gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradeArrayOne
-        }else if highestPossibleGrade == 4.3{
+        } else if highestPossibleGrade == 4.3 {
             gradeCalculatorManager.possibleGrades = Constants.GradeCalcStrings.possibleGradesArrayTwo
         }
     }
@@ -210,6 +201,7 @@ extension GradeCell: UITextFieldDelegate{
 }
 
 //MARK: - Picker View Related Methods & UIPickerViewDataSource & Delegate Methods
+
 extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func createPickerView(){
@@ -275,8 +267,28 @@ extension GradeCell: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 }
 
+//MARK: - UI Configuration
+
+extension GradeCell {
+    
+    func configureUI() {
+        
+        //Basic textfield Setup
+        fromBackgroundTextField.borderStyle = .none
+        fromBackgroundTextField.backgroundColor = UIColor.white
+
+        //To apply corner radius
+        fromBackgroundTextField.layer.cornerRadius = 30
+
+        //To apply border
+        fromBackgroundTextField.layer.borderWidth = 0.25
+        fromBackgroundTextField.layer.borderColor = UIColor.white.cgColor
+    }
+}
+
 //MARK: - String Extensions
 extension String  {
+    
     var isNumber: Bool {
         return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
