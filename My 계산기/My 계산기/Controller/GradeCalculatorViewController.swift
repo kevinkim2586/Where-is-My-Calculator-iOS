@@ -18,7 +18,7 @@ class GradeCalculatorViewController: UIViewController{
         super.viewDidLoad()
         
         IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.enableAutoToolbar = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         highestPossibleGradeTextField.delegate = self
@@ -39,6 +39,7 @@ class GradeCalculatorViewController: UIViewController{
         super.viewWillAppear(true)
         calculateResult()
     }
+
 
     @IBAction func pressedAddButton(_ sender: UIButton) {
         
