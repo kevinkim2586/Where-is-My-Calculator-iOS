@@ -12,6 +12,10 @@ struct Constants{
         static let unitPopoverToStoryboardID                = "unitPopoverToContentController"
     }
     
+    struct NormalCalcStrings {
+        static let operationSFSymbolArray = ["divide", "equal", "multiply", "plus", "minus"]
+    }
+    
     struct ExchangeRateStrings {
         
         static let countries                                = ["미국 달러","위안화", "유로","일본 엔", "한국 원"]

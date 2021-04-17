@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -201,7 +201,7 @@
 		7CDE256C25C125D80048B3CC = {
 			isa = PBXGroup;
 			children = (
-				7CDE257725C125D80048B3CC /* My 계산기 */,
+				7CDE257725C125D80048B3CC /* My 계산기 */,
 				7CDE258E25C125DB0048B3CC /* Calculator ProTests */,
 				7CDE259925C125DB0048B3CC /* Calculator ProUITests */,
 				7CDE257625C125D80048B3CC /* Products */,
@@ -220,7 +220,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7CDE257725C125D80048B3CC /* My 계산기 */ = {
+		7CDE257725C125D80048B3CC /* My 계산기 */ = {
 			isa = PBXGroup;
 			children = (
 				7CDF6CC725CF949E00DD67B3 /* Delegates */,
@@ -334,7 +334,6 @@
 				A49DA178A2A2F303DFEBD385 /* Pods-Calculator ProTests.debug.xcconfig */,
 				4B5EFE0E32CAA6FFB28E34C0 /* Pods-Calculator ProTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -786,6 +785,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinkim.WIM-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -806,6 +806,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinkim.WIM-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

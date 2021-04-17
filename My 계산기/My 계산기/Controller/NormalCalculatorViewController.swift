@@ -9,7 +9,7 @@ enum Operation: String{
     case NULL = "Empty"
 }
 
-let operationSFSymbolArray = ["divide", "equal", "multiply", "plus", "minus"]
+//let operationSFSymbolArray = ["divide", "equal", "multiply", "plus", "minus"]
 
 class NormalCalculatorViewController: UIViewController {
 
@@ -169,7 +169,6 @@ extension NormalCalculatorViewController {
             button.layer.cornerRadius = button.frame.width / 2
             
             button.titleLabel?.font = UIFont(name: "Helvetica",
-                                             
                                              size: 35)
           
             button.setTitleColor(.white, for: .normal)
@@ -177,7 +176,7 @@ extension NormalCalculatorViewController {
             let smallConfiguration = UIImage.SymbolConfiguration(pointSize: 40,
                                                                  weight: .bold,
                                                                  scale: .small)
-            let smallSymbolImage = UIImage(systemName: operationSFSymbolArray[index],
+            let smallSymbolImage = UIImage(systemName: Constants.NormalCalcStrings.operationSFSymbolArray[index],
                                            withConfiguration: smallConfiguration)
             button.setImage(smallSymbolImage,
                             for: .normal)
