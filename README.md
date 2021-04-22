@@ -1,4 +1,4 @@
-# My 계산기 🧮!
+# My 계산기 🧮
 ![icon2](https://user-images.githubusercontent.com/44637101/115650264-dd9bd800-a363-11eb-949a-fb8ae31fd6b2.png)
 ### App Store 에서 최신 버전을 다운받을 수 있습니다. [My 계산기](https://apps.apple.com/kr/app/my%EA%B3%84%EC%82%B0%EA%B8%B0/id1562660543?l=en)
 
